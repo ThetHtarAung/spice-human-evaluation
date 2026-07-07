@@ -500,6 +500,179 @@ pre{
   .row-between{
     flex-direction:column;
   }
+  /* ======================================
+   Full sequence page: full-width sticky image
+====================================== */
+
+.sequence-page {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+
+.sequence-sticky-panel {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  max-height: 64vh;
+  overflow: hidden;
+}
+
+.sequence-sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.sequence-frame-scroll {
+  max-height: calc(64vh - 105px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.sequence-frame-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.sequence-frame-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 6px;
+}
+
+.sequence-frame-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+}
+
+.sequence-caption {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-top: 4px;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+
+.sequence-question-wrap {
+  max-width: 920px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+/* ======================================
+   Participant setup: visual quality test
+====================================== */
+
+.visual-test {
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 14px;
+  background: var(--light);
+}
+
+.visual-test-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.visual-test-panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 12px;
+  text-align: center;
+}
+
+.visual-test-box {
+  height: 110px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  background:
+    linear-gradient(45deg, #fff 25%, #eef1f4 25%, #eef1f4 50%, #fff 50%, #fff 75%, #eef1f4 75%);
+  background-size: 18px 18px;
+}
+
+.visual-test-blur {
+  filter: blur(2px);
+  opacity: .72;
+}
+
+.visual-test-clear {
+  filter: none;
+}
+
+.visual-test-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.visual-test-options label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media(max-width:1000px) {
+  .sequence-frame-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sequence-sticky-panel {
+    max-height: 58vh;
+  }
+
+  .sequence-frame-scroll {
+    max-height: calc(58vh - 105px);
+  }
+}
+
+@media(max-width:760px) {
+  .sequence-frame-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sequence-sticky-panel {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .sequence-frame-scroll {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .visual-test-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }
 </style>
 </style>
@@ -604,7 +777,266 @@ function chooseAlignmentShots(shots,k){if(shots.length<=k)return shots; const id
 function ImageWithFallback({src,alt,cls,label}){const[bad,setBad]=useState(false); if(src&&!bad)return React.createElement("img",{src,alt,className:cls,onError:()=>setBad(true)}); return React.createElement("div",{className:"fallback"},label||"image missing")}
 function Q({q,val,isNA,onRate,onNA}){return React.createElement("div",{className:"question"},React.createElement("div",{className:"q-head"},React.createElement("div",null,React.createElement("div",{className:"q-title"},q.short),React.createElement("div",{className:"q-desc"},q.desc)),React.createElement("button",{className:"na-btn"+(isNA?" active":""),onClick:onNA},"N/A")),React.createElement("div",{className:"scale"+(isNA?" disabled":"")},SCALE.map(s=>React.createElement("button",{key:s.v,className:"scale-btn"+(val===s.v?" selected":""),onClick:()=>onRate(s.v)},React.createElement("div",{className:"scale-num"},s.v),React.createElement("div",{className:"scale-label"},s.label))))) }
 function Welcome({start,loadError}){const ready=onlineReady();return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},CONFIG.institution),React.createElement("h1",null,CONFIG.title),React.createElement("p",{className:"muted"},"This study evaluates AI-generated visual stories. Each evaluation item has separate stages: story introduction, shot-level text-image alignment, and full-sequence consistency rating."),React.createElement("div",{className:"grid-3",style:{margin:"18px 0"}},React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"~25 min"),React.createElement("div",{className:"stat-label"},"Estimated time")),React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},CONFIG.itemsPerParticipant),React.createElement("div",{className:"stat-label"},"Story outputs")),React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"3 stages"),React.createElement("div",{className:"stat-label"},"Per output"))),loadError&&React.createElement("div",{className:"error",style:{marginBottom:14}},loadError),!ready&&React.createElement("div",{className:CONFIG.requireOnlineSubmission?"error":"notice",style:{marginBottom:14}},CONFIG.requireOnlineSubmission?"Researcher setup required: Google Apps Script URL has not been configured.":"Test mode: Google Apps Script URL is not configured, so responses will be saved only as local browser backup."),React.createElement("div",{className:"notice",style:{marginBottom:14}},"Please use a laptop or desktop screen, browser zoom 100%, and complete the task alone."),btn(true,CONFIG.requireOnlineSubmission&&!ready,start,"Start evaluation")))}
-function Setup({assignments,onGo}){const[g,setG]=useState("");const[v,setV]=useState("");const[ai,setAi]=useState("");const[de,setDe]=useState("");const[ck,setCk]=useState({desktop:false,zoom:false,alone:false,visionOk:false});const group=g.trim().toUpperCase();const exists=assignments[group];const ok=group&&exists&&v&&ai&&de&&(!CONFIG.requireConditionChecklist||Object.values(ck).every(Boolean));const sel=(label,val,set,opts)=>React.createElement("div",null,React.createElement("div",{className:"label",style:{marginBottom:6}},label),React.createElement("select",{value:val,onChange:e=>set(e.target.value)},React.createElement("option",{value:""},"Select"),opts.map(o=>React.createElement("option",{key:o,value:o},o))));return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Participant setup"),React.createElement("p",{className:"muted"},"Enter the group code given by the researcher."),React.createElement("div",{className:"label",style:{marginBottom:6}},"Group code"),React.createElement("input",{type:"text",placeholder:"Example: G01",value:g,onChange:e=>setG(e.target.value.toUpperCase())}),g&&!exists&&React.createElement("p",{style:{color:"var(--danger)",fontSize:12}},"This group code does not exist."),React.createElement("div",{className:"grid-3",style:{marginTop:16}},sel("Vision condition",v,setV,["normal","corrected-to-normal","color vision issue","other"]),sel("AI image experience",ai,setAi,["none","low","medium","high"]),sel("Art/design experience",de,setDe,["none","low","medium","high"])),CONFIG.requireConditionChecklist&&React.createElement("div",{style:{marginTop:18}},React.createElement("div",{className:"label",style:{marginBottom:8}},"Condition checklist"),[["desktop","I am using a laptop or desktop, not a phone."],["zoom","Browser zoom is 100%."],["alone","I am completing this alone."],["visionOk","I can clearly see images and text."]].map(([k,t])=>React.createElement("label",{key:k,style:{display:"flex",gap:10,marginBottom:8}},React.createElement("input",{type:"checkbox",checked:ck[k],onChange:()=>setCk({...ck,[k]:!ck[k]})}),React.createElement("span",{className:"muted"},t)))),React.createElement("div",{style:{marginTop:18}},btn(true,!ok,()=>onGo({groupId:group,vision:v,aiExperience:ai,designExperience:de,conditionChecks:ck}),"Continue"))))}
+function Setup({assignments,onGo}) {
+  const [g, setG] = useState("");
+  const [v, setV] = useState("");
+  const [ai, setAi] = useState("");
+  const [de, setDe] = useState("");
+  const [visualTest, setVisualTest] = useState("");
+
+  const [ck, setCk] = useState({
+    desktop:false,
+    zoom:false,
+    alone:false
+  });
+
+  const group = g.trim().toUpperCase();
+  const exists = assignments[group];
+
+  const visualOk = visualTest === "right";
+
+  const ok =
+    group &&
+    exists &&
+    v &&
+    ai &&
+    de &&
+    visualOk &&
+    (!CONFIG.requireConditionChecklist || Object.values(ck).every(Boolean));
+
+  function sel(label, val, set, opts) {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "div",
+        { className: "label", style: { marginBottom: 6 } },
+        label
+      ),
+      React.createElement(
+        "select",
+        { value: val, onChange: e => set(e.target.value) },
+        React.createElement("option", { value: "" }, "Select"),
+        opts.map(o =>
+          React.createElement("option", { key: o, value: o }, o)
+        )
+      )
+    );
+  }
+
+  return React.createElement(
+    "div",
+    { className: "page" },
+
+    React.createElement(
+      "div",
+      { className: "card" },
+
+      React.createElement("h2", null, "Participant setup"),
+
+      React.createElement(
+        "p",
+        { className: "muted" },
+        "Enter the group code given by the researcher. This code controls which story outputs you will evaluate."
+      ),
+
+      React.createElement(
+        "div",
+        { className: "label", style: { marginBottom: 6 } },
+        "Group code"
+      ),
+
+      React.createElement("input", {
+        type: "text",
+        placeholder: "Example: G01",
+        value: g,
+        onChange: e => setG(e.target.value.toUpperCase())
+      }),
+
+      g && !exists && React.createElement(
+        "p",
+        { style: { color: "var(--danger)", fontSize: 12 } },
+        "This group code does not exist."
+      ),
+
+      React.createElement(
+        "div",
+        { className: "grid-3", style: { marginTop: 16 } },
+
+        sel("Vision condition", v, setV, [
+          "normal",
+          "corrected-to-normal",
+          "color vision issue",
+          "other"
+        ]),
+
+        sel("AI image experience", ai, setAi, [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]),
+
+        sel("Art/design experience", de, setDe, [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ])
+      ),
+
+      CONFIG.requireConditionChecklist && React.createElement(
+        "div",
+        { style: { marginTop: 18 } },
+
+        React.createElement(
+          "div",
+          { className: "label", style: { marginBottom: 8 } },
+          "Condition checklist"
+        ),
+
+        [
+          ["desktop", "I am using a laptop or desktop, not a phone."],
+          ["zoom", "Browser zoom is 100%."],
+          ["alone", "I am completing this alone."]
+        ].map(([k, t]) =>
+          React.createElement(
+            "label",
+            {
+              key: k,
+              style: {
+                display: "flex",
+                gap: 10,
+                marginBottom: 8
+              }
+            },
+
+            React.createElement("input", {
+              type: "checkbox",
+              checked: ck[k],
+              onChange: () => setCk({...ck, [k]: !ck[k]})
+            }),
+
+            React.createElement(
+              "span",
+              { className: "muted" },
+              t
+            )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        { className: "visual-test" },
+
+        React.createElement(
+          "div",
+          { className: "label" },
+          "Visual quality test"
+        ),
+
+        React.createElement(
+          "p",
+          { className: "muted", style: { marginBottom: 8 } },
+          "Please select which image looks clearer. This checks whether the display condition is suitable for image-quality evaluation."
+        ),
+
+        React.createElement(
+          "div",
+          { className: "visual-test-grid" },
+
+          React.createElement(
+            "div",
+            { className: "visual-test-panel" },
+            React.createElement(
+              "div",
+              { className: "visual-test-box visual-test-blur" },
+              "SPICE"
+            ),
+            React.createElement(
+              "div",
+              { className: "muted", style: { marginTop: 8, fontSize: 12 } },
+              "Image A"
+            )
+          ),
+
+          React.createElement(
+            "div",
+            { className: "visual-test-panel" },
+            React.createElement(
+              "div",
+              { className: "visual-test-box visual-test-clear" },
+              "SPICE"
+            ),
+            React.createElement(
+              "div",
+              { className: "muted", style: { marginTop: 8, fontSize: 12 } },
+              "Image B"
+            )
+          )
+        ),
+
+        React.createElement(
+          "div",
+          { className: "visual-test-options" },
+
+          React.createElement(
+            "label",
+            null,
+            React.createElement("input", {
+              type: "radio",
+              name: "visualTest",
+              value: "left",
+              checked: visualTest === "left",
+              onChange: e => setVisualTest(e.target.value)
+            }),
+            "Image A is clearer"
+          ),
+
+          React.createElement(
+            "label",
+            null,
+            React.createElement("input", {
+              type: "radio",
+              name: "visualTest",
+              value: "right",
+              checked: visualTest === "right",
+              onChange: e => setVisualTest(e.target.value)
+            }),
+            "Image B is clearer"
+          )
+        ),
+
+        visualTest && !visualOk && React.createElement(
+          "div",
+          { className: "error", style: { marginTop: 10 } },
+          "The clearer image should be Image B. Please check your display condition before continuing."
+        )
+      ),
+
+      React.createElement(
+        "div",
+        { style: { marginTop: 18 } },
+
+        btn(
+          true,
+          !ok,
+          () => onGo({
+            groupId: group,
+            vision: v,
+            aiExperience: ai,
+            designExperience: de,
+            visualTest,
+            visualTestPassed: visualOk,
+            conditionChecks: ck
+          }),
+          "Continue"
+        )
+      )
+    )
+  );
+}
 function Consent({onGo}){const[c,setC]=useState(false);return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Consent"),React.createElement("p",{className:"muted"},"Your anonymous ratings will be used for academic research to validate an automatic metric for visual story consistency. Participation is voluntary and you may stop at any time."),React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),React.createElement("span",{className:"muted"},"I have read the information above and agree to participate.")),React.createElement("div",{style:{marginTop:18}},btn(true,!c,onGo,"Continue"))))}
 function Intro({item,story,onNext,itemNo,total}){const base=item.path+"/";return React.createElement("div",{className:"page"},React.createElement("div",{className:"progress-wrap"},React.createElement("div",{className:"progress-bar"},React.createElement("div",{className:"progress-inner",style:{width:(itemNo/total*100)+"%"}})),React.createElement("span",{className:"label"},`${itemNo} / ${total}`)),React.createElement("div",{className:"card"},React.createElement("div",{className:"row-between"},React.createElement("div",null,React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind}`),React.createElement("h2",null,story.title)),React.createElement("div",{className:"label"},story.shots.length+" frames")),React.createElement("p",{className:"muted"},story.summary),React.createElement("h3",{style:{marginTop:18}},"Reference characters"),story.characters.length?React.createElement("div",{className:"refs"},story.characters.map((ch,i)=>React.createElement("div",{className:"ref-card",key:i},React.createElement(ImageWithFallback,{src:base+ch.ref,alt:ch.name,cls:"ref-img",label:"ref"}),React.createElement("div",{style:{fontWeight:650,fontSize:13,marginTop:8}},ch.name),React.createElement("div",{className:"muted",style:{fontSize:12}},ch.description)))):React.createElement("p",{className:"muted"},"No reference images are configured for this item. Check numRefs/refFiles in manifest.json."),React.createElement("div",{className:"notice",style:{marginTop:18}},"Next, you will rate text-image alignment for selected shots. Then you will rate the full sequence consistency."),React.createElement("div",{style:{marginTop:18}},btn(true,false,onNext,"Start alignment rating"))))}
 function Alignment({item,story,shots,idx,resp,setResp,onNext}){const ik=itemKey(item);const shot=shots[idx];const key=`align_${shot.shotId}`;const r=resp[ik]||{na:[],alignment:{},alignmentNA:[]};const val=r.alignment?.[key];const isNA=(r.alignmentNA||[]).includes(key);const base=item.path+"/";function set(v){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};rr.alignment={...(rr.alignment||{}),[key]:v};rr.alignmentNA=(rr.alignmentNA||[]).filter(x=>x!==key);return {...p,[ik]:rr}})}function na(){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};const a=rr.alignmentNA||[]; if(a.includes(key)){rr.alignmentNA=a.filter(x=>x!==key)}else{rr.alignmentNA=[...a,key]; if(rr.alignment)delete rr.alignment[key]} return {...p,[ik]:rr}})}const complete=typeof val==="number"||isNA;return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind} · alignment ${idx+1}/${shots.length}`),React.createElement("h2",null,"Text-image alignment"),React.createElement("div",{className:"shot-focus"},React.createElement("div",null,React.createElement(ImageWithFallback,{src:base+shot.frame,alt:shot.shotId,cls:"",label:shot.shotId})),React.createElement("div",null,React.createElement("h3",null,`Shot ${shot.n}`),React.createElement("div",{className:"label",style:{marginTop:8}},"Plot"),React.createElement("p",{className:"muted"},shot.plot||"No plot text available."),React.createElement("div",{className:"label"},"Setting"),React.createElement("p",{className:"muted"},shot.setting||"No setting text available."),React.createElement("div",{className:"label"},"Shot description"),React.createElement("p",{className:"muted"},shot.staticDesc||"No shot description available.")))),React.createElement("div",{className:"card"},React.createElement(Q,{q:{short:"Text-image alignment for this shot",desc:"Does this generated frame match the plot, setting, and shot description shown above?"},val,isNA,onRate:set,onNA:na}),React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16}},React.createElement("span",{className:"muted"},complete?"":"Please answer or choose N/A."),btn(true,!complete,onNext,idx===shots.length-1?"Continue to full sequence":"Next alignment shot"))))}
@@ -644,125 +1076,127 @@ function Sequence({item,story,resp,setResp,onSubmit,submitting}) {
 
   return React.createElement(
     "div",
-    { className: "page" },
+    { className: "page sequence-page" },
 
     React.createElement(
       "div",
-      { className: "fullseq-layout" },
+      { className: "card sequence-sticky-panel" },
 
-      /* LEFT: sticky full image sequence */
       React.createElement(
         "div",
-        { className: "fullseq-left" },
+        { className: "sequence-sticky-header" },
 
         React.createElement(
           "div",
-          { className: "fullseq-sticky" },
-
+          null,
           React.createElement(
             "div",
-            { className: "card" },
+            { className: "label" },
+            `${item.storyId} · ${item.modelBlind}`
+          ),
+          React.createElement(
+            "h2",
+            null,
+            "Full sequence consistency"
+          )
+        ),
 
+        React.createElement(
+          "div",
+          { className: "label" },
+          `${story.shots.length} frames`
+        )
+      ),
+
+      React.createElement(
+        "p",
+        { className: "muted", style: { marginTop: 0 } },
+        "View the full generated sequence in chronological order. The sequence stays visible while you answer the questions below."
+      ),
+
+      React.createElement(
+        "div",
+        { className: "sequence-frame-scroll" },
+
+        React.createElement(
+          "div",
+          { className: "sequence-frame-grid" },
+
+          story.shots.map(s =>
             React.createElement(
               "div",
-              { className: "label" },
-              `${item.storyId} · ${item.modelBlind}`
-            ),
+              { className: "sequence-frame-card", key: s.shotId },
 
-            React.createElement(
-              "h2",
-              null,
-              "Full sequence consistency"
-            ),
+              React.createElement(ImageWithFallback, {
+                src: base + s.frame,
+                alt: s.shotId,
+                cls: "sequence-frame-img",
+                label: `Frame ${s.n}`
+              }),
 
-            React.createElement(
-              "p",
-              { className: "muted" },
-              "View the full generated sequence in chronological order while answering the consistency questions."
-            ),
-
-            React.createElement(
-              "div",
-              { className: "fullseq-frame-grid" },
-
-              story.shots.map(s =>
-                React.createElement(
-                  "div",
-                  { className: "fullseq-frame-card", key: s.shotId },
-
-                  React.createElement(ImageWithFallback, {
-                    src: base + s.frame,
-                    alt: s.shotId,
-                    cls: "fullseq-frame-img",
-                    label: `Frame ${s.n}`
-                  }),
-
-                  React.createElement(
-                    "div",
-                    { className: "fullseq-caption" },
-                    `${s.n}. ${s.plot || s.staticDesc || ""}`
-                  )
-                )
+              React.createElement(
+                "div",
+                { className: "sequence-caption" },
+                `${s.n}. ${s.plot || s.staticDesc || ""}`
               )
             )
           )
         )
-      ),
+      )
+    ),
 
-      /* RIGHT: rating questions */
+    React.createElement(
+      "div",
+      { className: "sequence-question-wrap" },
+
       React.createElement(
         "div",
-        { className: "fullseq-right" },
+        { className: "card" },
 
         React.createElement(
           "div",
-          { className: "card" },
+          { className: "label", style: { marginBottom: 6 } },
+          "Questionnaire"
+        ),
+
+        React.createElement(
+          "p",
+          { className: "muted", style: { marginTop: 0 } },
+          "Please rate the whole visual story sequence while referring to the generated images above."
+        ),
+
+        SEQ_QUESTIONS.map(q =>
+          React.createElement(Q, {
+            key: q.id,
+            q,
+            val: r[q.id],
+            isNA: (r.na || []).includes(q.id),
+            onRate: v => rate(q.id, v),
+            onNA: () => na(q.id)
+          })
+        ),
+
+        React.createElement(
+          "div",
+          {
+            className: "row-between",
+            style: {
+              borderTop: "1px solid var(--border)",
+              paddingTop: 16
+            }
+          },
 
           React.createElement(
-            "div",
-            { className: "label", style: { marginBottom: 6 } },
-            "Full-sequence rating"
+            "span",
+            { className: "muted" },
+            complete ? "" : "Please answer all questions or select N/A."
           ),
 
-          React.createElement(
-            "p",
-            { className: "muted", style: { marginTop: 0 } },
-            "Please rate the whole story sequence. The image sequence will remain visible on the left while you answer."
-          ),
-
-          SEQ_QUESTIONS.map(q =>
-            React.createElement(Q, {
-              key: q.id,
-              q,
-              val: r[q.id],
-              isNA: (r.na || []).includes(q.id),
-              onRate: v => rate(q.id, v),
-              onNA: () => na(q.id)
-            })
-          ),
-
-          React.createElement(
-            "div",
-            {
-              className: "row-between",
-              style: {
-                borderTop: "1px solid var(--border)",
-                paddingTop: 16
-              }
-            },
-
-            React.createElement(
-              "span",
-              { className: "muted" },
-              complete ? "" : "Please answer all questions or select N/A."
-            ),
-
-            btn(
-              true,
-              !complete || submitting,
-              onSubmit,
-              submitting ? "Submitting..." : "Finish this story"
-            )
+          btn(
+            true,
+            !complete || submitting,
+            onSubmit,
+            submitting ? "Submitting..." : "Finish this story"
           )
         )
       )
