@@ -1,2 +1,0 @@
-item_id,story_id,title,model_blind,model_real,num_frames,storyboard_url,summary,characters,shot_descriptions
-story_01_A,story_01,Children's Picture Book,Model A,REAL_MODEL_NAME,23,storyboards/story_01_A.png,Replace summary,Replace character descriptions,Frames are shown in chronological order with frame numbers.
