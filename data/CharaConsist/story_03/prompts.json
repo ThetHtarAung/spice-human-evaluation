@@ -1,0 +1,478 @@
+﻿{
+    "Story_type": {
+        "en": "Fantasy",
+        "ch": "幻想"
+    },
+    "Characters": {
+        "Harry Potter": {
+            "tag": "realistic_human",
+            "name_ch": "哈利·波特",
+            "name_en": "Harry Potter",
+            "prompt_ch": "黑发绿眼的英国男孩，年龄大约11岁，额头上有一道闪电形的疤痕。穿着普通的麻瓜衣服，但即将换上霍格沃茨的校服。他聪明、好奇，对魔法世界充满向往，但也有些不安和困惑。",
+            "prompt_en": "A British boy with black hair and green eyes, approximately 11 years old, bearing a lightning-shaped scar on his forehead. Dressed in ordinary Muggle clothes but soon to change into Hogwarts robes. He is intelligent, curious, and full of longing for the magical world, yet also somewhat uneasy and confused.",
+            "num_of_appearances": 13
+        },
+        "Hagrid": {
+            "tag": "realistic_human",
+            "name_ch": "哈格力",
+            "name_en": "Hagrid",
+            "prompt_ch": "霍格沃茨的猎场看守，身材高大，毛发浓密，年龄大约30多岁。穿着一件巨大的外套，口袋里装满了各种奇怪的东西。",
+            "prompt_en": "The gamekeeper of Hogwarts, tall and heavily bearded, around 30 years old. Wearing an enormous coat with pockets filled with various strange items.",
+            "num_of_appearances": 10
+        },
+        "Ollivander": {
+            "tag": "realistic_human",
+            "name_ch": "奥利万德斯",
+            "name_en": "Ollivander",
+            "prompt_ch": "魔杖店的老板，白发苍苍的老人，眼睛泛着青光。穿着一件长袍，看起来有些神秘。",
+            "prompt_en": "The owner of the wand shop, an elderly man with white hair and gleaming blue eyes. Dressed in robes, he appears somewhat mysterious.",
+            "num_of_appearances": 2
+        },
+        "Goblin": {
+            "tag": "realistic_human",
+            "name_ch": "恶魔",
+            "name_en": "Goblin",
+            "prompt_ch": "古灵阁银行的员工，身材矮小，皮肤黝黑，手指和脚趾都很长。穿着深黑色和白色的制服。他们聪明、机灵，负责管理银行的金库。",
+            "prompt_en": "Employees of Gringotts Bank, small and dark-skinned with long fingers and toes. Wearing dark black and white uniforms. They are clever and cunning, responsible for managing the bank's vaults.",
+            "num_of_appearances": 1
+        },
+        "Owl": {
+            "tag": "non_human",
+            "name_ch": "猫头鹰",
+            "name_en": "Owl",
+            "prompt_ch": "一只白色的猫头鹰。",
+            "prompt_en": "A white owl.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "哈利第二天早上醒来，阳光透过窗帘的缝隙洒在床上，他揉了揉惺忪的睡眼，以为昨晚遇到哈格力只是个梦。",
+                "en": "Harry woke up the next morning, sunlight streaming through the gaps in the curtains onto his bed. Rubbing his sleepy eyes, he thought his encounter with Hagrid the night before had just been a dream."
+            },
+            "Setting Description": {
+                "ch": "早晨，哈利的卧室，阳光透过窗帘洒在床上，房间内摆设简单，床头柜上放着一盏台灯，墙上挂着一幅风景画，光线柔和。",
+                "en": "Morning, Harry's bedroom, sunlight filtering through the curtains onto the bed. The room is simply furnished, with a bedside lamp on the nightstand and a landscape painting on the wall, soft lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特"
+                ],
+                "en": [
+                    "Harry Potter"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利坐在床上，揉着眼睛，表情困惑，阳光洒在他的脸上，头发有些凌乱。",
+                "en": "Harry sits on the bed, rubbing his eyes, looking confused. Sunlight falls on his face, and his hair is slightly messy."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "然而，一阵急促的敲门声打破了他的幻想，哈格力那高大的身影依然在小屋里晃动。",
+                "en": "However, a series of urgent knocks shattered his illusion, and Hagrid's towering figure was still moving about the small hut."
+            },
+            "Setting Description": {
+                "ch": "早晨，哈利的小屋，木门被敲响，门框有些旧，墙上挂着一些旧照片，光线明亮。",
+                "en": "Morning, Harry's hut, the wooden door being knocked, the doorframe slightly worn, old photos hanging on the wall, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈格力"
+                ],
+                "en": [
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈格力站在门外，身材高大，表情微笑，一只手敲门，另一只手拿着一顶帽子。",
+                "en": "Hagrid stands outside the door, tall and smiling, one hand knocking, the other holding a hat."
+            }
+        },
+      
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "哈利从哈格力的口袋里翻出几枚硬币，付了钱，心中对这个神奇的世界充满了好奇。",
+                "en": "Harry dug out a few coins from Hagrid's pocket, paid for the newspaper, and felt full of curiosity about this wondrous world."
+            },
+            "Setting Description": {
+                "ch": "早晨，哈利的小屋，桌子上放着报纸，哈格力站在一旁，口袋里装满了各种奇怪的东西，光线明亮。",
+                "en": "Morning, Harry's hut, the newspaper lying on the table, Hagrid standing nearby, his pockets filled with various strange items, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利站在哈格力面前，手中拿着几枚硬币，表情好奇，哈格力微笑着看着他。",
+                "en": "Harry stands before Hagrid, holding a few coins, looking curious. Hagrid smiles at him."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "哈格力告诉哈利，他们要去伦敦买上学用品，并神秘地提到魔法师的银行由恶魔经营，非常安全。",
+                "en": "Hagrid told Harry they were going to London to buy school supplies and mysteriously mentioned that the wizards' bank was run by goblins and was very secure."
+            },
+            "Setting Description": {
+                "ch": "早晨，哈利的小屋，哈格力和哈利站在桌子旁，墙上挂着一幅地图，光线明亮。",
+                "en": "Morning, Harry's hut, Hagrid and Harry standing by the table, a map hanging on the wall, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "正面，倾斜镜头",
+                "en": "Frontal, dutch angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利看着哈格力，表情专注，哈格力表情神秘，一只手放在口袋里。",
+                "en": "Harry looks at Hagrid, expression focused. Hagrid looks mysterious, one hand in his pocket."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "他们坐上一艘小船，离开小岛，哈格力挥动魔杖，船便如离弦之箭般飞速前进，激起的浪花在阳光下闪烁着晶莹的光芒。",
+                "en": "They boarded a small boat and left the island. Hagrid waved his wand, and the boat shot forward like an arrow, the splashing waves glittering like crystals in the sunlight."
+            },
+            "Setting Description": {
+                "ch": "白天，海上，小船飞速前进，浪花四溅，阳光洒在海面上，远处是小岛的轮廓，光线明亮。",
+                "en": "Daytime, at sea, the small boat speeding forward, waves splashing, sunlight shining on the water, the outline of the island in the distance, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "远景，背面，鸟瞰镜头",
+                "en": "Wide shot, rear view, bird's eye view shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利和哈格力坐在小船上，哈格力挥动魔杖，船飞速前进，哈利紧紧抓住船舷。",
+                "en": "Harry and Hagrid sit in the boat. Hagrid waves his wand, and the boat speeds forward. Harry grips the side tightly."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "哈利紧紧抓住船舷，对魔法世界的奇妙既感到兴奋，又有些担忧，因为他不知道自己是否有足够的钱来支付那些神秘的魔法物品。",
+                "en": "Harry clutched the side of the boat, feeling both excitement and worry about the wonders of the magical world, unsure if he had enough money to pay for those mysterious magical items."
+            },
+            "Setting Description": {
+                "ch": "白天，海上，小船飞速前进，浪花四溅，阳光洒在海面上，光线明亮。",
+                "en": "Daytime, at sea, the small boat speeding forward, waves splashing, sunlight shining on the water, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特"
+                ],
+                "en": [
+                    "Harry Potter"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利紧紧抓住船舷，表情既兴奋又担忧，海风吹乱了他的头发。",
+                "en": "Harry grips the side of the boat, expression a mix of excitement and worry, the sea breeze tousling his hair."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "哈格力看出了他的心思，安慰道：“别担心，哈利，你的父母一定留了些东西给你。”",
+                "en": "Hagrid noticed his concern and reassured him, 'Don’t worry, Harry, your parents must have left you something.'"
+            },
+            "Setting Description": {
+                "ch": "白天，海上，小船飞速前进，浪花四溅，阳光洒在海面上，光线明亮。",
+                "en": "Daytime, at sea, the small boat speeding forward, waves splashing, sunlight shining on the water, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈格力看着哈利，表情安慰，一只手放在哈利的肩膀上，哈利表情稍微放松。",
+                "en": "Hagrid looks at Harry, expression reassuring, one hand on Harry's shoulder. Harry relaxes slightly."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "到了伦敦，他们挤进熙熙攘攘的地铁，随着人群涌动。",
+                "en": "Arriving in London, they squeezed into the bustling subway, moving with the crowd."
+            },
+            "Setting Description": {
+                "ch": "白天，伦敦地铁站，人群拥挤，地铁呼啸而过，墙上贴着各种广告，光线明亮。",
+                "en": "Daytime, London subway station, crowded with people, the subway roaring past, various advertisements on the walls, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利和哈格力挤在人群中，哈利表情好奇，哈格力表情平静。",
+                "en": "Harry and Hagrid jostle in the crowd. Harry looks curious, Hagrid calm."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "终于，他们来到了对角巷的入口——“易漏的大锅”酒吧。这是一条隐藏在普通街道中的魔法街，只有魔法师能看到。",
+                "en": "Finally, they reached the entrance to Diagon Alley—the Leaky Cauldron. This was a magical street hidden within an ordinary one, visible only to wizards."
+            },
+            "Setting Description": {
+                "ch": "白天，伦敦街道，一扇旧门上挂着“易漏的大锅”的招牌，门后是一条狭窄的小巷，光线昏暗。",
+                "en": "Daytime, London street, an old door with a sign reading 'The Leaky Cauldron,' a narrow alley behind it, dim lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利和哈格力站在门前，哈利表情好奇，哈格力表情微笑，一只手推开门。",
+                "en": "Harry and Hagrid stand before the door. Harry looks curious, Hagrid smiles, pushing the door open with one hand."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "酒吧里弥漫着一股浓郁的魔法气息，哈利一进门就发现自己在那里非常有名，每个人都想和他握手，他们的目光中充满了好奇和敬畏。",
+                "en": "The bar was filled with a thick magical atmosphere. The moment Harry stepped inside, he realized he was famous there. Everyone wanted to shake his hand, their eyes filled with curiosity and awe."
+            },
+            "Setting Description": {
+                "ch": "白天，易漏的大锅酒吧，室内昏暗，墙上挂着各种魔法物品，人们围在一起，光线柔和。",
+                "en": "Daytime, the Leaky Cauldron, dimly lit interior, various magical items hanging on the walls, people gathered around, soft lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利站在酒吧中央，人们围着他，表情好奇和敬畏，哈利表情有些不自在。",
+                "en": "Harry stands in the center of the bar, surrounded by people looking at him with curiosity and awe. Harry appears slightly uncomfortable."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "接着，他们来到了魔法师银行——古灵阁。银行的大厅里，许多恶魔忙碌地工作着，他们的眼睛闪烁着狡黠的光芒。",
+                "en": "Next, they arrived at the wizards' bank—Gringotts. In the grand hall, many goblins were busily working, their eyes gleaming with cunning."
+            },
+            "Setting Description": {
+                "ch": "白天，古灵阁银行大厅，高大的石柱，恶魔们穿着深红色和金黄色的制服，忙碌地工作，光线明亮。",
+                "en": "Daytime, Gringotts Bank hall, tall stone pillars, goblins dressed in dark red and gold uniforms working busily, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "恶魔"
+                ],
+                "en": [
+                    "Goblin"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "恶魔们在大厅里忙碌，眼睛闪烁着狡黠的光芒，手中拿着各种文件。",
+                "en": "Goblins bustle about the hall, eyes gleaming cunningly, holding various documents."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "哈利和哈格力乘坐一辆小车，穿过蜿蜒曲折的通道，来到了哈利的金库。金库的门缓缓打开，哈利惊讶地看到里面堆满了闪闪发光的金币，仿佛一座小小的金山。",
+                "en": "Harry and Hagrid rode a small cart through winding passages to Harry's vault. The vault door slowly opened, and Harry gasped at the sight of piles of gleaming gold coins, like a small mountain of treasure."
+            },
+            "Setting Description": {
+                "ch": "白天，古灵阁金库，狭窄的通道，小车停在金库门前，金库门缓缓打开，里面堆满了金币，光线明亮。",
+                "en": "Daytime, Gringotts vault, narrow passages, the cart stopping before the vault door, which slowly opens to reveal heaps of gold coins, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利和哈格力站在金库门前，哈利表情惊讶，眼睛睁大，哈格力表情微笑。",
+                "en": "Harry and Hagrid stand before the vault. Harry looks astonished, eyes wide. Hagrid smiles."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "他小心翼翼地拿了一些钱，然后他们又去了73号金库，哈格力从里面取出了一个神秘的包裹，脸上露出了凝重的神情。",
+                "en": "Carefully, Harry took some money. Then they went to Vault 713, where Hagrid retrieved a mysterious package, his expression grave."
+            },
+            "Setting Description": {
+                "ch": "白天，古灵阁金库，哈利手中拿着一些金币，哈格力站在73号金库前，手中拿着一个包裹，光线明亮。",
+                "en": "Daytime, Gringotts vault, Harry holding some gold coins, Hagrid standing before Vault 713, holding a package, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "正面，倾斜镜头",
+                "en": "Frontal, dutch angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "哈格力"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Hagrid"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利看着哈格力，表情好奇，哈格力表情凝重，手中拿着包裹。",
+                "en": "Harry looks at Hagrid, expression curious. Hagrid looks serious, holding the package."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "在对角巷，哈利买了上学需要的所有东西。他在书店里挑选了厚厚的魔法书，那些书的封面上闪烁着奇异的光芒。在奥利万德斯的魔杖店，哈利终于找到了属于他的魔杖。",
+                "en": "In Diagon Alley, Harry bought all the supplies he needed for school. He selected thick magical books in the bookstore, their covers shimmering with strange light. At Ollivanders' wand shop, Harry finally found his own wand."
+            },
+            "Setting Description": {
+                "ch": "白天，对角巷书店和魔杖店，书店内摆满了各种魔法书，魔杖店内挂着各种魔杖，光线明亮。",
+                "en": "Daytime, Diagon Alley bookstore and wand shop, the bookstore filled with various magical books, the wand shop displaying numerous wands, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "奥利万德斯"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Ollivander"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利站在书店里，手中拿着一本魔法书，表情专注，然后他走进魔杖店，奥利万德斯递给他一根魔杖。",
+                "en": "Harry stands in the bookstore, holding a magical book, expression focused. Then he enters the wand shop, where Ollivander hands him a wand."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "当他握住那根魔杖时，一股强大的力量涌入他的身体，他知道，这根魔杖和伏地魔的魔杖用的是同一只凤凰的羽毛，这让他既感到自豪又有些不安。最后，他还买了一只猫头鹰，作为他的宠物和信使。",
+                "en": "As he held the wand, a powerful force surged through his body. He realized this wand shared the same phoenix feather as Voldemort's wand, filling him with both pride and unease. Finally, he bought an owl as his pet and messenger."
+            },
+            "Setting Description": {
+                "ch": "白天，对角巷魔杖店，哈利手中握着魔杖，店内挂着各种魔杖，一只猫头鹰停在架子上，光线明亮。",
+                "en": "Daytime, Diagon Alley wand shop, Harry holding the wand, various wands hanging in the shop, an owl perched on a shelf, bright lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "哈利·波特",
+                    "奥利万德斯"
+                ],
+                "en": [
+                    "Harry Potter",
+                    "Ollivander"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "哈利握着魔杖，表情既兴奋又不安，奥利万德斯站在一旁，表情神秘，猫头鹰看着哈利。",
+                "en": "Harry holds the wand, expression both excited and uneasy. Ollivander stands nearby, looking mysterious. The owl watches Harry."
+            }
+        }
+    ]
+}

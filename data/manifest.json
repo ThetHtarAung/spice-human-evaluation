@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "itemId": "Model_A_story_01",
+      "modelId": "Model_A",
+      "storyId": "story_01",
+      "modelBlind": "Model A",
+      "modelReal": "REAL_MODEL_NAME_A",
+      "path": "data/Model_A/story_01",
+      "numFrames": 4
+    },
+    {
+      "itemId": "Model_B_story_01",
+      "modelId": "Model_B",
+      "storyId": "story_01",
+      "modelBlind": "Model B",
+      "modelReal": "REAL_MODEL_NAME_B",
+      "path": "data/Model_B/story_01",
+      "numFrames": 4
+    },
+    {
+      "itemId": "Model_C_story_01",
+      "modelId": "Model_C",
+      "storyId": "story_01",
+      "modelBlind": "Model C",
+      "modelReal": "REAL_MODEL_NAME_C",
+      "path": "data/Model_C/story_01",
+      "numFrames": 4
+    }
+  ]
+}

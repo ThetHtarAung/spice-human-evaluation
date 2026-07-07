@@ -1,0 +1,737 @@
+﻿{
+    "Story_type": {
+        "en": "German Fairy Tales",
+        "ch": "德国童话故事"
+    },
+    "Characters": {
+        "Snow White": {
+            "tag": "unrealistic_human",
+            "name_ch": "白雪公主",
+            "name_en": "Snow White",
+            "prompt_ch": "白雪公主，黑发棕眼，年轻美丽的公主，皮肤白皙如雪，脸颊红润如血，头发乌黑亮丽，戴着一个红色蝴蝶结发箍。她身穿华丽的公主裙，上半身是宝蓝色的胸衣，下半身是明黄色的裙子。",
+            "prompt_en": "Snow White, a young and beautiful princess with black hair and brown eyes, skin as white as snow, cheeks as red as blood, and hair as black as ebony. She wears a red bow headband and a luxurious princess dress with a sapphire blue bodice and a bright yellow skirt.",
+            "num_of_appearances": 15
+        },
+        "New Queen": {
+            "tag": "unrealistic_human",
+            "name_ch": "新王后",
+            "name_en": "New Queen",
+            "prompt_ch": "黑发绿眼，美丽却心胸狭窄的中年美丽女性。她常穿一袭普鲁士蓝色的长裙和黑色的披风，画着深紫色的眼影和红色的口红，气质神秘而威严。",
+            "prompt_en": "A beautiful but narrow-minded middle-aged woman with black hair and green eyes. She often wears a Prussian blue long dress and a black cloak, with deep purple eyeshadow and red lipstick, exuding a mysterious and authoritative aura.",
+            "num_of_appearances": 9
+        },
+        "Dwarf": {
+            "tag": "unrealistic_human",
+            "name_ch": "小矮人",
+            "name_en": "Dwarf",
+            "prompt_ch": "身材矮小但心地善良的小矮人，有一个大大的鼻子，长长的胡子。他穿着简单的红色衣服，脸上总是带着和蔼的笑容。",
+            "prompt_en": "A kind-hearted dwarf with a small stature, a large nose, and a long beard. He wears simple red clothes and always has a gentle smile on his face.",
+            "num_of_appearances": 5
+        },
+        "Prince": {
+            "tag": "unrealistic_human",
+            "name_ch": "王子",
+            "name_en": "Prince",
+            "prompt_ch": "英俊潇洒，棕发黑眼的年轻王子，身穿蓝色的铠甲，披着红色披风，腰间有一柄金色的佩剑。",
+            "prompt_en": "A handsome young prince with brown hair and black eyes, dressed in blue armor and a red cloak, with a golden sword at his waist.",
+            "num_of_appearances": 5
+        },
+        "Queen": {
+            "tag": "unrealistic_human",
+            "name_ch": "王后",
+            "name_en": "Queen",
+            "prompt_ch": "黑发黑眼，美丽而善良的中年美丽女性。她穿着棕色的长裙，头戴王后冠，表情慈祥。",
+            "prompt_en": "A beautiful and kind middle-aged woman with black hair and black eyes. She wears a brown long dress and a queen's crown, with a benevolent expression.",
+            "num_of_appearances": 4
+        },
+        "Servant": {
+            "tag": "unrealistic_human",
+            "name_ch": "仆人",
+            "name_en": "Servant",
+            "prompt_ch": "王后的忠实仆人，身穿浅棕色制服，表情严肃，有点胖的中年男人。有浓密的黑色头发，眉毛和胡子。",
+            "prompt_en": "The queen's loyal servant, a slightly overweight middle-aged man in a light brown uniform, with a serious expression, thick black hair, eyebrows, and beard.",
+            "num_of_appearances": 3
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "在一个寒冷的冬天，王后坐在王宫的窗边为她的女儿做针线活。",
+                "en": "On a cold winter day, the queen sat by the palace window sewing for her daughter."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 安静祥和, 窗外飘着雪花, 窗台上放着针线盒和半成品衣物, 温暖的室内光线",
+                "en": "Daytime, inside the palace, peaceful and serene, snowflakes falling outside the window, a sewing box and unfinished clothes on the windowsill, warm indoor lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王后"
+                ],
+                "en": [
+                    "Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王后坐在窗边的椅子上，专注地做着针线活，表情温柔，窗外的雪花在她身后飘落",
+                "en": "The queen sits on a chair by the window, focused on her sewing, with a gentle expression, snowflakes falling outside behind her."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "突然，她不小心被针刺破了手指，鲜血滴在了窗外飘进来的雪花上。",
+                "en": "Suddenly, she accidentally pricked her finger with the needle, and blood dripped onto the snowflakes drifting in through the window."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 安静, 窗外飘着雪花, 窗台上有针线盒和半成品衣物, 温暖的室内光线",
+                "en": "Daytime, inside the palace, quiet, snowflakes falling outside the window, a sewing box and unfinished clothes on the windowsill, warm indoor lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面, 平视镜头",
+                "en": "Close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王后"
+                ],
+                "en": [
+                    "Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王后的手指被针刺破，鲜血滴在窗台上的雪花上，她微微皱眉，表情惊讶",
+                "en": "The queen's finger is pricked by the needle, blood dripping onto the snowflakes on the windowsill. She frowns slightly, looking surprised."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "王后看着鲜血和白雪，开始祈祷，希望她的女儿能拥有像雪一样白嫩的皮肤，像血一样红润的脸颊，以及像乌木一样黑亮的头发。",
+                "en": "The queen looked at the blood and snow and began to pray, wishing for her daughter to have skin as white as snow, cheeks as red as blood, and hair as black as ebony."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 安静, 窗外飘着雪花, 窗台上有针线盒和半成品衣物, 温暖的室内光线",
+                "en": "Daytime, inside the palace, quiet, snowflakes falling outside the window, a sewing box and unfinished clothes on the windowsill, warm indoor lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面, 平视镜头",
+                "en": "Medium close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王后"
+                ],
+                "en": [
+                    "Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王后双手合十，闭着眼睛祈祷，表情虔诚，窗外的雪花继续飘落",
+                "en": "The queen clasps her hands together, eyes closed in prayer, with a devout expression, snowflakes continuing to fall outside."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "王后的女儿长大后，真的拥有了她所希望的美丽外貌，于是她给女儿取名为白雪公主。",
+                "en": "When the queen's daughter grew up, she indeed possessed the beautiful appearance her mother had wished for, so she named her Snow White."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫花园, 阳光明媚, 花园中有盛开的花朵和喷泉, 明亮的阳光",
+                "en": "Daytime, palace garden, sunny, blooming flowers and a fountain in the garden, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "白雪公主",
+                    "王后"
+                ],
+                "en": [
+                    "Snow White",
+                    "Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "白雪公主站在花园中，王后站在她身旁，白雪公主皮肤白皙，脸颊红润，头发乌黑亮丽，王后表情欣慰",
+                "en": "Snow White stands in the garden, the queen beside her. Snow White has fair skin, rosy cheeks, and lustrous black hair. The queen looks pleased."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "然而，白雪公主的母亲在她年幼时就去世了。",
+                "en": "However, Snow White's mother passed away when she was young."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 安静, 墙上挂着王后的画像, 桌上放着鲜花, 柔和的光线",
+                "en": "Daytime, inside the palace, quiet, the queen's portrait hanging on the wall, flowers on the table, soft lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 侧面, 平视镜头",
+                "en": "Medium shot, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "白雪公主"
+                ],
+                "en": [
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "白雪公主站在母亲的画像前，表情悲伤，眼中含泪",
+                "en": "Snow White stands before her mother's portrait, looking sorrowful with tears in her eyes."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "国王后来再婚，新王后虽然漂亮，但心地却很邪恶。她有一面魔镜，经常问它谁是世界上最漂亮的女人，魔镜总是回答是她。",
+                "en": "Later, the king remarried. The new queen was beautiful but evil-hearted. She had a magic mirror and often asked it who the fairest woman in the world was, and the mirror always answered that it was her."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 王后寝宫, 阴暗神秘, 墙上挂着黑色帷幕，桌上放着魔镜, 昏暗的烛光",
+                "en": "Nighttime, queen's chamber, dark and mysterious, black curtains on the wall, magic mirror on the table, dim candlelight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面, 低角度镜头",
+                "en": "Medium close up, front view, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后"
+                ],
+                "en": [
+                    "New Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后站在魔镜前，表情得意，魔镜中映出她的面孔",
+                "en": "The new queen stands before the magic mirror, looking smug. Her face is reflected in the mirror."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "然而白雪公主长大后，魔镜告诉王后，白雪公主比她更漂亮。",
+                "en": "But as Snow White grew up, the mirror told the queen that Snow White was fairer than her."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 王后寝宫, 阴暗神秘, 墙上挂着黑色帷幕，桌上放着魔镜, 昏暗的烛光",
+                "en": "Nighttime, queen's chamber, dark and mysterious, black curtains on the wall, magic mirror on the table, dim candlelight"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面, 平视镜头",
+                "en": "Close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后"
+                ],
+                "en": [
+                    "New Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后表情震惊，魔镜中映出白雪公主的面孔",
+                "en": "The new queen looks shocked. Snow White's face is reflected in the mirror."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "王后非常嫉妒，于是她命令仆人把白雪公主带到森林里杀死。",
+                "en": "The queen was filled with jealousy and ordered the servant to take Snow White into the forest and kill her."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 紧张, 王后站在王座前，仆人跪在她面前, 明亮的光线",
+                "en": "Daytime, inside the palace, tense, the queen standing before the throne, the servant kneeling before her, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 侧面, 高角度镜头",
+                "en": "Medium shot, side view, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后",
+                    "仆人"
+                ],
+                "en": [
+                    "New Queen",
+                    "Servant"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后表情愤怒，手指着仆人，仆人低头跪在地上，表情惊恐",
+                "en": "The new queen looks angry, pointing at the servant. The servant bows his head, kneeling in fear."
+            }
+        },
+     
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "之后他留在了森林里，猎杀了鹿的内脏回去交差。",
+                "en": "Afterward, he stayed in the forest, hunted a deer, and brought back its entrails as proof."
+            },
+            "Setting Description": {
+                "ch": "白天, 森林中, 安静, 树木茂密，地上有落叶和鹿的尸体, 自然光线",
+                "en": "Daytime, forest, quiet, dense trees, fallen leaves and a deer's corpse on the ground, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面, 平视镜头",
+                "en": "Medium close up, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "仆人"
+                ],
+                "en": [
+                    "Servant"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "仆人手持匕首，表情沉重，蹲在鹿的尸体旁处理内脏",
+                "en": "The servant holds a dagger, looking somber, crouching beside the deer's corpse to handle its entrails."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "白雪公主在森林里迷了路，最后来到了小矮人的家。",
+                "en": "Snow White got lost in the forest and eventually came upon the dwarfs' house."
+            },
+            "Setting Description": {
+                "ch": "白天, 森林中, 安静, 树木茂密，远处有小矮人的房子, 自然光线",
+                "en": "Daytime, forest, quiet, dense trees, the dwarfs' house visible in the distance, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 背面, 鸟瞰镜头",
+                "en": "Wide shot, rear view, bird's eye view shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "白雪公主"
+                ],
+                "en": [
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "白雪公主在森林中行走，表情迷茫，远处的小矮人房子若隐若现",
+                "en": "Snow White walks through the forest, looking lost. The dwarfs' house is faintly visible in the distance."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "小矮人非常善良，他让白雪公主住在他们家里，并照顾她。",
+                "en": "The dwarfs were very kind and let Snow White stay in their home, taking care of her."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 温馨, 房间里有简单的家具和壁炉, 温暖的壁炉火光",
+                "en": "Daytime, dwarfs' home, cozy, simple furniture and a fireplace in the room, warm firelight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小矮人",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Dwarf",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小矮人站在白雪公主面前，表情和蔼，白雪公主坐在椅子上，表情放松",
+                "en": "The dwarf stands before Snow White, looking kind. Snow White sits on a chair, relaxed."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "王后以为白雪公主已经死了，高兴了一阵子。",
+                "en": "The queen thought Snow White was dead and was happy for a while."
+            },
+            "Setting Description": {
+                "ch": "白天, 王后寝宫, 得意, 墙上挂着黑色帷幕，桌上放着魔镜, 明亮的光线",
+                "en": "Daytime, queen's chamber, smug, black curtains on the wall, magic mirror on the table, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面, 平视镜头",
+                "en": "Medium close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后"
+                ],
+                "en": [
+                    "New Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后站在魔镜前，表情得意，嘴角上扬",
+                "en": "The new queen stands before the magic mirror, looking smug with a smirk."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "但当她询问魔镜时，魔镜告诉她，白雪公主还活着，而且比以前更漂亮。",
+                "en": "But when she asked the mirror, it told her Snow White was still alive and fairer than ever."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 王后寝宫, 阴暗神秘, 墙上挂着黑色帷幕，桌上放着魔镜, 昏暗的烛光",
+                "en": "Nighttime, queen's chamber, dark and mysterious, black curtains on the wall, magic mirror on the table, dim candlelight"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面, 平视镜头",
+                "en": "Close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后",
+                    "白雪公主"
+                ],
+                "en": [
+                    "New Queen",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后表情震惊，魔镜中再次映出白雪公主的面孔",
+                "en": "The new queen looks shocked. Snow White's face is reflected in the mirror again."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "于是，王后决定亲自动手。她第一次假装成老太婆，用一根有毒的带子勒死了白雪公主。",
+                "en": "So, the queen decided to act herself. The first time, she disguised herself as an old woman and tried to strangle Snow White with a poisoned lace."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 紧张, 房间里有简单的家具和壁炉, 自然光线",
+                "en": "Daytime, dwarfs' home, tense, simple furniture and a fireplace in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面, 平视镜头",
+                "en": "Medium close up, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后",
+                    "白雪公主"
+                ],
+                "en": [
+                    "New Queen",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后假扮的老太婆站在白雪公主身后，用带子勒住她的脖子，白雪公主表情痛苦，挣扎着想要挣脱",
+                "en": "The new queen, disguised as an old woman, stands behind Snow White, tightening a lace around her neck. Snow White looks pained, struggling to break free."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "但小矮人发现并救活了她。",
+                "en": "But the dwarfs found her and revived her."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 紧张, 房间里有简单的家具和壁炉, 自然光线",
+                "en": "Daytime, dwarfs' home, tense, simple furniture and a fireplace in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小矮人",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Dwarf",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小矮人蹲在白雪公主身旁，表情焦急，手中拿着解药，白雪公主慢慢苏醒",
+                "en": "The dwarf crouches beside Snow White, looking anxious, holding an antidote. Snow White slowly wakes up."
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "第二次，王后又假装成老太婆，用一把有毒的梳子毒死了白雪公主。",
+                "en": "The second time, the queen disguised herself as an old woman again and poisoned Snow White with a poisoned comb."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 紧张, 房间里有简单的家具和壁炉, 自然光线",
+                "en": "Daytime, dwarfs' home, tense, simple furniture and a fireplace in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面, 平视镜头",
+                "en": "Medium close up, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后",
+                    "白雪公主"
+                ],
+                "en": [
+                    "New Queen",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后假扮的老太婆站在白雪公主身后，将有毒的梳子插进她的头发，白雪公主表情痛苦",
+                "en": "The new queen, disguised as an old woman, stands behind Snow White, inserting a poisoned comb into her hair. Snow White looks pained."
+            }
+        },
+        {
+            "index": 18,
+            "Plot Correspondence": {
+                "ch": "但小矮人再次救活了她。",
+                "en": "But the dwarfs revived her again."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 紧张, 房间里有简单的家具和壁炉, 自然光线",
+                "en": "Daytime, dwarfs' home, tense, simple furniture and a fireplace in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小矮人",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Dwarf",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小矮人再次蹲在白雪公主身旁，表情焦急，手中拿着解药，白雪公主慢慢苏醒",
+                "en": "The dwarf crouches beside Snow White again, looking anxious, holding an antidote. Snow White slowly wakes up."
+            }
+        },
+        {
+            "index": 19,
+            "Plot Correspondence": {
+                "ch": "第三次，王后假装成农妇，用一个有毒的苹果毒死了白雪公主。",
+                "en": "The third time, the queen disguised herself as a farmer's wife and poisoned Snow White with a poisoned apple."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 紧张, 房间里有简单的家具和壁炉, 自然光线",
+                "en": "Daytime, dwarfs' home, tense, simple furniture and a fireplace in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面, 平视镜头",
+                "en": "Medium close up, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "新王后",
+                    "白雪公主"
+                ],
+                "en": [
+                    "New Queen",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "新王后假扮的农妇站在白雪公主面前，递给她一个有毒的苹果，白雪公主表情天真，接过苹果咬了一口",
+                "en": "The new queen, disguised as a farmer's wife, stands before Snow White, offering her a poisoned apple. Snow White looks innocent, taking a bite."
+            }
+        },
+        {
+            "index": 20,
+            "Plot Correspondence": {
+                "ch": "这一次，小矮人无法救活她，只能把她放在玻璃棺材里。",
+                "en": "This time, the dwarfs couldn't revive her and had to place her in a glass coffin."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 悲伤, 房间里有简单的家具和玻璃棺材, 自然光线",
+                "en": "Daytime, dwarfs' home, sorrowful, simple furniture and a glass coffin in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小矮人",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Dwarf",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小矮人站在玻璃棺材旁，悲伤地哭泣，白雪公主躺在棺材中，表情安详",
+                "en": "The dwarf stands by the glass coffin, weeping sadly. Snow White lies inside the coffin, looking peaceful."
+            }
+        },
+        {
+            "index": 21,
+            "Plot Correspondence": {
+                "ch": "许多年后，一个王子也在森林里迷路，来到了小矮人的家。",
+                "en": "Many years later, a prince also got lost in the forest and came upon the dwarfs' house."
+            },
+            "Setting Description": {
+                "ch": "白天, 森林中, 安静, 树木茂密，远处有小矮人的房子, 自然光线",
+                "en": "Daytime, forest, quiet, dense trees, the dwarfs' house visible in the distance, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 背面, 鸟瞰镜头",
+                "en": "Wide shot, rear view, bird's eye view shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王子"
+                ],
+                "en": [
+                    "Prince"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王子在森林中行走，困惑地伸出头探望，远处的小矮人房子若隐若现",
+                "en": "The prince walks through the forest, looking around in confusion. The dwarfs' house is faintly visible in the distance."
+            }
+        },
+        {
+            "index": 22,
+            "Plot Correspondence": {
+                "ch": "他在玻璃棺材中看到了白雪公主的美丽，非常爱慕她。",
+                "en": "He saw Snow White's beauty in the glass coffin and fell in love with her."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 安静, 房间里有简单的家具和玻璃棺材, 自然光线",
+                "en": "Daytime, dwarfs' home, quiet, simple furniture and a glass coffin in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面, 平视镜头",
+                "en": "Medium close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王子",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Prince",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王子抚摸着玻璃棺材，凝视着白雪公主的面孔",
+                "en": "The prince touches the glass coffin, gazing at Snow White's face."
+            }
+        },
+        {
+            "index": 23,
+            "Plot Correspondence": {
+                "ch": "他请求小矮人让他带走白雪公主，小矮人们同意了。",
+                "en": "He asked the dwarfs to let him take Snow White, and they agreed."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 温馨, 房间里有简单的家具和玻璃棺材, 自然光线",
+                "en": "Daytime, dwarfs' home, cozy, simple furniture and a glass coffin in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王子",
+                    "小矮人"
+                ],
+                "en": [
+                    "Prince",
+                    "Dwarf"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王子站在小矮人面前，表情诚恳，小矮人点头同意",
+                "en": "The prince stands before the dwarf, looking earnest. The dwarf nods in agreement."
+            }
+        },
+        {
+            "index": 24,
+            "Plot Correspondence": {
+                "ch": "在王子准备带走白雪公主的时候，毒苹果从她的嘴里掉了出来，她醒了过来。",
+                "en": "As the prince prepared to take Snow White away, the poisoned apple fell from her mouth, and she woke up."
+            },
+            "Setting Description": {
+                "ch": "白天, 小矮人家中, 惊喜, 房间里有简单的家具和玻璃棺材, 自然光线",
+                "en": "Daytime, dwarfs' home, surprised, simple furniture and a glass coffin in the room, natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面, 平视镜头",
+                "en": "Medium close up, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王子",
+                    "白雪公主"
+                ],
+                "en": [
+                    "Prince",
+                    "Snow White"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王子扶起白雪公主，毒苹果从她嘴里掉出，白雪公主慢慢睁开眼睛，表情惊讶",
+                "en": "The prince helps Snow White sit up. The poisoned apple falls from her mouth, and Snow White slowly opens her eyes, looking surprised."
+            }
+        },
+        {
+            "index": 25,
+            "Plot Correspondence": {
+                "ch": "王子告诉她发生了什么，并请求她嫁给他。白雪公主同意了，他们举行了盛大的婚礼。王后也来参加了婚礼，当她看到新娘是白雪公主时，她气得昏了过去，最后在嫉妒和痛苦中死去。白雪公主和王子过上了幸福的生活，他们一直快乐地生活在一起。",
+                "en": "The prince told her what had happened and asked her to marry him. Snow White agreed, and they held a grand wedding. The queen also attended. When she saw that the bride was Snow White, she fainted in anger and eventually died of jealousy and bitterness. Snow White and the prince lived happily ever after."
+            },
+            "Setting Description": {
+                "ch": "白天, 王宫内, 喜庆, 装饰华丽的婚礼现场，宾客满堂, 明亮的光线",
+                "en": "Daytime, palace, festive, lavishly decorated wedding venue filled with guests, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "王子",
+                    "白雪公主",
+                    "新王后"
+                ],
+                "en": [
+                    "Prince",
+                    "Snow White",
+                    "New Queen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "王子和白雪公主站在婚礼台上，表情幸福，新王后站在台下，表情震惊，昏倒往后仰去",
+                "en": "The prince and Snow White stand at the wedding altar, looking happy. The new queen stands below, looking shocked, then faints backward."
+            }
+        }
+    ]
+}

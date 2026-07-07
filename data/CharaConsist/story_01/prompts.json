@@ -1,0 +1,653 @@
+﻿{
+    "Story_type": {
+        "en": "Children's Picture Books",
+        "ch": "儿童绘本"
+    },
+    "Characters": {
+        "Little Brown Rabbit": {
+            "tag": "non_human",
+            "name_ch": "小栗色兔子",
+            "name_en": "Little Brown Rabbit",
+            "prompt_ch": "一只可爱的小兔子，毛色栗色，眼睛明亮，小巧可爱，活泼好动。他的表情总是充满好奇。",
+            "prompt_en": "An adorable little rabbit with chestnut fur, bright eyes, small and cute, lively and active. His expression is always full of curiosity.",
+            "num_of_appearances": 16
+        },
+        "Big Brown Rabbit": {
+            "tag": "non_human",
+            "name_ch": "大栗色兔子",
+            "name_en": "Big Brown Rabbit",
+            "prompt_ch": "一只温暖而慈祥的大兔子，毛色栗色，高大强壮。他的表情总是充满关爱和耐心。",
+            "prompt_en": "A warm and kind big rabbit with chestnut fur, tall and strong. His expression is always full of love and patience.",
+            "num_of_appearances": 10
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "小兔子该上床睡觉了，可是他紧紧的抓住大兔子的耳朵不放。",
+                "en": "It's time for the little rabbit to go to bed, but he tightly holds onto the big rabbit's ears and refuses to let go."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子",
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit",
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子坐在床上，紧紧抓住大栗色兔子的耳朵，表情调皮可爱。大栗色兔子坐在床边，表情温柔，微微低头看着小兔子",
+                "en": "The little brown rabbit sits on the bed, tightly holding the big brown rabbit's ears, with a playful and cute expression. The big brown rabbit sits by the bed, looking gentle, slightly lowering his head to look at the little rabbit"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "他要大兔子好好听他说。他说：“猜猜我有多爱你？”",
+                "en": "He wants the big rabbit to listen carefully. He says, 'Guess how much I love you?'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情期待，眼睛明亮，嘴角微微上扬",
+                "en": "Close-up of the little brown rabbit's face, with an expectant expression, bright eyes, and a slight smile"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "大兔子说：“哦，这我可猜不出来。”",
+                "en": "The big rabbit says, 'Oh, I couldn't possibly guess that.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子微微一笑，眼神充满关爱，轻轻摇头",
+                "en": "The big brown rabbit smiles slightly, his eyes full of love, gently shaking his head"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "小兔子说：“这么多。”他把手臂张开，开的不能再开。",
+                "en": "The little rabbit says, 'This much.' He stretches his arms as wide as they can go."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子站在床上，双臂张开到最大，表情认真，眼神充满爱意",
+                "en": "The little brown rabbit stands on the bed, arms stretched as wide as possible, with a serious expression and eyes full of love"
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "大兔子的手臂要长得多，“我爱你有这么多。”他说。",
+                "en": "The big rabbit's arms are much longer. 'I love you this much,' he says."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子站在床边，双臂张开，比小兔子的手臂长得多，表情温柔，眼神充满爱意",
+                "en": "The big brown rabbit stands by the bed, arms stretched much wider than the little rabbit's, with a gentle expression and eyes full of love"
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "“嗯，这真是很多。”小兔子想。",
+                "en": "'Hmm, that is a lot,' the little rabbit thinks."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情惊讶，眼睛睁大，嘴巴微张",
+                "en": "Close-up of the little brown rabbit's face, with a surprised expression, wide eyes, and slightly open mouth"
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "“我的手举得有多高我就有多爱你。”小兔子说。",
+                "en": "'I love you as high as I can reach,' says the little rabbit."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子高举双手，表情认真，眼神坚定",
+                "en": "The little brown rabbit raises his hands high, with a serious expression and determined eyes"
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "“我的手举得有多高我就有多爱你。”大兔子说。",
+                "en": "'I love you as high as I can reach,' says the big rabbit."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子高举双手，比小兔子的手举得更高，表情温柔，眼神充满爱意",
+                "en": "The big brown rabbit raises his hands even higher than the little rabbit's, with a gentle expression and eyes full of love"
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "这可真高，小兔子想，我要是有那么长的手臂就好了。",
+                "en": "'That is very high,' the little rabbit thinks. 'I wish I had arms that long.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情羡慕，眼睛望着大兔子高举的双手",
+                "en": "Close-up of the little brown rabbit's face, with an admiring expression, eyes gazing at the big rabbit's raised hands"
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "小兔子又有了一个好主意，他打了个滚倒立起来，把脚撑在树干上。",
+                "en": "The little rabbit has another good idea. He rolls over and stands upside down, propping his feet against the tree trunk."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子倒立在床上，双脚撑在床头的树干装饰上，表情得意，眼神调皮",
+                "en": "The little brown rabbit stands upside down on the bed, feet propped against the tree trunk decoration at the headboard, with a proud expression and playful eyes"
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "“我爱你，直到我的脚趾头。”他说。",
+                "en": "'I love you up to my toes,' he says."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子倒立着，表情认真，眼神坚定，手指着自己的脚趾头",
+                "en": "The little brown rabbit stands upside down, pointing at his toes, with a serious expression and determined eyes"
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "大兔子把小兔子抱起来，甩过自己的头顶：“我爱你一直到你的脚趾头。”",
+                "en": "The big rabbit picks up the little rabbit and swings him over his head: 'I love you right up to your toes.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子",
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit",
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子把小栗色兔子抱起来，甩过自己的头顶，小兔子表情兴奋，大兔子表情温柔，眼神充满爱意",
+                "en": "The big brown rabbit picks up the little brown rabbit and swings him over his head. The little rabbit looks excited, while the big rabbit looks gentle, with eyes full of love"
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "“我跳得多高就有多爱你。”小兔子笑着跳上跳下。",
+                "en": "'I love you as high as I can jump,' says the little rabbit, laughing and hopping up and down."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子在床上跳上跳下，表情开心，笑容灿烂",
+                "en": "The little brown rabbit hops up and down on the bed, with a happy expression and a bright smile"
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "“我跳得多高就有多爱你。”大兔子也笑着跳起来，他跳得这么高，耳朵都碰到了树枝了。",
+                "en": "'I love you as high as I can jump,' says the big rabbit, laughing and jumping too. He jumps so high his ears touch the branches."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子在床边跳起来，跳得非常高，耳朵碰到了天花板上的树枝装饰，表情开心，笑容温暖",
+                "en": "The big brown rabbit jumps by the bed, jumping so high his ears touch the branch decoration on the ceiling, with a happy expression and a warm smile"
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "这真是跳得太棒了，小兔子想，我要是能跳得这么高就好了。",
+                "en": "'That is an amazing jump,' thinks the little rabbit. 'I wish I could jump that high.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情崇拜，眼睛闪闪发光，嘴巴微张",
+                "en": "Close-up of the little brown rabbit's face, with an admiring expression, sparkling eyes, and slightly open mouth"
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "“我爱你，像这条小路伸到小河那么远！” 小兔子喊起来。",
+                "en": "'I love you all the way down the lane to the river!' cries the little rabbit."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子站在床上，手指着窗外的小路，表情认真，眼神坚定",
+                "en": "The little brown rabbit stands on the bed, pointing at the lane outside the window, with a serious expression and determined eyes"
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "“我爱你，远到跨过小河再翻过山丘！” 大兔子说。",
+                "en": "'I love you across the river and over the hills!' says the big rabbit."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子站在床边，手指着窗外更远的地方，表情温柔，眼神充满爱意",
+                "en": "The big brown rabbit stands by the bed, pointing at the distant landscape outside the window, with a gentle expression and eyes full of love"
+            }
+        },
+        {
+            "index": 18,
+            "Plot Correspondence": {
+                "ch": "那可真远，小兔子想。他太困了，想不出更多的东西来了。",
+                "en": "'That is very far,' thinks the little rabbit. He is too sleepy to think of anything else."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情困倦，眼睛半闭，嘴巴微张",
+                "en": "Close-up of the little brown rabbit's face, with a sleepy expression, half-closed eyes, and slightly open mouth"
+            }
+        },
+        {
+            "index": 19,
+            "Plot Correspondence": {
+                "ch": "他望着灌木丛那边的夜空。没有什么比黑沉沉的天空更远了。",
+                "en": "He looks up at the night sky beyond the bushes. Nothing is as far as the dark sky."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子坐在床上，望着窗外的夜空，表情宁静，眼神深邃",
+                "en": "The little brown rabbit sits on the bed, gazing at the night sky outside the window, with a peaceful expression and deep eyes"
+            }
+        },
+        {
+            "index": 20,
+            "Plot Correspondence": {
+                "ch": "“我爱你一直到月亮那里。”说完，小兔子闭上了眼睛。",
+                "en": "'I love you right up to the moon,' says the little rabbit, closing his eyes."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小栗色兔子的脸部特写，表情安详，眼睛闭上，嘴角微微上扬",
+                "en": "Close-up of the little brown rabbit's face, with a serene expression, closed eyes, and a slight smile"
+            }
+        },
+        {
+            "index": 21,
+            "Plot Correspondence": {
+                "ch": "“哦，这真是很远。”大兔子说，“非常非常的远。”",
+                "en": "'Oh, that is very far,' says the big rabbit. 'Very, very far.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子的脸部特写，表情温柔，眼神充满爱意，嘴角微微上扬",
+                "en": "Close-up of the big brown rabbit's face, with a gentle expression, eyes full of love, and a slight smile"
+            }
+        },
+        {
+            "index": 22,
+            "Plot Correspondence": {
+                "ch": "他把小兔子放到用树叶堆起来的床上，低下头来亲了亲小兔子，对他说晚安。",
+                "en": "He tucks the little rabbit into the bed made of leaves, bends down, kisses him goodnight."
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子",
+                    "小栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit",
+                    "Little Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子把小栗色兔子轻轻放到床上，低下头亲了亲小兔子的额头，表情温柔，眼神充满爱意。小兔子表情安详，已经睡着",
+                "en": "The big brown rabbit gently tucks the little brown rabbit into the bed, bends down to kiss his forehead, with a gentle expression and eyes full of love. The little rabbit looks serene, already asleep"
+            }
+        },
+        {
+            "index": 23,
+            "Plot Correspondence": {
+                "ch": "然后他躺在小兔子的身边，带着微笑轻声地说：“我爱你，一直远到月亮那里，再从月亮那里绕回来。”",
+                "en": "Then he lies down beside the little rabbit, smiles, and whispers, 'I love you to the moon and back.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，小兔子的卧室，温馨的氛围，柔软的床铺，床头柜上放着一盏小夜灯，墙上挂着一幅星空画，窗外可以看到月亮和星星，柔和的黄色光线",
+                "en": "Nighttime, the little rabbit's bedroom, cozy atmosphere, soft bedding, a small night light on the bedside table, a starry sky painting on the wall, the moon and stars visible outside the window, soft yellow lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "大栗色兔子"
+                ],
+                "en": [
+                    "Big Brown Rabbit"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "大栗色兔子躺在小兔子身边，表情温柔，眼神充满爱意，嘴角带着微笑，轻声说着话",
+                "en": "The big brown rabbit lies beside the little rabbit, with a gentle expression, eyes full of love, a smile on his face, whispering softly"
+            }
+        }
+    ]
+}

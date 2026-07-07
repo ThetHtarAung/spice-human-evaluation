@@ -1,0 +1,46 @@
+{
+  "title": "Practice Story 01",
+  "summary": "Replace this sample with the real ViStoryBench story introduction.",
+  "characters": [
+    {
+      "name": "Character 1",
+      "description": "Replace with the real character description.",
+      "ref": "refs/01.jpg"
+    },
+    {
+      "name": "Character 2",
+      "description": "Replace with the real character description.",
+      "ref": "refs/02.jpg"
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "shot_01",
+      "plot": "Replace with the plot for shot 1.",
+      "setting": "Replace with setting description.",
+      "static": "Replace with static shot description.",
+      "frame": "frames/shot_01.avif"
+    },
+    {
+      "shot_id": "shot_02",
+      "plot": "Replace with the plot for shot 2.",
+      "setting": "Replace with setting description.",
+      "static": "Replace with static shot description.",
+      "frame": "frames/shot_02.avif"
+    },
+    {
+      "shot_id": "shot_03",
+      "plot": "Replace with the plot for shot 3.",
+      "setting": "Replace with setting description.",
+      "static": "Replace with static shot description.",
+      "frame": "frames/shot_03.avif"
+    },
+    {
+      "shot_id": "shot_04",
+      "plot": "Replace with the plot for shot 4.",
+      "setting": "Replace with setting description.",
+      "static": "Replace with static shot description.",
+      "frame": "frames/shot_04.avif"
+    }
+  ]
+}
