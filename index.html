@@ -5,7 +5,503 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Visual Story Consistency Human Evaluation</title>
 <style>
-*{box-sizing:border-box} :root{--bg:#f4f6f8;--card:#fff;--text:#1e2d3d;--muted:#5f6b77;--light:#eef1f4;--border:#d6dce2;--accent:#1e2d3d;--danger:#b3261e;--warn:#fff3cd;--warntext:#7a5b00;--ok:#e8f5e9;--oktext:#1b5e20;--r:14px;--rs:9px} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}button,input,select{font-family:inherit}button:disabled{cursor:not-allowed;opacity:.45}input[type=checkbox]{accent-color:var(--accent)}input[type=text],select{width:100%;padding:10px 12px;border-radius:var(--rs);border:1px solid var(--border);background:#fff;color:var(--text);font-size:14px;outline:none}.page{max-width:1050px;margin:0 auto;padding:24px 16px}.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px;box-shadow:0 1px 8px rgba(0,0,0,.03)}.card+.card{margin-top:14px}.label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}h1{font-size:24px;margin:6px 0 8px;font-weight:650}h2{font-size:19px;margin:6px 0 8px;font-weight:650}h3{font-size:15px;margin:0 0 6px;font-weight:650}p{line-height:1.6}.muted{color:var(--muted);font-size:14px;line-height:1.55}.btn-primary{cursor:pointer;padding:10px 22px;border-radius:var(--rs);border:none;background:var(--accent);color:white;font-size:14px;font-weight:600}.btn-secondary{cursor:pointer;padding:10px 18px;border-radius:var(--rs);border:1px solid var(--border);background:white;color:var(--text);font-size:14px;font-weight:500}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row-between{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.notice{background:var(--warn);color:var(--warntext);border-radius:var(--rs);padding:12px 14px;font-size:13px;line-height:1.5}.success{background:var(--ok);color:var(--oktext);border-radius:var(--rs);padding:12px 14px;font-size:13px;line-height:1.5}.error{background:#fdecea;color:var(--danger);border-radius:var(--rs);padding:12px 14px;font-size:13px;line-height:1.5}.stat{background:var(--light);border-radius:var(--rs);padding:14px;text-align:center}.stat-number{font-size:21px;font-weight:650}.stat-label{font-size:12px;color:var(--muted)}.refs{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}.ref-card{background:var(--light);border:1px solid var(--border);border-radius:var(--rs);padding:10px}.ref-img{width:100%;aspect-ratio:1/1;object-fit:contain;background:white;border-radius:8px;border:1px solid var(--border)}.frame-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.frame-card{background:var(--light);border:1px solid var(--border);border-radius:var(--rs);padding:8px}.frame-img{width:100%;aspect-ratio:4/3;object-fit:contain;background:white;border-radius:7px;border:1px solid var(--border)}.fallback{width:100%;aspect-ratio:4/3;border:1px solid var(--border);border-radius:7px;background:#dce8f7;display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.45);font-size:11px;font-weight:650;text-align:center;padding:8px}.shot-caption{font-size:11px;color:var(--muted);line-height:1.35;margin-top:5px}.question{padding:16px 0;border-top:1px solid var(--border)}.question:first-child{border-top:none;padding-top:4px}.q-title{font-size:14px;font-weight:650;margin-bottom:3px}.q-desc{font-size:12px;color:var(--muted);line-height:1.45}.q-head{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.na-btn{cursor:pointer;flex-shrink:0;font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;border:1px solid var(--border);background:white;color:var(--muted)}.na-btn.active{border-color:var(--accent);background:var(--accent);color:white}.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.scale.disabled{opacity:.28;pointer-events:none}.scale-btn{cursor:pointer;min-height:58px;padding:7px 4px;border-radius:var(--rs);border:1px solid var(--border);background:var(--light);color:var(--muted);text-align:center}.scale-btn.selected{border:2px solid var(--accent);background:var(--accent);color:white}.scale-num{font-size:17px;font-weight:650}.scale-label{font-size:10px;margin-top:3px;line-height:1.15}.progress-wrap{display:flex;align-items:center;gap:10px;margin-bottom:14px}.progress-bar{flex:1;height:5px;background:var(--border);border-radius:4px;overflow:hidden}.progress-inner{height:100%;background:var(--accent)}.shot-focus{display:grid;grid-template-columns:minmax(260px,1fr) minmax(260px,1fr);gap:16px}.shot-focus img{width:100%;max-height:60vh;object-fit:contain;background:white;border:1px solid var(--border);border-radius:var(--rs)}pre{white-space:pre-wrap;background:var(--light);padding:12px;border-radius:var(--rs);font-size:12px}@media(max-width:760px){.grid-3,.shot-focus{grid-template-columns:1fr}.scale{grid-template-columns:1fr}.frame-grid{grid-template-columns:repeat(3,1fr)}.row-between{flex-direction:column}}
+  <style>
+*{box-sizing:border-box}
+
+:root{
+  --bg:#f4f6f8;
+  --card:#fff;
+  --text:#1e2d3d;
+  --muted:#5f6b77;
+  --light:#eef1f4;
+  --border:#d6dce2;
+  --accent:#1e2d3d;
+  --danger:#b3261e;
+  --warn:#fff3cd;
+  --warntext:#7a5b00;
+  --ok:#e8f5e9;
+  --oktext:#1b5e20;
+  --r:14px;
+  --rs:9px;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+button,input,select{
+  font-family:inherit;
+}
+
+button:disabled{
+  cursor:not-allowed;
+  opacity:.45;
+}
+
+input[type=checkbox]{
+  accent-color:var(--accent);
+}
+
+input[type=text],
+select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:var(--rs);
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--text);
+  font-size:14px;
+  outline:none;
+}
+
+/* Wider page, not too narrow in the middle */
+.page{
+  max-width:1280px;
+  margin:0 auto;
+  padding:24px 28px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:22px;
+  box-shadow:0 1px 8px rgba(0,0,0,.03);
+}
+
+.card+.card{
+  margin-top:14px;
+}
+
+.label{
+  font-size:11px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+h1{
+  font-size:24px;
+  margin:6px 0 8px;
+  font-weight:650;
+}
+
+h2{
+  font-size:19px;
+  margin:6px 0 8px;
+  font-weight:650;
+}
+
+h3{
+  font-size:15px;
+  margin:0 0 6px;
+  font-weight:650;
+}
+
+p{
+  line-height:1.6;
+}
+
+.muted{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.btn-primary{
+  cursor:pointer;
+  padding:10px 22px;
+  border-radius:var(--rs);
+  border:none;
+  background:var(--accent);
+  color:white;
+  font-size:14px;
+  font-weight:600;
+}
+
+.btn-secondary{
+  cursor:pointer;
+  padding:10px 18px;
+  border-radius:var(--rs);
+  border:1px solid var(--border);
+  background:white;
+  color:var(--text);
+  font-size:14px;
+  font-weight:500;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.row-between{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.notice{
+  background:var(--warn);
+  color:var(--warntext);
+  border-radius:var(--rs);
+  padding:12px 14px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.success{
+  background:var(--ok);
+  color:var(--oktext);
+  border-radius:var(--rs);
+  padding:12px 14px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.error{
+  background:#fdecea;
+  color:var(--danger);
+  border-radius:var(--rs);
+  padding:12px 14px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.stat{
+  background:var(--light);
+  border-radius:var(--rs);
+  padding:14px;
+  text-align:center;
+}
+
+.stat-number{
+  font-size:21px;
+  font-weight:650;
+}
+
+.stat-label{
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* Reference image layout */
+.refs{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:12px;
+}
+
+.ref-card{
+  background:var(--light);
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  padding:10px;
+}
+
+.ref-img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  background:white;
+  border-radius:8px;
+  border:1px solid var(--border);
+}
+
+/* Original frame grid, still used by other pages if needed */
+.frame-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.frame-card{
+  background:var(--light);
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  padding:8px;
+}
+
+.frame-img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  background:white;
+  border-radius:7px;
+  border:1px solid var(--border);
+}
+
+.fallback{
+  width:100%;
+  aspect-ratio:4/3;
+  border:1px solid var(--border);
+  border-radius:7px;
+  background:#dce8f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(0,0,0,.45);
+  font-size:11px;
+  font-weight:650;
+  text-align:center;
+  padding:8px;
+}
+
+.shot-caption{
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.35;
+  margin-top:5px;
+}
+
+/* Questions */
+.question{
+  padding:16px 0;
+  border-top:1px solid var(--border);
+}
+
+.question:first-child{
+  border-top:none;
+  padding-top:4px;
+}
+
+.q-title{
+  font-size:14px;
+  font-weight:650;
+  margin-bottom:3px;
+}
+
+.q-desc{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.q-head{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.na-btn{
+  cursor:pointer;
+  flex-shrink:0;
+  font-size:11px;
+  font-weight:700;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:white;
+  color:var(--muted);
+}
+
+.na-btn.active{
+  border-color:var(--accent);
+  background:var(--accent);
+  color:white;
+}
+
+.scale{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:7px;
+}
+
+.scale.disabled{
+  opacity:.28;
+  pointer-events:none;
+}
+
+.scale-btn{
+  cursor:pointer;
+  min-height:58px;
+  padding:7px 4px;
+  border-radius:var(--rs);
+  border:1px solid var(--border);
+  background:var(--light);
+  color:var(--muted);
+  text-align:center;
+}
+
+.scale-btn.selected{
+  border:2px solid var(--accent);
+  background:var(--accent);
+  color:white;
+}
+
+.scale-num{
+  font-size:17px;
+  font-weight:650;
+}
+
+.scale-label{
+  font-size:10px;
+  margin-top:3px;
+  line-height:1.15;
+}
+
+/* Progress bar */
+.progress-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.progress-bar{
+  flex:1;
+  height:5px;
+  background:var(--border);
+  border-radius:4px;
+  overflow:hidden;
+}
+
+.progress-inner{
+  height:100%;
+  background:var(--accent);
+}
+
+/* Shot-level alignment page */
+.shot-focus{
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) minmax(260px,1fr);
+  gap:16px;
+}
+
+.shot-focus img{
+  width:100%;
+  max-height:60vh;
+  object-fit:contain;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+}
+
+pre{
+  white-space:pre-wrap;
+  background:var(--light);
+  padding:12px;
+  border-radius:var(--rs);
+  font-size:12px;
+}
+
+/* ================================
+   Full sequence page: sticky layout
+================================ */
+
+.fullseq-layout{
+  display:grid;
+  grid-template-columns:minmax(560px,1.35fr) minmax(400px,.85fr);
+  gap:20px;
+  align-items:start;
+}
+
+.fullseq-left{
+  min-width:0;
+}
+
+.fullseq-right{
+  min-width:0;
+}
+
+/* This keeps the full sequence image panel visible */
+.fullseq-sticky{
+  position:sticky;
+  top:18px;
+  max-height:calc(100vh - 36px);
+  overflow-y:auto;
+}
+
+/* Full sequence image grid */
+.fullseq-frame-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+}
+
+.fullseq-frame-card{
+  background:var(--light);
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  padding:7px;
+}
+
+.fullseq-frame-img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  background:white;
+  border-radius:7px;
+  border:1px solid var(--border);
+}
+
+.fullseq-caption{
+  font-size:10px;
+  color:var(--muted);
+  line-height:1.35;
+  margin-top:5px;
+}
+
+/* Optional: make question card slightly more compact */
+.fullseq-right .card{
+  padding:20px;
+}
+
+/* Responsive layout */
+@media(max-width:1000px){
+  .page{
+    max-width:1050px;
+    padding:18px 14px;
+  }
+
+  .fullseq-layout{
+    grid-template-columns:1fr;
+  }
+
+  .fullseq-sticky{
+    position:static;
+    max-height:none;
+    overflow:visible;
+  }
+
+  .fullseq-frame-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:760px){
+  .grid-3,
+  .shot-focus{
+    grid-template-columns:1fr;
+  }
+
+  .scale{
+    grid-template-columns:1fr;
+  }
+
+  .frame-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .row-between{
+    flex-direction:column;
+  }
+}
+</style>
 </style>
 </head>
 <body><div id="app"></div>
@@ -112,7 +608,167 @@ function Setup({assignments,onGo}){const[g,setG]=useState("");const[v,setV]=useS
 function Consent({onGo}){const[c,setC]=useState(false);return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Consent"),React.createElement("p",{className:"muted"},"Your anonymous ratings will be used for academic research to validate an automatic metric for visual story consistency. Participation is voluntary and you may stop at any time."),React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),React.createElement("span",{className:"muted"},"I have read the information above and agree to participate.")),React.createElement("div",{style:{marginTop:18}},btn(true,!c,onGo,"Continue"))))}
 function Intro({item,story,onNext,itemNo,total}){const base=item.path+"/";return React.createElement("div",{className:"page"},React.createElement("div",{className:"progress-wrap"},React.createElement("div",{className:"progress-bar"},React.createElement("div",{className:"progress-inner",style:{width:(itemNo/total*100)+"%"}})),React.createElement("span",{className:"label"},`${itemNo} / ${total}`)),React.createElement("div",{className:"card"},React.createElement("div",{className:"row-between"},React.createElement("div",null,React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind}`),React.createElement("h2",null,story.title)),React.createElement("div",{className:"label"},story.shots.length+" frames")),React.createElement("p",{className:"muted"},story.summary),React.createElement("h3",{style:{marginTop:18}},"Reference characters"),story.characters.length?React.createElement("div",{className:"refs"},story.characters.map((ch,i)=>React.createElement("div",{className:"ref-card",key:i},React.createElement(ImageWithFallback,{src:base+ch.ref,alt:ch.name,cls:"ref-img",label:"ref"}),React.createElement("div",{style:{fontWeight:650,fontSize:13,marginTop:8}},ch.name),React.createElement("div",{className:"muted",style:{fontSize:12}},ch.description)))):React.createElement("p",{className:"muted"},"No reference images are configured for this item. Check numRefs/refFiles in manifest.json."),React.createElement("div",{className:"notice",style:{marginTop:18}},"Next, you will rate text-image alignment for selected shots. Then you will rate the full sequence consistency."),React.createElement("div",{style:{marginTop:18}},btn(true,false,onNext,"Start alignment rating"))))}
 function Alignment({item,story,shots,idx,resp,setResp,onNext}){const ik=itemKey(item);const shot=shots[idx];const key=`align_${shot.shotId}`;const r=resp[ik]||{na:[],alignment:{},alignmentNA:[]};const val=r.alignment?.[key];const isNA=(r.alignmentNA||[]).includes(key);const base=item.path+"/";function set(v){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};rr.alignment={...(rr.alignment||{}),[key]:v};rr.alignmentNA=(rr.alignmentNA||[]).filter(x=>x!==key);return {...p,[ik]:rr}})}function na(){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};const a=rr.alignmentNA||[]; if(a.includes(key)){rr.alignmentNA=a.filter(x=>x!==key)}else{rr.alignmentNA=[...a,key]; if(rr.alignment)delete rr.alignment[key]} return {...p,[ik]:rr}})}const complete=typeof val==="number"||isNA;return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind} · alignment ${idx+1}/${shots.length}`),React.createElement("h2",null,"Text-image alignment"),React.createElement("div",{className:"shot-focus"},React.createElement("div",null,React.createElement(ImageWithFallback,{src:base+shot.frame,alt:shot.shotId,cls:"",label:shot.shotId})),React.createElement("div",null,React.createElement("h3",null,`Shot ${shot.n}`),React.createElement("div",{className:"label",style:{marginTop:8}},"Plot"),React.createElement("p",{className:"muted"},shot.plot||"No plot text available."),React.createElement("div",{className:"label"},"Setting"),React.createElement("p",{className:"muted"},shot.setting||"No setting text available."),React.createElement("div",{className:"label"},"Shot description"),React.createElement("p",{className:"muted"},shot.staticDesc||"No shot description available.")))),React.createElement("div",{className:"card"},React.createElement(Q,{q:{short:"Text-image alignment for this shot",desc:"Does this generated frame match the plot, setting, and shot description shown above?"},val,isNA,onRate:set,onNA:na}),React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16}},React.createElement("span",{className:"muted"},complete?"":"Please answer or choose N/A."),btn(true,!complete,onNext,idx===shots.length-1?"Continue to full sequence":"Next alignment shot"))))}
-function Sequence({item,story,resp,setResp,onSubmit,submitting}){const ik=itemKey(item);const r=resp[ik]||{na:[]};const base=item.path+"/";function rate(qid,v){setResp(p=>{const rr={...(p[ik]||{na:[]})};rr[qid]=v;rr.na=(rr.na||[]).filter(x=>x!==qid);return {...p,[ik]:rr}})}function na(qid){setResp(p=>{const rr={...(p[ik]||{na:[]})};const a=rr.na||[];if(a.includes(qid)){rr.na=a.filter(x=>x!==qid)}else{rr.na=[...a,qid];delete rr[qid]}return {...p,[ik]:rr}})}const complete=SEQ_QUESTIONS.every(q=>typeof r[q.id]==="number"||(r.na||[]).includes(q.id));return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind}`),React.createElement("h2",null,"Full sequence consistency"),React.createElement("p",{className:"muted"},"Now view the full generated sequence in chronological order and rate consistency across the whole story."),React.createElement("div",{className:"frame-grid"},story.shots.map(s=>React.createElement("div",{className:"frame-card",key:s.shotId},React.createElement(ImageWithFallback,{src:base+s.frame,alt:s.shotId,cls:"frame-img",label:`Frame ${s.n}`}),React.createElement("div",{className:"shot-caption"},`${s.n}. ${s.plot||s.staticDesc||""}`))))),React.createElement("div",{className:"card"},SEQ_QUESTIONS.map(q=>React.createElement(Q,{key:q.id,q,val:r[q.id],isNA:(r.na||[]).includes(q.id),onRate:v=>rate(q.id,v),onNA:()=>na(q.id)})),React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16}},React.createElement("span",{className:"muted"},complete?"":"Please answer all questions or select N/A."),btn(true,!complete||submitting,onSubmit,submitting?"Submitting...":"Finish this story"))))}
+function Sequence({item,story,resp,setResp,onSubmit,submitting}) {
+  const ik = itemKey(item);
+  const r = resp[ik] || {na:[]};
+  const base = item.path + "/";
+
+  function rate(qid, v) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      rr[qid] = v;
+      rr.na = (rr.na || []).filter(x => x !== qid);
+      return {...p, [ik]: rr};
+    });
+  }
+
+  function na(qid) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      const a = rr.na || [];
+
+      if (a.includes(qid)) {
+        rr.na = a.filter(x => x !== qid);
+      } else {
+        rr.na = [...a, qid];
+        delete rr[qid];
+      }
+
+      return {...p, [ik]: rr};
+    });
+  }
+
+  const complete = SEQ_QUESTIONS.every(q =>
+    typeof r[q.id] === "number" || (r.na || []).includes(q.id)
+  );
+
+  return React.createElement(
+    "div",
+    { className: "page" },
+
+    React.createElement(
+      "div",
+      { className: "fullseq-layout" },
+
+      /* LEFT: sticky full image sequence */
+      React.createElement(
+        "div",
+        { className: "fullseq-left" },
+
+        React.createElement(
+          "div",
+          { className: "fullseq-sticky" },
+
+          React.createElement(
+            "div",
+            { className: "card" },
+
+            React.createElement(
+              "div",
+              { className: "label" },
+              `${item.storyId} · ${item.modelBlind}`
+            ),
+
+            React.createElement(
+              "h2",
+              null,
+              "Full sequence consistency"
+            ),
+
+            React.createElement(
+              "p",
+              { className: "muted" },
+              "View the full generated sequence in chronological order while answering the consistency questions."
+            ),
+
+            React.createElement(
+              "div",
+              { className: "fullseq-frame-grid" },
+
+              story.shots.map(s =>
+                React.createElement(
+                  "div",
+                  { className: "fullseq-frame-card", key: s.shotId },
+
+                  React.createElement(ImageWithFallback, {
+                    src: base + s.frame,
+                    alt: s.shotId,
+                    cls: "fullseq-frame-img",
+                    label: `Frame ${s.n}`
+                  }),
+
+                  React.createElement(
+                    "div",
+                    { className: "fullseq-caption" },
+                    `${s.n}. ${s.plot || s.staticDesc || ""}`
+                  )
+                )
+              )
+            )
+          )
+        )
+      ),
+
+      /* RIGHT: rating questions */
+      React.createElement(
+        "div",
+        { className: "fullseq-right" },
+
+        React.createElement(
+          "div",
+          { className: "card" },
+
+          React.createElement(
+            "div",
+            { className: "label", style: { marginBottom: 6 } },
+            "Full-sequence rating"
+          ),
+
+          React.createElement(
+            "p",
+            { className: "muted", style: { marginTop: 0 } },
+            "Please rate the whole story sequence. The image sequence will remain visible on the left while you answer."
+          ),
+
+          SEQ_QUESTIONS.map(q =>
+            React.createElement(Q, {
+              key: q.id,
+              q,
+              val: r[q.id],
+              isNA: (r.na || []).includes(q.id),
+              onRate: v => rate(q.id, v),
+              onNA: () => na(q.id)
+            })
+          ),
+
+          React.createElement(
+            "div",
+            {
+              className: "row-between",
+              style: {
+                borderTop: "1px solid var(--border)",
+                paddingTop: 16
+              }
+            },
+
+            React.createElement(
+              "span",
+              { className: "muted" },
+              complete ? "" : "Please answer all questions or select N/A."
+            ),
+
+            btn(
+              true,
+              !complete || submitting,
+              onSubmit,
+              submitting ? "Submitting..." : "Finish this story"
+            )
+          )
+        )
+      )
+    )
+  );
+}
 function Done({pid,status}){return React.createElement("div",{className:"page"},React.createElement("div",{className:"card",style:{textAlign:"center",padding:"44px 22px"}},React.createElement("h2",null,"Thank you for your participation"),React.createElement("p",{className:"muted"},status==="local_only"?"Responses were saved as local browser backup only. Configure Google Apps Script before real online collection.":"Your responses have been submitted."),React.createElement("div",{style:{display:"inline-block",background:"var(--light)",borderRadius:"var(--rs)",padding:"12px 24px",marginBottom:16}},React.createElement("div",{className:"label"},"Participant code"),React.createElement("div",{style:{fontSize:24,letterSpacing:".12em",fontWeight:650}},pid)),status==="error"&&React.createElement("div",{className:"error"},"Online submission may have failed. A local backup was saved."),status==="sent"&&React.createElement("div",{className:"success"},"Responses were sent to the online spreadsheet."))) }
 function RuntimeError({message,onBack}){return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Page stopped because data could not be loaded"),React.createElement("div",{className:"error"},message),React.createElement("p",{className:"muted"},"Most common causes: the group has no items, data/manifest.json itemId does not match data/assignments.json, or prompts.json is missing at the path listed in manifest.json."),React.createElement("pre",null,"Expected path example:\ndata/Model_A/story_01/prompts.json\ndata/Model_A/story_01/frames/shot_01.avif\ndata/Model_A/story_01/refs/01.jpg"),btn(false,false,onBack,"Back to setup"))) }
 function App(){const[phase,setPhase]=useState("loading");const[manifest,setManifest]=useState(null);const[assign,setAssign]=useState(null);const[err,setErr]=useState("");const[pid,setPid]=useState("");const[meta,setMeta]=useState(null);const[items,setItems]=useState([]);const[itemIdx,setItemIdx]=useState(0);const[story,setStory]=useState(null);const[alignShots,setAlignShots]=useState([]);const[alignIdx,setAlignIdx]=useState(0);const[resp,setResp]=useState({});const[submitting,setSubmitting]=useState(false);const[status,setStatus]=useState("sent");useEffect(()=>{Promise.all([getJson("data/manifest.json"),getJson("data/assignments.json")]).then(([m,a])=>{setManifest(m);setAssign(a);setPhase("welcome")}).catch(e=>{setErr(String(e));setPhase("welcome")})},[]);async function loadItem(i,itemList=items){try{const item=itemList[i];if(!item)throw new Error("No item found for this group/index. Check assignments.json and manifest.json itemId values.");const p=await getJson(item.path+"/prompts.json");const st=normalizeStory(p,item);setStory(st);setAlignShots(chooseAlignmentShots(st.shots,CONFIG.alignmentShotsPerItem));setAlignIdx(0);setPhase("intro")}catch(e){setErr(String(e));setPhase("runtime_error")}}function start(){setPid(genPID());setPhase("setup")}function setupDone(m){setMeta(m);const ids=assign[m.groupId]||[];const itemObjs=ids.map(id=>(manifest.items||[]).find(x=>x.itemId===id)).filter(Boolean);if(!itemObjs.length){setErr(`Group ${m.groupId} has no valid items. Check assignments.json and manifest.json.`);setPhase("runtime_error");return}setItems(itemObjs);setPhase("consent")}async function consentDone(){await loadItem(0,items)}function nextIntro(){setPhase("alignment")}function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else setPhase("sequence")}function averageAlignment(r){const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:""}async function finishSeq(){const item=items[itemIdx];const ik=itemKey(item);const itemResp=resp[ik]||{};const submission={pid,groupId:meta.groupId,timestamp:new Date().toISOString(),participantMeta:meta,itemIndex:itemIdx+1,totalItems:items.length,itemMeta:item,responses:{[ik]:{...itemResp,q5_alignment:averageAlignment(itemResp)}}};setSubmitting(true);try{const result=await submit(submission);setStatus(result.status||"sent")}catch(e){console.error(e);setStatus("error")}setSubmitting(false);if(itemIdx<items.length-1){const ni=itemIdx+1;setItemIdx(ni);await loadItem(ni,items)}else setPhase("done")}if(phase==="loading")return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},"Loading..."));const cur=items[itemIdx];return React.createElement("div",null,phase==="welcome"&&React.createElement(Welcome,{start,loadError:err}),phase==="setup"&&React.createElement(Setup,{assignments:assign||{},onGo:setupDone}),phase==="consent"&&React.createElement(Consent,{onGo:consentDone}),phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),phase==="sequence"&&story&&React.createElement(Sequence,{item:cur,story,resp,setResp,onSubmit:finishSeq,submitting}),phase==="done"&&React.createElement(Done,{pid,status}),phase==="runtime_error"&&React.createElement(RuntimeError,{message:err,onBack:()=>setPhase("setup")}))}
