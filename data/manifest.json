@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "itemId": "Model_A_story_01",
-      "modelId": "Model_A",
+      "itemId": "CharaConsist_story_01",
+      "modelId": "CharaConsist",
       "storyId": "story_01",
       "modelBlind": "Model A",
       "modelReal": "CharaConsist",
