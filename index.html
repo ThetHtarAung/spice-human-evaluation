@@ -17,7 +17,7 @@ const {useState,useEffect}=React;
 const CONFIG={
   title:"Visual Story Consistency Evaluation",
   institution:"Ritsumeikan University — Visual Information Engineering Lab",
-  googleAppsScriptUrl:"PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbwswQA9o-eG8uwKT-2uwMGebMdj6Kz-ze0hz9GIMCCfNkOLtshkK8AWgTKVuJ2W51Ai/exec",
   requireOnlineSubmission:false, // set true after Google Apps Script URL is configured
   itemsPerParticipant:10,
   alignmentShotsPerItem:5,
@@ -34,7 +34,7 @@ const SEQ_QUESTIONS=[
 ];
 const SCALE=[{v:1,label:"Very poor"},{v:2,label:"Poor"},{v:3,label:"Fair"},{v:4,label:"Good"},{v:5,label:"Excellent"}];
 
-function onlineReady(){return CONFIG.googleAppsScriptUrl&&CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/")&&!CONFIG.googleAppsScriptUrl.includes("PASTE_YOUR")}
+function onlineReady(){return CONFIG.googleAppsScriptUrl&&CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/")&&!CONFIG.googleAppsScriptUrl.includes("https://script.google.com/macros/s/AKfycbwswQA9o-eG8uwKT-2uwMGebMdj6Kz-ze0hz9GIMCCfNkOLtshkK8AWgTKVuJ2W51Ai/exec")}
 function genPID(){return "P"+Date.now().toString(36).toUpperCase().slice(-7)+Math.random().toString(36).slice(2,6).toUpperCase()}
 function pad2(n){return String(n).padStart(2,"0")}
 function itemKey(item){return item?.itemId||item?.id||""}
