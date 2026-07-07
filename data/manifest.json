@@ -7,7 +7,10 @@
       "modelBlind": "Model A",
       "modelReal": "CharaConsist",
       "path": "data/CharaConsist/story_01",
-      "numFrames": 4
+      "numFrames": 23,
+      "numRefs": 2,
+      "refStart": 0,
+      "refExt": "jpg"
     },
     {
       "itemId": "Model_B_story_01",
@@ -16,7 +19,10 @@
       "modelBlind": "Model B",
       "modelReal": "REAL_MODEL_NAME_B",
       "path": "data/Model_B/story_01",
-      "numFrames": 4
+      "numFrames": 4,
+      "numRefs": 2,
+      "refStart": 0,
+      "refExt": "jpg"
     },
     {
       "itemId": "Model_C_story_01",
@@ -25,7 +31,10 @@
       "modelBlind": "Model C",
       "modelReal": "REAL_MODEL_NAME_C",
       "path": "data/Model_C/story_01",
-      "numFrames": 4
+      "numFrames": 4,
+      "numRefs": 2,
+      "refStart": 0,
+      "refExt": "jpg"
     }
   ]
 }
