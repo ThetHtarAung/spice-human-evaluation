@@ -528,12 +528,21 @@ pre {
    Full sequence page: fixed collage
 ================================ */
 
+/* ================================
+   Full sequence page: fixed collage
+================================ */
+ 
+
+/* ================================
+   Full sequence page: fixed collage
+================================ */
+ 
 .sequence-page {
   max-width: none;
   width: 100%;
   padding: 0;
 }
-
+ 
 .sequence-sticky-panel {
   position: sticky;
   top: 0;
@@ -546,7 +555,7 @@ pre {
   overflow: hidden;
   padding-top: 34px;
 }
-
+ 
 /* signature motif: a perforated film-strip edge across the sticky collage panel */
 .sequence-sticky-panel::before {
   content: "";
@@ -555,13 +564,13 @@ pre {
   left: 0;
   right: 0;
   height: 18px;
-  background-color: white;
+  background-color: var(--ink);
   background-image: radial-gradient(circle, var(--bg) 3.5px, transparent 3.6px);
   background-size: 24px 18px;
   background-position: 12px center;
   background-repeat: repeat-x;
 }
-
+ 
 .sequence-sticky-header {
   display: flex;
   justify-content: space-between;
@@ -569,26 +578,26 @@ pre {
   gap: 16px;
   margin-bottom: 10px;
 }
-
+ 
 .sequence-frame-scroll {
   max-height: calc(64vh - 110px);
   overflow-y: auto;
   padding-right: 4px;
 }
-
+ 
 .sequence-frame-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 8px;
 }
-
+ 
 .sequence-frame-card {
   background: var(--light);
   border: 1px solid var(--border);
   border-radius: var(--rs);
   padding: 6px;
 }
-
+ 
 .sequence-frame-img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -597,7 +606,7 @@ pre {
   border-radius: 6px;
   border: 1px solid var(--border);
 }
-
+ 
 .sequence-caption {
   font-size: 10px;
   color: var(--muted);
@@ -606,24 +615,34 @@ pre {
   max-height: 2.6em;
   overflow: hidden;
 }
-
+ 
 .sequence-question-wrap {
   width: 100%;
-  margin: auto;
+  margin: 24px auto 44px;
   padding: 0 20px;
   counter-reset: qnum;
 }
-
+ 
+.sequence-question-wrap .card {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+ 
 .sequence-question-wrap .question {
   counter-increment: qnum;
 }
-
+ 
 .sequence-question-wrap .q-title::before {
   content: counter(qnum, decimal-leading-zero) "  \2014  ";
   font-family: var(--font-mono);
   color: var(--accent);
   font-weight: 600;
 }
+ 
+ 
 
 /* ================================
    Participant setup: visual display test
