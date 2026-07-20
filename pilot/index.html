@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visual Story Consistency Human Evaluation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f0e6;
+  --card: #fffdf9;
+  --text: #1c1f22;
+  --muted: #726c5e;
+  --light: #ece5d4;
+  --border: #ddd4bd;
+  --border-strong: #c7bb9c;
+  --ink: #1c1f22;
+  --accent: #b3841f;
+  --accent-dark: #8a6417;
+  --accent-tint: #f4e9cd;
+  --danger: #a3291c;
+  --warn: #f8edd2;
+  --warntext: #855a10;
+  --ok: #e6ede1;
+  --oktext: #33532f;
+  --r: 16px;
+  --rs: 9px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(28,31,34,.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  transition: background-color .15s ease, border-color .15s ease, transform .05s ease, color .15s ease;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  accent-color: var(--ink);
+  width: 16px;
+  height: 16px;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ink);
+}
+
+/* ================================
+   Common layout
+================================ */
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 28px 60px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(28,20,10,.03), 0 10px 28px -18px rgba(28,20,10,.18);
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  margin: 4px 0 8px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 4px 0 8px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.65;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  cursor: pointer;
+  padding: 11px 24px;
+  border-radius: var(--rs);
+  border: 1px solid var(--accent-dark);
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.btn-secondary {
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: var(--ink);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notice {
+  background: var(--warn);
+  color: var(--warntext);
+  border-radius: var(--rs);
+  border: 1px solid #e9d69f;
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.success {
+  background: var(--ok);
+  color: var(--oktext);
+  border-radius: var(--rs);
+  border: 1px solid #c3d6bb;
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.error {
+  background: #fbe9e6;
+  color: var(--danger);
+  border: 1px solid #f0c4bc;
+  border-radius: var(--rs);
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.stat {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 16px 14px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-top: 3px;
+}
+
+/* ================================
+   Reference images
+================================ */
+
+.refs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.ref-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 10px;
+}
+
+.ref-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: white;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+}
+
+/* ================================
+   General frame grid
+================================ */
+
+.frame-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.frame-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 8px;
+}
+
+.frame-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.fallback {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  background: repeating-linear-gradient(45deg, var(--light), var(--light) 8px, #fff 8px, #fff 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px;
+}
+
+.shot-caption {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+/* ================================
+   Questions
+================================ */
+
+.question {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.question:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.q-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.q-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.q-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.na-btn {
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: white;
+  color: var(--muted);
+}
+
+.na-btn.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: white;
+}
+
+.scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.scale.disabled {
+  opacity: .28;
+  pointer-events: none;
+}
+
+.scale-btn {
+  cursor: pointer;
+  min-height: 60px;
+  padding: 8px 4px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border);
+  background: var(--light);
+  color: var(--muted);
+  text-align: center;
+}
+
+.scale-btn:hover:not(.selected) {
+  border-color: var(--border-strong);
+  background: #fff;
+}
+
+.scale-btn.selected {
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+.scale-num {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.scale-label {
+  font-size: 10px;
+  margin-top: 3px;
+  line-height: 1.15;
+}
+
+/* ================================
+   Progress bar — styled as a frame counter
+================================ */
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-inner {
+  height: 100%;
+  background: var(--accent);
+}
+
+.progress-wrap > .label {
+  font-family: var(--font-mono);
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 5px;
+  padding: 4px 8px;
+  letter-spacing: .04em;
+}
+
+.progress-wrap > .label::before {
+  display: none;
+}
+
+/* ================================
+   Shot-level alignment page
+================================ */
+
+.shot-focus {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(260px, 1fr);
+  gap: 18px;
+}
+
+.shot-focus img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+}
+
+pre {
+  white-space: pre-wrap;
+  background: var(--light);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: var(--rs);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ================================
+   Full sequence page: fixed collage
+================================ */
+
+/* ================================
+   Full sequence page: fixed collage
+================================ */
+ 
+
+/* ================================
+   Full sequence page: fixed collage
+================================ */
+ 
+.sequence-page {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+ 
+.sequence-sticky-panel {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  max-height: 64vh;
+  overflow: hidden;
+  padding-top: 34px;
+}
+ 
+/* signature motif: a perforated film-strip edge across the sticky collage panel */
+.sequence-sticky-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background-color: var(--ink);
+  background-image: radial-gradient(circle, var(--bg) 3.5px, transparent 3.6px);
+  background-size: 24px 18px;
+  background-position: 12px center;
+  background-repeat: repeat-x;
+}
+ 
+.sequence-sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+ 
+.sequence-frame-scroll {
+  max-height: calc(64vh - 110px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+ 
+.sequence-frame-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+ 
+.sequence-frame-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 6px;
+}
+ 
+.sequence-frame-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+ 
+.sequence-caption {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-top: 4px;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+ 
+.sequence-question-wrap {
+  width: 100%;
+  margin: 24px auto 44px;
+  padding: 0 20px;
+  counter-reset: qnum;
+}
+ 
+.sequence-question-wrap .card {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+ 
+.sequence-question-wrap .question {
+  counter-increment: qnum;
+}
+ 
+.sequence-question-wrap .q-title::before {
+  content: counter(qnum, decimal-leading-zero) "  \2014  ";
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
+}
+ 
+ 
+
+/* ================================
+   Participant setup: visual display test
+================================ */
+
+.visual-test {
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 16px;
+  background: var(--light);
+}
+
+.visual-test-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.visual-test-panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 12px;
+  text-align: center;
+}
+
+.synthetic-scene {
+  position: relative;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom, #dceeff 0%, #dceeff 45%, #f7efe3 45%, #f7efe3 100%);
+}
+
+.synthetic-scene.blur {
+  filter: blur(2px);
+  opacity: .65;
+}
+
+.synthetic-frame-label {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.synthetic-window {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 46px;
+  height: 36px;
+  background: #b8ddff;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.synthetic-table {
+  position: absolute;
+  right: 18px;
+  bottom: 24px;
+  width: 70px;
+  height: 10px;
+  background: #9b6b43;
+  border-radius: 4px;
+}
+
+.synthetic-book {
+  position: absolute;
+  right: 38px;
+  bottom: 36px;
+  width: 24px;
+  height: 13px;
+  background: #d94b4b;
+  border-radius: 2px;
+}
+
+.synthetic-person {
+  position: absolute;
+  left: 54px;
+  bottom: 24px;
+  width: 58px;
+  height: 92px;
+}
+
+.synthetic-head {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f2c7a5;
+  border: 1px solid #c89d7c;
+}
+
+.synthetic-shirt {
+  position: absolute;
+  left: 9px;
+  top: 32px;
+  width: 42px;
+  height: 43px;
+  background: #2d7ff9;
+  border-radius: 10px 10px 5px 5px;
+  border: 1px solid #1d5fc0;
+}
+
+.synthetic-leg-left,
+.synthetic-leg-right {
+  position: absolute;
+  top: 76px;
+  width: 13px;
+  height: 18px;
+  background: #4d5a66;
+  border-radius: 4px;
+}
+
+.synthetic-leg-left {
+  left: 15px;
+}
+
+.synthetic-leg-right {
+  right: 15px;
+}
+
+.visual-test-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.visual-test-options label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ================================
+   Responsive layout
+================================ */
+
+@media(max-width:1000px) {
+  .page {
+    max-width: 1050px;
+    padding: 20px 14px 50px;
+  }
+
+  .sequence-frame-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sequence-sticky-panel {
+    max-height: 58vh;
+  }
+
+  .sequence-frame-scroll {
+    max-height: calc(58vh - 110px);
+  }
+}
+
+@media(max-width:760px) {
+  .grid-3,
+  .shot-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .scale {
+    grid-template-columns: 1fr;
+  }
+
+  .frame-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .row-between {
+    flex-direction: column;
+  }
+
+  .sequence-frame-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sequence-sticky-panel {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .sequence-sticky-panel::before {
+    display: none;
+  }
+
+  .sequence-frame-scroll {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .visual-test-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body><div id="app"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect}=React;
+
+const CONFIG={
+  title:"Visual Story Consistency Evaluation",
+  institution:"Ritsumeikan University — Visual Information Engineering Lab",
+  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbwswQA9o-eG8uwKT-2uwMGebMdj6Kz-ze0hz9GIMCCfNkOLtshkK8AWgTKVuJ2W51Ai/exec",
+  requireOnlineSubmission:false, // set true after Google Apps Script URL is configured
+  itemsPerParticipant:10,
+  alignmentShotsPerItem:5,
+  requireConditionChecklist:true
+};
+
+const COMPONENT_QUESTIONS={
+  character:[
+    {id:"q1_identity",short:"Character identity consistency",desc:"Focus only on character identity. Are the same characters visually consistent in face, body, proportions, and general visual identity across the story?"},
+    {id:"q2_attribute",short:"Character attribute consistency",desc:"Focus only on character attributes. Are clothing, colors, accessories, body shape, and other important visual details preserved across shots?"}
+  ],
+  scene:[
+    {id:"q3_background",short:"Background / scene consistency",desc:"Focus only on the environment. When the story stays in the same location, is the background or scene visually consistent?"},
+    {id:"q4_temporal",short:"Temporal smoothness",desc:"Focus only on flow. Does the image sequence feel visually smooth, coherent, and natural from one shot to the next?"}
+  ],
+  overall:[
+    {id:"q6_noncopy",short:"Avoidance of repetition / copy-paste",desc:"Focus on repetition. When the story changes, do the images avoid looking overly repeated, duplicated, or copy-pasted?"},
+    {id:"q7_overall",short:"Overall visual story consistency",desc:"Considering all previous aspects, how visually consistent and coherent is this generated story overall?"}
+  ]
+};
+const COMPONENT_STAGE_INFO={
+  character:{
+    label:"Stage 3 / 5",
+    title:"Character consistency",
+    instruction:"Compare the reference character images with the generated sequence. On this page, focus only on character identity and character attributes.",
+    footer:"After this page, you will evaluate background and temporal consistency."
+  },
+  scene:{
+    label:"Stage 4 / 5",
+    title:"Scene and temporal consistency",
+    instruction:"View the full generated sequence. On this page, focus only on background/scene consistency and temporal smoothness.",
+    footer:"After this page, you will evaluate repetition and overall consistency."
+  },
+  overall:{
+    label:"Stage 5 / 5",
+    title:"Repetition and overall consistency",
+    instruction:"View the full generated sequence again. On this page, focus on repeated/copy-pasted appearances and then give your overall judgment.",
+    footer:"After this page, your ratings for this story output will be submitted."
+  }
+};
+const SCALE=[{v:1,label:"Very poor"},{v:2,label:"Poor"},{v:3,label:"Fair"},{v:4,label:"Good"},{v:5,label:"Excellent"}];
+
+const FOCUS_COMPONENTS=[
+  {id:"identity",label:"Character identity"},
+  {id:"attribute",label:"Character attributes"},
+  {id:"background",label:"Background / scene consistency"},
+  {id:"temporal",label:"Temporal smoothness"},
+  {id:"alignment",label:"Text-image alignment"},
+  {id:"noncopy",label:"Avoiding repetition / copy-paste"},
+  {id:"overall",label:"Overall coherence"}
+];
+
+function onlineReady(){return CONFIG.googleAppsScriptUrl&&CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/")&&!CONFIG.googleAppsScriptUrl.includes("https://script.google.com/macros/s/AKfycbwswQA9o-eG8uwKT-2uwMGebMdj6Kz-ze0hz9GIMCCfNkOLtshkK8AWgTKVuJ2W51Ai/exec")}
+function genPID(){return "P"+Date.now().toString(36).toUpperCase().slice(-7)+Math.random().toString(36).slice(2,6).toUpperCase()}
+function pad2(n){return String(n).padStart(2,"0")}
+function itemKey(item){return item?.itemId||item?.id||""}
+function btn(primary,disabled,onClick,text){return React.createElement("button",{className:primary?"btn-primary":"btn-secondary",disabled,onClick},text)}
+async function getJson(url){const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error(url+" not found or not accessible"); return await r.json()}
+function saveBackup(sub){const old=JSON.parse(localStorage.getItem("spice_submission_backups")||"[]"); old.push(sub); localStorage.setItem("spice_submission_backups",JSON.stringify(old));}
+async function submit(sub){saveBackup(sub); if(!onlineReady()){ if(CONFIG.requireOnlineSubmission) throw new Error("Google Apps Script URL is not configured."); return {status:"local_only"}; } await fetch(CONFIG.googleAppsScriptUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(sub)}); return {status:"sent"};}
+function buildReferenceFiles(item){
+  // GitHub Pages cannot automatically list files in /refs/.
+  // Therefore, reference image count is declared in manifest.json.
+  // Default convention: refs/00.jpg, refs/01.jpg, ...
+  if(Array.isArray(item.refFiles) && item.refFiles.length) return item.refFiles;
+  const count = item.numRefs ?? item.refCount ?? 0;
+  const start = item.refStart ?? 0;
+  const ext = item.refExt || "jpg";
+  const files=[];
+  for(let i=0;i<count;i++) files.push(`refs/${pad2(start+i)}.${ext}`);
+  return files;
+}
+function normalizeStory(prompts,item){
+  const title=prompts.title||prompts.story_title||item.title||item.storyId;
+  const summary=prompts.summary||prompts.story_summary||prompts.story_all_content_en||prompts.story||"Read the shot descriptions and generated frames below.";
+
+  // Character text can come from prompts.json if available,
+  // but reference image paths are generated from /refs/ using manifest.json.
+  let charText=[];
+  if(Array.isArray(prompts.characters)) charText=prompts.characters;
+  else if(Array.isArray(prompts.character_info)) charText=prompts.character_info;
+  else if(prompts.story_all_characters_info&&typeof prompts.story_all_characters_info==='object'){
+    charText=Object.entries(prompts.story_all_characters_info).map(([name,desc])=>({
+      name,
+      description:typeof desc==='string'?desc:JSON.stringify(desc)
+    }));
+  }
+  charText=charText.map((c,i)=>({
+    name:c.name||c.character_name||`Character ${i+1}`,
+    description:c.description||c.prompt||c.info||""
+  }));
+
+  const refFiles=buildReferenceFiles(item);
+  const refStart=item.refStart ?? 0;
+  const nRefs=Math.max(charText.length, refFiles.length);
+  const chars=[];
+  for(let i=0;i<nRefs;i++){
+    chars.push({
+      name:charText[i]?.name || `Reference ${pad2(refStart+i)}`,
+      description:charText[i]?.description || "Reference image provided for this story.",
+      ref:refFiles[i] || ""
+    });
+  }
+
+  let shots=[];
+  const rawShots=prompts.shots||prompts.Shots||prompts.storyboard||[];
+  if(Array.isArray(rawShots)&&rawShots.length){
+    shots=rawShots.map((s,i)=>({
+      shotId:s.shot_id||s.id||`shot_${pad2(i+1)}`,
+      n:i+1,
+      plot:s.plot||s.plot_en||s["Plot Correspondence"]?.en||s.shot_plot_correspondence_en||s.caption||s.description||"",
+      setting:s.setting||s.setting_en||s["Setting Description"]?.en||s.shot_setting_description_en||"",
+      staticDesc:s.static||s.static_en||s["Static Shot Description"]?.en||s.shot_static_shot_description_en||"",
+      frame:s.frame||`frames/shot_${pad2(i+1)}.avif`
+    }))
+  }
+  else {
+    const n=item.numFrames||0;
+    for(let i=1;i<=n;i++) shots.push({shotId:`shot_${pad2(i)}`,n:i,plot:"",setting:"",staticDesc:"",frame:`frames/shot_${pad2(i)}.avif`})
+  }
+  return {title,summary,characters:chars,shots};
+}
+function chooseAlignmentShots(shots,k){
+  if(shots.length<=k) return shots;
+  if(k<=1) return [shots[0]];
+  const idx=[];
+  for(let i=0;i<k;i++) idx.push(Math.round(i*(shots.length-1)/(k-1)));
+  return [...new Set(idx)].map(i=>shots[i]).slice(0,k);
+}
+function ImageWithFallback({src,alt,cls,label}){const[bad,setBad]=useState(false); if(src&&!bad)return React.createElement("img",{src,alt,className:cls,onError:()=>setBad(true)}); return React.createElement("div",{className:"fallback"},label||"image missing")}
+function Q({q,val,isNA,onRate,onNA}){return React.createElement("div",{className:"question"},React.createElement("div",{className:"q-head"},React.createElement("div",null,React.createElement("div",{className:"q-title"},q.short),React.createElement("div",{className:"q-desc"},q.desc)),React.createElement("button",{className:"na-btn"+(isNA?" active":""),onClick:onNA},"N/A")),React.createElement("div",{className:"scale"+(isNA?" disabled":"")},SCALE.map(s=>React.createElement("button",{key:s.v,className:"scale-btn"+(val===s.v?" selected":""),onClick:()=>onRate(s.v)},React.createElement("div",{className:"scale-num"},s.v),React.createElement("div",{className:"scale-label"},s.label))))) }
+function Welcome({start,loadError}){const ready=onlineReady();return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},CONFIG.institution),React.createElement("h1",null,CONFIG.title),React.createElement("p",{className:"muted"},"This study evaluates AI-generated visual stories. Each evaluation item has separate stages: story introduction, shot-level text-image alignment, character consistency, scene/temporal consistency, and repetition/overall rating."),React.createElement("div",{className:"grid-3",style:{margin:"18px 0"}},React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"~25 min"),React.createElement("div",{className:"stat-label"},"Estimated time")),React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},CONFIG.itemsPerParticipant),React.createElement("div",{className:"stat-label"},"Story outputs")),React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"5 stages"),React.createElement("div",{className:"stat-label"},"Per output"))),loadError&&React.createElement("div",{className:"error",style:{marginBottom:14}},loadError),!ready&&React.createElement("div",{className:CONFIG.requireOnlineSubmission?"error":"notice",style:{marginBottom:14}},CONFIG.requireOnlineSubmission?"Researcher setup required: Google Apps Script URL has not been configured.":"Test mode: Google Apps Script URL is not configured, so responses will be saved only as local browser backup."),React.createElement("div",{className:"notice",style:{marginBottom:14}},"Please use a laptop or desktop screen, browser zoom 100%, and complete the task alone."),btn(true,CONFIG.requireOnlineSubmission&&!ready,start,"Start evaluation")))}
+function VisualTestScene({blur}) {
+  return React.createElement(
+    "div",
+    { className: "synthetic-scene" + (blur ? " blur" : "") },
+
+    React.createElement(
+      "div",
+      { className: "synthetic-frame-label" },
+      "Frame 01"
+    ),
+
+    React.createElement("div", { className: "synthetic-window" }),
+    React.createElement("div", { className: "synthetic-table" }),
+    React.createElement("div", { className: "synthetic-book" }),
+
+    React.createElement(
+      "div",
+      { className: "synthetic-person" },
+      React.createElement("div", { className: "synthetic-head" }),
+      React.createElement("div", { className: "synthetic-shirt" }),
+      React.createElement("div", { className: "synthetic-leg-left" }),
+      React.createElement("div", { className: "synthetic-leg-right" })
+    )
+  );
+}
+function Setup({assignments,onGo}) {
+  const [g,setG] = useState("");
+  const [v,setV] = useState("");
+  const [ai,setAi] = useState("");
+  const [de,setDe] = useState("");
+
+  const [clearAnswer,setClearAnswer] = useState("");
+  const [colorAnswer,setColorAnswer] = useState("");
+
+  const [ck,setCk] = useState({
+    desktop:false,
+    zoom:false,
+    alone:false
+  });
+
+  const group = g.trim().toUpperCase();
+  const exists = assignments[group];
+
+  const visualPassed =
+    clearAnswer === "B" &&
+    colorAnswer === "blue";
+
+  const ok =
+    group &&
+    exists &&
+    v &&
+    ai &&
+    de &&
+    visualPassed &&
+    (!CONFIG.requireConditionChecklist || Object.values(ck).every(Boolean));
+
+  function sel(label,val,set,opts) {
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "div",
+        { className:"label", style:{marginBottom:6} },
+        label
+      ),
+      React.createElement(
+        "select",
+        { value:val, onChange:e=>set(e.target.value) },
+        React.createElement("option", {value:""}, "Select"),
+        opts.map(o =>
+          React.createElement("option", {key:o,value:o}, o)
+        )
+      )
+    );
+  }
+
+  return React.createElement(
+    "div",
+    { className:"page" },
+
+    React.createElement(
+      "div",
+      { className:"card" },
+
+      React.createElement("h2", null, "Participant setup"),
+
+      React.createElement(
+        "p",
+        { className:"muted" },
+        "Enter the group code given by the researcher. This code controls which story outputs you will evaluate."
+      ),
+
+      React.createElement(
+        "div",
+        { className:"label", style:{marginBottom:6} },
+        "Group code"
+      ),
+
+      React.createElement("input", {
+        type:"text",
+        placeholder:"Example: G01",
+        value:g,
+        onChange:e=>setG(e.target.value.toUpperCase())
+      }),
+
+      g && !exists && React.createElement(
+        "p",
+        { style:{color:"var(--danger)",fontSize:12} },
+        "This group code does not exist."
+      ),
+
+      React.createElement(
+        "div",
+        { className:"grid-3", style:{marginTop:16} },
+
+        sel("Vision condition",v,setV,[
+          "normal",
+          "corrected-to-normal",
+          "color vision issue",
+          "other"
+        ]),
+
+        sel("AI image experience",ai,setAi,[
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]),
+
+        sel("Art/design experience",de,setDe,[
+          "none",
+          "low",
+          "medium",
+          "high"
+        ])
+      ),
+
+      CONFIG.requireConditionChecklist && React.createElement(
+        "div",
+        { style:{marginTop:18} },
+
+        React.createElement(
+          "div",
+          { className:"label", style:{marginBottom:8} },
+          "Condition checklist"
+        ),
+
+        [
+          ["desktop","I am using a laptop or desktop, not a phone."],
+          ["zoom","Browser zoom is 100%."],
+          ["alone","I am completing this alone."]
+        ].map(([k,t]) =>
+          React.createElement(
+            "label",
+            {
+              key:k,
+              style:{
+                display:"flex",
+                gap:10,
+                marginBottom:8
+              }
+            },
+
+            React.createElement("input", {
+              type:"checkbox",
+              checked:ck[k],
+              onChange:()=>setCk({...ck,[k]:!ck[k]})
+            }),
+
+            React.createElement(
+              "span",
+              { className:"muted" },
+              t
+            )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        { className:"visual-test" },
+
+        React.createElement(
+          "div",
+          { className:"label" },
+          "Visual display check"
+        ),
+
+        React.createElement(
+          "p",
+          { className:"muted", style:{marginBottom:8} },
+          "This is not an ability test. It only checks whether your screen condition is suitable for image-based evaluation."
+        ),
+
+        React.createElement(
+          "div",
+          { className:"visual-test-grid" },
+
+          React.createElement(
+            "div",
+            { className:"visual-test-panel" },
+            React.createElement(VisualTestScene, {blur:true}),
+            React.createElement(
+              "div",
+              { className:"muted", style:{marginTop:8,fontSize:12} },
+              "Image A"
+            )
+          ),
+
+          React.createElement(
+            "div",
+            { className:"visual-test-panel" },
+            React.createElement(VisualTestScene, {blur:false}),
+            React.createElement(
+              "div",
+              { className:"muted", style:{marginTop:8,fontSize:12} },
+              "Image B"
+            )
+          )
+        ),
+
+        React.createElement(
+          "div",
+          { className:"label", style:{marginTop:12} },
+          "Question 1"
+        ),
+
+        React.createElement(
+          "p",
+          { className:"muted", style:{margin:"4px 0"} },
+          "Which image is clearer?"
+        ),
+
+        React.createElement(
+          "div",
+          { className:"visual-test-options" },
+
+          ["A","B"].map(x =>
+            React.createElement(
+              "label",
+              { key:x },
+              React.createElement("input", {
+                type:"radio",
+                name:"clearAnswer",
+                value:x,
+                checked:clearAnswer===x,
+                onChange:e=>setClearAnswer(e.target.value)
+              }),
+              "Image " + x
+            )
+          )
+        ),
+
+        React.createElement(
+          "div",
+          { className:"label", style:{marginTop:14} },
+          "Question 2"
+        ),
+
+        React.createElement(
+          "p",
+          { className:"muted", style:{margin:"4px 0"} },
+          "In Image B, what color is the character's shirt?"
+        ),
+
+        React.createElement(
+          "div",
+          { className:"visual-test-options" },
+
+          [
+            ["blue","Blue"],
+            ["red","Red"],
+            ["green","Green"],
+            ["cannot_tell","Cannot tell"]
+          ].map(([value,label]) =>
+            React.createElement(
+              "label",
+              { key:value },
+              React.createElement("input", {
+                type:"radio",
+                name:"colorAnswer",
+                value:value,
+                checked:colorAnswer===value,
+                onChange:e=>setColorAnswer(e.target.value)
+              }),
+              label
+            )
+          )
+        ),
+
+        (clearAnswer || colorAnswer) && !visualPassed && React.createElement(
+          "div",
+          { className:"error", style:{marginTop:12} },
+          "Please check your screen brightness, zoom, and visibility. The clearer image should be Image B, and the shirt color should be Blue."
+        )
+      ),
+
+      React.createElement(
+        "div",
+        { style:{marginTop:18} },
+
+        btn(
+          true,
+          !ok,
+          () => onGo({
+            groupId:group,
+            vision:v,
+            aiExperience:ai,
+            designExperience:de,
+            visualClearAnswer:clearAnswer,
+            visualColorAnswer:colorAnswer,
+            visualTestPassed:visualPassed,
+            conditionChecks:ck
+          }),
+          "Continue"
+        )
+      )
+    )
+  );
+}
+function Consent({onGo}){const[c,setC]=useState(false);return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Consent"),React.createElement("p",{className:"muted"},"Your anonymous ratings will be used for academic research to validate an automatic metric for visual story consistency. Participation is voluntary and you may stop at any time."),React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),React.createElement("span",{className:"muted"},"I have read the information above and agree to participate.")),React.createElement("div",{style:{marginTop:18}},btn(true,!c,onGo,"Continue"))))}
+function Intro({item,story,onNext,itemNo,total}){const base=item.path+"/";return React.createElement("div",{className:"page"},React.createElement("div",{className:"progress-wrap"},React.createElement("div",{className:"progress-bar"},React.createElement("div",{className:"progress-inner",style:{width:(itemNo/total*100)+"%"}})),React.createElement("span",{className:"label"},`${itemNo} / ${total}`)),React.createElement("div",{className:"card"},React.createElement("div",{className:"row-between"},React.createElement("div",null,React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind}`),React.createElement("h2",null,story.title)),React.createElement("div",{className:"label"},story.shots.length+" frames")),React.createElement("p",{className:"muted"},story.summary),React.createElement("h3",{style:{marginTop:18}},"Reference characters"),story.characters.length?React.createElement("div",{className:"refs"},story.characters.map((ch,i)=>React.createElement("div",{className:"ref-card",key:i},React.createElement(ImageWithFallback,{src:base+ch.ref,alt:ch.name,cls:"ref-img",label:"ref"}),React.createElement("div",{style:{fontWeight:650,fontSize:13,marginTop:8}},ch.name),React.createElement("div",{className:"muted",style:{fontSize:12}},ch.description)))):React.createElement("p",{className:"muted"},"No reference images are configured for this item. Check numRefs/refFiles in manifest.json."),React.createElement("div",{className:"notice",style:{marginTop:18}},"Next, you will rate selected shots for text-image alignment. After that, you will rate character consistency, scene/temporal consistency, and repetition/overall consistency on separate focused pages."),React.createElement("div",{style:{marginTop:18}},btn(true,false,onNext,"Start alignment rating"))))}
+function Alignment({item,story,shots,idx,resp,setResp,onNext}){const ik=itemKey(item);const shot=shots[idx];const key=`align_${shot.shotId}`;const r=resp[ik]||{na:[],alignment:{},alignmentNA:[]};const val=r.alignment?.[key];const isNA=(r.alignmentNA||[]).includes(key);const base=item.path+"/";function set(v){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};rr.alignment={...(rr.alignment||{}),[key]:v};rr.alignmentNA=(rr.alignmentNA||[]).filter(x=>x!==key);return {...p,[ik]:rr}})}function na(){setResp(p=>{const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};const a=rr.alignmentNA||[]; if(a.includes(key)){rr.alignmentNA=a.filter(x=>x!==key)}else{rr.alignmentNA=[...a,key]; if(rr.alignment)delete rr.alignment[key]} return {...p,[ik]:rr}})}const complete=typeof val==="number"||isNA;return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("div",{className:"label"},`${item.storyId} · ${item.modelBlind} · alignment ${idx+1}/${shots.length}`),React.createElement("h2",null,"Text-image alignment"),React.createElement("div",{className:"shot-focus"},React.createElement("div",null,React.createElement(ImageWithFallback,{src:base+shot.frame,alt:shot.shotId,cls:"",label:shot.shotId})),React.createElement("div",null,React.createElement("h3",null,`Shot ${shot.n}`),React.createElement("div",{className:"label",style:{marginTop:8}},"Plot"),React.createElement("p",{className:"muted"},shot.plot||"No plot text available."),React.createElement("div",{className:"label"},"Setting"),React.createElement("p",{className:"muted"},shot.setting||"No setting text available."),React.createElement("div",{className:"label"},"Shot description"),React.createElement("p",{className:"muted"},shot.staticDesc||"No shot description available.")))),React.createElement("div",{className:"card"},React.createElement(Q,{q:{short:"Text-image alignment for this shot",desc:"Does this generated frame match the plot, setting, and shot description shown above?"},val,isNA,onRate:set,onNA:na}),React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16}},React.createElement("span",{className:"muted"},complete?"":"Please answer or choose N/A."),btn(true,!complete,onNext,idx===shots.length-1?"Continue to full sequence":"Next alignment shot"))))}
+function SequencePanel({item,story,title,instruction,showReferences}) {
+  const base = item.path + "/";
+
+  return React.createElement(
+    "div",
+    { className:"card sequence-sticky-panel" },
+
+    React.createElement(
+      "div",
+      { className:"sequence-sticky-header" },
+
+      React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className:"label" },
+          `${item.storyId} · ${item.modelBlind}`
+        ),
+        React.createElement("h2", null, title)
+      ),
+
+      React.createElement(
+        "div",
+        { className:"label" },
+        `${story.shots.length} frames`
+      )
+    ),
+
+    React.createElement(
+      "p",
+      { className:"muted", style:{marginTop:0} },
+      instruction
+    ),
+
+    showReferences && story.characters.length > 0 && React.createElement(
+      "div",
+      { style:{margin:"10px 0 12px"} },
+      React.createElement("div", {className:"label", style:{marginBottom:8}}, "Reference characters"),
+      React.createElement(
+        "div",
+        { className:"refs" },
+        story.characters.map((ch,i)=>
+          React.createElement(
+            "div",
+            { className:"ref-card", key:i },
+            React.createElement(ImageWithFallback,{src:base+ch.ref,alt:ch.name,cls:"ref-img",label:"ref"}),
+            React.createElement("div",{style:{fontWeight:650,fontSize:12,marginTop:6}},ch.name)
+          )
+        )
+      )
+    ),
+
+    React.createElement(
+      "div",
+      { className:"sequence-frame-scroll" },
+
+      React.createElement(
+        "div",
+        { className:"sequence-frame-grid" },
+
+        story.shots.map(s =>
+          React.createElement(
+            "div",
+            { className:"sequence-frame-card", key:s.shotId },
+
+            React.createElement(ImageWithFallback, {
+              src:base+s.frame,
+              alt:s.shotId,
+              cls:"sequence-frame-img",
+              label:`Frame ${s.n}`
+            }),
+
+            React.createElement(
+              "div",
+              { className:"sequence-caption" },
+              `${s.n}. ${s.plot || s.staticDesc || ""}`
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+function ComponentStage({item,story,stage,resp,setResp,onNext,submitting}) {
+  const ik = itemKey(item);
+  const r = resp[ik] || {na:[]};
+  const questions = COMPONENT_QUESTIONS[stage];
+  const info = COMPONENT_STAGE_INFO[stage];
+  const isLast = stage === "overall";
+
+  function rate(qid,v) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      rr[qid] = v;
+      rr.na = (rr.na || []).filter(x => x !== qid);
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function na(qid) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      const a = rr.na || [];
+
+      if (a.includes(qid)) {
+        rr.na = a.filter(x => x !== qid);
+      } else {
+        rr.na = [...a,qid];
+        delete rr[qid];
+      }
+
+      return {...p,[ik]:rr};
+    });
+  }
+
+  const complete = questions.every(q =>
+    typeof r[q.id] === "number" || (r.na || []).includes(q.id)
+  );
+
+  return React.createElement(
+    "div",
+    { className:"page sequence-page" },
+
+    React.createElement(SequencePanel, {
+      item,
+      story,
+      title:info.title,
+      instruction:info.instruction,
+      showReferences:stage === "character"
+    }),
+
+    React.createElement(
+      "div",
+      { className:"sequence-question-wrap" },
+
+      React.createElement(
+        "div",
+        { className:"card" },
+
+        React.createElement(
+          "div",
+          { className:"label", style:{marginBottom:6} },
+          info.label
+        ),
+
+        React.createElement(
+          "p",
+          { className:"muted", style:{marginTop:0} },
+          info.footer
+        ),
+
+        questions.map(q =>
+          React.createElement(Q, {
+            key:q.id,
+            q,
+            val:r[q.id],
+            isNA:(r.na || []).includes(q.id),
+            onRate:v=>rate(q.id,v),
+            onNA:()=>na(q.id)
+          })
+        ),
+
+        React.createElement(
+          "div",
+          {
+            className:"row-between",
+            style:{
+              borderTop:"1px solid var(--border)",
+              paddingTop:16
+            }
+          },
+
+          React.createElement(
+            "span",
+            { className:"muted" },
+            complete ? "" : "Please answer all questions or select N/A."
+          ),
+
+          btn(
+            true,
+            !complete || submitting,
+            onNext,
+            submitting ? "Submitting..." : (isLast ? "Finish this story" : "Continue")
+          )
+        )
+      )
+    )
+  );
+}
+function FocusSurvey({pid,meta,onFinish}){
+  const [rank1,setRank1]=useState("");
+  const [rank2,setRank2]=useState("");
+  const [rank3,setRank3]=useState("");
+  const [comment,setComment]=useState("");
+  const [submitting,setSubmitting]=useState(false);
+  const selected=[rank1,rank2,rank3].filter(Boolean);
+  const unique=new Set(selected).size===selected.length;
+  const complete=rank1&&rank2&&rank3&&unique;
+
+  function componentSelect(label,value,setValue){
+    return React.createElement(
+      "div",
+      null,
+      React.createElement("div",{className:"label",style:{marginBottom:6}},label),
+      React.createElement(
+        "select",
+        {value,onChange:e=>setValue(e.target.value)},
+        React.createElement("option",{value:""},"Select one component"),
+        FOCUS_COMPONENTS.map(c=>React.createElement("option",{key:c.id,value:c.id},c.label))
+      )
+    );
+  }
+
+  async function finish(){
+    if(!complete)return;
+    setSubmitting(true);
+    const submission={
+      pid,
+      groupId:meta?.groupId||"",
+      timestamp:new Date().toISOString(),
+      submissionType:"post_study_focus_survey",
+      participantMeta:meta,
+      focusSurvey:{
+        rank1_most_focused:rank1,
+        rank2_second_focused:rank2,
+        rank3_third_focused:rank3,
+        optionalComment:comment
+      }
+    };
+    try{
+      const result=await submit(submission);
+      onFinish(result.status||"sent");
+    }catch(e){
+      console.error(e);
+      onFinish("error");
+    }
+    setSubmitting(false);
+  }
+
+  return React.createElement(
+    "div",
+    {className:"page"},
+    React.createElement(
+      "div",
+      {className:"card"},
+      React.createElement("div",{className:"label"},"Final reflection"),
+      React.createElement("h2",null,"Which consistency cues did you focus on most?"),
+      React.createElement("p",{className:"muted"},"Please choose the three aspects you relied on most when judging visual story consistency. This question is shown only after the main ratings so it will not guide or bias your previous answers."),
+      React.createElement(
+        "div",
+        {className:"grid-3",style:{marginTop:16}},
+        componentSelect("Most focused aspect",rank1,setRank1),
+        componentSelect("Second most focused aspect",rank2,setRank2),
+        componentSelect("Third most focused aspect",rank3,setRank3)
+      ),
+      selected.length>0&&!unique&&React.createElement("div",{className:"error",style:{marginTop:14}},"Please choose three different components."),
+      React.createElement("div",{className:"label",style:{marginTop:18,marginBottom:6}},"Optional comment"),
+      React.createElement("textarea",{value:comment,onChange:e=>setComment(e.target.value),placeholder:"Optional: What made you decide whether a story was visually consistent or inconsistent?"}),
+      React.createElement(
+        "div",
+        {className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16,marginTop:18}},
+        React.createElement("span",{className:"muted"},complete?"":"Please choose three different components."),
+        btn(true,!complete||submitting,finish,submitting?"Submitting...":"Submit final answers")
+      )
+    )
+  );
+}
+function Done({pid,status}){return React.createElement("div",{className:"page"},React.createElement("div",{className:"card",style:{textAlign:"center",padding:"44px 22px"}},React.createElement("h2",null,"Thank you for your participation"),React.createElement("p",{className:"muted"},status==="local_only"?"Responses were saved as local browser backup only. Configure Google Apps Script before real online collection.":"Your responses have been submitted."),React.createElement("div",{style:{display:"inline-block",background:"var(--light)",borderRadius:"var(--rs)",padding:"12px 24px",marginBottom:16}},React.createElement("div",{className:"label"},"Participant code"),React.createElement("div",{style:{fontSize:24,letterSpacing:".12em",fontWeight:650}},pid)),status==="error"&&React.createElement("div",{className:"error"},"Online submission may have failed. A local backup was saved."),status==="sent"&&React.createElement("div",{className:"success"},"Responses were sent to the online spreadsheet."))) }
+function RuntimeError({message,onBack}){return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},React.createElement("h2",null,"Page stopped because data could not be loaded"),React.createElement("div",{className:"error"},message),React.createElement("p",{className:"muted"},"Most common causes: the group has no items, data/manifest.json itemId does not match data/assignments.json, or prompts.json is missing at the path listed in manifest.json."),React.createElement("pre",null,"Expected path example:\ndata/Model_A/story_01/prompts.json\ndata/Model_A/story_01/frames/shot_01.avif\ndata/Model_A/story_01/refs/01.jpg"),btn(false,false,onBack,"Back to setup"))) }
+function App(){const[phase,setPhase]=useState("loading");const[manifest,setManifest]=useState(null);const[assign,setAssign]=useState(null);const[err,setErr]=useState("");const[pid,setPid]=useState("");const[meta,setMeta]=useState(null);const[items,setItems]=useState([]);const[itemIdx,setItemIdx]=useState(0);const[story,setStory]=useState(null);const[alignShots,setAlignShots]=useState([]);const[alignIdx,setAlignIdx]=useState(0);const[resp,setResp]=useState({});const[submitting,setSubmitting]=useState(false);const[status,setStatus]=useState("sent");useEffect(()=>{Promise.all([getJson("data/manifest.json"),getJson("data/assignments.json")]).then(([m,a])=>{setManifest(m);setAssign(a);setPhase("welcome")}).catch(e=>{setErr(String(e));setPhase("welcome")})},[]);async function loadItem(i,itemList=items){try{const item=itemList[i];if(!item)throw new Error("No item found for this group/index. Check assignments.json and manifest.json itemId values.");const p=await getJson(item.path+"/prompts.json");const st=normalizeStory(p,item);setStory(st);setAlignShots(chooseAlignmentShots(st.shots,CONFIG.alignmentShotsPerItem));setAlignIdx(0);setPhase("intro")}catch(e){setErr(String(e));setPhase("runtime_error")}}function start(){setPid(genPID());setPhase("setup")}function setupDone(m){setMeta(m);const ids=assign[m.groupId]||[];const itemObjs=ids.map(id=>(manifest.items||[]).find(x=>x.itemId===id)).filter(Boolean);if(!itemObjs.length){setErr(`Group ${m.groupId} has no valid items. Check assignments.json and manifest.json.`);setPhase("runtime_error");return}setItems(itemObjs);setPhase("consent")}async function consentDone(){await loadItem(0,items)}function nextIntro(){setPhase("alignment")}function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else setPhase("character")}function averageAlignment(r){const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:""}async function finishSeq(){const item=items[itemIdx];const ik=itemKey(item);const itemResp=resp[ik]||{};const submission={pid,groupId:meta.groupId,timestamp:new Date().toISOString(),participantMeta:meta,itemIndex:itemIdx+1,totalItems:items.length,itemMeta:item,responses:{[ik]:{...itemResp,q5_alignment:averageAlignment(itemResp)}}};setSubmitting(true);try{const result=await submit(submission);setStatus(result.status||"sent")}catch(e){console.error(e);setStatus("error")}setSubmitting(false);if(itemIdx<items.length-1){const ni=itemIdx+1;setItemIdx(ni);await loadItem(ni,items)}else setPhase("focus_survey")}if(phase==="loading")return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},"Loading..."));const cur=items[itemIdx];return React.createElement("div",null,phase==="welcome"&&React.createElement(Welcome,{start,loadError:err}),phase==="setup"&&React.createElement(Setup,{assignments:assign||{},onGo:setupDone}),phase==="consent"&&React.createElement(Consent,{onGo:consentDone}),phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),phase==="character"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"character",resp,setResp,onNext:()=>setPhase("scene"),submitting:false}),phase==="scene"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"scene",resp,setResp,onNext:()=>setPhase("overall"),submitting:false}),phase==="overall"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"overall",resp,setResp,onNext:finishSeq,submitting}),phase==="focus_survey"&&React.createElement(FocusSurvey,{pid,meta,onFinish:(s)=>{setStatus(s);setPhase("done")}}),phase==="done"&&React.createElement(Done,{pid,status}),phase==="runtime_error"&&React.createElement(RuntimeError,{message:err,onBack:()=>setPhase("setup")}))}
+ReactDOM.createRoot(document.getElementById("app")).render(React.createElement(App));
+</script></body></html>
