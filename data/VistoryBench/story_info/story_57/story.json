@@ -1,0 +1,146 @@
+﻿{
+    "Story_type": {
+        "en": "Fairy Tales",
+        "ch": "童话"
+    },
+    "Characters": {
+        "Wild Donkey": {
+            "tag": "non_human",
+            "name_ch": "野驴",
+            "name_en": "Wild Donkey",
+            "prompt_ch": "一头毛色较浅的成年驴，体型略小但动作灵活。身上没有负重，显得轻松自在。",
+            "prompt_en": "An adult donkey with a lighter-colored coat, slightly smaller in size but agile in movement. It carries no burden and appears relaxed and carefree.",
+            "num_of_appearances": 3
+        },
+        "Domestic Donkey": {
+            "tag": "non_human",
+            "name_ch": "家驴",
+            "name_en": "Domestic Donkey",
+            "prompt_ch": "一头毛色灰褐的成年驴，体型健壮但神情疲惫。走路时步伐沉重。",
+            "prompt_en": "An adult donkey with a grayish-brown coat, robust in build but with a weary expression. Its footsteps are heavy when walking.",
+            "num_of_appearances": 2
+        },
+        "Lion": {
+            "tag": "non_human",
+            "name_ch": "狮子",
+            "name_en": "Lion",
+            "prompt_ch": "一头体型庞大、毛色金黄的猛兽，眼神锐利，步伐矫健。出现时带着一股威严和危险的气息。",
+            "prompt_en": "A massive, golden-furred predator with sharp eyes and nimble movements. It exudes an aura of authority and danger when it appears.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "一天，一头家驴背着沉重的货物，步履艰难地走在路上，显得非常疲惫。",
+                "en": "One day, a domestic donkey was carrying a heavy load, trudging wearily along the road, looking extremely exhausted."
+            },
+            "Setting Description": {
+                "ch": "白天, 山路, 疲惫的氛围, 崎岖的山路, 远处的山峰, 稀疏的树木, 柔和的自然光线",
+                "en": "Daytime, mountain path, weary atmosphere, rugged mountain road, distant peaks, sparse trees, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中远景, 侧面, 平视镜头",
+                "en": "Medium long shot, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "家驴"
+                ],
+                "en": [
+                    "Domestic Donkey"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "家驴站在山路中央，背上驮着沉重的货物，脖子上套着缰绳，神情疲惫，步伐沉重",
+                "en": "The domestic donkey stands in the middle of the mountain path, carrying a heavy load on its back, a harness around its neck, its expression weary and footsteps heavy"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "不远处，一头野驴正在悠闲地吃草。",
+                "en": "Not far away, a wild donkey was leisurely grazing."
+            },
+            "Setting Description": {
+                "ch": "白天, 山坡, 宁静的氛围, 青翠的草地, 远处的树木, 野花点缀, 明亮的自然光线",
+                "en": "Daytime, hillside, serene atmosphere, lush green grass, distant trees, wildflowers scattered about, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 正面, 平视镜头",
+                "en": "Medium shot, front view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "野驴"
+                ],
+                "en": [
+                    "Wild Donkey"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "野驴站在山坡上，低头悠闲地吃草，神情轻松自在，身上没有负重",
+                "en": "The wild donkey stands on the hillside, lowering its head to graze leisurely, appearing relaxed and carefree, with no burden on its back"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "野驴：你看我多自由，可以在山上随意吃草，无忧无虑。而你呢，天天背着这么重的货物，还得挨主人的皮鞭，生活得这么痛苦。",
+                "en": "Wild Donkey: 'Look how free I am—I can graze anywhere on the mountain without a care in the world. But you, you carry such heavy loads every day and endure the whip of your master, living such a painful life.'"
+            },
+            "Setting Description": {
+                "ch": "白天, 山路与山坡交界, 对比的氛围, 山路与草地的交界, 远处的山峰, 两头驴的位置, 柔和的自然光线",
+                "en": "Daytime, junction between mountain path and hillside, contrasting atmosphere, boundary between the path and grassland, distant peaks, positions of the two donkeys, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 侧面, 平视镜头",
+                "en": "Full shot, side view, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "家驴",
+                    "野驴"
+                ],
+                "en": [
+                    "Domestic Donkey",
+                    "Wild Donkey"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "家驴在画面左侧的山路上，野驴在画面右侧的山坡上，野驴抬头看着家驴，表情轻松中带着一丝同情",
+                "en": "The domestic donkey is on the left side of the frame on the mountain path, while the wild donkey is on the right side of the frame on the hillside. The wild donkey looks up at the domestic donkey with a relaxed yet slightly sympathetic expression"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "就在这时，一头狮子出现了。狮子看到家驴身边有驴夫保护，便转身扑向了独自一人的野驴，迅速将他抓住并吃掉了。",
+                "en": "Just then, a lion appeared. Seeing that the domestic donkey was protected by its owner, the lion turned and pounced on the solitary wild donkey, swiftly capturing and devouring it."
+            },
+            "Setting Description": {
+                "ch": "白天, 山坡, 紧张的氛围, 青翠的草地, 远处的树木, 狮子的出现, 强烈的自然光线",
+                "en": "Daytime, hillside, tense atmosphere, lush green grass, distant trees, the lion's sudden appearance, strong natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面, 低角度镜头",
+                "en": "Medium close up, side view, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "狮子",
+                    "野驴"
+                ],
+                "en": [
+                    "Lion",
+                    "Wild Donkey"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "狮子从画面右侧扑向野驴，野驴惊恐地试图逃跑，但被狮子迅速抓住，狮子的眼神锐利，动作迅猛",
+                "en": "The lion pounces on the wild donkey from the right side of the frame. The wild donkey, terrified, attempts to flee but is quickly caught by the lion. The lion's gaze is sharp, and its movements are swift and deadly"
+            }
+        }
+    ]
+}

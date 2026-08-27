@@ -1,0 +1,444 @@
+﻿{
+    "Story_type": {
+        "en": "Modern Romance",
+        "ch": "现代言情"
+    },
+    "Characters": {
+        "Jing Lan": {
+            "tag": "realistic_human",
+            "name_ch": "景岚",
+            "name_en": "Jing Lan",
+            "prompt_ch": "一个黑发黑眼的年轻女演员，年龄约20出头，容貌清纯可人。穿着时尚简约，常以休闲装或剧中角色的服饰亮相，气质清新自然。",
+            "prompt_en": "A young actress with black hair and black eyes, in her early 20s, with a pure and lovely appearance. She dresses in a simple and stylish manner, often appearing in casual wear or the costumes of her roles, exuding a fresh and natural charm.",
+            "num_of_appearances": 13
+        },
+        "Song Yuchen": {
+            "tag": "realistic_human",
+            "name_ch": "宋昱辰",
+            "name_en": "Song Yuchen",
+            "prompt_ch": "一个黑发黑眼的男演员，年龄约25岁，五官精致，尤其是一双桃花眼令人印象深刻。穿着随性，多以牛仔裤和T恤为主，偶尔会穿剧中角色的服装，整体气质阳光帅气。",
+            "prompt_en": "A male actor with black hair and black eyes, around 25 years old, with delicate features, especially his peach blossom eyes that leave a deep impression. He dresses casually, mostly in jeans and T-shirts, occasionally wearing costumes from his roles, giving off a sunny and handsome vibe.",
+            "num_of_appearances": 5
+        },
+        "Yang Yu": {
+            "tag": "realistic_human",
+            "name_ch": "杨羽",
+            "name_en": "Yang Yu",
+            "prompt_ch": "一个黑发黑眼的男演员，年龄约25岁，面容冷峻，气质高冷。",
+            "prompt_en": "A male actor with black hair and black eyes, around 25 years old, with a cold and stern expression, exuding an aloof demeanor.",
+            "num_of_appearances": 3
+        },
+        "Wu Zheng": {
+            "tag": "realistic_human",
+            "name_ch": "吴峥",
+            "name_en": "Wu Zheng",
+            "prompt_ch": "一个黑发黑眼的男演员，年龄约24岁，五官端正，气质阳光。穿着休闲，多以运动装为主，给人一种亲切感。",
+            "prompt_en": "A male actor with black hair and black eyes, around 24 years old, with regular features and a sunny disposition. He dresses casually, mostly in sportswear, giving off a friendly and approachable feeling.",
+            "num_of_appearances": 1
+        },
+        "Jiao Jiao": {
+            "tag": "realistic_human",
+            "name_ch": "焦娇",
+            "name_en": "Jiao Jiao",
+            "prompt_ch": "一个黑发黑眼的年轻女演员，年龄约20出头，容貌娇艳，气质活泼。穿着时尚，穿着短裙，给人一种青春活力的感觉。",
+            "prompt_en": "A young actress with black hair and black eyes, in her early 20s, with a charming and lively appearance. She dresses fashionably, often in short skirts, exuding a youthful and energetic vibe.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "我刚因一部古装剧走红，公司立刻安排我参加一档综艺，与三男三女明星共同录制。",
+                "en": "Having just gained fame from a period drama, my company immediately arranged for me to participate in a variety show, recording alongside three male and three female celebrities."
+            },
+            "Setting Description": {
+                "ch": "白天，综艺录制现场，热闹的氛围，背景是大型舞台和观众席，各种灯光设备，工作人员忙碌的身影，明亮的灯光效果。",
+                "en": "Daytime, variety show recording set, lively atmosphere, background featuring a large stage and audience seating, various lighting equipment, busy staff members, bright lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚站在舞台中央，表情略显紧张，双手微微握拳，目光环顾四周。",
+                "en": "Jing Lan stands at the center of the stage, looking slightly nervous, with her hands slightly clenched, her eyes scanning the surroundings."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "三位男星竟是我的青梅竹马吴峥、当红剧的CP搭档宋昱辰，以及秘密交往三年的男友杨羽。",
+                "en": "The three male stars turned out to be my childhood friend Wu Zheng, my popular drama co-star Song Yuchen, and my secret boyfriend of three years, Yang Yu."
+            },
+            "Setting Description": {
+                "ch": "白天，综艺录制现场的后台，忙碌的氛围，化妆间内摆满了化妆品和服装，墙上挂着各种海报，柔和的灯光效果。",
+                "en": "Daytime, backstage of the variety show recording, bustling atmosphere, makeup room filled with cosmetics and costumes, posters hanging on the walls, soft lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "吴峥",
+                    "宋昱辰",
+                    "杨羽"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Wu Zheng",
+                    "Song Yuchen",
+                    "Yang Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚坐在化妆镜前，表情惊讶。吴峥站在她左侧，微笑着打招呼。宋昱辰在右侧整理服装，杨羽则靠在门边，神情冷淡。",
+                "en": "Jing Lan sits in front of a makeup mirror, looking surprised. Wu Zheng stands to her left, smiling and greeting her. Song Yuchen adjusts his costume on the right, while Yang Yu leans against the doorway, his expression cold."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "直播间瞬间炸锅，各种猜测和攻击扑面而来。",
+                "en": "The live broadcast instantly exploded with various speculations and attacks."
+            },
+            "Setting Description": {
+                "ch": "白天，直播间控制室，紧张的氛围，墙上的大屏幕显示着网友的评论，工作人员紧盯屏幕，快速敲击键盘，强烈的灯光效果。",
+                "en": "Daytime, live broadcast control room, tense atmosphere, large screens on the walls displaying netizens' comments, staff members intently watching the screens and typing quickly, intense lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "屏幕上滚动着各种猜测和攻击性评论，工作人员神情紧张。",
+                "en": "The screen scrolls with various speculative and aggressive comments, the staff members looking tense."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "我与杨羽因戏生情，但为了他的事业，我们一直保持地下恋情。",
+                "en": "Yang Yu and I fell in love while working together, but for the sake of his career, we kept our relationship secret."
+            },
+            "Setting Description": {
+                "ch": "夜晚，城市街道，宁静的氛围，路灯下行人稀少，远处高楼的灯光闪烁，柔和的黄色灯光效果。",
+                "en": "Nighttime, city streets, serene atmosphere, few pedestrians under the streetlights, distant skyscrapers twinkling with lights, soft yellow lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "杨羽"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Yang Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚和杨羽并肩走在街道上，景岚表情温柔，杨羽神情冷峻，两人保持一定距离。",
+                "en": "Jing Lan and Yang Yu walk side by side on the street, Jing Lan looking gentle, Yang Yu appearing cold and stern, the two maintaining a certain distance."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "随着他的走红，我们的关系变得疏远。半年前，我们被狗仔拍到，我遭受了网络暴力，而他却选择沉默。",
+                "en": "As he became more famous, our relationship grew distant. Six months ago, we were photographed by paparazzi, and I suffered online harassment while he chose to remain silent."
+            },
+            "Setting Description": {
+                "ch": "夜晚，景岚的公寓，孤独的氛围，客厅内散落着杂志和剧本，窗外是城市夜景，昏暗的灯光效果。",
+                "en": "Nighttime, Jing Lan's apartment, lonely atmosphere, living room scattered with magazines and scripts, city nightscape visible outside the window, dim lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚坐在沙发上，表情落寞，手中握着手机，屏幕上显示着负面评论。",
+                "en": "Jing Lan sits on the sofa, looking despondent, holding a phone in her hand, the screen displaying negative comments."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "这次综艺，我们的关系再次成为焦点，而他却与新搭档焦娇频频互动，让我心生酸涩。",
+                "en": "During this variety show, our relationship became the focus again, and he frequently interacted with his new co-star Jiao Jiao, making me feel bitter."
+            },
+            "Setting Description": {
+                "ch": "白天，综艺录制现场，热闹的氛围，舞台上杨羽和焦娇正在互动，观众席上粉丝欢呼，明亮的灯光效果。",
+                "en": "Daytime, variety show recording set, lively atmosphere, Yang Yu and Jiao Jiao interacting on stage, fans cheering in the audience, bright lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "杨羽",
+                    "焦娇"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Yang Yu",
+                    "Jiao Jiao"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚站在舞台一侧，表情复杂地看着杨羽和焦娇互动，杨羽微笑着与焦娇交谈。",
+                "en": "Jing Lan stands on the side of the stage, looking conflicted as she watches Yang Yu and Jiao Jiao interact, Yang Yu smiling while talking to Jiao Jiao."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "与此同时，我因手滑点赞了一位男主播的视频而再次陷入舆论漩涡。",
+                "en": "Meanwhile, I accidentally liked a male streamer's video and was dragged into another wave of online gossip."
+            },
+            "Setting Description": {
+                "ch": "白天，景岚的公寓，紧张的氛围，客厅内电脑屏幕显示着社交媒体页面，窗外阳光明媚，明亮的灯光效果。",
+                "en": "Daytime, Jing Lan's apartment, tense atmosphere, computer screen in the living room displaying a social media page, sunny outside, bright lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚坐在电脑前，表情焦虑，手指悬在鼠标上方，屏幕上显示着点赞的视频和网友评论。",
+                "en": "Jing Lan sits in front of the computer, looking anxious, her finger hovering over the mouse, the screen showing the liked video and netizens' comments."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "在我最无助的时候，宋昱辰一直陪伴在我身边，给我鼓励和支持。",
+                "en": "During my toughest moments, Song Yuchen stayed by my side, offering encouragement and support."
+            },
+            "Setting Description": {
+                "ch": "傍晚，城市公园，宁静的氛围，长椅旁有一棵大树，树叶随风飘动，夕阳的余晖洒在地面上，柔和的金色灯光效果。",
+                "en": "Evening, city park, serene atmosphere, a bench beside a large tree, leaves rustling in the wind, golden sunset light spilling on the ground, soft golden lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "宋昱辰"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Song Yuchen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚和宋昱辰坐在长椅上，宋昱辰表情关切，轻拍景岚的肩膀，景岚微微低头，神情稍显放松。",
+                "en": "Jing Lan and Song Yuchen sit on the bench, Song Yuchen looking concerned as he lightly pats Jing Lan's shoulder, Jing Lan slightly lowering her head, appearing somewhat relieved."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "宋昱辰要离开综艺去拍戏了，我感到失落。",
+                "en": "Song Yuchen was leaving the variety show to film a drama, and I felt lost."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的天台，安静的氛围，远处城市夜景璀璨，微风轻拂，昏暗的灯光效果。",
+                "en": "Nighttime, rooftop of the variety show recording set, quiet atmosphere, dazzling city nightscape in the distance, gentle breeze, dim lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "宋昱辰"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Song Yuchen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚和宋昱辰站在天台边缘，景岚表情失落，宋昱辰神情平静，两人并肩而立，望向远方。",
+                "en": "Jing Lan and Song Yuchen stand at the edge of the rooftop, Jing Lan looking lost, Song Yuchen appearing calm, the two standing side by side, gazing into the distance."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "在我离开的前一天，我们在天台上聊天。宋昱辰突然拉我到楼梯间，向我表白，希望我能和他一起离开。",
+                "en": "The day before I left, we chatted on the rooftop. Song Yuchen suddenly pulled me into the stairwell and confessed, hoping I would leave with him."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的楼梯间，昏暗的氛围，墙上的应急灯发出微弱的光，楼梯间安静无人，柔和的蓝色灯光效果。",
+                "en": "Nighttime, stairwell of the variety show recording set, dim atmosphere, faint light from the emergency lights on the walls, the stairwell quiet and empty, soft blue lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "宋昱辰"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Song Yuchen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "宋昱辰握住景岚的手，表情认真，景岚神情惊讶，微微后退一步。",
+                "en": "Song Yuchen holds Jing Lan's hand, looking serious, Jing Lan appearing surprised, taking a slight step back."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "但我拒绝了，我不想因为感情而放弃事业。",
+                "en": "But I refused—I didn’t want to give up my career for love."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的楼梯间，昏暗的氛围，墙上的应急灯发出微弱的光，楼梯间安静无人，柔和的蓝色灯光效果。",
+                "en": "Nighttime, stairwell of the variety show recording set, dim atmosphere, faint light from the emergency lights on the walls, the stairwell quiet and empty, soft blue lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚表情坚定，微微摇头，眼神中透出决心。",
+                "en": "Jing Lan looks determined, slightly shaking her head, her eyes filled with resolve."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "最后，我送给宋昱辰一张便签纸，上面写着我一直以来的座右铭。",
+                "en": "In the end, I gave Song Yuchen a note with my long-standing motto written on it."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的天台，安静的氛围，远处城市夜景璀璨，微风轻拂，昏暗的灯光效果。",
+                "en": "Nighttime, rooftop of the variety show recording set, quiet atmosphere, dazzling city nightscape in the distance, gentle breeze, dim lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚",
+                    "宋昱辰"
+                ],
+                "en": [
+                    "Jing Lan",
+                    "Song Yuchen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚递给宋昱辰一张便签纸，宋昱辰接过，表情复杂，景岚微微一笑。",
+                "en": "Jing Lan hands Song Yuchen a note, Song Yuchen accepting it with a complicated expression, Jing Lan smiling faintly."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "希望我们能在顶峰相见。",
+                "en": "I hope we can meet at the peak."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的天台，安静的氛围，远处城市夜景璀璨，微风轻拂，昏暗的灯光效果。",
+                "en": "Nighttime, rooftop of the variety show recording set, quiet atmosphere, dazzling city nightscape in the distance, gentle breeze, dim lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚表情坚定，眼神中充满期待，微微抬头望向远方。",
+                "en": "Jing Lan looks determined, her eyes filled with anticipation, slightly raising her head to gaze into the distance."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "然后，我转身离开，心中充满了不舍和期待。",
+                "en": "Then, I turned and left, filled with reluctance and hope."
+            },
+            "Setting Description": {
+                "ch": "夜晚，综艺录制现场的天台，安静的氛围，远处城市夜景璀璨，微风轻拂，昏暗的灯光效果。",
+                "en": "Nighttime, rooftop of the variety show recording set, quiet atmosphere, dazzling city nightscape in the distance, gentle breeze, dim lighting effects."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，背面镜头",
+                "en": "Full shot, back shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "景岚"
+                ],
+                "en": [
+                    "Jing Lan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "景岚转身离开天台，背影坚定，微风轻拂她的长发，远处城市夜景依旧璀璨。",
+                "en": "Jing Lan turns and walks away from the rooftop, her back firm, the breeze lightly tousling her hair, the city nightscape still dazzling in the distance."
+            }
+        }
+    ]
+}

@@ -1,0 +1,435 @@
+﻿{
+    "Story_type": {
+        "en": "Horror",
+        "ch": "恐怖"
+    },
+    "Characters": {
+        "Li Shiqing": {
+            "tag": "realistic_human",
+            "name_ch": "李诗情",
+            "name_en": "Li Shiqing",
+            "prompt_ch": "黑发黑眼的中国年轻女大学生，大约20岁左右，皮肤白皙，五官清秀。留着一头黑色长发。穿着简单的大学生服饰，蓝色牛仔衬衫搭配牛仔裤。",
+            "prompt_en": "A young Chinese female university student with black hair and black eyes, approximately 20 years old, fair-skinned with delicate features. She has long black hair and wears simple university attire—a blue denim shirt paired with jeans.",
+            "num_of_appearances": 15
+        },
+        "Bus Driver Uncle": {
+            "tag": "realistic_human",
+            "name_ch": "司机大叔",
+            "name_en": "Bus Driver Uncle",
+            "prompt_ch": "中年男性，大约40多岁，头发花白，身材中等，面相和善。头发有些稀疏，穿着公交车司机的制服，蓝色的衬衫。",
+            "prompt_en": "A middle-aged man in his 40s with graying hair, medium build, and a kind face. His hair is somewhat thinning, and he wears the uniform of a bus driver—a blue shirt.",
+            "num_of_appearances": 2
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "李诗情像往常一样在公交车上睡着了。",
+                "en": "As usual, Li Shiqing fell asleep on the bus."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，头靠在窗边，表情安详，闭着眼睛，双肩包放在腿上",
+                "en": "Li Shiqing sits by the window, her head resting against it, her expression peaceful with closed eyes, a backpack placed on her lap"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "突然，她被一阵卡农铃声吵醒。",
+                "en": "Suddenly, she was awakened by the sound of a Canon ringtone."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情微微睁开眼睛，表情有些迷茫，手伸向口袋，卡农铃声从口袋中传出",
+                "en": "Li Shiqing slightly opens her eyes, her expression somewhat dazed, her hand reaching into her pocket as the Canon ringtone plays from it"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "然而，公交车突然发生了剧烈的撞击，她随即晕了过去。",
+                "en": "However, the bus suddenly experienced a violent collision, and she promptly fainted."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 混乱的氛围, 乘客们惊慌失措, 物品散落一地, 强烈的阳光透过窗户",
+                "en": "Daytime, inside the bus, a chaotic atmosphere, panicked passengers, items scattered everywhere, strong sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情身体前倾，表情惊恐，双手试图抓住前方的扶手，但失败了，头撞在前方座位上，晕了过去",
+                "en": "Li Shiqing leans forward, her expression terrified, her hands attempting to grasp the handrail in front of her but failing, her head hitting the seat in front as she faints"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "当她醒来时，一切似乎都很正常。",
+                "en": "When she woke up, everything seemed perfectly normal."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，慢慢睁开眼睛，表情困惑，环顾四周，一切似乎都很正常",
+                "en": "Li Shiqing sits by the window, slowly opening her eyes, her expression confused as she looks around—everything appears normal"
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "但当那该死的手机铃声再次响起时，噩梦又一次降临。",
+                "en": "But when that damned phone rang again, the nightmare returned once more."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情表情紧张，手再次伸向口袋，卡农铃声再次响起，她的眼睛瞪大，显得惊恐",
+                "en": "Li Shiqing's expression is tense as her hand reaches into her pocket again; the Canon ringtone plays once more, her eyes widening in terror"
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "公交车急转弯，乘客们尖叫着被甩下座位，李诗情也不例外。",
+                "en": "The bus made a sharp turn, passengers screamed as they were thrown from their seats, and Li Shiqing was no exception."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 混乱的氛围, 乘客们惊慌失措, 物品散落一地, 强烈的阳光透过窗户",
+                "en": "Daytime, inside the bus, a chaotic atmosphere, panicked passengers, items scattered everywhere, strong sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "公交车急转弯，乘客们尖叫着被甩下座位，李诗情身体失去平衡，表情惊恐，试图抓住旁边伸出的一只手",
+                "en": "The bus takes a sharp turn; passengers scream as they are thrown from their seats. Li Shiqing loses her balance, her expression terrified as she tries to grab an outstretched hand nearby"
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "她试图抓住旁边一只扶手，但失败了，后脑勺重重着地。",
+                "en": "She tried to grab a nearby handrail but failed, her head hitting the ground hard."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 混乱的氛围, 乘客们惊慌失措, 物品散落一地, 强烈的阳光透过窗户",
+                "en": "Daytime, inside the bus, a chaotic atmosphere, panicked passengers, items scattered everywhere, strong sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情的手在空中挥舞，试图抓住旁边的扶手，但失败了，后脑勺重重着地，表情痛苦，闭上了眼睛",
+                "en": "Li Shiqing's hand flails in the air, attempting to grab the nearby handrail but failing; the back of her head hits the ground hard, her expression pained as her eyes close"
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "第三次“醒来”时，李诗情意识到事情不对劲。",
+                "en": "Upon 'waking up' for the third time, Li Shiqing realized something was wrong."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，慢慢睁开眼睛，表情困惑且凝重，手捂着头，似乎在回忆之前的“噩梦”",
+                "en": "Li Shiqing sits by the window, slowly opening her eyes, her expression confused and solemn, her hand clutching her head as if recalling the previous 'nightmare'"
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "她试图让司机停车，但司机担心在没有站台的地方停车会出事故，拒绝了她的请求。",
+                "en": "She tried to get the driver to stop, but he refused, fearing an accident if he stopped outside a designated stop."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 紧张的氛围, 乘客们好奇地看着李诗情, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a tense atmosphere, passengers watching Li Shiqing curiously, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情",
+                    "司机大叔"
+                ],
+                "en": [
+                    "Li Shiqing",
+                    "Bus Driver Uncle"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情站在司机旁边，表情焦急，手抓着司机的座位，司机大叔转过头，表情犹豫，微微摇头",
+                "en": "Li Shiqing stands next to the driver, her expression anxious, her hand gripping his seat. The Bus Driver Uncle turns his head, his expression hesitant as he shakes it slightly"
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "就在这时，手机铃声再次响起，公交车又一次出事了。",
+                "en": "Just then, the phone rang again, and the bus met with another accident."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 混乱的氛围, 乘客们惊慌失措, 物品散落一地, 强烈的阳光透过窗户",
+                "en": "Daytime, inside the bus, a chaotic atmosphere, panicked passengers, items scattered everywhere, strong sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "卡农铃声再次响起，李诗情表情惊恐，公交车突然急转弯，乘客们尖叫着被甩下座位，李诗情也不例外",
+                "en": "The Canon ringtone plays again; Li Shiqing's expression is terrified as the bus suddenly takes a sharp turn. Passengers scream as they are thrown from their seats, and Li Shiqing is no exception"
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "第四次醒来时，她决定扮演成一个“突发疾病”的虚弱女孩，试图让司机停车。",
+                "en": "Upon waking for the fourth time, she decided to act like a 'suddenly ill' weak girl to get the driver to stop."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，表情坚定，手捂着胸口，装作虚弱的样子，慢慢站起身来",
+                "en": "Li Shiqing sits by the window, her expression resolute, her hand clutching her chest as she feigns weakness, slowly standing up"
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "司机犹豫了一下，最终同意了。",
+                "en": "The driver hesitated but eventually agreed."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 紧张的氛围, 乘客们好奇地看着李诗情, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a tense atmosphere, passengers watching Li Shiqing curiously, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情",
+                    "司机大叔"
+                ],
+                "en": [
+                    "Li Shiqing",
+                    "Bus Driver Uncle"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情站在司机旁边，表情虚弱，手扶着司机的座位，司机大叔转过头，表情犹豫，但最终点了点头",
+                "en": "Li Shiqing stands next to the driver, her expression weak, her hand resting on his seat. The Bus Driver Uncle turns his head, his expression hesitant, but he eventually nods"
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "然而，就在车子即将停下时，那可怕的手机铃声再次响起，公交车又一次出事了。",
+                "en": "However, just as the bus was about to stop, the dreadful phone rang again, and the bus met with another accident."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 混乱的氛围, 乘客们惊慌失措, 物品散落一地, 强烈的阳光透过窗户",
+                "en": "Daytime, inside the bus, a chaotic atmosphere, panicked passengers, items scattered everywhere, strong sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "车子即将停下，卡农铃声再次响起，李诗情表情惊恐，公交车突然急转弯，乘客们尖叫着被甩下座位，李诗情也不例外",
+                "en": "The bus is about to stop when the Canon ringtone plays again. Li Shiqing's expression is terrified as the bus suddenly takes a sharp turn. Passengers scream as they are thrown from their seats, and Li Shiqing is no exception"
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "李诗情不甘心，她发誓下一次一定要先抓紧什么，避免再次受伤。",
+                "en": "Li Shiqing refused to give up. She vowed that next time, she would hold onto something tightly to avoid getting hurt again."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，表情坚定且不甘心，手紧紧握拳，眼神中透露出决心",
+                "en": "Li Shiqing sits by the window, her expression resolute and unwilling to concede, her hands clenched into fists, her eyes filled with determination"
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "李诗情紧盯着前方，准备迎接下一次的挑战。",
+                "en": "Li Shiqing stared ahead, ready to face the next challenge."
+            },
+            "Setting Description": {
+                "ch": "白天, 公交车内, 安静的氛围, 座位上零散的乘客, 窗外流动的城市风景, 柔和的自然光线",
+                "en": "Daytime, inside the bus, a quiet atmosphere, scattered passengers in their seats, flowing city scenery outside the window, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李诗情"
+                ],
+                "en": [
+                    "Li Shiqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李诗情坐在靠窗的座位上，身体微微前倾，表情专注且坚定，双手紧握扶手，准备迎接下一次的挑战",
+                "en": "Li Shiqing sits by the window, leaning slightly forward, her expression focused and determined, her hands gripping the handrail tightly, ready to face the next challenge"
+            }
+        }
+    ]
+}

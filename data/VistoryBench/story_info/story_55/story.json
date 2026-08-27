@@ -1,0 +1,529 @@
+﻿{
+    "Story_type": {
+        "en": "Science Fiction",
+        "ch": "科幻"
+    },
+    "Characters": {
+        "Professor Aronnax": {
+            "tag": "realistic_human",
+            "name_ch": "阿龙纳斯教授",
+            "name_en": "Professor Aronnax",
+            "prompt_ch": "一位好奇心强、富有冒险精神的法国海洋生物学家。他穿着西装，中等身材，头发花白，有一双灰色的眼睛，博学多才。",
+            "prompt_en": "A curious and adventurous French marine biologist. He wears a suit, has a medium build, gray hair, and gray eyes. He is highly knowledgeable and versatile.",
+            "num_of_appearances": 13
+        },
+        "Conseil": {
+            "tag": "realistic_human",
+            "name_ch": "康塞尔",
+            "name_en": "Conseil",
+            "prompt_ch": "中年法国男人，性格温和，做事细心。他身材较矮，头发花白稀疏，有一双棕色的眼睛，作为教授的助手，穿着整洁的制服。",
+            "prompt_en": "A middle-aged French man with a gentle and meticulous personality. He has a short stature, sparse gray hair, and brown eyes. As the professor's assistant, he wears a neat uniform.",
+            "num_of_appearances": 5
+        },
+        "Ned Land": {
+            "tag": "realistic_human",
+            "name_ch": "尼德·兰",
+            "name_en": "Ned Land",
+            "prompt_ch": "一位强壮的加拿大捕鲸手，性格直率，脾气暴躁。他身材高大，肌肉发达，有一头浓密的棕发和锐利的蓝眼睛。他穿着简单的水手服，总是带着一把锋利的匕首。",
+            "prompt_en": "A strong Canadian harpooner with a straightforward and irritable temperament. He is tall and muscular, with thick brown hair and sharp blue eyes. He wears simple sailor attire and always carries a sharp dagger.",
+            "num_of_appearances": 5
+        },
+        "Captain Nemo": {
+            "tag": "realistic_human",
+            "name_ch": "尼摩船长",
+            "name_en": "Captain Nemo",
+            "prompt_ch": "诺第留斯号潜艇的神秘船长，知识渊博，技术高超。他身材修长，面容冷峻，有一双深邃的黑眼睛。他穿着蓝色的船长制服，显得威严而神秘。",
+            "prompt_en": "The mysterious captain of the Nautilus submarine. Highly knowledgeable and technically skilled, he has a slender build, stern features, and deep black eyes. He wears a blue captain's uniform, appearing imposing and enigmatic.",
+            "num_of_appearances": 3
+        },
+        "First Mate": {
+            "tag": "realistic_human",
+            "name_ch": "船副",
+            "name_en": "First Mate",
+            "prompt_ch": "诺第留斯号潜艇的船副，身材高大，面容冷峻。",
+            "prompt_en": "The first mate of the Nautilus submarine. He is tall with stern features.",
+            "num_of_appearances": 2
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "十一月九日，我在诺第留斯号潜艇上醒来，睡了整整十二个小时。",
+                "en": "On November 9th, I woke up on the Nautilus submarine after sleeping for a full twelve hours."
+            },
+            "Setting Description": {
+                "ch": "清晨，诺第留斯号潜艇内部，卧室，安静的氛围，床铺、书桌、墙上挂着的地图，柔和的光线",
+                "en": "Early morning, inside the Nautilus submarine, bedroom, quiet atmosphere, bed, desk, map hanging on the wall, soft lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授"
+                ],
+                "en": [
+                    "Professor Aronnax"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授躺在床上，刚刚睁开眼睛，表情有些迷茫，床头柜上放着一本书和眼镜",
+                "en": "Professor Aronnax lies in bed, just opening his eyes with a somewhat confused expression. A book and glasses are placed on the nightstand."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "康塞尔进来问候，然后开始工作。",
+                "en": "Conseil enters to greet me and then begins his work."
+            },
+            "Setting Description": {
+                "ch": "清晨，诺第留斯号潜艇内部，卧室，安静的氛围，床铺、书桌、墙上挂着的地图，柔和的光线",
+                "en": "Early morning, inside the Nautilus submarine, bedroom, quiet atmosphere, bed, desk, map hanging on the wall, soft lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "康塞尔"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Conseil"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "康塞尔站在床边，微微弯腰，表情关切，阿龙纳斯教授坐在床上，微笑回应",
+                "en": "Conseil stands by the bed, slightly bending forward with a concerned expression. Professor Aronnax sits on the bed, smiling in response."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "加拿大人尼德·兰还在熟睡。",
+                "en": "The Canadian, Ned Land, is still sound asleep."
+            },
+            "Setting Description": {
+                "ch": "清晨，诺第留斯号潜艇内部，另一间卧室，安静的氛围，床铺、简单的家具、墙上挂着的渔网，昏暗的光线",
+                "en": "Early morning, inside the Nautilus submarine, another bedroom, quiet atmosphere, bed, simple furniture, fishing net hanging on the wall, dim lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "尼德·兰"
+                ],
+                "en": [
+                    "Ned Land"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼德·兰躺在床上，鼾声如雷，表情安详，一只手臂搭在床边",
+                "en": "Ned Land lies on the bed, snoring loudly with a peaceful expression. One arm rests on the side of the bed."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "我穿好由贝类纤维制成的衣服，这种材料既柔软又保暖。",
+                "en": "I dressed in clothes made of shellfish fiber, a material that is both soft and warm."
+            },
+            "Setting Description": {
+                "ch": "清晨，诺第留斯号潜艇内部，卧室，安静的氛围，衣柜、镜子、书桌，柔和的光线",
+                "en": "Early morning, inside the Nautilus submarine, bedroom, quiet atmosphere, wardrobe, mirror, desk, soft lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授"
+                ],
+                "en": [
+                    "Professor Aronnax"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授站在镜子前，正在扣上衣服的最后一颗扣子，表情满意，衣服材质显得柔软有光泽",
+                "en": "Professor Aronnax stands in front of the mirror, fastening the last button of his clothes with a satisfied expression. The fabric appears soft and glossy."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "我去客厅等待尼摩船长，但他没有出现。",
+                "en": "I went to the lounge to wait for Captain Nemo, but he did not appear."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，客厅，豪华的装饰，沙发、茶几、墙上挂着的海洋画作，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, lounge, luxurious decor, sofa, coffee table, ocean-themed paintings on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授"
+                ],
+                "en": [
+                    "Professor Aronnax"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授坐在沙发上，手中拿着一本书，表情期待，不时看向门口",
+                "en": "Professor Aronnax sits on the sofa, holding a book with an expectant expression, occasionally glancing toward the door."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "我研究了柜子里的贝类和植物标本，但船长仍未露面。",
+                "en": "I examined the shell and plant specimens in the cabinet, but the captain still did not show up."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，客厅，豪华的装饰，展示柜、沙发、茶几，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, lounge, luxurious decor, display cabinet, sofa, coffee table, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授"
+                ],
+                "en": [
+                    "Professor Aronnax"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授站在展示柜前，仔细观察贝类标本，表情专注，一只手轻轻触摸标本",
+                "en": "Professor Aronnax stands in front of the display cabinet, carefully observing shell specimens with a focused expression. One hand lightly touches a specimen."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "十一月十日，依然没有见到船长。我和康塞尔、尼德·兰都很疑惑。",
+                "en": "On November 10th, we still hadn't seen the captain. Conseil, Ned Land, and I were all puzzled."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，餐厅，简洁的装饰，餐桌、椅子、墙上挂着的航海图，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, dining room, simple decor, dining table, chairs, nautical chart on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "康塞尔",
+                    "尼德·兰"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Conseil",
+                    "Ned Land"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "三人围坐在餐桌旁，表情疑惑，康塞尔微微皱眉，尼德·兰双手交叉放在胸前",
+                "en": "The three sit around the dining table with puzzled expressions. Conseil frowns slightly, while Ned Land crosses his arms."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "我们享受着船上的自由和美食，但船长的缺席令人不安。",
+                "en": "We enjoyed the freedom and food on the ship, but the captain's absence was unsettling."
+            },
+            "Setting Description": {
+                "ch": "中午，诺第留斯号潜艇内部，餐厅，简洁的装饰，餐桌上摆满美食、餐具、墙上挂着的航海图，明亮的光线",
+                "en": "Noon, inside the Nautilus submarine, dining room, simple decor, dining table laden with food, tableware, nautical chart on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "康塞尔",
+                    "尼德·兰"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Conseil",
+                    "Ned Land"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "三人正在用餐，阿龙纳斯教授若有所思，康塞尔细嚼慢咽，尼德·兰大口吃肉",
+                "en": "The three are eating. Professor Aronnax looks thoughtful, Conseil chews slowly, and Ned Land eats meat heartily."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "十一月十一日，我在平台上呼吸新鲜空气，看到船副用望远镜观察四周。",
+                "en": "On November 11th, I stepped onto the platform to breathe fresh air and saw the first mate using binoculars to observe the surroundings."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇外部，平台，广阔的海洋，栏杆、船副、望远镜、远处的海平线，清新的海风",
+                "en": "Morning, outside the Nautilus submarine, platform, vast ocean, railing, first mate, binoculars, distant horizon, fresh sea breeze"
+            },
+            "Shot Perspective Design": {
+                "ch": "中远景，高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "船副"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "First Mate"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授站在平台中央，深呼吸，表情放松，船副站在一旁，用望远镜观察四周",
+                "en": "Professor Aronnax stands in the center of the platform, taking a deep breath with a relaxed expression. The first mate stands nearby, using binoculars to observe the surroundings."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "船副说了一句奇怪的话：“诺土隆一雷斯扑一罗宜一维尔希。”我不明白这句话的意思。",
+                "en": "The first mate said a strange phrase: 'Nautron respoc lorni virch.' I didn't understand its meaning."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇外部，平台，广阔的海洋，栏杆、船副、望远镜、远处的海平线，清新的海风",
+                "en": "Morning, outside the Nautilus submarine, platform, vast ocean, railing, first mate, binoculars, distant horizon, fresh sea breeze"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "船副"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "First Mate"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "船副放下望远镜，表情严肃，说出那句奇怪的话，阿龙纳斯教授站在一旁，表情困惑",
+                "en": "The first mate lowers the binoculars with a serious expression and utters the strange phrase. Professor Aronnax stands nearby, looking confused."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "接下来的五天，情况依旧，船长没有出现。",
+                "en": "For the next five days, the situation remained unchanged—the captain did not appear."
+            },
+            "Setting Description": {
+                "ch": "下午，诺第留斯号潜艇内部，走廊，安静的氛围，墙上的舷窗、地板上的阴影、远处的舱门，昏暗的光线",
+                "en": "Afternoon, inside the Nautilus submarine, corridor, quiet atmosphere, portholes on the wall, shadows on the floor, distant cabin door, dim lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景，平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "空无一人的走廊，光线透过舷窗洒在地板上，形成斑驳的阴影",
+                "en": "The empty corridor has light streaming through the portholes, casting mottled shadows on the floor."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "十一月十六日，我收到船长的信，邀请我和同伴们去克利斯波岛的森林打猎。",
+                "en": "On November 16th, I received a letter from the captain inviting my companions and me to hunt in the forests of Crespo Island."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，客厅，豪华的装饰，茶几上放着一封信、沙发、墙上挂着的海洋画作，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, lounge, luxurious decor, letter on the coffee table, sofa, ocean-themed painting on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授"
+                ],
+                "en": [
+                    "Professor Aronnax"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿龙纳斯教授坐在沙发上，手中拿着船长的信，表情惊讶，信封上印有船长的徽章",
+                "en": "Professor Aronnax sits on the sofa, holding the captain's letter with a surprised expression. The envelope bears the captain's emblem."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "我们都很惊讶，因为船长一直讨厌陆地。我查看地图，发现克利斯波岛是一个荒凉的小岛。",
+                "en": "We were all surprised because the captain had always despised land. I checked the map and found that Crespo Island was a desolate islet."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，客厅，豪华的装饰，茶几上放着一封信、沙发、墙上挂着的海洋画作、地图桌，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, lounge, luxurious decor, letter on the coffee table, sofa, ocean-themed painting on the wall, map table, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "康塞尔",
+                    "尼德·兰"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Conseil",
+                    "Ned Land"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "三人围在地图桌旁，阿龙纳斯教授手指着地图上的克利斯波岛，表情疑惑，康塞尔和尼德·兰凑近观看",
+                "en": "The three gather around the map table. Professor Aronnax points to Crespo Island on the map with a puzzled expression. Conseil and Ned Land lean in to look."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "十一月十七日，我见到了船长，他解释说我们要去的是海底森林，而不是陆地森林。",
+                "en": "On November 17th, I met the captain, who explained that we were going to an underwater forest, not a land forest."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，船长室，简洁而威严的装饰，书桌、椅子、墙上挂着的航海图，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, captain's quarters, simple yet imposing decor, desk, chair, nautical chart on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "尼摩船长"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Captain Nemo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼摩船长坐在书桌后，表情冷峻，阿龙纳斯教授站在桌前，表情惊讶",
+                "en": "Captain Nemo sits behind the desk with a stern expression. Professor Aronnax stands in front of the desk, looking surprised."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "他展示了一套潜水设备，包括卢格罗尔呼吸器和兰可夫探照灯，这些设备能让我们在海底自由行动和照明。",
+                "en": "He displayed a set of diving equipment, including the Rouquayrol breathing apparatus and Ruhmkorff lamps, which would allow us to move and illuminate freely underwater."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，船长室，简洁而威严的装饰，书桌上放着潜水设备、墙上挂着的航海图，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, captain's quarters, simple yet imposing decor, diving equipment on the desk, nautical chart on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "尼摩船长"
+                ],
+                "en": [
+                    "Captain Nemo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼摩船长站在书桌旁，手中拿着卢格罗尔呼吸器，表情自豪，设备细节清晰可见",
+                "en": "Captain Nemo stands by the desk, holding the Rouquayrol breathing apparatus with a proud expression. The equipment's details are clearly visible."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "他还介绍了一种特殊的猎枪，使用压缩空气和高压玻璃球作为子弹，威力巨大。",
+                "en": "He also introduced a special hunting gun that used compressed air and high-pressure glass bullets, which were immensely powerful."
+            },
+            "Setting Description": {
+                "ch": "上午，诺第留斯号潜艇内部，船长室，简洁而威严的装饰，书桌上放着猎枪、墙上挂着的航海图，明亮的光线",
+                "en": "Morning, inside the Nautilus submarine, captain's quarters, simple yet imposing decor, hunting gun on the desk, nautical chart on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "特写，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "尼摩船长"
+                ],
+                "en": [
+                    "Captain Nemo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼摩船长手中拿着猎枪，枪身细节特写，表情严肃，手指轻轻抚过枪身",
+                "en": "Captain Nemo holds the hunting gun with a serious expression. The gun's details are shown in close-up as he lightly runs his fingers over it."
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "我和同伴们穿上潜水服，准备开始这次奇特的海底狩猎之旅。",
+                "en": "My companions and I put on diving suits, preparing for this peculiar underwater hunting expedition."
+            },
+            "Setting Description": {
+                "ch": "下午，诺第留斯号潜艇内部，准备室，简洁的装饰，潜水服、设备架、墙上挂着的操作指南，明亮的光线",
+                "en": "Afternoon, inside the Nautilus submarine, preparation room, simple decor, diving suits, equipment rack, operational guide on the wall, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿龙纳斯教授",
+                    "康塞尔",
+                    "尼德·兰"
+                ],
+                "en": [
+                    "Professor Aronnax",
+                    "Conseil",
+                    "Ned Land"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "三人正在穿戴潜水服，阿龙纳斯教授调整呼吸器，康塞尔检查探照灯，尼德·兰拿起猎枪，表情期待",
+                "en": "The three are putting on diving suits. Professor Aronnax adjusts the breathing apparatus, Conseil checks the lamp, and Ned Land picks up the hunting gun with an eager expression."
+            }
+        }
+    ]
+}

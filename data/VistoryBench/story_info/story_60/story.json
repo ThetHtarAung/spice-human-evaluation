@@ -1,0 +1,266 @@
+﻿{
+    "Story_type": {
+        "en": "Ancient Chinese Novels",
+        "ch": "中国古代小说"
+    },
+    "Characters": {
+        "Liu Bei": {
+            "tag": "realistic_human",
+            "name_ch": "刘备",
+            "name_en": "Liu Bei",
+            "prompt_ch": "刘备，中国古代男人，面容慈祥方正，眉目温和，蓄着整齐的中长胡须，双目柔润中透出隐忍坚韧，整体气质宽厚仁德",
+            "prompt_en": "Liu Bei, an ancient Chinese man with a benevolent and dignified face, gentle and warm eyes, neatly trimmed medium-length beard, soft and moist eyes revealing resilience and endurance, embodying a broad-minded and virtuous demeanor.",
+            "num_of_appearances": 6
+        },
+        "Zhang Fei": {
+            "tag": "realistic_human",
+            "name_ch": "张飞",
+            "name_en": "Zhang Fei",
+            "prompt_ch": "张飞，中国古代男人，络腮胡浓密，身形魁梧，气势凶猛，粗犷中透着忠直憨气。",
+            "prompt_en": "Zhang Fei, an ancient Chinese man with a dense full beard, burly physique, fierce presence, rough yet honest and straightforward in character.",
+            "num_of_appearances": 6
+        },
+        "Guan Yu": {
+            "tag": "realistic_human",
+            "name_ch": "关羽",
+            "name_en": "Guan Yu",
+            "prompt_ch": "关羽，中国古代男人，红脸长胡子，胡子长得快到胸口，眼睛细长的眯着但特别有神，眉毛浓密。个子很高，威风凛凛。",
+            "prompt_en": "Guan Yu, an ancient Chinese man with a red face and long beard that reaches almost to his chest, slender but sharp and spirited eyes, thick eyebrows, towering and majestic in stature.",
+            "num_of_appearances": 5
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "旁白：东汉末年，黄巾起义，天下大乱。幽州太守刘焉招募义兵，榜文到了涿县。",
+                "en": "Narration: In the late Eastern Han Dynasty, the Yellow Turban Rebellion erupted, plunging the world into chaos. Liu Yan, the governor of Youzhou, recruited volunteers, and the notice reached Zhuoxian County."
+            },
+            "Setting Description": {
+                "ch": "白天, 涿县街道, 人来人往, 街边有各种小摊贩, 张贴榜文的告示墙, 阳光明媚",
+                "en": "Daytime, streets of Zhuoxian County, bustling with people, various street vendors, notice wall with the proclamation, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "街道上人来人往，告示墙前围着一群人，榜文在墙上显得格外醒目",
+                "en": "The streets are bustling with people, a crowd gathered in front of the notice wall, the proclamation stands out prominently on the wall"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "刘备看到榜文，感叹自己无力报国。",
+                "en": "Liu Bei sees the proclamation and laments his inability to serve the country."
+            },
+            "Setting Description": {
+                "ch": "白天, 涿县街道, 人来人往, 街边有各种小摊贩, 张贴榜文的告示墙, 阳光明媚",
+                "en": "Daytime, streets of Zhuoxian County, bustling with people, various street vendors, notice wall with the proclamation, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备"
+                ],
+                "en": [
+                    "Liu Bei"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备站在告示墙前，表情凝重，微微皱眉，双手背在身后，目光注视着榜文",
+                "en": "Liu Bei stands in front of the notice wall, his expression solemn, slightly frowning, hands behind his back, gazing at the proclamation"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "张飞出现，愿意资助刘备招募乡勇。",
+                "en": "Zhang Fei appears, willing to fund Liu Bei's recruitment of local volunteers."
+            },
+            "Setting Description": {
+                "ch": "白天, 涿县街道, 人来人往, 街边有各种小摊贩, 张贴榜文的告示墙, 阳光明媚",
+                "en": "Daytime, streets of Zhuoxian County, bustling with people, various street vendors, notice wall with the proclamation, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面镜头",
+                "en": "Medium close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "张飞"
+                ],
+                "en": [
+                    "Zhang Fei"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "张飞站在刘备身旁，表情豪爽，右手拍在刘备肩膀上，目光坚定",
+                "en": "Zhang Fei stands beside Liu Bei, his expression hearty, right hand patting Liu Bei's shoulder, eyes determined"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "两人正饮酒时，遇到关羽。",
+                "en": "While drinking, they encounter Guan Yu."
+            },
+            "Setting Description": {
+                "ch": "白天, 涿县酒馆, 酒馆内人声鼎沸, 木桌木椅, 酒坛酒碗, 阳光透过窗户洒进来",
+                "en": "Daytime, tavern in Zhuoxian County, lively atmosphere inside, wooden tables and chairs, jars and bowls of wine, sunlight streaming through the windows"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备",
+                    "张飞",
+                    "关羽"
+                ],
+                "en": [
+                    "Liu Bei",
+                    "Zhang Fei",
+                    "Guan Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备和张飞坐在酒馆内，关羽站在他们面前，三人表情严肃，关羽双手抱拳",
+                "en": "Liu Bei and Zhang Fei are seated inside the tavern, Guan Yu stands before them, all three looking solemn, Guan Yu with hands clasped in salute"
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "三人在桃园结拜为兄弟，发誓同心协力，救国救民。",
+                "en": "The three swear brotherhood in the Peach Garden, pledging to unite and save the country and its people."
+            },
+            "Setting Description": {
+                "ch": "白天, 桃园, 桃花盛开, 花瓣飘落, 石桌石凳, 阳光明媚",
+                "en": "Daytime, Peach Garden, peach blossoms in full bloom, petals falling, stone table and stools, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备",
+                    "张飞",
+                    "关羽"
+                ],
+                "en": [
+                    "Liu Bei",
+                    "Zhang Fei",
+                    "Guan Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备、张飞、关羽站在桃园中央，三人表情庄重，双手举起，向天发誓",
+                "en": "Liu Bei, Zhang Fei, and Guan Yu stand at the center of the Peach Garden, their expressions solemn, hands raised in a vow to heaven"
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "他们招募了五百乡勇，得到商人资助，打造了兵器铠甲。",
+                "en": "They recruit five hundred local volunteers, receive funding from merchants, and forge weapons and armor."
+            },
+            "Setting Description": {
+                "ch": "白天, 涿县校场, 乡勇们在操练, 兵器架上摆满了兵器, 铠甲堆放在一旁, 阳光明媚",
+                "en": "Daytime, training ground in Zhuoxian County, volunteers drilling, weapon racks filled with weapons, armor piled nearby, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中远景, 高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备",
+                    "张飞",
+                    "关羽"
+                ],
+                "en": [
+                    "Liu Bei",
+                    "Zhang Fei",
+                    "Guan Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备、张飞、关羽站在校场中央，乡勇们在他们周围操练，兵器和铠甲在阳光下闪闪发光",
+                "en": "Liu Bei, Zhang Fei, and Guan Yu stand at the center of the training ground, volunteers drilling around them, weapons and armor gleaming in the sunlight"
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "在太守刘焉的命令下，他们去迎战黄巾军。首战告捷，大败敌军。",
+                "en": "Under Governor Liu Yan's orders, they march to battle the Yellow Turban Army. Their first battle is victorious, defeating the enemy decisively."
+            },
+            "Setting Description": {
+                "ch": "白天, 战场, 尘土飞扬, 士兵们在厮杀, 远处是黄巾军的旗帜, 阳光刺眼",
+                "en": "Daytime, battlefield, dust swirling, soldiers engaged in combat, Yellow Turban Army banners in the distance, glaring sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 鸟瞰镜头",
+                "en": "Wide shot, bird's eye view shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备",
+                    "张飞",
+                    "关羽"
+                ],
+                "en": [
+                    "Liu Bei",
+                    "Zhang Fei",
+                    "Guan Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备、张飞、关羽带领士兵们冲锋陷阵，黄巾军节节败退，战场上尘土飞扬",
+                "en": "Liu Bei, Zhang Fei, and Guan Yu lead their troops in battle, the Yellow Turban Army retreating in disarray, dust swirling on the battlefield"
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "刘备听说老师卢植在广宗与黄巾军作战，便带兵去支援。但到了那里，发现卢植已被朝廷逮捕。",
+                "en": "Liu Bei hears that his mentor Lu Zhi is fighting the Yellow Turban Army in Guangzong and leads his troops to support. Upon arrival, he discovers Lu Zhi has been arrested by the imperial court."
+            },
+            "Setting Description": {
+                "ch": "白天, 广宗城外, 士兵们在驻扎, 远处是广宗城的城墙, 阳光明媚",
+                "en": "Daytime, outside Guangzong city, soldiers encamped, city walls in the distance, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘备",
+                    "张飞",
+                    "关羽"
+                ],
+                "en": [
+                    "Liu Bei",
+                    "Zhang Fei",
+                    "Guan Yu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘备、张飞、关羽站在营地中央，表情凝重，士兵们在他们周围忙碌，远处的城墙上挂着朝廷的旗帜",
+                "en": "Liu Bei, Zhang Fei, and Guan Yu stand at the center of the camp, their expressions grave, soldiers busy around them, imperial banners hanging on the distant city walls"
+            }
+        }
+    ]
+}

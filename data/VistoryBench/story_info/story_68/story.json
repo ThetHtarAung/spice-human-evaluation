@@ -1,0 +1,161 @@
+﻿{
+    "Story_type": {
+        "en": "Greek Mythology",
+        "ch": "希腊神话"
+    },
+    "Characters": {
+        "Daedalus": {
+            "tag": "unrealistic_human",
+            "name_ch": "代达罗斯",
+            "name_en": "Daedalus",
+            "prompt_ch": "古希腊建筑师兼发明家，中年男性，身材高大，面容睿智，眼神中透露出无尽的创造力和智慧。他身穿古希腊长袍，腰间系着一条皮带，头发和胡子花白，但精神矍铄。他的手上拿着一柄锤子。",
+            "prompt_en": "An ancient Greek architect and inventor, a middle-aged man of tall stature with a wise face, his eyes revealing boundless creativity and intelligence. He wears an ancient Greek robe with a leather belt around his waist. His hair and beard are gray, but he appears vigorous. He holds a hammer in his hand.",
+            "num_of_appearances": 3
+        },
+        "Icarus": {
+            "tag": "unrealistic_human",
+            "name_ch": "伊卡洛斯",
+            "name_en": "Icarus",
+            "prompt_ch": "代达罗斯的年轻儿子，少年模样，大约十五六岁，身形修长，面容英俊，眼中闪烁着对未知世界的好奇与渴望。他身穿简洁的古希腊服饰，神情中带着年轻人特有的冲动与无畏。",
+            "prompt_en": "Daedalus' young son, a teenager of about fifteen or sixteen, with a slender build and handsome features. His eyes sparkle with curiosity and longing for the unknown world. He wears simple ancient Greek attire, his expression marked by the impulsiveness and fearlessness typical of youth.",
+            "num_of_appearances": 3
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "旁白：在遥远的克里特岛上，有一位聪明绝顶的建筑师代达罗斯。",
+                "en": "Narrator: On the distant island of Crete, there lived an extraordinarily brilliant architect named Daedalus."
+            },
+            "Setting Description": {
+                "ch": "白天, 克里特岛海边悬崖, 宁静的氛围, 远处是无垠的蓝色大海，海浪轻拍礁石，悬崖上生长着稀疏的灌木和野花，天空中海鸥盘旋飞翔, 柔和的自然光线",
+                "en": "Daytime, seaside cliffs of Crete, serene atmosphere, vast blue sea in the distance with waves gently lapping against the rocks. Sparse shrubs and wildflowers grow on the cliffs, seagulls circle in the sky, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "无角色",
+                "en": "No characters present"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "代达罗斯受国王米诺斯之托，建造了一座无比复杂的迷宫。",
+                "en": "Daedalus, commissioned by King Minos, built an incredibly complex labyrinth."
+            },
+            "Setting Description": {
+                "ch": "白天, 迷宫内部, 阴暗的氛围, 石砌的墙壁上爬满了藤蔓，地面上铺着青苔，光线透过狭窄的窗户洒下斑驳的光影，迷宫深处传来隐隐的回声, 微弱的光线",
+                "en": "Daytime, inside the labyrinth, gloomy atmosphere, stone walls covered with ivy, moss growing on the ground. Flickering light streams through narrow windows, faint echoes resonate from the depths of the labyrinth, dim lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 高角度镜头",
+                "en": "Medium shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "代达罗斯"
+                ],
+                "en": [
+                    "Daedalus"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "代达罗斯站在迷宫中央，表情专注，手中拿着设计图纸，目光在四周的墙壁上巡视",
+                "en": "Daedalus stands at the center of the labyrinth, his expression focused, holding design blueprints in his hand as he surveys the surrounding walls"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "国王害怕迷宫的秘密被泄露，便将代达罗斯和他的儿子伊卡洛斯关进了迷宫中的一座高塔。",
+                "en": "Fearing the labyrinth's secrets might be revealed, the king imprisoned Daedalus and his son Icarus in a high tower within the labyrinth."
+            },
+            "Setting Description": {
+                "ch": "白天, 迷宫高塔内部, 压抑的氛围, 石砌的塔内光线昏暗，仅有一扇小窗透进微弱的光线，塔内陈设简陋，角落里堆放着杂物, 微弱的光线",
+                "en": "Daytime, inside the high tower of the labyrinth, oppressive atmosphere, dim lighting inside the stone tower with only a small window letting in faint light. The interior is sparsely furnished, with clutter piled in a corner, dim lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "代达罗斯",
+                    "伊卡洛斯"
+                ],
+                "en": [
+                    "Daedalus",
+                    "Icarus"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "代达罗斯和伊卡洛斯站在塔内，代达罗斯表情凝重，伊卡洛斯神情不安，两人望向那扇小窗",
+                "en": "Daedalus and Icarus stand inside the tower, Daedalus looking grave and Icarus uneasy, both gazing at the small window"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "代达罗斯精心设计了一对飞行翼，告诫儿子伊卡洛斯飞行时既不能太低，也不能太高。",
+                "en": "Daedalus meticulously designed a pair of wings and warned his son Icarus not to fly too low or too high."
+            },
+            "Setting Description": {
+                "ch": "白天, 高塔内部, 紧张的氛围, 工作台上散落着各种工具和材料，墙上挂着设计图纸，窗外可以看到远处的大海, 明亮的光线",
+                "en": "Daytime, inside the high tower, tense atmosphere, workbench scattered with tools and materials, design blueprints hanging on the wall. The distant sea is visible through the window, bright lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "代达罗斯",
+                    "伊卡洛斯"
+                ],
+                "en": [
+                    "Daedalus",
+                    "Icarus"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "代达罗斯手中拿着刚完成的飞行翼，表情严肃地对伊卡洛斯讲解，伊卡洛斯认真聆听，眼中闪烁着兴奋",
+                "en": "Daedalus holds the newly completed wings, speaking seriously to Icarus as the latter listens attentively, his eyes gleaming with excitement"
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "伊卡洛斯初次飞行，忘记了父亲的忠告，越飞越高，最终因过于接近太阳，蜡翼融化，从高空坠落。",
+                "en": "Icarus, flying for the first time, forgot his father's warning and flew higher and higher. Eventually, the wax wings melted from the sun's heat, causing him to plummet from the sky."
+            },
+            "Setting Description": {
+                "ch": "白天, 高空, 紧张的氛围, 天空湛蓝，白云朵朵，下方是无垠的大海，海浪在阳光下闪烁着光芒, 强烈的阳光",
+                "en": "Daytime, high in the sky, tense atmosphere, azure sky dotted with white clouds, vast sea glistening under the sunlight below, intense sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "正面, 倾斜镜头",
+                "en": "Frontal, dutch angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "伊卡洛斯"
+                ],
+                "en": [
+                    "Icarus"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "伊卡洛斯在空中飞翔，表情兴奋，翅膀开始融化，他惊恐地望向太阳，身体开始坠落",
+                "en": "Icarus flies through the air, his expression excited as the wings begin to melt. He looks up at the sun in terror as his body starts to fall"
+            }
+        }
+    ]
+}

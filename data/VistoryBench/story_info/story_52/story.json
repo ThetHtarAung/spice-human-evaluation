@@ -1,0 +1,571 @@
+﻿{
+    "Story_type": {
+        "en": "Fantasy",
+        "ch": "西方幻想"
+    },
+    "Characters": {
+        "Daenerys": {
+            "tag": "realistic_human",
+            "name_ch": "丹妮莉丝",
+            "name_en": "Daenerys",
+            "prompt_ch": "一位年轻美丽的孕妇，白发黑眼，皮肤白皙。她穿着多斯拉克风格的服饰，长袍上绘有彩色图案。",
+            "prompt_en": "A young and beautiful pregnant woman with white hair, black eyes, and fair skin. She wears Dothraki-style clothing, with colorful patterns painted on her robe.",
+            "num_of_appearances": 9
+        },
+        "Viserys": {
+            "tag": "realistic_human",
+            "name_ch": "韦赛里斯",
+            "name_en": "Viserys",
+            "prompt_ch": "一个自负而疯狂的男人。他白发银眼，面容憔悴，穿着破旧的红色丝衣和黑色天鹅绒披风。",
+            "prompt_en": "A conceited and insane man. He has silver hair and pale eyes, with a gaunt face. He wears tattered red silk and a black velvet cloak.",
+            "num_of_appearances": 7
+        },
+        "Khal Drogo": {
+            "tag": "realistic_human",
+            "name_ch": "卓戈卡奥",
+            "name_en": "Khal Drogo",
+            "prompt_ch": "强大的多斯拉克首领。他身材魁梧，古铜色皮肤，长长的黑发编成辫子，上面装饰着金环和铃铛。他穿着马皮裤子和彩绘皮背心，腰间系着沉重的金章腰带。他是一个威严而冷酷的战士。",
+            "prompt_en": "A powerful Dothraki leader. He is tall and muscular, with bronze skin, long black hair braided with bells and gold rings. He wears horsehide pants and a painted leather vest, with a heavy golden belt around his waist. He is a stern and ruthless warrior.",
+            "num_of_appearances": 5
+        },
+        "Dosh Khaleen Elder": {
+            "tag": "realistic_human",
+            "name_ch": "多希卡林的老妪",
+            "name_en": "Dosh Khaleen Elder",
+            "prompt_ch": "多斯拉克人的女智者，由一群年迈的老妇人组成。她们穿着朴素的长袍，脸上布满皱纹，眼神锐利。",
+            "prompt_en": "The wise women of the Dothraki, a group of elderly women. They wear plain robes and have wrinkled faces with sharp eyes.",
+            "num_of_appearances": 2
+        },
+        "Bloodrider": {
+            "tag": "realistic_human",
+            "name_ch": "血盟卫",
+            "name_en": "Bloodrider",
+            "prompt_ch": "多斯拉克人的战士，穿着多斯拉克风格的服饰，手持长矛，表情严肃。",
+            "prompt_en": "Dothraki warriors dressed in traditional attire, holding spears and wearing serious expressions.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "夜幕降临，多斯拉克人的圣城维斯·多斯拉克被笼罩在一片神秘的氛围中。",
+                "en": "As night falls, the sacred city of Vaes Dothrak is shrouded in a mysterious atmosphere."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 维斯·多斯拉克, 神秘氛围, 辽阔的草原, 远处的帐篷和篝火, 微弱的月光",
+                "en": "Nighttime, Vaes Dothrak, mysterious atmosphere, vast grasslands, distant tents and bonfires, faint moonlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "辽阔的草原上，圣城维斯·多斯拉克的轮廓在夜色中若隐若现，远处的帐篷闪烁着微弱的火光。",
+                "en": "The outline of the sacred city of Vaes Dothrak is faintly visible in the night, with distant tents glowing faintly from bonfires."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "年轻的丹妮莉丝，身怀六甲，站在一个火坑旁。",
+                "en": "Young Daenerys, heavily pregnant, stands beside a fire pit."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 紧张氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, tense atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝站在火坑旁，双手捧着冒着热气的马心，表情凝重，火光映照在她白皙的脸上。",
+                "en": "Daenerys stands by the fire pit, holding a steaming horse heart in her hands, her expression solemn, the firelight reflecting on her fair face."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "她的丈夫卓戈卡奥，刚刚杀死了一匹野马，将血淋淋的心脏递给她。",
+                "en": "Her husband, Khal Drogo, has just killed a wild horse and hands her the bloody heart."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 紧张氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, tense atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面镜头",
+                "en": "Medium close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "卓戈卡奥"
+                ],
+                "en": [
+                    "Khal Drogo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "卓戈卡奥站在丹妮莉丝身旁，身材魁梧，手中握着血淋淋的马心，表情冷酷。",
+                "en": "Khal Drogo stands beside Daenerys, his muscular frame holding the bloody horse heart, his expression cold and stern."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "丹妮莉丝强忍着恶心，咬了下去。鲜血顺着她的下巴流下，她艰难地咀嚼着生肉。",
+                "en": "Daenerys suppresses her nausea and takes a bite. Blood drips down her chin as she struggles to chew the raw meat."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 紧张氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, tense atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面镜头",
+                "en": "Close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝紧闭双眼，咬下马心，鲜血顺着下巴流下，表情痛苦而坚定。",
+                "en": "Daenerys closes her eyes as she bites into the horse heart, blood running down her chin, her expression pained but resolute."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "她抬起头，看到多希卡林的老妪们正注视着她。",
+                "en": "She looks up and sees the Dosh Khaleen elders watching her."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 神秘氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, mysterious atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 高角度镜头",
+                "en": "Medium shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝",
+                    "多希卡林的老妪"
+                ],
+                "en": [
+                    "Daenerys",
+                    "Dosh Khaleen Elder"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝抬头，多希卡林的老妪们站在她面前，眼神锐利，表情严肃。",
+                "en": "Daenerys looks up to see the Dosh Khaleen elders standing before her, their sharp eyes and stern expressions fixed on her."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "最年迈的一位老妪高举双手，宣布丹妮莉丝怀的是个男孩，并将成为“骑着世界的骏马”。",
+                "en": "The eldest of the elders raises her hands and declares that Daenerys is carrying a boy, who will be 'the stallion who mounts the world.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 神秘氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, mysterious atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "多希卡林的老妪"
+                ],
+                "en": [
+                    "Dosh Khaleen Elder"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "最年迈的老妪高举双手，表情庄重，宣布预言，其他老妪围绕在她身旁。",
+                "en": "The eldest elder raises her hands, her expression solemn as she delivers the prophecy, the other elders gathered around her."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "人群欢呼起来，丹妮莉丝感到一丝安慰。",
+                "en": "The crowd cheers, and Daenerys feels a glimmer of comfort."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 火坑旁, 欢庆氛围, 燃烧的篝火, 地上的血迹, 火光映照",
+                "en": "Nighttime, beside the fire pit, celebratory atmosphere, burning bonfire, bloodstains on the ground, firelight illuminating the scene"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝站在中央，周围人群欢呼雀跃，她脸上露出一丝欣慰的微笑。",
+                "en": "Daenerys stands at the center, surrounded by cheering people, a faint smile of relief on her face."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "仪式结束后，丹妮莉丝和卓戈卡奥回到他们的宫殿。宫殿里正在举行盛大的宴会。",
+                "en": "After the ceremony, Daenerys and Khal Drogo return to their palace, where a grand feast is underway."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 欢庆氛围, 装饰华丽的宫殿, 宴会桌, 音乐和鼓声, 火把照明",
+                "en": "Nighttime, inside the palace, celebratory atmosphere, ornately decorated palace, banquet tables, music and drumbeats, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝",
+                    "卓戈卡奥"
+                ],
+                "en": [
+                    "Daenerys",
+                    "Khal Drogo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝和卓戈卡奥并肩走入宫殿，宴会正在进行，人们欢声笑语，音乐和鼓声交织。",
+                "en": "Daenerys and Khal Drogo walk side by side into the palace, where the feast is in full swing, people laughing and chatting, music and drumbeats filling the air."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "然而，丹妮莉丝的哥哥韦赛里斯却不见踪影。",
+                "en": "However, Daenerys' brother Viserys is nowhere to be seen."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 欢庆氛围, 装饰华丽的宫殿, 宴会桌, 音乐和鼓声, 火把照明",
+                "en": "Nighttime, inside the palace, celebratory atmosphere, ornately decorated palace, banquet tables, music and drumbeats, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝环顾四周，表情略显担忧，寻找韦赛里斯的身影。",
+                "en": "Daenerys looks around, her expression slightly worried as she searches for Viserys."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "过了一会儿，韦赛里斯出现了，他喝得烂醉如泥，手里还拿着一把剑。",
+                "en": "After a while, Viserys appears, drunken and stumbling, a sword in his hand."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 音乐和鼓声渐弱, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, music and drumbeats fading, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "韦赛里斯摇摇晃晃地走来，手中握着剑，表情疯狂，眼神迷离。",
+                "en": "Viserys staggers forward, sword in hand, his expression wild and his gaze unfocused."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "韦赛里斯的行为引起了公愤，人们开始朝他叫嚷。",
+                "en": "Viserys' behavior incites public outrage, and people begin shouting at him."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 音乐和鼓声停止, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, music and drumbeats stopped, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "韦赛里斯站在中央，周围人群愤怒地叫嚷，气氛紧张。",
+                "en": "Viserys stands in the center, surrounded by angry shouting from the crowd, the atmosphere growing tense."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "丹妮莉丝感到恐惧，她试图劝说哥哥，但韦赛里斯已经失去了理智。",
+                "en": "Daenerys feels fear as she tries to reason with her brother, but Viserys has lost all sense."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 正面镜头",
+                "en": "Medium close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝",
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Daenerys",
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝面对韦赛里斯，表情惊恐，试图劝说，但韦赛里斯挥舞着剑，无视她的话语。",
+                "en": "Daenerys faces Viserys, her expression fearful as she tries to speak reason, but Viserys ignores her, waving his sword wildly."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "卓戈卡奥从高位上走下来，他的血盟卫抓住了韦赛里斯。",
+                "en": "Khal Drogo descends from his throne, and his bloodriders seize Viserys."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 高角度镜头",
+                "en": "Medium shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "卓戈卡奥",
+                    "韦赛里斯",
+                    "血盟卫"
+                ],
+                "en": [
+                    "Khal Drogo",
+                    "Viserys",
+                    "Bloodrider"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "卓戈卡奥从高位走下，血盟卫抓住韦赛里斯，韦赛里斯挣扎但无济于事。",
+                "en": "Khal Drogo steps down from his throne, his bloodriders grabbing Viserys, who struggles helplessly."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "卓戈卡奥将他的金腰带扔进一个烧得通红的铁锅里。",
+                "en": "Khal Drogo throws his golden belt into a red-hot iron pot."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 烧红的铁锅, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, glowing iron pot, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "卓戈卡奥"
+                ],
+                "en": [
+                    "Khal Drogo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "卓戈卡奥将金腰带扔进烧红的铁锅，表情冷酷，火焰映照在他脸上。",
+                "en": "Khal Drogo throws the golden belt into the red-hot iron pot, his expression cold and stern, the flames reflecting on his face."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "等黄金融化后，他用马毛手套抓起锅子，将滚烫的黄金浇在韦赛里斯的头上。",
+                "en": "Once the gold has melted, he takes the pot with a horsehair glove and pours the molten gold over Viserys' head."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 烧红的铁锅, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, glowing iron pot, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面镜头",
+                "en": "Close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "卓戈卡奥",
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Khal Drogo",
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "卓戈卡奥用马毛手套抓起铁锅，将滚烫的黄金浇在韦赛里斯头上，韦赛里斯表情极度痛苦。",
+                "en": "Khal Drogo lifts the iron pot with a horsehair glove, pouring the molten gold over Viserys' head, Viserys' face contorted in agony."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "韦赛里斯发出撕心裂肺的惨叫，他的身体在泥地上抽搐了几下，然后不动了。",
+                "en": "Viserys lets out a bloodcurdling scream, his body convulsing on the muddy ground before going still."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 紧张氛围, 装饰华丽的宫殿, 宴会桌, 地上的血迹, 火把照明",
+                "en": "Nighttime, inside the palace, tense atmosphere, ornately decorated palace, banquet tables, bloodstains on the ground, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "韦赛里斯倒在地上，身体抽搐，发出惨叫，最终不动了，周围一片寂静。",
+                "en": "Viserys collapses to the ground, his body convulsing as he screams, before falling still, the room silent."
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "丹妮莉丝看着这一幕，心中充满了悲伤和绝望。",
+                "en": "Daenerys watches this scene, her heart filled with sorrow and despair."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 悲伤氛围, 装饰华丽的宫殿, 宴会桌, 地上的血迹, 火把照明",
+                "en": "Nighttime, inside the palace, sorrowful atmosphere, ornately decorated palace, banquet tables, bloodstains on the ground, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 正面镜头",
+                "en": "Close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝看着韦赛里斯的尸体，表情悲伤而绝望，泪水在眼眶中打转。",
+                "en": "Daenerys gazes at Viserys' lifeless body, her expression sorrowful and despairing, tears welling in her eyes."
+            }
+        },
+        {
+            "index": 18,
+            "Plot Correspondence": {
+                "ch": "但她也明白了：韦赛里斯不是真龙，因为真龙不怕火。",
+                "en": "But she also understands: Viserys was not the true dragon, for true dragons are not afraid of fire."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 悲伤氛围, 装饰华丽的宫殿, 宴会桌, 地上的血迹, 火把照明",
+                "en": "Nighttime, inside the palace, sorrowful atmosphere, ornately decorated palace, banquet tables, bloodstains on the ground, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "丹妮莉丝"
+                ],
+                "en": [
+                    "Daenerys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "丹妮莉丝低头沉思，表情逐渐坚定，仿佛明白了什么。",
+                "en": "Daenerys lowers her head in thought, her expression gradually firming as if she has realized something."
+            }
+        },
+        {
+            "index": 19,
+            "Plot Correspondence": {
+                "ch": "宫殿内一片寂静，人们震惊地看着这一幕。",
+                "en": "The palace is silent, the crowd staring in shock at the scene."
+            },
+            "Setting Description": {
+                "ch": "夜晚, 宫殿内, 震惊氛围, 装饰华丽的宫殿, 宴会桌, 地上的血迹, 火把照明",
+                "en": "Nighttime, inside the palace, shocked atmosphere, ornately decorated palace, banquet tables, bloodstains on the ground, torchlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "韦赛里斯"
+                ],
+                "en": [
+                    "Viserys"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "宫殿内一片寂静，人们震惊地看着韦赛里斯的尸体，表情各异。",
+                "en": "The palace is utterly silent, the crowd staring in shock at Viserys' body, their expressions a mix of horror and disbelief."
+            }
+        }
+    ]
+}

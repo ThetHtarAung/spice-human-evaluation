@@ -1,0 +1,429 @@
+﻿{
+    "Story_type": {
+        "en": "African Folktales",
+        "ch": "非洲民间故事"
+    },
+    "Characters": {
+        "Anansi": {
+            "tag": "non_human",
+            "name_ch": "阿南西",
+            "name_en": "Anansi",
+            "prompt_ch": "聪明而贪心的蜘蛛神，拥有织网和攀爬的天赋。他的外貌像一只巨大的蜘蛛，有着八条细长的腿和一双闪烁着智慧光芒的眼睛。",
+            "prompt_en": "A clever but greedy spider god, gifted with the ability to weave webs and climb. He resembles a giant spider with eight slender legs and eyes that gleam with intelligence.",
+            "num_of_appearances": 10
+        },
+        "Nyame": {
+            "tag": "unrealistic_human",
+            "name_ch": "尼亚美神",
+            "name_en": "Nyame",
+            "prompt_ch": "一位天上的神灵，皮肤黝黑，没有头发，有长长的白色胡须，拥有无尽的智慧和神秘的力量。他的形象高大而威严，穿着飘逸的金黄色长袍，周身散发着柔和的光芒，给人一种神圣而不可侵犯的感觉。",
+            "prompt_en": "A celestial deity with dark skin, no hair, and a long white beard, possessing boundless wisdom and mysterious powers. His figure is tall and majestic, dressed in flowing golden robes, emitting a soft glow that gives a sacred and inviolable aura.",
+            "num_of_appearances": 2
+        },
+        "Anansi's Son": {
+            "tag": "unrealistic_human",
+            "name_ch": "阿南西的儿子",
+            "name_en": "Anansi's Son",
+            "prompt_ch": "一个非洲男童，黑发黑眼，皮肤黝黑，穿着黄色的T恤。",
+            "prompt_en": "An African boy with black hair and eyes, dark skin, and wearing a yellow T-shirt.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "在遥远的古代，人类的生活处于一种原始而朴素的状态。",
+                "en": "In ancient times, human life was primitive and simple."
+            },
+            "Setting Description": {
+                "ch": "白天, 原始丛林, 宁静而朴素的氛围, 高大的树木，低矮的灌木丛, 柔和的自然光线",
+                "en": "Daytime, primeval jungle, serene and rustic atmosphere, tall trees, low shrubs, soft natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "原始丛林全景，树木繁茂，阳光透过树叶洒下斑驳的光影",
+                "en": "Panoramic view of the primeval jungle, lush trees, sunlight filtering through leaves casting dappled shadows"
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "天上的神灵尼亚美将世间所有的智慧凝聚在一个神秘的砂锅中，这个砂锅被高高悬挂在人类无法触及的地方。",
+                "en": "The celestial deity Nyame condensed all the world's wisdom into a mysterious clay pot, which was hung high beyond human reach."
+            },
+            "Setting Description": {
+                "ch": "白天, 天空中漂浮的云层, 神秘而庄严的氛围, 云层中隐约可见的神秘砂锅, 柔和的金色光芒",
+                "en": "Daytime, floating clouds in the sky, mysterious and solemn atmosphere, the faintly visible clay pot amidst the clouds, soft golden glow"
+            },
+            "Shot Perspective Design": {
+                "ch": "中远景, 高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "尼亚美神"
+                ],
+                "en": [
+                    "Nyame"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼亚美神站在云层之上，双手高举神秘的砂锅，表情庄严而神圣",
+                "en": "Nyame stands atop the clouds, holding the mysterious clay pot high with both hands, his expression solemn and divine"
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "尼亚美决定将这个充满智慧的砂锅交给聪明的蜘蛛神阿南西。",
+                "en": "Nyame decided to entrust this wisdom-filled clay pot to the clever spider god Anansi."
+            },
+            "Setting Description": {
+                "ch": "白天, 云层之上, 神圣而庄严的氛围, 漂浮的云朵, 柔和的金色光芒",
+                "en": "Daytime, atop the clouds, sacred and solemn atmosphere, drifting clouds, soft golden glow"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "尼亚美神",
+                    "阿南西"
+                ],
+                "en": [
+                    "Nyame",
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "尼亚美神将砂锅递给阿南西，阿南西表情兴奋而期待，八条腿微微颤动",
+                "en": "Nyame hands the clay pot to Anansi, whose expression is excited and expectant, his eight legs trembling slightly"
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "每当阿南西小心翼翼地揭开砂锅的盖子往里看时，他就能学到新的知识和技能，这让他感到无比的兴奋和满足。",
+                "en": "Whenever Anansi carefully lifted the lid of the clay pot to peer inside, he would learn new knowledge and skills, filling him with immense excitement and satisfaction."
+            },
+            "Setting Description": {
+                "ch": "白天, 阿南西的巢穴, 神秘而兴奋的氛围, 巢穴内挂满的丝线, 柔和的光线",
+                "en": "Daytime, Anansi's lair, mysterious and excited atmosphere, threads hanging everywhere inside the lair, soft lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西小心翼翼地揭开砂锅盖子，表情专注而兴奋，眼中闪烁着智慧的光芒",
+                "en": "Anansi cautiously lifts the lid of the clay pot, his expression focused and excited, eyes gleaming with wisdom"
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "然而，阿南西的内心深处却隐藏着贪婪的欲望。他担心其他人会偷看砂锅，从而分享到这份宝贵的智慧。",
+                "en": "However, deep down, Anansi harbored greed. He feared others might peek into the pot and share this precious wisdom."
+            },
+            "Setting Description": {
+                "ch": "白天, 阿南西的巢穴, 紧张而贪婪的氛围, 巢穴内杂乱的丝线, 昏暗的光线",
+                "en": "Daytime, Anansi's lair, tense and greedy atmosphere, messy threads inside the lair, dim lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西紧抱着砂锅，表情紧张而贪婪，眼神四处张望",
+                "en": "Anansi clutches the clay pot tightly, his expression tense and greedy, eyes darting around"
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "于是，他想出了一个自以为聪明的办法：“如果我把砂锅放在树顶上，所有的智慧就只属于我了！”",
+                "en": "Thus, he devised what he thought was a clever plan: 'If I place the pot atop the tallest tree, all the wisdom will belong to me alone!'"
+            },
+            "Setting Description": {
+                "ch": "白天, 高大的树木, 紧张而兴奋的氛围, 树干上缠绕的丝线, 明亮的自然光线",
+                "en": "Daytime, tall tree, tense and excited atmosphere, threads wrapped around the trunk, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西站在树下，抬头望着树顶，表情兴奋而得意，丝线缠绕在树干上",
+                "en": "Anansi stands beneath the tree, looking up at the top, his expression excited and smug, threads coiled around the trunk"
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "阿南西用自己织的长丝线将砂锅牢牢绑住，并将丝线的另一端系在自己的肚子上。",
+                "en": "Anansi used his long silk thread to tie the pot securely and fastened the other end around his belly."
+            },
+            "Setting Description": {
+                "ch": "白天, 树下, 专注而紧张的氛围, 地上散落的丝线, 明亮的自然光线",
+                "en": "Daytime, beneath the tree, focused and tense atmosphere, scattered threads on the ground, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西用丝线绑住砂锅，并将丝线系在自己肚子上，表情专注而紧张",
+                "en": "Anansi ties the pot with the thread and fastens it around his belly, his expression focused and tense"
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "他开始艰难地往树上爬，每一步都伴随着气喘吁吁的呼吸声。然而，砂锅总是不时地撞到他的腿，让他感到一阵阵的疼痛，爬行的过程变得异常艰辛。",
+                "en": "He began climbing the tree laboriously, each step accompanied by heavy panting. However, the pot kept bumping against his legs, causing pain and making the climb exceptionally arduous."
+            },
+            "Setting Description": {
+                "ch": "白天, 树干上, 艰难而痛苦的氛围, 缠绕在树干上的丝线, 明亮的自然光线",
+                "en": "Daytime, tree trunk, difficult and painful atmosphere, threads wrapped around the trunk, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西艰难地往树上爬，表情痛苦，砂锅不时撞到他的腿，丝线紧绷",
+                "en": "Anansi struggles to climb the tree, his expression pained, the pot bumping against his legs, the thread taut"
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "阿南西的儿子在树下静静地看着这一切，他聪明的眼睛里闪烁着思考的光芒。他向父亲提出了一个建议：“为什么不把砂锅扛在背上呢？这样会容易很多。”",
+                "en": "Anansi's son watched quietly from below, his intelligent eyes gleaming with thought. He offered his father advice: 'Why not carry the pot on your back? It would be much easier.'"
+            },
+            "Setting Description": {
+                "ch": "白天, 树下, 思考而关切的氛围, 地上散落的丝线, 明亮的自然光线",
+                "en": "Daytime, beneath the tree, thoughtful and concerned atmosphere, scattered threads on the ground, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西的儿子"
+                ],
+                "en": [
+                    "Anansi's Son"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西的儿子站在树下，抬头望着父亲，表情关切而思考，眼中闪烁着智慧的光芒",
+                "en": "Anansi's son stands below the tree, looking up at his father, his expression concerned and thoughtful, eyes gleaming with wisdom"
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "阿南西听到儿子的建议后，虽然有些不情愿，但还是决定尝试一下。他将砂锅扛在背上，果然感到轻松了许多。",
+                "en": "Though reluctant, Anansi decided to try his son's suggestion. He carried the pot on his back and found it much easier."
+            },
+            "Setting Description": {
+                "ch": "白天, 树干上, 尝试而轻松的氛围, 缠绕在树干上的丝线, 明亮的自然光线",
+                "en": "Daytime, tree trunk, experimental and relieved atmosphere, threads wrapped around the trunk, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西将砂锅扛在背上，表情轻松，爬行速度明显加快",
+                "en": "Anansi carries the pot on his back, his expression relieved, climbing noticeably faster"
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "很快，阿南西便顺利地爬到了树顶。",
+                "en": "Soon, Anansi successfully reached the treetop."
+            },
+            "Setting Description": {
+                "ch": "白天, 树顶, 得意而兴奋的氛围, 广阔的天空和丛林全景, 明亮的自然光线",
+                "en": "Daytime, treetop, smug and excited atmosphere, expansive view of the sky and jungle, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西站在树顶，俯瞰下方世界，表情得意而兴奋，砂锅稳稳地放在一旁",
+                "en": "Anansi stands at the treetop, looking down at the world below, his expression smug and excited, the pot resting securely beside him"
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "然而，就在他站在树顶上，俯瞰着下方的世界时，阿南西突然意识到一个令他震惊的问题：“本应拥有所有智慧的我，刚才竟然不如我的儿子聪明！”",
+                "en": "However, as he stood atop the tree, gazing at the world below, Anansi suddenly realized a shocking truth: 'I, who was supposed to possess all wisdom, was outsmarted by my own son!'"
+            },
+            "Setting Description": {
+                "ch": "白天, 树顶, 震惊而愤怒的氛围, 广阔的天空和丛林全景, 明亮的自然光线",
+                "en": "Daytime, treetop, shocked and angry atmosphere, expansive view of the sky and jungle, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西站在树顶陷入思考，表情震惊和愤怒，眼中闪烁着复杂的情绪",
+                "en": "Anansi stands at the treetop lost in thought, his expression shocked and angry, eyes reflecting complex emotions"
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "这个想法像一道闪电般击中了他的内心，让他感到无比的愤怒和羞愧。他气急败坏，几乎要跳起来，一怒之下竟将砂锅扔到了树下。",
+                "en": "This thought struck him like lightning, filling him with rage and shame. In his fury, he nearly leaped up and, in a fit of anger, hurled the pot down the tree."
+            },
+            "Setting Description": {
+                "ch": "白天, 树顶, 愤怒而失控的氛围, 广阔的天空和丛林全景, 明亮的自然光线",
+                "en": "Daytime, treetop, furious and uncontrolled atmosphere, expansive view of the sky and jungle, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿南西"
+                ],
+                "en": [
+                    "Anansi"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿南西愤怒地将砂锅扔下树，表情失控，丝线在空中飞舞",
+                "en": "Anansi furiously throws the pot down the tree, his expression out of control, threads fluttering in the air"
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "砂锅在落地的瞬间碎成了无数小片，所有的智慧也随之散落人间。",
+                "en": "The pot shattered into countless pieces upon impact, scattering all its wisdom across the world."
+            },
+            "Setting Description": {
+                "ch": "白天, 树下, 震撼而神秘的氛围, 地上散落的砂锅碎片, 明亮的自然光线",
+                "en": "Daytime, beneath the tree, awe-inspiring and mysterious atmosphere, shards of the pot scattered on the ground, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "砂锅碎片散落一地，智慧的光芒从碎片中散发出来，丛林中弥漫着神秘的氛围",
+                "en": "Shards of the pot lie scattered on the ground, glowing with wisdom, the jungle permeated with a mystical aura"
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "这些智慧的碎片像一颗颗种子，在人们的心中生根发芽。从此，人们学会了耕田、织布、打铁以及所有现代生活中的技能。智慧不再是某个人的专属，而是所有人可以自由分享的财富。",
+                "en": "These fragments of wisdom took root in people's hearts like seeds. From then on, humans learned to farm, weave, forge, and all the skills of modern life. Wisdom was no longer the property of one but a treasure shared freely by all."
+            },
+            "Setting Description": {
+                "ch": "白天, 人类村庄, 繁荣而和谐的氛围, 人们忙碌的身影, 明亮的自然光线",
+                "en": "Daytime, human village, prosperous and harmonious atmosphere, people busy at work, bright natural lighting"
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 鸟瞰镜头",
+                "en": "Wide shot, bird's eye view shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "人类村庄全景，人们在田地里耕作，织布，打铁，村庄充满繁荣与和谐的景象",
+                "en": "Panoramic view of the human village, people farming in the fields, weaving, forging, the village bustling with prosperity and harmony"
+            }
+        }
+    ]
+}

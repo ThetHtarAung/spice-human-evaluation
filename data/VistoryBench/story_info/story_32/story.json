@@ -1,0 +1,316 @@
+﻿{
+    "Story_type": {
+        "en": "Japanese Fantasy Light Novels",
+        "ch": "日式幻想轻小说"
+    },
+    "Characters": {
+        "Natsuki Subaru": {
+            "tag": "unrealistic_human",
+            "name_ch": "菜月昴",
+            "name_en": "Natsuki Subaru",
+            "prompt_ch": "一个普通的日本高中生，被召唤到异世界。他有黑色的短发，中等的身高和体格，穿着灰色的运动服和运动鞋。他的眼睛锐利。",
+            "prompt_en": "An ordinary Japanese high school student who is summoned to a fantasy parallel world. He has short black hair, a medium height and build, and wears a gray tracksuit and sneakers. His eyes are sharp.",
+            "num_of_appearances": 9
+        },
+        "Emilia": {
+            "tag": "unrealistic_human",
+            "name_ch": "爱蜜莉雅",
+            "name_en": "Emilia",
+            "prompt_ch": "一个半妖精少女，拥有强大的魔法能力。她有及腰的银色长发，蓝紫色的眼睛，穿着白色的长袍，上面绣着“似魔之鸟”的图腾，大约有一百六十公分左右。",
+            "prompt_en": "A half-elf girl with powerful magical abilities. She has waist-length silver hair, blue-purple eyes, and wears a white robe embroidered with a 'witch-like bird' emblem. She is approximately 160 cm tall.",
+            "num_of_appearances": 5
+        },
+        "Little Girl": {
+            "tag": "unrealistic_human",
+            "name_ch": "小女孩",
+            "name_en": "Little Girl",
+            "prompt_ch": "一个迷路的小女孩，绿色的头发和眼睛，穿着破旧的衣服，脸上满是污垢，眼神迷茫，大约五六岁。",
+            "prompt_en": "A lost little girl with green hair and eyes, wearing tattered clothes, her face covered in dirt, and a confused expression. She appears to be around five or six years old.",
+            "num_of_appearances": 2
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "菜月昴，一个普通的日本高中生，被召唤到了一个奇幻的异世界。他身无分文，对这个世界一无所知，只能靠着自己对动漫和游戏的了解来应对。",
+                "en": "Natsuki Subaru, an ordinary Japanese high school student, is summoned to a fantastical parallel world. Penniless and knowing nothing about this world, he relies on his knowledge of anime and games to navigate it."
+            },
+            "Setting Description": {
+                "ch": "白天，异世界的繁华街道，石板路，两旁是中世纪风格的建筑，摊贩林立，人来人往，热闹非凡，阳光明媚，空气中弥漫着各种食物的香气。",
+                "en": "Daytime, a bustling street in the parallel world, cobblestone roads, medieval-style buildings on both sides, vendors lining the streets, crowds of people, vibrant atmosphere, bright sunlight, and the aroma of various foods in the air."
+            },
+            "Shot Perspective Design": {
+                "ch": "远景，平视镜头",
+                "en": "Wide shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴"
+                ],
+                "en": [
+                    "Natsuki Subaru"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴站在街道中央，表情迷茫，四处张望，穿着灰色的运动服和运动鞋，与周围的环境格格不入。",
+                "en": "Natsuki Subaru stands in the middle of the street, looking confused as he glances around, wearing a gray tracksuit and sneakers, standing out starkly against the surroundings."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "在这个异世界，他遇到了一群小混混，他们试图抢劫他。昴虽然勇敢地反抗了，但很快就被打得遍体鳞伤。",
+                "en": "In this parallel world, he encounters a group of thugs who attempt to rob him. Although Subaru bravely resists, he is quickly beaten to a pulp."
+            },
+            "Setting Description": {
+                "ch": "傍晚，异世界的小巷，阴暗潮湿，垃圾散落一地，墙上满是涂鸦，空气中弥漫着腐败的气味，光线昏暗。",
+                "en": "Evening, a dark and damp alley in the parallel world, littered with garbage, graffiti-covered walls, a foul smell in the air, dim lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴"
+                ],
+                "en": [
+                    "Natsuki Subaru"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴被三个小混混围在墙角，表情愤怒但无力，身上满是伤痕，小混混们表情狰狞，手中拿着棍棒。",
+                "en": "Natsuki Subaru is cornered by three thugs against a wall, his expression angry but powerless, his body covered in bruises. The thugs look menacing, holding clubs."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "就在他以为自己的生命即将结束时，一个神秘的银发少女出现了。",
+                "en": "Just as he thinks his life is about to end, a mysterious silver-haired girl appears."
+            },
+            "Setting Description": {
+                "ch": "傍晚，异世界的小巷，阴暗潮湿，垃圾散落一地，墙上满是涂鸦，空气中弥漫着腐败的气味，光线昏暗，但巷口透进一丝亮光。",
+                "en": "Evening, the same dark and damp alley, littered with garbage, graffiti-covered walls, foul smell in the air, dim lighting, but a faint light shines through the alley entrance."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爱蜜莉雅"
+                ],
+                "en": [
+                    "Emilia"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爱蜜莉雅站在巷口，银发在微风中飘动，蓝紫色的眼睛冷冷地看着小混混们，表情平静但充满威严。",
+                "en": "Emilia stands at the alley entrance, her silver hair fluttering slightly in the breeze, her blue-purple eyes coldly fixed on the thugs, her expression calm yet commanding."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "少女名叫爱蜜莉雅，她是一个半妖精，拥有强大的魔法能力。她救了昴，并决定帮助他找到被偷走的徽章。",
+                "en": "The girl introduces herself as Emilia, a half-elf with powerful magical abilities. She saves Subaru and decides to help him retrieve the stolen insignia."
+            },
+            "Setting Description": {
+                "ch": "傍晚，异世界的街道，石板路，两旁是中世纪风格的建筑，摊贩已经收摊，行人稀少，光线柔和。",
+                "en": "Evening, the streets of the parallel world, cobblestone roads, medieval-style buildings on both sides, vendors packing up, few pedestrians, soft lighting."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴",
+                    "爱蜜莉雅"
+                ],
+                "en": [
+                    "Natsuki Subaru",
+                    "Emilia"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爱蜜莉雅站在菜月昴面前，表情温和，帕克坐在她的肩膀上，菜月昴坐在地上，表情感激，身上的伤痕已经消失。",
+                "en": "Emilia stands in front of Natsuki Subaru, her expression gentle, with Puck perched on her shoulder. Subaru sits on the ground, looking grateful, his wounds already healed."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "在寻找徽章的过程中，昴和爱蜜莉雅遇到了一个迷路的小女孩。爱蜜莉雅决定帮助她，尽管这可能会耽误他们寻找徽章的时间。",
+                "en": "While searching for the insignia, Subaru and Emilia encounter a lost little girl. Emilia decides to help her, even though it might delay their search for the insignia."
+            },
+            "Setting Description": {
+                "ch": "傍晚，异世界的广场，喷泉中央，周围是绿化带和长椅，行人三三两两，天空泛着橙红色的晚霞。",
+                "en": "Evening, a plaza in the parallel world, a fountain at the center, surrounded by greenery and benches, a few pedestrians, the sky painted in orange-red twilight."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴",
+                    "爱蜜莉雅",
+                    "小女孩"
+                ],
+                "en": [
+                    "Natsuki Subaru",
+                    "Emilia",
+                    "Little Girl"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爱蜜莉雅蹲在小女孩面前，表情温柔，菜月昴站在一旁，表情有些焦急，小女孩表情迷茫，眼中含泪。",
+                "en": "Emilia kneels in front of the little girl, her expression kind, while Subaru stands nearby, looking slightly impatient. The little girl appears lost, her eyes teary."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "昴也加入了帮助小女孩的行列，他用一个魔术让小女孩开心起来。",
+                "en": "Subaru joins in helping the little girl and uses a magic trick to cheer her up."
+            },
+            "Setting Description": {
+                "ch": "傍晚，异世界的广场，喷泉中央，周围是绿化带和长椅，行人三三两两，天空泛着橙红色的晚霞，喷泉的水珠在光线下闪烁。",
+                "en": "Evening, the plaza in the parallel world, the fountain at the center, surrounded by greenery and benches, a few pedestrians, the sky painted in orange-red twilight, the fountain's water droplets glittering in the light."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴",
+                    "小女孩"
+                ],
+                "en": [
+                    "Natsuki Subaru",
+                    "Little Girl"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴蹲在小女孩面前，表情专注，手中拿着一枚硬币，正在表演魔术，小女孩表情惊喜，眼中闪烁着光芒。",
+                "en": "Natsuki Subaru kneels in front of the little girl, his expression focused as he performs a magic trick with a coin. The little girl looks delighted, her eyes sparkling with wonder."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "最终，他们找到了偷走徽章的小偷的藏身之处，一个被称为“赃物库”的地方。昴决定进去看看。",
+                "en": "Eventually, they locate the hideout of the thief who stole the insignia—a place called the 'Loot House.' Subaru decides to investigate."
+            },
+            "Setting Description": {
+                "ch": "夜晚，异世界的贫民区，破旧的房屋，街道狭窄，空气中弥漫着潮湿和霉味，月光透过云层洒下斑驳的光影。",
+                "en": "Nighttime, the slums of the parallel world, dilapidated houses, narrow streets, a damp and musty smell in the air, moonlight casting patchy shadows through the clouds."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴"
+                ],
+                "en": [
+                    "Natsuki Subaru"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴站在一栋破旧的房屋前，表情坚定，房屋的门上挂着“赃物库”的牌子，周围一片寂静。",
+                "en": "Natsuki Subaru stands in front of a rundown house, his expression resolute. A sign reading 'Loot House' hangs on the door, and the surroundings are eerily quiet."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "但当他进去后，他发现了一具尸体，然后被一个神秘的女人袭击了。",
+                "en": "But upon entering, he discovers a corpse and is then attacked by a mysterious woman."
+            },
+            "Setting Description": {
+                "ch": "夜晚，赃物库内部，昏暗的灯光，杂乱的货物堆放，空气中弥漫着灰尘和血腥味，一具尸体躺在角落。",
+                "en": "Nighttime, inside the Loot House, dim lighting, cluttered with piled-up goods, dust and the scent of blood in the air, a corpse lying in the corner."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，倾斜镜头",
+                "en": "Close up, dutch angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴"
+                ],
+                "en": [
+                    "Natsuki Subaru"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴表情震惊，眼中满是恐惧，看着角落的尸体，突然一个黑影从背后袭来，他猛地回头。",
+                "en": "Natsuki Subaru looks shocked, his eyes filled with fear as he stares at the corpse in the corner. Suddenly, a shadowy figure attacks from behind, and he whirls around."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "昴受了重伤，生命垂危。就在他即将失去意识的时候，爱蜜莉雅冲了进来。",
+                "en": "Subaru is severely wounded and on the brink of death. Just as he is about to lose consciousness, Emilia bursts in."
+            },
+            "Setting Description": {
+                "ch": "夜晚，赃物库内部，昏暗的灯光，杂乱的货物堆放，空气中弥漫着灰尘和血腥味，地上满是血迹。",
+                "en": "Nighttime, inside the Loot House, dim lighting, cluttered with piled-up goods, dust and the scent of blood in the air, bloodstains covering the floor."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，高角度镜头",
+                "en": "Medium close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴",
+                    "爱蜜莉雅"
+                ],
+                "en": [
+                    "Natsuki Subaru",
+                    "Emilia"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴躺在地上，表情痛苦，身上满是伤痕，爱蜜莉雅冲进来，表情焦急，银发在空中飞舞。",
+                "en": "Natsuki Subaru lies on the ground, his expression pained, his body covered in wounds. Emilia rushes in, her silver hair flowing as she looks frantic with worry."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "昴用尽最后的力气告诉她，他会救她。然后，他死了。",
+                "en": "With his last ounce of strength, Subaru tells her he will save her. Then, he dies."
+            },
+            "Setting Description": {
+                "ch": "夜晚，赃物库内部，昏暗的灯光，杂乱的货物堆放，空气中弥漫着灰尘和血腥味，地上满是血迹，月光透过窗户洒进来。",
+                "en": "Nighttime, inside the Loot House, dim lighting, cluttered with piled-up goods, dust and the scent of blood in the air, bloodstains covering the floor, moonlight streaming through the window."
+            },
+            "Shot Perspective Design": {
+                "ch": "特写，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "菜月昴",
+                    "爱蜜莉雅"
+                ],
+                "en": [
+                    "Natsuki Subaru",
+                    "Emilia"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "菜月昴的脸占据整个画面，表情虚弱但坚定，眼中满是决心，爱蜜莉雅的手轻轻握住他的手，眼中含泪。",
+                "en": "Natsuki Subaru's face fills the screen, his expression weak but determined, his eyes full of resolve. Emilia gently holds his hand, her eyes brimming with tears."
+            }
+        }
+    ]
+}

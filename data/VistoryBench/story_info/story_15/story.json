@@ -1,0 +1,854 @@
+﻿{
+    "Story_type": {
+        "en": "Urban Novel",
+        "ch": "都市小说"
+    },
+    "Characters": {
+        "Zhao Qingqing": {
+            "tag": "realistic_human",
+            "name_ch": "赵晴晴",
+            "name_en": "Zhao Qingqing",
+            "prompt_ch": "黑发黑眼的中国现代女性，年龄大约三十多岁，长相端庄。她穿着简洁大方的现代职业装，发型干练，气质温和中带着坚韧。",
+            "prompt_en": "A modern Chinese woman with black hair and eyes, in her thirties, with a dignified appearance. She wears simple and elegant modern professional attire, has a neat hairstyle, and a gentle yet resilient demeanor.",
+            "num_of_appearances": 18
+        },
+        "Father": {
+            "tag": "realistic_human",
+            "name_ch": "爸爸",
+            "name_en": "Father",
+            "prompt_ch": "黑发中夹杂着白发的中国现代中年男性，年龄大约五十七岁，身材中等。他穿着朴素的休闲装，神情有些疲惫和迷茫。",
+            "prompt_en": "A middle-aged modern Chinese man with black hair mixed with gray, around fifty-seven years old, of average build. He wears plain casual clothes and looks tired and confused.",
+            "num_of_appearances": 14
+        },
+        "Gu Zhenzhen": {
+            "tag": "realistic_human",
+            "name_ch": "顾珍珍",
+            "name_en": "Gu Zhenzhen",
+            "prompt_ch": "黑发黑眼的中国现代女性，年龄大约三十七岁，身材窈窕，看起来很年轻漂亮。她喜欢化淡妆，穿着时尚的衣服。",
+            "prompt_en": "A modern Chinese woman with black hair and eyes, around thirty-seven years old, with a graceful figure and a youthful, beautiful appearance. She prefers light makeup and wears fashionable clothes.",
+            "num_of_appearances": 8
+        },
+        "Aunt Liu": {
+            "tag": "realistic_human",
+            "name_ch": "刘阿姨",
+            "name_en": "Aunt Liu",
+            "prompt_ch": "跳广场舞的阿姨，中国现代中年女性，年龄大约六十多岁，身材瘦削。她穿着朴实的常服。",
+            "prompt_en": "A middle-aged modern Chinese woman who enjoys square dancing, around sixty years old, with a slender figure. She wears plain everyday clothes.",
+            "num_of_appearances": 4
+        },
+        "Li Chao": {
+            "tag": "realistic_human",
+            "name_ch": "李超",
+            "name_en": "Li Chao",
+            "prompt_ch": "黑发黑眼的中国现代少年，年龄大约十四五岁，身材高大健壮。他穿着棒球服，性格叛逆嚣张，缺乏教养。",
+            "prompt_en": "A modern Chinese teenager with black hair and eyes, around fourteen or fifteen years old, tall and robust. He wears a baseball jacket and has a rebellious, arrogant personality with poor upbringing.",
+            "num_of_appearances": 3
+        },
+        "Husband": {
+            "tag": "realistic_human",
+            "name_ch": "老公",
+            "name_en": "Husband",
+            "prompt_ch": "黑发黑眼的中国现代男性，年龄大约三十多岁，身材高大。他穿着简洁的现代男装，如衬衫和西裤，气质稳重。",
+            "prompt_en": "A modern Chinese man with black hair and eyes, in his thirties, tall. He wears simple modern men's attire like shirts and trousers, with a steady demeanor.",
+            "num_of_appearances": 3
+        },
+        "Daughter": {
+            "tag": "realistic_human",
+            "name_ch": "女儿",
+            "name_en": "Daughter",
+            "prompt_ch": "黑发黑眼的中国现代少女，年龄大约十岁，身材娇小。她穿着简单的小裙子，性格活泼可爱。",
+            "prompt_en": "A modern Chinese girl with black hair and eyes, around ten years old, petite. She wears simple dresses and has a lively, adorable personality.",
+            "num_of_appearances": 3
+        },
+        "Madam Wang": {
+            "tag": "realistic_human",
+            "name_ch": "王夫人",
+            "name_en": "Madam Wang",
+            "prompt_ch": "黑发黑眼的中国现代中年女性，年龄大约三十多岁，身材瘦削，嘴角有一颗痣。她穿着朴实的家居服，性格泼辣。",
+            "prompt_en": "A middle-aged modern Chinese woman with black hair and eyes, in her thirties, slender, with a mole at the corner of her mouth. She wears simple home clothes and has a feisty personality.",
+            "num_of_appearances": 2
+        },
+        "Mother": {
+            "tag": "realistic_human",
+            "name_ch": "妈妈",
+            "name_en": "Mother",
+            "prompt_ch": "黑发黑眼的中国现代中年女性，年龄大约五十多岁，身材瘦削。她穿着朴实的家居服。",
+            "prompt_en": "A middle-aged modern Chinese woman with black hair and eyes, in her fifties, with a slender figure. She wears simple home clothes.",
+            "num_of_appearances": 1
+        },
+        "Lu Ming": {
+            "tag": "realistic_human",
+            "name_ch": "卢铭",
+            "name_en": "Lu Ming",
+            "prompt_ch": "黑发黑眼的中国现代男性，年龄大约三十多岁。他穿着低调的职业装，如深色西装，性格通情达理，是一名律师。",
+            "prompt_en": "A modern Chinese man with black hair and eyes, in his thirties. He wears understated professional attire like dark suits, is reasonable and understanding, and works as a lawyer.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "妈妈临终前，嘱咐我家里存款和房子的分配，并坚持让爸爸保证不打我财产的主意。她还提到了小区的刘芳，希望爸爸再婚就找她。",
+                "en": "Before Mother passed away, she instructed me on the distribution of the family savings and house, insisting that Father promise not to lay claim to my assets. She also mentioned Liu Fang from the neighborhood, hoping Father would remarry her if he chose to."
+            },
+            "Setting Description": {
+                "ch": "白天，医院病房，床头柜上放着一束鲜花，窗外是城市的天际线，阳光透过窗帘洒进来，温馨而沉重的氛围，空气中弥漫着消毒水的味道。",
+                "en": "Daytime, hospital room, a bouquet of flowers on the bedside table, the city skyline visible outside the window, sunlight filtering through the curtains, a warm yet heavy atmosphere, the smell of disinfectant in the air."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "妈妈"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Mother"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在病床边，握着妈妈的手，表情悲伤而关切。妈妈躺在病床上，脸色苍白，眼神温柔而坚定。",
+                "en": "Zhao Qingqing sits by the hospital bed, holding Mother's hand, her expression sad and concerned. Mother lies in bed, pale-faced, her eyes gentle yet determined."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "妈妈去世后不久，爸爸就让刘阿姨来照顾他。",
+                "en": "Shortly after Mother's death, Father invited Aunt Liu to take care of him."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，墙上挂着妈妈的照片，茶几上放着一杯热茶，窗外是小区的绿化带，安静而略带悲伤的氛围。",
+                "en": "Daytime, living room at home, a photo of Mother hanging on the wall, a cup of hot tea on the coffee table, the neighborhood greenery outside the window, a quiet and slightly sorrowful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "刘阿姨"
+                ],
+                "en": [
+                    "Father",
+                    "Aunt Liu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸坐在沙发上，神情疲惫。刘阿姨站在一旁，手里拿着扫把，表情关切。",
+                "en": "Father sits on the sofa, looking tired. Aunt Liu stands nearby, holding a broom, her expression concerned."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "但后来又以各种理由拒绝了和刘阿姨结婚。原来，爸爸喜欢上了一个叫顾珍珍的年轻女人。",
+                "en": "But later, he found various reasons to reject marrying Aunt Liu. It turned out Father had fallen for a younger woman named Gu Zhenzhen."
+            },
+            "Setting Description": {
+                "ch": "傍晚，家中餐厅，餐桌上摆着简单的饭菜，窗外是夕阳西下的景色，略带尴尬和不安的氛围。",
+                "en": "Evening, home dining room, simple dishes on the table, sunset outside the window, an atmosphere tinged with awkwardness and unease."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "刘阿姨"
+                ],
+                "en": [
+                    "Father",
+                    "Aunt Liu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸低头吃饭，避开刘阿姨的目光。刘阿姨坐在对面，表情失落。",
+                "en": "Father eats with his head down, avoiding Aunt Liu's gaze. Aunt Liu sits across from him, looking disappointed."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "顾珍珍比爸爸小二十岁，她知道爸爸有女朋友，但还是和他在一起。",
+                "en": "Gu Zhenzhen was twenty years younger than Father. She knew he had a girlfriend but still pursued him."
+            },
+            "Setting Description": {
+                "ch": "夜晚，城市街道，霓虹灯闪烁，路边停着一辆轿车，浪漫而略带神秘的氛围。",
+                "en": "Nighttime, city street, neon lights flickering, a car parked by the roadside, a romantic yet slightly mysterious atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，高角度镜头",
+                "en": "Close up, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "顾珍珍"
+                ],
+                "en": [
+                    "Gu Zhenzhen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "顾珍珍靠在车旁，手里拿着手机，嘴角微微上扬，表情得意。",
+                "en": "Gu Zhenzhen leans against the car, holding a phone, a faint smirk on her lips, looking smug."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "爸爸和刘阿姨分手后，就把顾珍珍接进了家门。",
+                "en": "After breaking up with Aunt Liu, Father brought Gu Zhenzhen into the house."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，沙发上放着顾珍珍的名牌包，窗外是小区的花园，略带紧张和不安的氛围。",
+                "en": "Daytime, living room at home, a designer bag belonging to Gu Zhenzhen on the sofa, the neighborhood garden outside the window, a slightly tense and uneasy atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "顾珍珍"
+                ],
+                "en": [
+                    "Father",
+                    "Gu Zhenzhen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸帮顾珍珍提行李，顾珍珍环顾四周，表情满意。",
+                "en": "Father carries Gu Zhenzhen's luggage, while she looks around, satisfied."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "我和老公带着孩子去见顾珍珍，发现她根本不会做家务，还对我的孩子指手画脚。",
+                "en": "My husband and I took our child to meet Gu Zhenzhen, only to find she couldn't do any housework and even bossed my child around."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，地上散落着玩具，茶几上放着一杯水，略带混乱和尴尬的氛围。",
+                "en": "Daytime, living room at home, toys scattered on the floor, a glass of water on the coffee table, a slightly chaotic and awkward atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "老公",
+                    "顾珍珍",
+                    "女儿"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Husband",
+                    "Gu Zhenzhen",
+                    "Daughter"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴和老公坐在沙发上，表情无奈。顾珍珍站在一旁，指着地上的玩具，表情不满。女儿在一旁玩耍，不知所措。",
+                "en": "Zhao Qingqing and her husband sit on the sofa, looking helpless. Gu Zhenzhen stands nearby, pointing at the toys on the floor, displeased. The daughter plays nearby, confused."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "吃饭时，她嫌弃我女儿吃饭邋遢，还暗示我没有家教。",
+                "en": "During dinner, she criticized my daughter for eating messily and implied I lacked parenting skills."
+            },
+            "Setting Description": {
+                "ch": "傍晚，家中餐厅，餐桌上摆着丰盛的饭菜，窗外是夕阳的余晖，略带紧张和尴尬的氛围。",
+                "en": "Evening, home dining room, a lavish meal on the table, sunset glow outside the window, a slightly tense and awkward atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "顾珍珍",
+                    "赵晴晴",
+                    "女儿"
+                ],
+                "en": [
+                    "Gu Zhenzhen",
+                    "Zhao Qingqing",
+                    "Daughter"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "顾珍珍皱眉看着女儿，表情嫌弃。赵晴晴在一旁，表情尴尬。女儿低头吃饭，眼神委屈。",
+                "en": "Gu Zhenzhen frowns at the daughter, looking disdainful. Zhao Qingqing sits nearby, embarrassed. The daughter eats with her head down, eyes filled with grievance."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "饭后，她又让我去洗碗，我拒绝了，她就向爸爸撒娇。",
+                "en": "After dinner, she asked me to wash the dishes. When I refused, she whined to Father."
+            },
+            "Setting Description": {
+                "ch": "傍晚，家中厨房，水池里堆着脏碗，窗外是夜幕降临的景色，略带紧张和不满的氛围。",
+                "en": "Evening, home kitchen, dirty dishes piled in the sink, nightfall outside the window, a slightly tense and resentful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "顾珍珍",
+                    "赵晴晴",
+                    "爸爸"
+                ],
+                "en": [
+                    "Gu Zhenzhen",
+                    "Zhao Qingqing",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "顾珍珍靠在厨房门边，表情不满。赵晴晴站在水池旁，表情坚定。爸爸在一旁，神情为难。",
+                "en": "Gu Zhenzhen leans against the kitchen door, displeased. Zhao Qingqing stands by the sink, resolute. Father stands nearby, torn."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "过年时，我发现顾珍珍的儿子李超住在我家，还霸占了我的房间。",
+                "en": "During the New Year, I discovered Gu Zhenzhen's son, Li Chao, was living in my house and had taken over my room."
+            },
+            "Setting Description": {
+                "ch": "白天，家中走廊，墙上挂着家庭照片，地上散落着李超的鞋子，略带惊讶和不满的氛围。",
+                "en": "Daytime, home hallway, family photos on the wall, Li Chao's shoes scattered on the floor, a slightly surprised and resentful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "李超"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Li Chao"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴站在房间门口，表情惊讶。李超躺在床上，玩着手机，表情无所谓。",
+                "en": "Zhao Qingqing stands at the bedroom door, surprised. Li Chao lies on the bed, playing with his phone, indifferent."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "李超故意推倒我女儿，还出言不逊。我老公教训了李超，但爸爸却让我不要和孩子计较。",
+                "en": "Li Chao deliberately pushed my daughter and spoke rudely. My husband scolded Li Chao, but Father told me not to fuss over a child."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，地上散落着玩具，窗外是阳光明媚的景色，略带紧张和冲突的氛围。",
+                "en": "Daytime, living room at home, toys scattered on the floor, sunny scenery outside the window, a slightly tense and confrontational atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李超",
+                    "老公",
+                    "赵晴晴",
+                    "女儿",
+                    "爸爸"
+                ],
+                "en": [
+                    "Li Chao",
+                    "Husband",
+                    "Zhao Qingqing",
+                    "Daughter",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李超站在一旁，表情嚣张。老公挡在女儿前面，表情愤怒。赵晴晴抱着女儿，表情心疼。爸爸在一旁，神情为难。",
+                "en": "Li Chao stands nearby, looking arrogant. The husband shields the daughter, furious. Zhao Qingqing holds the daughter, heartbroken. Father stands nearby, conflicted."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "后来，爸爸问我借钱买新车，我拒绝了。",
+                "en": "Later, Father asked me to lend him money to buy a new car, but I refused."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，茶几上放着一杯茶，窗外是小区的景色，略带尴尬和紧张的氛围。",
+                "en": "Daytime, living room at home, a cup of tea on the coffee table, neighborhood scenery outside the window, a slightly awkward and tense atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Father",
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸坐在沙发上，表情期待。赵晴晴站在一旁，表情为难。",
+                "en": "Father sits on the sofa, hopeful. Zhao Qingqing stands nearby, hesitant."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "他就把旧车卖给了我老公的朋友，只卖了两万八。我这才知道，爸爸的工资都上缴给了顾珍珍，他根本存不下钱。",
+                "en": "He then sold the old car to my husband's friend for only 28,000 yuan. That's when I realized Father had been giving all his salary to Gu Zhenzhen, leaving him with no savings."
+            },
+            "Setting Description": {
+                "ch": "白天，车库，旧车停在一旁，墙上挂着工具，略带惊讶和失望的氛围。",
+                "en": "Daytime, garage, the old car parked nearby, tools hanging on the wall, a slightly surprised and disappointed atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "老公",
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Husband",
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "老公站在车旁，表情惊讶。赵晴晴在一旁，表情失望。",
+                "en": "The husband stands by the car, surprised. Zhao Qingqing stands nearby, disappointed."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "刘阿姨来找我，说顾珍珍去她家闹事，要她还钱。",
+                "en": "Aunt Liu came to me, saying Gu Zhenzhen had caused a scene at her house, demanding money back."
+            },
+            "Setting Description": {
+                "ch": "白天，小区花园，长椅上放着刘阿姨的包，周围是散步的居民，略带焦急和不安的氛围。",
+                "en": "Daytime, neighborhood garden, Aunt Liu's bag on a bench, residents strolling nearby, a slightly anxious and uneasy atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "刘阿姨",
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Aunt Liu",
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "刘阿姨坐在长椅上，表情焦急。赵晴晴站在一旁，表情关切。",
+                "en": "Aunt Liu sits on the bench, anxious. Zhao Qingqing stands nearby, concerned."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "我去帮忙，但爸爸却让我劝刘阿姨退钱，他再私下补给我。我无奈，只能照做。",
+                "en": "I went to help, but Father asked me to persuade Aunt Liu to return the money, promising to repay me privately later. Reluctantly, I agreed."
+            },
+            "Setting Description": {
+                "ch": "白天，刘阿姨家客厅，茶几上放着一杯水，墙上挂着家庭照片，略带尴尬和无奈的氛围。",
+                "en": "Daytime, Aunt Liu's living room, a glass of water on the coffee table, family photos on the wall, a slightly awkward and resigned atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "刘阿姨",
+                    "爸爸"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Aunt Liu",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在沙发上，表情为难。刘阿姨在一旁，表情失落。爸爸站在门口，神情尴尬。",
+                "en": "Zhao Qingqing sits on the sofa, conflicted. Aunt Liu sits nearby, dejected. Father stands by the door, embarrassed."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "我找了卢铭，让他帮忙查顾珍珍的资料。",
+                "en": "I sought out Lu Ming to help investigate Gu Zhenzhen."
+            },
+            "Setting Description": {
+                "ch": "白天，律师事务所办公室，桌上堆着文件，窗外是城市的景色，略带严肃和紧张的氛围。",
+                "en": "Daytime, law office, files piled on the desk, cityscape outside the window, a slightly serious and tense atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "卢铭"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Lu Ming"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在办公桌前，表情严肃。卢铭在一旁，翻阅文件，表情专注。",
+                "en": "Zhao Qingqing sits at the desk, serious. Lu Ming flips through files, focused."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "结果发现，顾珍珍在和爸爸交往的同时，还和单位的王副厂长有染。",
+                "en": "The investigation revealed Gu Zhenzhen was involved with Deputy Director Wang from her workplace while dating Father."
+            },
+            "Setting Description": {
+                "ch": "白天，咖啡厅，桌上放着笔记本电脑，窗外是行人匆匆的街道，略带震惊和愤怒的氛围。",
+                "en": "Daytime, café, a laptop on the table, pedestrians rushing outside the window, a slightly shocked and angry atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴盯着电脑屏幕，表情震惊而愤怒。",
+                "en": "Zhao Qingqing stares at the laptop screen, shocked and angry."
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "我把资料给爸爸看，他很生气，说要和顾珍珍分手。",
+                "en": "I showed the evidence to Father. He was furious and said he would break up with Gu Zhenzhen."
+            },
+            "Setting Description": {
+                "ch": "傍晚，家中客厅，茶几上散落着资料，窗外是夕阳的余晖，略带愤怒和失望的氛围。",
+                "en": "Evening, living room at home, documents scattered on the coffee table, sunset glow outside the window, a slightly angry and disappointed atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Father",
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸坐在沙发上，手里拿着资料，表情愤怒而失望。赵晴晴站在一旁，表情严肃。",
+                "en": "Father sits on the sofa, holding the documents, angry and disappointed. Zhao Qingqing stands nearby, stern."
+            }
+        },
+        {
+            "index": 18,
+            "Plot Correspondence": {
+                "ch": "但没过几天，他又说顾珍珍怀孕了，他要负责。",
+                "en": "But a few days later, he claimed Gu Zhenzhen was pregnant and he had to take responsibility."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，沙发上放着一个靠垫，窗外是小区的景色，略带无奈和纠结的氛围。",
+                "en": "Daytime, living room at home, a cushion on the sofa, neighborhood scenery outside the window, a slightly resigned and conflicted atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Father",
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸低头，表情纠结。赵晴晴站在一旁，表情无奈。",
+                "en": "Father lowers his head, conflicted. Zhao Qingqing stands nearby, resigned."
+            }
+        },
+        {
+            "index": 19,
+            "Plot Correspondence": {
+                "ch": "我劝爸爸不要犯糊涂，但他不听。",
+                "en": "I urged Father not to be foolish, but he wouldn't listen."
+            },
+            "Setting Description": {
+                "ch": "白天，家中餐厅，餐桌上放着一杯茶，窗外是阳光明媚的景色，略带紧张和无奈的氛围。",
+                "en": "Daytime, home dining room, a cup of tea on the table, sunny scenery outside the window, a slightly tense and resigned atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "爸爸"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在餐桌旁，表情严肃。爸爸在一旁，神情固执。",
+                "en": "Zhao Qingqing sits at the table, stern. Father stands nearby, stubborn."
+            }
+        },
+        {
+            "index": 20,
+            "Plot Correspondence": {
+                "ch": "后来，李超知道顾珍珍怀孕，就打了爸爸。顾珍珍为了救儿子，承认她是假怀孕。",
+                "en": "Later, when Li Chao found out Gu Zhenzhen was pregnant, he attacked Father. To save her son, Gu Zhenzhen admitted she had faked the pregnancy."
+            },
+            "Setting Description": {
+                "ch": "夜晚，家中客厅，地上散落着物品，窗外是夜幕降临的景色，略带紧张和冲突的氛围。",
+                "en": "Nighttime, living room at home, items scattered on the floor, nightfall outside the window, a slightly tense and confrontational atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "李超",
+                    "顾珍珍",
+                    "爸爸"
+                ],
+                "en": [
+                    "Li Chao",
+                    "Gu Zhenzhen",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "李超站在一旁，表情愤怒。顾珍珍挡在爸爸前面，表情惊慌。爸爸坐在地上，神情痛苦。",
+                "en": "Li Chao stands nearby, furious. Gu Zhenzhen shields Father, panicked. Father sits on the floor, in pain."
+            }
+        },
+        {
+            "index": 21,
+            "Plot Correspondence": {
+                "ch": "爸爸很受打击，说要和顾珍珍分手。但没过多久，顾珍珍又来找爸爸，爸爸心软，又原谅了她。",
+                "en": "Father was devastated and said he would break up with Gu Zhenzhen. But soon after, she returned, and Father, weak-hearted, forgave her again."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，沙发上放着一个靠垫，窗外是小区的景色，略带无奈和心软的氛围。",
+                "en": "Daytime, living room at home, a cushion on the sofa, neighborhood scenery outside the window, a slightly resigned and soft-hearted atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，侧面镜头",
+                "en": "Medium close up, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸",
+                    "顾珍珍"
+                ],
+                "en": [
+                    "Father",
+                    "Gu Zhenzhen"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸坐在沙发上，表情纠结。顾珍珍站在一旁，表情楚楚可怜。",
+                "en": "Father sits on the sofa, torn. Gu Zhenzhen stands nearby, looking pitiful."
+            }
+        },
+        {
+            "index": 22,
+            "Plot Correspondence": {
+                "ch": "我知道，只要顾珍珍在，爸爸就不会醒悟。于是，我把顾珍珍和王副厂长的事告诉了王夫人。",
+                "en": "I knew Father wouldn't wake up as long as Gu Zhenzhen was around. So, I told Madam Wang about Gu Zhenzhen's affair with Deputy Director Wang."
+            },
+            "Setting Description": {
+                "ch": "白天，咖啡厅，桌上放着一杯咖啡，窗外是行人匆匆的街道，略带坚定和决心的氛围。",
+                "en": "Daytime, café, a cup of coffee on the table, pedestrians rushing outside the window, a slightly determined and resolute atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "王夫人"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Madam Wang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在桌前，表情坚定。王夫人在一旁，表情愤怒。",
+                "en": "Zhao Qingqing sits at the table, resolute. Madam Wang sits nearby, furious."
+            }
+        },
+        {
+            "index": 23,
+            "Plot Correspondence": {
+                "ch": "王夫人带人打了顾珍珍，还把视频传到了网上。顾珍珍被开除，爸爸也因为不服从管理被提前内退。",
+                "en": "Madam Wang brought people to beat up Gu Zhenzhen and uploaded the video online. Gu Zhenzhen was fired, and Father was forced into early retirement for insubordination."
+            },
+            "Setting Description": {
+                "ch": "白天，工厂门口，地上散落着物品，周围是围观的人群，略带混乱和震惊的氛围。",
+                "en": "Daytime, factory entrance, items scattered on the ground, onlookers nearby, a slightly chaotic and shocking atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "顾珍珍",
+                    "王夫人"
+                ],
+                "en": [
+                    "Gu Zhenzhen",
+                    "Madam Wang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "顾珍珍坐在地上，表情惊恐。王夫人站在一旁，表情愤怒。",
+                "en": "Gu Zhenzhen sits on the ground, terrified. Madam Wang stands nearby, furious."
+            }
+        },
+        {
+            "index": 24,
+            "Plot Correspondence": {
+                "ch": "收入减少后，顾珍珍离开了爸爸。",
+                "en": "With reduced income, Gu Zhenzhen left Father."
+            },
+            "Setting Description": {
+                "ch": "白天，家中客厅，沙发上空无一物，窗外是小区的景色，略带失落和空虚的氛围。",
+                "en": "Daytime, living room at home, the sofa empty, neighborhood scenery outside the window, a slightly desolate and empty atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "爸爸"
+                ],
+                "en": [
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "爸爸坐在沙发上，表情失落而空虚。",
+                "en": "Father sits on the sofa, desolate and empty."
+            }
+        },
+        {
+            "index": 25,
+            "Plot Correspondence": {
+                "ch": "爸爸来找我和好，但我拒绝了。因为那个家，已经没有了妈妈的痕迹。",
+                "en": "Father came to reconcile, but I refused. Because that home no longer had any trace of Mother."
+            },
+            "Setting Description": {
+                "ch": "白天，小区花园，长椅上放着一本书，周围是散步的居民，略带悲伤和坚定的氛围。",
+                "en": "Daytime, neighborhood garden, a book on a bench, residents strolling nearby, a slightly sorrowful and resolute atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴",
+                    "爸爸"
+                ],
+                "en": [
+                    "Zhao Qingqing",
+                    "Father"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴坐在长椅上，表情悲伤而坚定。爸爸站在一旁，神情恳求。",
+                "en": "Zhao Qingqing sits on the bench, sorrowful yet resolute. Father stands nearby, pleading."
+            }
+        },
+        {
+            "index": 26,
+            "Plot Correspondence": {
+                "ch": "没有妈妈，就真的没有了娘家。",
+                "en": "Without Mother, I truly no longer had a maternal home."
+            },
+            "Setting Description": {
+                "ch": "傍晚，家中客厅，墙上挂着妈妈的照片，窗外是夕阳的余晖，温馨而悲伤的氛围。",
+                "en": "Evening, living room at home, a photo of Mother on the wall, sunset glow outside the window, a warm yet sorrowful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "赵晴晴"
+                ],
+                "en": [
+                    "Zhao Qingqing"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "赵晴晴站在照片前，眼眶湿润，表情怀念而坚定。",
+                "en": "Zhao Qingqing stands before the photo, eyes moist, nostalgic yet resolute."
+            }
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+﻿{
+    "Story_type": {
+        "en": "Japanese Children's Literature",
+        "ch": "日本儿童文学"
+    },
+    "Characters": {
+        "Totto-chan": {
+            "tag": "unrealistic_human",
+            "name_ch": "小豆豆",
+            "name_en": "Totto-chan",
+            "prompt_ch": "一个活泼好动、充满好奇心的日本小学一年级女孩。她有黑色的头发和明亮的眼睛，穿着红色的小裙子。",
+            "prompt_en": "A lively and curious first-grade Japanese girl. She has black hair and bright eyes, wearing a little red dress.",
+            "num_of_appearances": 5
+        },
+        "Totto-chan's Mother": {
+            "tag": "unrealistic_human",
+            "name_ch": "小豆豆的妈妈",
+            "name_en": "Totto-chan's Mother",
+            "prompt_ch": "一位温柔而担忧的日本母亲。她有黑色的短卷发，穿着得体的绿色外套和长裙。",
+            "prompt_en": "A gentle yet concerned Japanese mother. She has short black curly hair and wears a proper green coat and long skirt.",
+            "num_of_appearances": 2
+        },
+        "Ticket Inspector Uncle": {
+            "tag": "unrealistic_human",
+            "name_ch": "检票员叔叔",
+            "name_en": "Ticket Inspector Uncle",
+            "prompt_ch": "一个和善的日本中年男子，身材微胖，戴着眼镜。他穿着制服，工作时总是忙碌而专注。",
+            "prompt_en": "A kind middle-aged Japanese man, slightly overweight and wearing glasses. He is dressed in a uniform and always appears busy and focused at work.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "小豆豆和妈妈一起走在去新学校的路上。小豆豆对电车票很感兴趣，她问检票员叔叔能否留下车票，但被拒绝了。",
+                "en": "Totto-chan and her mother are walking to the new school. Totto-chan is very interested in the train ticket and asks the ticket inspector uncle if she can keep it, but is refused."
+            },
+            "Setting Description": {
+                "ch": "早晨，电车站台，繁忙的氛围，站台上人来人往，电车停在站台旁，阳光透过站台顶棚洒下，电车票箱挂在电车门旁，远处是城市的建筑群。",
+                "en": "Morning, train station platform, bustling atmosphere, people coming and going on the platform, a train parked beside the platform, sunlight filtering through the platform roof, a ticket box hanging next to the train door, city buildings visible in the distance."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景, 平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小豆豆",
+                    "检票员叔叔"
+                ],
+                "en": [
+                    "Totto-chan",
+                    "Ticket Inspector Uncle"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小豆豆站在检票员叔叔面前，表情期待，右手伸出，检票员叔叔微笑着摇头，左手拿着一叠车票，背景中电车门旁的票箱半满。",
+                "en": "Totto-chan stands in front of the ticket inspector uncle with an expectant expression, her right hand outstretched. The ticket inspector uncle smiles and shakes his head, holding a stack of tickets in his left hand. In the background, the ticket box next to the train door is half full."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "小豆豆看到检票箱里满满的车票，便梦想着长大后成为一名检票员。",
+                "en": "Seeing the ticket box filled with tickets, Totto-chan dreams of becoming a ticket inspector when she grows up."
+            },
+            "Setting Description": {
+                "ch": "早晨，电车站台，繁忙的氛围，站台上人来人往，电车停在站台旁，阳光透过站台顶棚洒下，电车票箱挂在电车门旁，远处是城市的建筑群。",
+                "en": "Morning, train station platform, bustling atmosphere, people coming and going on the platform, a train parked beside the platform, sunlight filtering through the platform roof, a ticket box hanging next to the train door, city buildings visible in the distance."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景, 平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小豆豆"
+                ],
+                "en": [
+                    "Totto-chan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小豆豆站在电车门旁，表情专注，双眼紧盯着票箱，右手轻轻触碰票箱，背景中电车门开启，乘客上下车。",
+                "en": "Totto-chan stands beside the train door, looking focused, her eyes fixed on the ticket box, her right hand gently touching it. In the background, the train door is open with passengers boarding and alighting."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "小豆豆的妈妈牵着小豆豆走着，心里有些不安，因为小豆豆之前在学校里的行为让老师很头疼，甚至被要求退学。",
+                "en": "Totto-chan’s mother holds her hand as they walk, feeling uneasy because Totto-chan’s previous behavior at school had troubled the teachers, even leading to her expulsion."
+            },
+            "Setting Description": {
+                "ch": "早晨，城市街道，宁静的氛围，街道两旁是住宅和商店，阳光洒在地面上，树影斑驳，行人稀少，远处是学校的轮廓。",
+                "en": "Morning, city street, serene atmosphere, residential houses and shops lining the street, sunlight casting dappled shadows on the ground, sparse pedestrians, the outline of a school visible in the distance."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景, 侧面镜头",
+                "en": "Medium long shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小豆豆",
+                    "小豆豆的妈妈"
+                ],
+                "en": [
+                    "Totto-chan",
+                    "Totto-chan's Mother"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小豆豆的妈妈牵着小豆豆走在街道上，小豆豆表情愉快，妈妈表情略带忧虑，两人的影子在地面上拉长。",
+                "en": "Totto-chan’s mother holds Totto-chan’s hand as they walk down the street. Totto-chan looks cheerful, while her mother appears slightly worried. Their shadows stretch long on the ground."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "当她们到达新学校时，小豆豆惊讶地发现学校的大门是由两棵活树做成的，校名牌子歪歪斜斜地挂在上面。",
+                "en": "When they arrive at the new school, Totto-chan is surprised to find that the school gate is made of two living trees, with the school name plate hanging crookedly from them."
+            },
+            "Setting Description": {
+                "ch": "早晨，新学校门口，宁静的氛围，两棵大树作为校门，校名牌子挂在树枝上，地面是石子路，周围是绿树和花草，阳光透过树叶洒下。",
+                "en": "Morning, entrance of the new school, serene atmosphere, two large trees forming the school gate, the school name plate hanging from the branches, a gravel path on the ground, surrounded by green trees and flowers, sunlight filtering through the leaves."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景, 平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小豆豆",
+                    "小豆豆的妈妈"
+                ],
+                "en": [
+                    "Totto-chan",
+                    "Totto-chan's Mother"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小豆豆和妈妈站在校门口，小豆豆表情惊讶，右手指着校名牌子，妈妈微笑着看着小豆豆，背景中校门的两棵树显得格外醒目。",
+                "en": "Totto-chan and her mother stand at the school gate. Totto-chan looks surprised, pointing at the school name plate with her right hand, while her mother smiles at her. In the background, the two trees forming the gate stand out prominently."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "更让她吃惊的是，校园里竟然有六辆真正的电车作为教室。小豆豆觉得自己仿佛置身于梦境中。",
+                "en": "To her even greater amazement, there are six real train cars serving as classrooms in the schoolyard. Totto-chan feels as if she has stepped into a dream."
+            },
+            "Setting Description": {
+                "ch": "早晨，校园内，宁静的氛围，六辆电车停在校园中，电车周围是绿草地和树木，阳光洒在电车上，远处是教学楼的轮廓。",
+                "en": "Morning, schoolyard, serene atmosphere, six train cars parked in the yard, surrounded by green grass and trees, sunlight shining on the train cars, the outline of the school building visible in the distance."
+            },
+            "Shot Perspective Design": {
+                "ch": "远景, 高角度镜头",
+                "en": "Wide shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "小豆豆"
+                ],
+                "en": [
+                    "Totto-chan"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "小豆豆站在校园中央，表情震惊，双手捂住嘴巴，背景中六辆电车整齐排列，阳光照在电车上闪闪发光。",
+                "en": "Totto-chan stands in the center of the schoolyard, looking astonished, her hands covering her mouth. In the background, the six train cars are neatly arranged, gleaming in the sunlight."
+            }
+        }
+    ]
+}

@@ -1,0 +1,503 @@
+﻿{
+    "Story_type": {
+        "en": "Classics for Women",
+        "ch": "女性经典"
+    },
+    "Characters": {
+        "Meg": {
+            "tag": "realistic_human",
+            "name_ch": "梅格",
+            "name_en": "Meg",
+            "prompt_ch": "十六岁的美国女孩，长相标致，体态丰盈，肌肤洁白，有一头棕色的浓密秀发，棕色的眼睛和白皙的双手。",
+            "prompt_en": "A sixteen-year-old American girl, pretty and plump, with fair skin, thick brown hair, brown eyes, and delicate white hands.",
+            "num_of_appearances": 9
+        },
+        "Jo": {
+            "tag": "realistic_human",
+            "name_ch": "乔",
+            "name_en": "Jo",
+            "prompt_ch": "十五岁的美国女孩，棕色的头发，身材修长，她性格刚毅，有时会显得粗鲁。",
+            "prompt_en": "A fifteen-year-old American girl with brown hair and a tall, slender frame. She has a strong-willed personality and can sometimes appear rough.",
+            "num_of_appearances": 9
+        },
+        "Beth": {
+            "tag": "realistic_human",
+            "name_ch": "贝思",
+            "name_en": "Beth",
+            "prompt_ch": "十三岁的美国女孩，一头金色长卷发，肤色红润，秀发润泽，性格腼腆、安静。",
+            "prompt_en": "A thirteen-year-old American girl with long, golden curls, rosy cheeks, and glossy hair. She is shy and quiet by nature.",
+            "num_of_appearances": 9
+        },
+        "Amy": {
+            "tag": "realistic_human",
+            "name_ch": "艾美",
+            "name_en": "Amy",
+            "prompt_ch": "十二岁的美国女孩，乖巧可爱，有一双金色的眼睛和金黄色的卷发。",
+            "prompt_en": "A twelve-year-old American girl, sweet and adorable, with golden eyes and golden ringlets.",
+            "num_of_appearances": 9
+        },
+        "Mrs. March": {
+            "tag": "realistic_human",
+            "name_ch": "马奇太太",
+            "name_en": "Mrs. March",
+            "prompt_ch": "四十多岁的美国母亲，高个子，金色的短发，蓝色的眼睛，充满母性光辉。她衣着朴素，但仪态高贵。",
+            "prompt_en": "A mother in her forties, tall, with short golden hair and blue eyes, radiating maternal warmth. She dresses plainly but carries herself with grace.",
+            "num_of_appearances": 4
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "圣诞节即将来临，马奇家的四姐妹却因为贫穷而无法像其他孩子一样期待礼物。",
+                "en": "Christmas is approaching, but the four March sisters, due to their poverty, cannot look forward to gifts like other children."
+            },
+            "Setting Description": {
+                "ch": "白天，马奇家客厅，陈旧的家具，壁炉上的挂钟，窗外飘落的雪花，微弱的阳光透过窗户洒在地板上，营造出一种宁静而略带忧伤的氛围。",
+                "en": "Daytime, the March family's living room, with old furniture, a clock on the mantel, snow falling outside the window, and faint sunlight streaming through the window onto the floor, creating a serene yet slightly melancholic atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "梅格坐在旧沙发上，手抚摸着自己的旧衣服，表情失落；乔躺在地毯上，双臂交叉在胸前，眉头紧皱；贝思坐在钢琴旁，手指轻轻抚过琴键，眼神温柔但略带忧伤；艾美站在窗边，望着窗外的雪花，神情复杂。",
+                "en": "Meg sits on an old sofa, her hands touching her worn-out dress, looking disappointed; Jo lies on the carpet with her arms crossed, frowning; Beth sits by the piano, her fingers lightly touching the keys, her gaze gentle yet tinged with sadness; Amy stands by the window, watching the falling snow outside, her expression complex."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "大姐梅格叹息着望着自己的旧衣服。",
+                "en": "The eldest sister Meg sighs as she looks at her old clothes."
+            },
+            "Setting Description": {
+                "ch": "白天，马奇家客厅，旧沙发，壁炉上的挂钟，微弱的阳光透过窗户洒在地板上，营造出一种宁静而略带忧伤的氛围。",
+                "en": "Daytime, the March family's living room, an old sofa, a clock on the mantel, faint sunlight streaming through the window onto the floor, creating a serene yet slightly melancholic atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格"
+                ],
+                "en": [
+                    "Meg"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "梅格坐在旧沙发上，手抚摸着自己的旧衣服，眼神中透露出一丝无奈和渴望，微微叹了口气。",
+                "en": "Meg sits on the old sofa, her hands touching her old dress, her eyes revealing a hint of resignation and longing as she sighs softly."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "二姐乔躺在地毯上抱怨没有礼物的圣诞节难以度过。",
+                "en": "The second sister Jo lies on the carpet, complaining about how difficult it is to spend Christmas without gifts."
+            },
+            "Setting Description": {
+                "ch": "白天，马奇家客厅，地毯，壁炉上的挂钟，微弱的阳光透过窗户洒在地板上。",
+                "en": "Daytime, the March family's living room, a carpet, a clock on the mantel, faint sunlight streaming through the window onto the floor."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "乔"
+                ],
+                "en": [
+                    "Jo"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "乔躺在地毯上，双臂交叉在胸前，眉头紧皱，嘴里嘟囔着什么，表情显得有些烦躁和不满。",
+                "en": "Jo lies on the carpet, her arms crossed, frowning and muttering something under her breath, her expression showing irritation and discontent."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "三妹贝思虽然觉得有家人就足够，但也为无法给母亲买礼物而难过。",
+                "en": "The third sister Beth feels that having family is enough, but she is still saddened by her inability to buy a gift for their mother."
+            },
+            "Setting Description": {
+                "ch": "白天，马奇家客厅，钢琴，壁炉上的挂钟，微弱的阳光透过窗户洒在地板上。",
+                "en": "Daytime, the March family's living room, a piano, a clock on the mantel, faint sunlight streaming through the window onto the floor."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "贝思"
+                ],
+                "en": [
+                    "Beth"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "贝思坐在钢琴旁，手指轻轻抚过琴键，眼神温柔但略带忧伤，微微低着头，似乎在思考着什么。",
+                "en": "Beth sits by the piano, her fingers lightly touching the keys, her gaze gentle yet tinged with sadness, her head slightly bowed as if deep in thought."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "小妹艾美则对有钱人家的女孩充满嫉妒。",
+                "en": "The youngest sister Amy is filled with envy for the girls from wealthy families."
+            },
+            "Setting Description": {
+                "ch": "白天，马奇家客厅，窗边，窗外飘落的雪花，微弱的阳光透过窗户洒在地板上。",
+                "en": "Daytime, the March family's living room, by the window, snow falling outside, faint sunlight streaming through the window onto the floor."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "艾美"
+                ],
+                "en": [
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "艾美站在窗边，双手扶着窗台，望着窗外的雪花，眼神中透露出一丝嫉妒和向往，嘴角微微下垂。",
+                "en": "Amy stands by the window, her hands resting on the windowsill as she watches the falling snow outside, her eyes revealing a hint of jealousy and longing, her lips slightly downturned."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "姐妹们每人只有一元钱，她们原本计划用这点钱买自己喜欢的东西，但母亲建议她们将钱捐献给在战场上受苦的士兵。",
+                "en": "Each sister has only one dollar, which they originally planned to spend on something they liked, but their mother suggests they donate the money to soldiers suffering on the battlefield."
+            },
+            "Setting Description": {
+                "ch": "傍晚，马奇家客厅，餐桌，烛光，壁炉上的挂钟，窗外的雪花依旧飘落。",
+                "en": "Evening, the March family's living room, a dining table, candlelight, a clock on the mantel, snow still falling outside the window."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美",
+                    "马奇太太"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy",
+                    "Mrs. March"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们围坐在餐桌旁，每人面前放着一元钱，表情各异；马奇太太站在她们身后，双手放在她们的肩膀上，眼神中透露出慈爱和期待。",
+                "en": "The sisters gather around the dining table, each with a dollar in front of them, their expressions varied; Mrs. March stands behind them, her hands resting on their shoulders, her eyes filled with love and expectation."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "姐妹们虽然不情愿，但也理解母亲的用意。她们开始讨论如何用这点钱给母亲买圣诞礼物，最后决定各自准备一份小礼物，给母亲一个惊喜。",
+                "en": "Though reluctant, the sisters understand their mother's intention. They begin discussing how to use the money to buy a Christmas gift for their mother and decide to each prepare a small surprise for her."
+            },
+            "Setting Description": {
+                "ch": "傍晚，马奇家客厅，餐桌，烛光，壁炉上的挂钟，窗外的雪花依旧飘落。",
+                "en": "Evening, the March family's living room, a dining table, candlelight, a clock on the mantel, snow still falling outside the window."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们围坐在餐桌旁，互相看着对方，表情从最初的不情愿逐渐转变为理解和决心，梅格微微点头，乔握紧了拳头，贝思露出了微笑，艾美眼神中闪烁着光芒。",
+                "en": "The sisters gather around the dining table, looking at one another, their expressions shifting from initial reluctance to understanding and determination. Meg nods slightly, Jo clenches her fists, Beth smiles gently, and Amy's eyes sparkle with inspiration."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "晚上，姐妹们围坐在火炉旁做针线活。",
+                "en": "In the evening, the sisters gather around the fireplace, doing needlework."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上，营造出一种温馨而宁静的氛围。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces, creating a warm and peaceful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们围坐在火炉旁，各自手中拿着针线活，梅格专注地缝制着什么，乔时不时地抬头看向其他人，贝思安静地做着针线，艾美则显得有些笨拙但认真。",
+                "en": "The sisters sit around the fireplace, each holding needlework. Meg sews intently, Jo occasionally glances at the others, Beth works quietly, and Amy, though slightly clumsy, remains focused."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "母亲回家后，给她们带来了一封父亲的来信。",
+                "en": "When their mother returns home, she brings them a letter from their father."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "马奇太太"
+                ],
+                "en": [
+                    "Mrs. March"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "马奇太太站在客厅门口，手中拿着一封书信，脸上带着温暖的微笑，眼神中透露出一丝激动和期待。",
+                "en": "Mrs. March stands at the doorway of the living room, holding a letter in her hand, a warm smile on her face, her eyes shining with emotion and anticipation."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "信中，父亲鼓励她们坚强、勇敢，并表示虽然要等上一年才能回家，但他会一直想念和为她们祈祷。",
+                "en": "In the letter, their father encourages them to be strong and brave, saying that though it will be a year before he returns, he will always miss and pray for them."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们围坐在火炉旁，手中拿着父亲的来信，表情专注而感动，梅格眼眶微红，乔紧抿着嘴唇，贝思轻轻擦拭着眼泪，艾美则紧紧握着信纸。",
+                "en": "The sisters sit around the fireplace, holding their father's letter, their expressions focused and moved. Meg's eyes are slightly red, Jo presses her lips together, Beth wipes away a tear, and Amy clutches the letter tightly."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "姐妹们被父亲的信深深感动，决定努力改正自己的缺点，不让父亲失望。",
+                "en": "Deeply touched by their father's letter, the sisters resolve to improve themselves and not disappoint him when he returns."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们互相看着对方，眼神中透露出坚定和决心，梅格微微点头，乔握紧了拳头，贝思露出了微笑，艾美则眼神中闪烁着光芒。",
+                "en": "The sisters look at one another, their eyes filled with resolve and determination. Meg nods slightly, Jo clenches her fists, Beth smiles gently, and Amy's eyes sparkle with inspiration."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "母亲用她们小时候喜欢玩的《天路历程》游戏来比喻她们现在的生活，告诉她们每个人都有自己的重担，但只要追求善美、追求幸福，就能跨越艰难险阻，最终到达“天国”。",
+                "en": "Their mother uses the game 'The Pilgrim's Progress,' which they loved as children, to metaphorically describe their current lives, telling them that everyone has their own burdens to bear, but as long as they pursue goodness and happiness, they can overcome hardships and reach 'the Celestial City.'"
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "马奇太太"
+                ],
+                "en": [
+                    "Mrs. March"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "马奇太太坐在姐妹们中间，手中拿着一本《天路历程》，眼神中透露出智慧和慈爱，语气温柔而坚定。",
+                "en": "Mrs. March sits among her daughters, holding a copy of 'The Pilgrim's Progress,' her eyes filled with wisdom and love, her voice gentle yet firm."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "姐妹们受到启发，决定真心真意地去做，不让父亲回来时感到失望。",
+                "en": "Inspired, the sisters resolve to wholeheartedly strive not to disappoint their father when he returns."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家客厅，火炉，壁炉上的挂钟，微弱的火光映照在姐妹们的脸上。",
+                "en": "Night, the March family's living room, a fireplace, a clock on the mantel, the faint glow of the fire illuminating their faces."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们围坐在火炉旁，表情专注而坚定，梅格微微点头，乔握紧了拳头，贝思露出了微笑，艾美则眼神中闪烁着光芒。",
+                "en": "The sisters sit around the fireplace, their expressions focused and resolute. Meg nods slightly, Jo clenches her fists, Beth smiles gently, and Amy's eyes sparkle with inspiration."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "最后，姐妹们在母亲的歌声中进入梦乡，期待着圣诞节的到来。",
+                "en": "Finally, the sisters drift off to sleep to the sound of their mother's lullaby, eagerly awaiting Christmas morning."
+            },
+            "Setting Description": {
+                "ch": "夜晚，马奇家卧室，四张床铺，窗外的雪花依旧飘落，微弱的月光透过窗户洒在地板上，营造出一种宁静而温馨的氛围。",
+                "en": "Night, the March family's bedroom, four beds, snow still falling outside the window, faint moonlight streaming through the window onto the floor, creating a peaceful and warm atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "梅格",
+                    "乔",
+                    "贝思",
+                    "艾美",
+                    "马奇太太"
+                ],
+                "en": [
+                    "Meg",
+                    "Jo",
+                    "Beth",
+                    "Amy",
+                    "Mrs. March"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "姐妹们躺在各自的床上，表情安详而期待，马奇太太站在床边，轻轻哼唱着歌曲，眼神中透露出慈爱和温暖。",
+                "en": "The sisters lie in their beds, their expressions serene and expectant. Mrs. March stands by their beds, softly singing a lullaby, her eyes filled with love and warmth."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "旁白：圣诞节的早晨，阳光透过窗户洒在姐妹们的脸上，她们醒来后，发现床头放着母亲准备的小礼物，心中充满了感激和喜悦。",
+                "en": "Narration: On Christmas morning, sunlight streams through the window, illuminating the sisters' faces as they wake to find small gifts left by their mother at their bedsides, their hearts brimming with gratitude and joy."
+            },
+            "Setting Description": {
+                "ch": "早晨，马奇家卧室，四张床铺，窗外的雪花已经停了，明亮的阳光透过窗户洒在地板上，营造出一种温馨而喜悦的氛围。",
+                "en": "Morning, the March family's bedroom, four beds, the snow outside has stopped, bright sunlight streams through the window onto the floor, creating a warm and joyful atmosphere."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，平视镜头",
+                "en": "Full shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [],
+                "en": []
+            },
+            "Static Shot Description": {
+                "ch": "四张床铺上，姐妹们的床头各自放着一份小礼物，她们开心极了。阳光洒在她们的脸上，营造出一种宁静而温馨的氛围。",
+                "en": "On each of the four beds, a small gift rests by the sisters' pillows, filling them with delight. Sunlight bathes their faces, creating a serene and heartwarming scene."
+            }
+        }
+    ]
+}

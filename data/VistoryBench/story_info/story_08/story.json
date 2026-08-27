@@ -1,0 +1,633 @@
+﻿{
+    "Story_type": {
+        "en": "Chinese Ancient Romance",
+        "ch": "中国古代言情"
+    },
+    "Characters": {
+        "Consort Jiang": {
+            "tag": "unrealistic_human",
+            "name_ch": "江贵妃",
+            "name_en": "Consort Jiang",
+            "prompt_ch": "黑发黑眼的中国古代年轻女性，年龄大约十八九岁，体态纤弱，面色苍白。她穿着华丽的宫装，但神情总是带着一丝忧郁和颓废。",
+            "prompt_en": "A young woman from ancient China with black hair and black eyes, approximately 18-19 years old, frail in stature with a pale complexion. She wears extravagant palace attire but always carries an air of melancholy and listlessness.",
+            "num_of_appearances": 21
+        },
+        "Emperor": {
+            "tag": "unrealistic_human",
+            "name_ch": "皇帝",
+            "name_en": "Emperor",
+            "prompt_ch": "黑发黑眼的中国古代年轻男性，年龄大约二十多岁，身材高大，面容英俊帅气，但眼神中透着一丝冷酷和玩味。他穿着龙袍，举止间透露出帝王的威严和不可捉摸的心思。",
+            "prompt_en": "A young man from ancient China with black hair and black eyes, approximately in his 20s, tall and handsome with a commanding presence. His eyes, however, hint at a cold and calculating nature. He wears imperial robes, exuding both authority and unpredictability.",
+            "num_of_appearances": 12
+        },
+        "Lady Jiang": {
+            "tag": "unrealistic_human",
+            "name_ch": "江夫人",
+            "name_en": "Lady Jiang",
+            "prompt_ch": "江贵妃的母亲，黑眼的中国古代中年女性，头发黑白相间，年龄大约四十多岁，皮肤保养得当，但眼神中透着一丝刻薄和势利，穿着贵族夫人的服饰。",
+            "prompt_en": "Consort Jiang's mother, a middle-aged woman from ancient China with black eyes and salt-and-pepper hair, approximately in her 40s. Her well-maintained appearance is offset by a sharp, shrewd gaze. She dresses in noblewoman attire.",
+            "num_of_appearances": 4
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "我自小体弱多病，脸色苍白如纸，身形单薄如柳，仿佛一阵风就能将我吹倒。",
+                "en": "Since childhood, I have been frail and sickly, my face as pale as paper, my body as slender as a willow, as if a gust of wind could knock me over."
+            },
+            "Setting Description": {
+                "ch": "清晨，江府庭院，微风拂过，树叶沙沙作响，庭院中央有一池清水，池边有几株垂柳，阳光透过树叶洒下斑驳的光影，空气中弥漫着淡淡的花香。",
+                "en": "Early morning, the Jiang family courtyard. A gentle breeze rustles the leaves, and a clear pond lies at the center, surrounded by weeping willows. Sunlight filters through the leaves, casting dappled shadows. The air carries a faint floral fragrance."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃站在池边，身形单薄，脸色苍白，微风拂过她的长发，她眼神忧郁地望着水面。",
+                "en": "Consort Jiang stands by the pond, frail and pale. The breeze tousles her long hair as she gazes melancholically at the water."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "在父亲的眼中，我不过是一枚无用的棋子，一枚可以随意丢弃的弃子。于是，我被送入了那座金碧辉煌却又冰冷无情的皇宫，成为了江贵妃。",
+                "en": "In my father's eyes, I was nothing more than a useless chess piece, a pawn to be discarded at will. Thus, I was sent into that gilded yet heartless palace, becoming Consort Jiang."
+            },
+            "Setting Description": {
+                "ch": "黄昏，江府大门前，马车停在门口，仆人们忙碌地搬运行李，江府的匾额在夕阳下显得格外沉重，街道上行人稀少，空气中弥漫着离别的氛围。",
+                "en": "Dusk, outside the Jiang residence gate. A carriage waits, servants bustling to load luggage. The family plaque looms heavily under the setting sun. The streets are quiet, the air thick with farewell."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃站在马车旁，身着华丽的宫装，神情忧郁，她回头望了一眼江府，眼中满是不舍与无奈。",
+                "en": "Consort Jiang stands beside the carriage, dressed in resplendent palace attire, her expression sorrowful. She glances back at the Jiang residence, eyes filled with reluctance and resignation."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "在这深宫之中，我对未来毫无期盼，每日只是浑浑噩噩度日。我常常独自一人坐在连廊上，望着墙角那一枝孤独的梅花，心中涌起无尽的悲凉。",
+                "en": "In the depths of the palace, I had no hope for the future, merely drifting through each day in a haze. I often sat alone on the veranda, gazing at a solitary plum blossom in the corner, overwhelmed by boundless sorrow."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊蜿蜒曲折，墙角一枝梅花孤独绽放，花瓣上挂着几滴露珠，阳光透过云层洒下柔和的光芒，空气中弥漫着淡淡的梅香。",
+                "en": "Afternoon, the palace courtyard. The winding veranda stretches out, a lone plum blossom blooms in the corner, dewdrops clinging to its petals. Soft sunlight filters through the clouds, the air carrying a faint plum fragrance."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，平视镜头",
+                "en": "Medium long shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃坐在连廊上，身形纤弱，眼神空洞地望着那枝梅花，脸上写满了悲凉与孤独。",
+                "en": "Consort Jiang sits on the veranda, frail and hollow-eyed as she stares at the plum blossom, her face etched with desolation and loneliness."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "那日，我又坐在连廊上发呆，望着那梅花，不由自主地吟诵了一首诗：“墙角数枝梅，凌寒独自开。遥知不是雪，为有暗香来。”",
+                "en": "That day, lost in thought on the veranda, I unconsciously recited a poem while gazing at the plum blossom: 'By the wall, a few branches of plum, braving the cold alone in bloom. From afar, I know it's not snow, for a subtle fragrance comes.'"
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊上阳光斑驳，墙角的梅花在微风中轻轻摇曳，几片花瓣飘落在地，空气中弥漫着淡淡的梅香。",
+                "en": "Afternoon, the palace courtyard. Sunlight dapples the veranda, the corner plum blossom sways gently in the breeze, petals scattering. The air carries a faint plum fragrance."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃坐在连廊上，眼神迷离地望着梅花，嘴唇微动，轻声吟诵着诗句，脸上流露出一丝淡淡的哀愁。",
+                "en": "Consort Jiang sits on the veranda, her gaze distant as she softly recites the poem, lips slightly parted, her face tinged with quiet sorrow."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "突然，一个低沉而威严的声音传来：“江贵妃好兴致，可是在思念什么人？”我猛然回头，只见皇帝站在不远处，目光如炬地看着我。",
+                "en": "Suddenly, a deep, authoritative voice rang out: 'Consort Jiang seems lost in thought—missing someone?' Startled, I turned to see the Emperor standing not far away, his piercing gaze fixed on me."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊尽头，皇帝站在不远处，身着龙袍，威严而冷酷，阳光洒在他身上，投下长长的影子。",
+                "en": "Afternoon, the palace courtyard. The Emperor stands at the end of the veranda, clad in imperial robes, commanding yet cold. Sunlight casts a long shadow behind him."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃猛然回头，眼中闪过一丝惊慌，皇帝站在不远处，目光如炬地看着她，脸上带着一丝玩味的笑容。",
+                "en": "Consort Jiang whips her head around, a flicker of alarm in her eyes. The Emperor stands nearby, his piercing gaze locked on her, a hint of amusement playing on his lips."
+            }
+        },
+        {
+            "index": 6,
+            "Plot Correspondence": {
+                "ch": "皇帝却微微一笑，话中有话地说道：“既已入宫，便该安心待在朕的身边，那些无谓的思念，还是早些忘了的好。”",
+                "en": "The Emperor smiled faintly, his words layered with meaning: 'Since you’ve entered the palace, you should content yourself by my side. It’s best to let go of futile longings.'"
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊上，皇帝走近江贵妃，微风拂过，梅花花瓣飘落，空气中弥漫着淡淡的梅香。",
+                "en": "Afternoon, the palace courtyard. The Emperor approaches Consort Jiang on the veranda. A breeze stirs, plum petals drift down, the air faintly scented with plum blossoms."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝站在江贵妃面前，微微一笑，眼中透着一丝冷酷与玩味，江贵妃低着头，神情复杂，双手紧握。",
+                "en": "The Emperor stands before Consort Jiang, smiling faintly, his eyes cold yet playful. Consort Jiang bows her head, her expression conflicted, hands clenched tightly."
+            }
+        },
+        {
+            "index": 7,
+            "Plot Correspondence": {
+                "ch": "皇帝却命人折下那枝梅花送到我手中，并意味深长地说道：“有花堪折直须折，莫待无花空折枝。”",
+                "en": "The Emperor ordered someone to pluck the plum blossom and hand it to me, saying meaningfully: 'Pluck the blossom while you may, don’t wait till branches bare you sigh.'"
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊上，梅花枝被折下，花瓣散落一地，阳光透过树叶洒下斑驳的光影。",
+                "en": "Afternoon, the palace courtyard. The plum branch is snapped off, petals scattered. Sunlight filters through leaves, casting dappled light."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝将梅花枝递给江贵妃，眼中意味深长，江贵妃接过梅花，神情困惑，手指轻轻抚摸着花瓣。",
+                "en": "The Emperor offers the plum branch to Consort Jiang, his gaze inscrutable. She accepts it, her expression puzzled, fingers lightly tracing the petals."
+            }
+        },
+        {
+            "index": 8,
+            "Plot Correspondence": {
+                "ch": "我不解其意，却突然感到一阵天旋地转，眼前一黑，便晕倒在地。",
+                "en": "Baffled by his meaning, I suddenly felt dizzy. Darkness swallowed my vision, and I collapsed."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫庭院，连廊上，江贵妃手中的梅花枝掉落在地，花瓣四散，阳光依旧柔和，空气中弥漫着淡淡的梅香。",
+                "en": "Afternoon, the palace courtyard. The plum branch slips from Consort Jiang’s hand, petals scattering. Sunlight remains gentle, the air faintly fragrant."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，低角度镜头",
+                "en": "Medium shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃身体摇晃，脸色苍白，眼中闪过一丝迷茫，随后晕倒在地，梅花枝散落在她身旁。",
+                "en": "Consort Jiang sways, her face deathly pale, confusion flashing in her eyes before she collapses, the plum branch tumbling beside her."
+            }
+        },
+        {
+            "index": 9,
+            "Plot Correspondence": {
+                "ch": "当我醒来时，皇帝正坐在我的床边，目光柔和地看着我。",
+                "en": "When I awoke, the Emperor was seated at my bedside, gazing at me gently."
+            },
+            "Setting Description": {
+                "ch": "傍晚，皇宫寝宫，烛光摇曳，床幔轻垂，桌上放着一碗热气腾腾的药，空气中弥漫着淡淡的药香。",
+                "en": "Evening, the palace bedchamber. Candlelight flickers, bed curtains hang softly. A bowl of steaming medicine rests on the table, the air tinged with its bitter scent."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃躺在床上，脸色依旧苍白，皇帝坐在床边，目光柔和地看着她，手轻轻握着她的手。",
+                "en": "Consort Jiang lies in bed, still pale. The Emperor sits beside her, his gaze tender, one hand lightly holding hers."
+            }
+        },
+        {
+            "index": 10,
+            "Plot Correspondence": {
+                "ch": "他提出要我每日清晨随他一起锻炼身体，强健体魄。我虽不愿，却无法拒绝他的旨意。",
+                "en": "He proposed that I join him each morning for exercise to strengthen my body. Though reluctant, I couldn’t refuse his decree."
+            },
+            "Setting Description": {
+                "ch": "清晨，皇宫庭院，薄雾弥漫，草地上露珠闪烁，远处传来鸟鸣声，空气中弥漫着清新的气息。",
+                "en": "Early morning, the palace courtyard. Mist lingers, dew glistens on grass. Birds chirp in the distance, the air crisp and fresh."
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，高角度镜头",
+                "en": "Full shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝站在庭院中央，身姿挺拔，江贵妃站在他身旁，神情犹豫，双手交握在身前。",
+                "en": "The Emperor stands tall in the courtyard’s center. Consort Jiang stands beside him, hesitant, her hands clasped tightly before her."
+            }
+        },
+        {
+            "index": 11,
+            "Plot Correspondence": {
+                "ch": "接下来的几天，我每次锻炼都因体力不支而晕倒，皇帝却乐此不疲，仿佛在欣赏一场有趣的游戏。",
+                "en": "For days afterward, I collapsed each time from exhaustion. The Emperor, however, seemed amused, as if observing a diverting game."
+            },
+            "Setting Description": {
+                "ch": "清晨，皇宫庭院，草地上江贵妃倒在地上，脸色苍白，皇帝站在一旁，神情玩味，阳光透过薄雾洒下柔和的光芒。",
+                "en": "Early morning, the palace courtyard. Consort Jiang lies on the grass, pale and breathless. The Emperor stands nearby, entertained, sunlight filtering through the mist."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃倒在地上，呼吸急促，皇帝站在一旁，嘴角微微上扬，眼中透着一丝戏谑。",
+                "en": "Consort Jiang lies on the ground, gasping. The Emperor watches, a smirk playing on his lips, his eyes alight with amusement."
+            }
+        },
+        {
+            "index": 12,
+            "Plot Correspondence": {
+                "ch": "直到第五天，他才大发慈悲地停止了这个“折磨”。",
+                "en": "Only on the fifth day did he mercifully end this 'torment.'"
+            },
+            "Setting Description": {
+                "ch": "清晨，皇宫庭院，薄雾散去，阳光明媚，草地上露珠已干，远处传来宫女们的低语声，空气中弥漫着清新的气息。",
+                "en": "Early morning, the palace courtyard. The mist has lifted, sunlight bright. The grass is dry, maids murmur in the distance, the air fresh."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，平视镜头",
+                "en": "Medium long shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝站在江贵妃面前，神情柔和，江贵妃坐在地上，脸色依旧苍白，但眼中闪过一丝庆幸。",
+                "en": "The Emperor stands before Consort Jiang, his expression softened. She sits on the ground, still pale but with a glimmer of relief in her eyes."
+            }
+        },
+        {
+            "index": 13,
+            "Plot Correspondence": {
+                "ch": "那日，我的母亲江夫人进宫看我。她依旧是那副冷淡的面孔，仿佛我与她只是陌生人。",
+                "en": "That day, my mother, Lady Jiang, visited me in the palace. Her demeanor was as cold as ever, as if we were strangers."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，窗外阳光明媚，室内却显得有些阴冷，桌上放着几盘精致的点心，空气中弥漫着淡淡的茶香。",
+                "en": "Afternoon, the palace bedchamber. Sunlight streams through the windows, yet the room feels chilly. Delicate pastries sit untouched on the table, the air lightly scented with tea."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "江夫人"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Lady Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江夫人坐在桌旁，神情冷淡，江贵妃站在一旁，神情复杂，双手紧握在身后。",
+                "en": "Lady Jiang sits at the table, aloof. Consort Jiang stands nearby, her expression troubled, hands clenched behind her back."
+            }
+        },
+        {
+            "index": 14,
+            "Plot Correspondence": {
+                "ch": "她提到了我进宫前与襄阳王的约定，语气中带着一丝威胁。我否认了这一切，母亲却冷笑着说道：“你以为你能瞒过我吗？别忘了，你的命还握在我的手里。”",
+                "en": "She mentioned my pre-palace arrangement with the Prince of Xiangyang, her tone laced with threat. I denied it, but Mother sneered, 'Do you think you can deceive me? Remember, your life is still in my hands.'"
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，窗外阳光透过窗棂洒下斑驳的光影，室内气氛紧张，桌上的点心未动，空气中弥漫着一丝压抑。",
+                "en": "Afternoon, the palace bedchamber. Sunlight slants through the lattice, casting shadows. The pastries remain untouched, the air thick with tension."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "江夫人"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Lady Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江夫人目光锐利地看着江贵妃，嘴角带着一丝冷笑，江贵妃低着头，神情紧张，手指紧紧握在一起。",
+                "en": "Lady Jiang fixes Consort Jiang with a sharp gaze, her lips curled in a sneer. Consort Jiang bows her head, tense, fingers twisting together."
+            }
+        },
+        {
+            "index": 15,
+            "Plot Correspondence": {
+                "ch": "就在这时，皇帝突然出现，他听到了我们的对话，脸色阴沉地质问母亲关于襄阳王的事。",
+                "en": "Just then, the Emperor appeared unexpectedly. Having overheard us, his face darkened as he interrogated Mother about the Prince of Xiangyang."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，皇帝突然推门而入，阳光洒在他身上，投下长长的影子，室内气氛瞬间凝固，空气中弥漫着一丝紧张。",
+                "en": "Afternoon, the palace bedchamber. The Emperor throws the door open, sunlight haloing him. The room freezes, the air crackling with tension."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，侧面镜头",
+                "en": "Medium shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "江夫人",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Lady Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝站在门口，脸色阴沉，目光如炬地看着江夫人，江夫人脸色惨白，身体微微颤抖，江贵妃站在一旁，神情惊慌。",
+                "en": "The Emperor looms in the doorway, his expression stormy. Lady Jiang pales, trembling slightly. Consort Jiang stands frozen, panic in her eyes."
+            }
+        },
+        {
+            "index": 16,
+            "Plot Correspondence": {
+                "ch": "母亲吓得脸色惨白，跪地求饶。我心中一紧，连忙也跪在地上，请求皇帝放过她。",
+                "en": "Mother turned deathly pale, kneeling to beg for mercy. My heart clenched, and I too knelt, pleading with the Emperor to spare her."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，地上铺着柔软的地毯，阳光透过窗棂洒下斑驳的光影，室内气氛紧张到了极点。",
+                "en": "Afternoon, the palace bedchamber. The plush carpet muffles sound. Sunlight filters through the lattice, the room tense to the breaking point."
+            },
+            "Shot Perspective Design": {
+                "ch": "中近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "江夫人",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Lady Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江夫人跪在地上，脸色惨白，身体颤抖，江贵妃也跪在一旁，神情紧张，双手紧握，皇帝站在她们面前，脸色依旧阴沉。",
+                "en": "Lady Jiang kneels, shaking, her face ashen. Consort Jiang kneels beside her, frantic, hands clasped tightly. The Emperor looms over them, his expression unreadable."
+            }
+        },
+        {
+            "index": 17,
+            "Plot Correspondence": {
+                "ch": "皇帝冷冷地看了母亲一眼，最终还是放走了她。但他却要我解释襄阳王的事。",
+                "en": "The Emperor cast a frigid glance at Mother but ultimately let her go. Then he demanded an explanation about the Prince of Xiangyang."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，江夫人离去后，室内显得有些空旷，阳光依旧透过窗棂洒下斑驳的光影，空气中弥漫着一丝凝重。",
+                "en": "Afternoon, the palace bedchamber. With Lady Jiang gone, the room feels cavernous. Sunlight still slants through the lattice, the air heavy."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝坐在桌旁，神情冷峻，江贵妃站在一旁，神情复杂，双手紧握在身前，眼中闪过一丝犹豫。",
+                "en": "The Emperor sits at the table, stern. Consort Jiang stands before him, conflicted, hands clenched at her sides, hesitation in her eyes."
+            }
+        },
+        {
+            "index": 18,
+            "Plot Correspondence": {
+                "ch": "我深吸一口气，将襄阳王与我姐姐有染的事告诉了他。皇帝听后，脸色稍霁，并透露他留着襄阳王的性命只是为了好玩。随后，他下旨惩罚了襄阳王和我的姐姐。",
+                "en": "I took a deep breath and confessed the affair between the Prince of Xiangyang and my elder sister. The Emperor’s expression softened slightly, and he revealed he’d kept the Prince alive merely for sport. Then he ordered punishments for both the Prince and my sister."
+            },
+            "Setting Description": {
+                "ch": "午后，皇宫寝宫，窗外阳光明媚，室内气氛稍稍缓和，桌上的点心依旧未动，空气中弥漫着一丝复杂的情绪。",
+                "en": "Afternoon, the palace bedchamber. Sunlight brightens the room, the mood easing slightly. The pastries remain untouched, the air complex."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Medium close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃深吸一口气，神情坚定地看着皇帝，皇帝听后，脸色稍霁，眼中闪过一丝玩味，手指轻轻敲击着桌面。",
+                "en": "Consort Jiang inhales deeply, her gaze steady. The Emperor listens, his expression thawing slightly, fingers drumming the table thoughtfully."
+            }
+        },
+        {
+            "index": 19,
+            "Plot Correspondence": {
+                "ch": "我对皇帝的行为感到解气，心中对他的怨恨也消散了几分。",
+                "en": "I felt vindicated by the Emperor’s actions, and my resentment toward him faded somewhat."
+            },
+            "Setting Description": {
+                "ch": "傍晚，皇宫庭院，夕阳西下，天边泛起绚丽的晚霞，微风拂过，树叶沙沙作响，空气中弥漫着淡淡的花香。",
+                "en": "Evening, the palace courtyard. The sun sets, painting the sky in vivid hues. A breeze stirs the leaves, the air sweet with flowers."
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，高角度镜头",
+                "en": "Medium long shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃站在庭院中，望着天边的晚霞，神情复杂，但眼中闪过一丝释然与轻松。",
+                "en": "Consort Jiang stands in the courtyard, gazing at the sunset, her expression complex but with a glimmer of release and peace."
+            }
+        },
+        {
+            "index": 20,
+            "Plot Correspondence": {
+                "ch": "晚上，皇帝来我宫中用膳，并留宿在此。我本以为会发生些什么，但皇帝只是安静地抱着我入睡。",
+                "en": "That night, the Emperor dined in my chambers and stayed over. I braced for the worst, but he merely held me quietly as we slept."
+            },
+            "Setting Description": {
+                "ch": "夜晚，皇宫寝宫，烛光摇曳，床幔轻垂，桌上放着几盘精致的菜肴，空气中弥漫着淡淡的饭菜香。",
+                "en": "Night, the palace bedchamber. Candlelight flickers, bed curtains drawn. Exquisite dishes adorn the table, the air rich with food."
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃",
+                    "皇帝"
+                ],
+                "en": [
+                    "Consort Jiang",
+                    "Emperor"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "皇帝与江贵妃坐在桌旁用膳，神情柔和，江贵妃低着头，神情有些紧张，但眼中闪过一丝期待。",
+                "en": "The Emperor and Consort Jiang dine together, his demeanor gentle. She keeps her head down, nervous yet with a flicker of anticipation."
+            }
+        },
+        {
+            "index": 21,
+            "Plot Correspondence": {
+                "ch": "第二天清晨，我发现了皇帝留下的玉佩，心中涌起一股莫名的情愫。",
+                "en": "The next morning, I discovered the jade pendant the Emperor had left behind, and an indescribable emotion welled up inside me."
+            },
+            "Setting Description": {
+                "ch": "清晨，皇宫寝宫，阳光透过窗棂洒下柔和的光芒，床幔轻垂，桌上放着一块精致的玉佩，空气中弥漫着淡淡的清香。",
+                "en": "Early morning, the palace bedchamber. Sunlight streams through the lattice, the bed curtains soft. An exquisite jade pendant rests on the table, the air faintly fragrant."
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，平视镜头",
+                "en": "Close up, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "江贵妃"
+                ],
+                "en": [
+                    "Consort Jiang"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "江贵妃坐在床边，手中拿着那块玉佩，神情复杂，眼中闪过一丝莫名的情愫，手指轻轻抚摸着玉佩的纹理。",
+                "en": "Consort Jiang sits on the bed, the jade pendant in her hands. Her expression is complex, a strange emotion in her eyes as her fingers trace its carvings."
+            }
+        }
+    ]
+}

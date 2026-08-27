@@ -1,0 +1,436 @@
+{
+  "groups": {
+    "G01": [
+      "story29_StoryDiffusion_photomaker",
+      "story68_UNO",
+      "story32_Gemini",
+      "story64_NanoBanana",
+      "story24_QwenImageEdit-2509",
+      "story60_NaiveBaseline"
+    ],
+    "G02": [
+      "story24_StoryDiffusion_photomaker",
+      "story60_Gemini",
+      "story32_NaiveBaseline",
+      "story68_UNO",
+      "story64_QwenImageEdit-2509",
+      "story29_NanoBanana"
+    ],
+    "G03": [
+      "story68_QwenImageEdit-2509",
+      "story60_Gemini",
+      "story29_NanoBanana",
+      "story64_NaiveBaseline",
+      "story24_StoryDiffusion_photomaker",
+      "story32_UNO"
+    ],
+    "G04": [
+      "story64_NanoBanana",
+      "story29_QwenImageEdit-2509",
+      "story68_NaiveBaseline",
+      "story32_Gemini",
+      "story24_StoryDiffusion_photomaker",
+      "story60_UNO"
+    ],
+    "G05": [
+      "story60_QwenImageEdit-2509",
+      "story68_Gemini",
+      "story64_StoryDiffusion_photomaker",
+      "story32_NanoBanana",
+      "story24_NaiveBaseline",
+      "story29_UNO"
+    ],
+    "G06": [
+      "story64_QwenImageEdit-2509",
+      "story24_UNO",
+      "story68_StoryDiffusion_photomaker",
+      "story32_Gemini",
+      "story29_NaiveBaseline",
+      "story60_NanoBanana"
+    ],
+    "G07": [
+      "story32_NanoBanana",
+      "story29_Gemini",
+      "story60_QwenImageEdit-2509",
+      "story24_UNO",
+      "story68_StoryDiffusion_photomaker",
+      "story64_NaiveBaseline"
+    ],
+    "G08": [
+      "story68_NaiveBaseline",
+      "story60_UNO",
+      "story24_Gemini",
+      "story32_QwenImageEdit-2509",
+      "story29_StoryDiffusion_photomaker",
+      "story64_NanoBanana"
+    ],
+    "G09": [
+      "story32_NaiveBaseline",
+      "story64_QwenImageEdit-2509",
+      "story68_Gemini",
+      "story24_NanoBanana",
+      "story29_StoryDiffusion_photomaker",
+      "story60_UNO"
+    ],
+    "G10": [
+      "story32_StoryDiffusion_photomaker",
+      "story60_QwenImageEdit-2509",
+      "story68_Gemini",
+      "story24_UNO",
+      "story64_NaiveBaseline",
+      "story29_NanoBanana"
+    ],
+    "G11": [
+      "story60_Gemini",
+      "story32_NaiveBaseline",
+      "story68_UNO",
+      "story24_NanoBanana",
+      "story64_StoryDiffusion_photomaker",
+      "story29_QwenImageEdit-2509"
+    ],
+    "G12": [
+      "story64_Gemini",
+      "story29_UNO",
+      "story60_NanoBanana",
+      "story68_QwenImageEdit-2509",
+      "story32_StoryDiffusion_photomaker",
+      "story24_NaiveBaseline"
+    ],
+    "G13": [
+      "story29_NaiveBaseline",
+      "story24_Gemini",
+      "story68_QwenImageEdit-2509",
+      "story60_NanoBanana",
+      "story64_UNO",
+      "story32_StoryDiffusion_photomaker"
+    ],
+    "G14": [
+      "story60_StoryDiffusion_photomaker",
+      "story64_Gemini",
+      "story32_UNO",
+      "story68_NaiveBaseline",
+      "story29_QwenImageEdit-2509",
+      "story24_NanoBanana"
+    ],
+    "G15": [
+      "story68_NanoBanana",
+      "story24_QwenImageEdit-2509",
+      "story32_UNO",
+      "story60_NaiveBaseline",
+      "story64_StoryDiffusion_photomaker",
+      "story29_Gemini"
+    ],
+    "G16": [
+      "story60_StoryDiffusion_photomaker",
+      "story32_QwenImageEdit-2509",
+      "story68_NanoBanana",
+      "story64_Gemini",
+      "story24_NaiveBaseline",
+      "story29_UNO"
+    ],
+    "G17": [
+      "story60_StoryDiffusion_photomaker",
+      "story24_Gemini",
+      "story32_QwenImageEdit-2509",
+      "story29_NaiveBaseline",
+      "story68_NanoBanana",
+      "story64_UNO"
+    ],
+    "G18": [
+      "story68_StoryDiffusion_photomaker",
+      "story29_Gemini",
+      "story24_QwenImageEdit-2509",
+      "story60_NaiveBaseline",
+      "story32_NanoBanana",
+      "story64_UNO"
+    ],
+    "G19": [
+      "story08_UNO",
+      "story79_StoryDiffusion_photomaker",
+      "story52_QwenImageEdit-2509",
+      "story27_NaiveBaseline",
+      "story55_Gemini",
+      "story15_NanoBanana"
+    ],
+    "G20": [
+      "story15_NanoBanana",
+      "story52_Gemini",
+      "story27_StoryDiffusion_photomaker",
+      "story08_UNO",
+      "story79_QwenImageEdit-2509",
+      "story55_NaiveBaseline"
+    ],
+    "G21": [
+      "story55_Gemini",
+      "story52_NanoBanana",
+      "story27_UNO",
+      "story08_NaiveBaseline",
+      "story15_QwenImageEdit-2509",
+      "story79_StoryDiffusion_photomaker"
+    ],
+    "G22": [
+      "story55_NanoBanana",
+      "story52_NaiveBaseline",
+      "story08_QwenImageEdit-2509",
+      "story79_UNO",
+      "story27_Gemini",
+      "story15_StoryDiffusion_photomaker"
+    ],
+    "G23": [
+      "story79_QwenImageEdit-2509",
+      "story27_NanoBanana",
+      "story52_Gemini",
+      "story08_UNO",
+      "story15_NaiveBaseline",
+      "story55_StoryDiffusion_photomaker"
+    ],
+    "G24": [
+      "story27_StoryDiffusion_photomaker",
+      "story15_Gemini",
+      "story55_QwenImageEdit-2509",
+      "story52_UNO",
+      "story08_NanoBanana",
+      "story79_NaiveBaseline"
+    ],
+    "G25": [
+      "story15_UNO",
+      "story79_Gemini",
+      "story52_StoryDiffusion_photomaker",
+      "story08_NaiveBaseline",
+      "story27_NanoBanana",
+      "story55_QwenImageEdit-2509"
+    ],
+    "G26": [
+      "story15_NaiveBaseline",
+      "story79_UNO",
+      "story55_StoryDiffusion_photomaker",
+      "story52_Gemini",
+      "story27_QwenImageEdit-2509",
+      "story08_NanoBanana"
+    ],
+    "G27": [
+      "story52_UNO",
+      "story79_StoryDiffusion_photomaker",
+      "story15_NanoBanana",
+      "story27_NaiveBaseline",
+      "story55_Gemini",
+      "story08_QwenImageEdit-2509"
+    ],
+    "G28": [
+      "story79_NanoBanana",
+      "story52_UNO",
+      "story15_StoryDiffusion_photomaker",
+      "story55_NaiveBaseline",
+      "story08_Gemini",
+      "story27_QwenImageEdit-2509"
+    ],
+    "G29": [
+      "story52_NanoBanana",
+      "story55_StoryDiffusion_photomaker",
+      "story27_QwenImageEdit-2509",
+      "story15_UNO",
+      "story79_Gemini",
+      "story08_NaiveBaseline"
+    ],
+    "G30": [
+      "story27_Gemini",
+      "story52_NanoBanana",
+      "story15_NaiveBaseline",
+      "story55_QwenImageEdit-2509",
+      "story79_UNO",
+      "story08_StoryDiffusion_photomaker"
+    ],
+    "G31": [
+      "story52_NaiveBaseline",
+      "story08_QwenImageEdit-2509",
+      "story27_Gemini",
+      "story15_StoryDiffusion_photomaker",
+      "story79_NanoBanana",
+      "story55_UNO"
+    ],
+    "G32": [
+      "story08_NanoBanana",
+      "story15_Gemini",
+      "story27_UNO",
+      "story52_StoryDiffusion_photomaker",
+      "story79_QwenImageEdit-2509",
+      "story55_NaiveBaseline"
+    ],
+    "G33": [
+      "story52_NaiveBaseline",
+      "story15_QwenImageEdit-2509",
+      "story55_NanoBanana",
+      "story08_StoryDiffusion_photomaker",
+      "story79_Gemini",
+      "story27_UNO"
+    ],
+    "G34": [
+      "story15_QwenImageEdit-2509",
+      "story79_NaiveBaseline",
+      "story52_StoryDiffusion_photomaker",
+      "story08_Gemini",
+      "story27_NanoBanana",
+      "story55_UNO"
+    ],
+    "G35": [
+      "story55_NanoBanana",
+      "story52_QwenImageEdit-2509",
+      "story27_StoryDiffusion_photomaker",
+      "story79_NaiveBaseline",
+      "story15_UNO",
+      "story08_Gemini"
+    ],
+    "G36": [
+      "story79_NanoBanana",
+      "story08_StoryDiffusion_photomaker",
+      "story52_QwenImageEdit-2509",
+      "story15_Gemini",
+      "story27_NaiveBaseline",
+      "story55_UNO"
+    ],
+    "G37": [
+      "story09_StoryDiffusion_photomaker",
+      "story01_NanoBanana",
+      "story28_UNO",
+      "story17_QwenImageEdit-2509",
+      "story57_NaiveBaseline",
+      "story53_Gemini"
+    ],
+    "G38": [
+      "story17_UNO",
+      "story28_NanoBanana",
+      "story09_StoryDiffusion_photomaker",
+      "story57_QwenImageEdit-2509",
+      "story53_Gemini",
+      "story01_NaiveBaseline"
+    ],
+    "G39": [
+      "story28_NaiveBaseline",
+      "story57_StoryDiffusion_photomaker",
+      "story17_QwenImageEdit-2509",
+      "story01_Gemini",
+      "story53_UNO",
+      "story09_NanoBanana"
+    ],
+    "G40": [
+      "story09_NaiveBaseline",
+      "story01_Gemini",
+      "story57_NanoBanana",
+      "story17_UNO",
+      "story28_StoryDiffusion_photomaker",
+      "story53_QwenImageEdit-2509"
+    ],
+    "G41": [
+      "story01_UNO",
+      "story28_QwenImageEdit-2509",
+      "story57_NanoBanana",
+      "story53_StoryDiffusion_photomaker",
+      "story17_Gemini",
+      "story09_NaiveBaseline"
+    ],
+    "G42": [
+      "story28_NaiveBaseline",
+      "story53_UNO",
+      "story57_Gemini",
+      "story09_StoryDiffusion_photomaker",
+      "story01_NanoBanana",
+      "story17_QwenImageEdit-2509"
+    ],
+    "G43": [
+      "story57_NanoBanana",
+      "story28_QwenImageEdit-2509",
+      "story53_NaiveBaseline",
+      "story09_Gemini",
+      "story17_StoryDiffusion_photomaker",
+      "story01_UNO"
+    ],
+    "G44": [
+      "story28_NanoBanana",
+      "story01_UNO",
+      "story09_QwenImageEdit-2509",
+      "story17_NaiveBaseline",
+      "story53_StoryDiffusion_photomaker",
+      "story57_Gemini"
+    ],
+    "G45": [
+      "story09_NaiveBaseline",
+      "story53_QwenImageEdit-2509",
+      "story17_StoryDiffusion_photomaker",
+      "story28_UNO",
+      "story01_NanoBanana",
+      "story57_Gemini"
+    ],
+    "G46": [
+      "story17_NaiveBaseline",
+      "story57_StoryDiffusion_photomaker",
+      "story53_UNO",
+      "story01_Gemini",
+      "story28_NanoBanana",
+      "story09_QwenImageEdit-2509"
+    ],
+    "G47": [
+      "story57_QwenImageEdit-2509",
+      "story28_UNO",
+      "story01_StoryDiffusion_photomaker",
+      "story09_NanoBanana",
+      "story17_NaiveBaseline",
+      "story53_Gemini"
+    ],
+    "G48": [
+      "story17_StoryDiffusion_photomaker",
+      "story01_NaiveBaseline",
+      "story57_UNO",
+      "story09_QwenImageEdit-2509",
+      "story53_NanoBanana",
+      "story28_Gemini"
+    ],
+    "G49": [
+      "story01_StoryDiffusion_photomaker",
+      "story53_QwenImageEdit-2509",
+      "story09_NanoBanana",
+      "story17_UNO",
+      "story57_NaiveBaseline",
+      "story28_Gemini"
+    ],
+    "G50": [
+      "story57_UNO",
+      "story17_NanoBanana",
+      "story09_Gemini",
+      "story53_NaiveBaseline",
+      "story28_QwenImageEdit-2509",
+      "story01_StoryDiffusion_photomaker"
+    ],
+    "G51": [
+      "story01_NaiveBaseline",
+      "story57_QwenImageEdit-2509",
+      "story53_StoryDiffusion_photomaker",
+      "story28_Gemini",
+      "story17_NanoBanana",
+      "story09_UNO"
+    ],
+    "G52": [
+      "story28_NaiveBaseline",
+      "story09_UNO",
+      "story01_QwenImageEdit-2509",
+      "story53_NanoBanana",
+      "story57_StoryDiffusion_photomaker",
+      "story17_Gemini"
+    ],
+    "G53": [
+      "story53_NanoBanana",
+      "story57_NaiveBaseline",
+      "story28_StoryDiffusion_photomaker",
+      "story09_UNO",
+      "story01_QwenImageEdit-2509",
+      "story17_Gemini"
+    ],
+    "G54": [
+      "story57_UNO",
+      "story09_Gemini",
+      "story17_NanoBanana",
+      "story28_StoryDiffusion_photomaker",
+      "story53_NaiveBaseline",
+      "story01_QwenImageEdit-2509"
+    ]
+  }
+}

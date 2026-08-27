@@ -1,0 +1,185 @@
+﻿{
+    "Story_type": {
+        "en": "Modern and Contemporary China Novels",
+        "ch": "中国近现代小说"
+    },
+    "Characters": {
+        "Ah Q": {
+            "tag": "realistic_human",
+            "name_ch": "阿Q",
+            "name_en": "Ah Q",
+            "prompt_ch": "一个黑发黑眼的中国古代底层农民，年龄大约三十多岁，身材瘦小，皮肤黝黑，脸上常挂着得意的笑容。他穿着破旧的布衫和裤子，脚上是一双磨破的草鞋，总是一副不修边幅的样子。",
+            "prompt_en": "A lower-class peasant from ancient China with black hair and black eyes, about thirty years old, thin and small in stature, with dark skin and often wearing a smug smile. He dresses in tattered shirts and pants, with worn-out straw sandals on his feet, always appearing unkempt.",
+            "num_of_appearances": 5
+        },
+        "Mrs. Wu": {
+            "tag": "realistic_human",
+            "name_ch": "吴妈",
+            "name_en": "Mrs. Wu",
+            "prompt_ch": "赵太爷家的女仆，黑发黑眼的中年女性，年龄大约四十多岁，身材丰满，她穿着简单的布衣和裙子，总是忙碌地在赵家干活。",
+            "prompt_en": "A maid in Mr. Zhao's household, a middle-aged woman with black hair and black eyes, around forty years old, plump in figure. She wears simple cloth clothes and a skirt, always busy working in the Zhao household.",
+            "num_of_appearances": 2
+        },
+        "Young Nun": {
+            "tag": "realistic_human",
+            "name_ch": "小尼姑",
+            "name_en": "Young Nun",
+            "prompt_ch": "一个年轻的尼姑，黑发黑眼，皮肤白皙，神情羞涩。她穿着简朴的尼姑袍，头戴尼姑帽。",
+            "prompt_en": "A young nun with black hair and black eyes, fair skin, and a shy demeanor. She wears a simple nun's robe and a nun's hat.",
+            "num_of_appearances": 1
+        },
+        "Mr. Zhao": {
+            "tag": "realistic_human",
+            "name_ch": "赵太爷",
+            "name_en": "Mr. Zhao",
+            "prompt_ch": "一个富有的地主，黑发黑眼的中年男性，年龄大约五十多岁，神情严肃。",
+            "prompt_en": "A wealthy landlord, a middle-aged man with black hair and black eyes, about fifty years old, with a serious expression.",
+            "num_of_appearances": 1
+        }
+    },
+    "Shots": [
+        {
+            "index": 1,
+            "Plot Correspondence": {
+                "ch": "阿Q得意地走在街上，手指碰到了小尼姑的脸，那滑腻的感觉让他心神荡漾。",
+                "en": "Ah Q walks proudly down the street, his finger brushing against the young nun's face, the smooth sensation making his heart flutter."
+            },
+            "Setting Description": {
+                "ch": "白天，未庄的街道，热闹的氛围，街道两旁是低矮的房屋，地上是坑洼不平的土路，几个小贩在路边叫卖，远处有一棵大槐树，阳光明媚",
+                "en": "Daytime, the streets of Weizhuang, bustling atmosphere, low houses lining both sides of the street, uneven dirt roads on the ground, a few vendors calling out their wares by the roadside, a large locust tree in the distance, bright sunlight"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，平视镜头",
+                "en": "Medium shot, eye level shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿Q",
+                    "小尼姑"
+                ],
+                "en": [
+                    "Ah Q",
+                    "Young Nun"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿Q得意地走在街道中央，小尼姑低着头走在路边。阿Q的手指不经意间碰到了小尼姑的脸颊，阿Q表情得意，小尼姑表情羞涩，脸颊微红",
+                "en": "Ah Q walks proudly in the center of the street, while the young nun walks with her head down on the roadside. Ah Q's finger accidentally touches the young nun's cheek. Ah Q looks smug, while the young nun appears shy, her cheeks slightly flushed."
+            }
+        },
+        {
+            "index": 2,
+            "Plot Correspondence": {
+                "ch": "阿Q在赵太爷家做工，和女仆吴妈聊天。吴妈说起家里的琐事，阿Q却只听见“女人”两个字。",
+                "en": "Ah Q works at Mr. Zhao's house and chats with the maid, Mrs. Wu. Mrs. Wu talks about household chores, but Ah Q only hears the words 'woman.'"
+            },
+            "Setting Description": {
+                "ch": "白天，赵太爷家的后院，忙碌的氛围，院子里有一口水井，几只鸡在院子里觅食，晾衣绳上挂着几件衣服，阳光透过树叶洒在地上",
+                "en": "Daytime, the backyard of Mr. Zhao's house, busy atmosphere, a well in the yard, a few chickens pecking around, clothes hanging on a clothesline, sunlight filtering through the leaves onto the ground"
+            },
+            "Shot Perspective Design": {
+                "ch": "中长景，侧面镜头",
+                "en": "Medium long shot, side shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿Q",
+                    "吴妈"
+                ],
+                "en": [
+                    "Ah Q",
+                    "Mrs. Wu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿Q和吴妈站在水井旁，吴妈手里拿着一个木桶，正在和阿Q聊天。阿Q表情心不在焉，眼神游离，吴妈表情认真，嘴巴一张一合",
+                "en": "Ah Q and Mrs. Wu stand beside the well. Mrs. Wu holds a wooden bucket and is chatting with Ah Q. Ah Q looks distracted, his eyes wandering, while Mrs. Wu appears earnest, her mouth opening and closing."
+            }
+        },
+        {
+            "index": 3,
+            "Plot Correspondence": {
+                "ch": "阿Q突然冲动地对吴妈说：“我和你困觉，我和你困觉！”吴妈吓得大叫着跑出去。",
+                "en": "Ah Q impulsively says to Mrs. Wu, 'Let's sleep together, let's sleep together!' Mrs. Wu, terrified, screams and runs away."
+            },
+            "Setting Description": {
+                "ch": "白天，赵太爷家的后院，紧张的氛围，院子里的鸡被惊得四处乱跑，晾衣绳上的衣服被风吹得飘动，阳光依旧明媚",
+                "en": "Daytime, the backyard of Mr. Zhao's house, tense atmosphere, chickens in the yard scattering in alarm, clothes on the clothesline fluttering in the wind, sunlight still bright"
+            },
+            "Shot Perspective Design": {
+                "ch": "近景，正面镜头",
+                "en": "Close up, front shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿Q",
+                    "吴妈"
+                ],
+                "en": [
+                    "Ah Q",
+                    "Mrs. Wu"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿Q表情激动，身体前倾，对着吴妈大声说话。吴妈表情惊恐，双手捂住嘴巴，身体后退",
+                "en": "Ah Q looks agitated, leaning forward as he shouts at Mrs. Wu. Mrs. Wu appears horrified, covering her mouth with her hands and stepping back."
+            }
+        },
+        {
+            "index": 4,
+            "Plot Correspondence": {
+                "ch": "阿Q还没反应过来，就被赵太爷用大竹杠打了一顿。",
+                "en": "Before Ah Q can react, Mr. Zhao beats him with a large bamboo pole."
+            },
+            "Setting Description": {
+                "ch": "白天，赵太爷家的后院，混乱的氛围，地上散落着几根鸡毛，晾衣绳上的衣服被风吹得剧烈飘动，阳光被云遮住，光线变暗",
+                "en": "Daytime, the backyard of Mr. Zhao's house, chaotic atmosphere, a few chicken feathers scattered on the ground, clothes on the clothesline flapping violently in the wind, sunlight obscured by clouds, lighting dimming"
+            },
+            "Shot Perspective Design": {
+                "ch": "中景，高角度镜头",
+                "en": "Medium shot, high-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿Q",
+                    "赵太爷"
+                ],
+                "en": [
+                    "Ah Q",
+                    "Mr. Zhao"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿Q倒在地上，双手抱头，表情痛苦。赵太爷站在阿Q旁边，手里拿着大竹杠，表情愤怒，正举起竹杠准备打下去",
+                "en": "Ah Q lies on the ground, clutching his head in pain. Mr. Zhao stands beside Ah Q, holding a large bamboo pole, looking furious as he raises the pole to strike."
+            }
+        },
+        {
+            "index": 5,
+            "Plot Correspondence": {
+                "ch": "阿Q逃出赵家，躲进土谷祠。地保来教训他，说他调戏赵家的用人，简直是造反。",
+                "en": "Ah Q flees the Zhao household and hides in the Earth God Temple. The local constable comes to reprimand him, saying that harassing the Zhao family's servant is tantamount to rebellion."
+            },
+            "Setting Description": {
+                "ch": "傍晚，土谷祠内，昏暗的氛围，祠内只有一盏油灯发出微弱的光，墙上挂着几幅破旧的画像，地上铺着稻草，门外是一片荒地",
+                "en": "Evening, inside the Earth God Temple, dim atmosphere, only an oil lamp providing faint light, a few tattered portraits hanging on the walls, straw spread on the ground, a desolate field outside the door"
+            },
+            "Shot Perspective Design": {
+                "ch": "全景，低角度镜头",
+                "en": "Full shot, low-angle shot"
+            },
+            "Characters Appearing": {
+                "ch": [
+                    "阿Q"
+                ],
+                "en": [
+                    "Ah Q"
+                ]
+            },
+            "Static Shot Description": {
+                "ch": "阿Q蜷缩在祠内的角落，表情惊恐。地保站在阿Q面前，表情严肃，手指着阿Q，嘴巴一张一合，似乎在教训他",
+                "en": "Ah Q crouches in a corner of the temple, looking terrified. The local constable stands in front of Ah Q, his expression stern as he points at Ah Q, his mouth opening and closing as if scolding him."
+            }
+        }
+    ]
+}
