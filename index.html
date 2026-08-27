@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visual Story Consistency Human Evaluation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Clean White & Dark Blue Color Palette */
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;       /* Dark Navy */
+  --muted: #64748b;      /* Cool Slate Gray */
+  --light: #f1f5f9;      /* Light Cool Gray */
+  --border: #e2e8f0;     /* Soft Border */
+  --border-strong: #cbd5e1;
+  --ink: #0f172a;        /* Deep Slate/Navy */
+  --accent: #2563eb;     /* Vivid Blue */
+  --accent-dark: #1d4ed8;
+  --accent-tint: #eff6ff;/* Soft Blue Tint */
+  --danger: #dc2626;
+  --warn: #fef3c7;
+  --warntext: #92400e;
+  --ok: #dcfce7;
+  --oktext: #166534;
+  --r: 12px;
+  --rs: 8px;
+  --font-display: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+button {
+  transition: background-color .15s ease, border-color .15s ease, transform .05s ease, color .15s ease;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input[type=checkbox], input[type=radio] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+input[type=text]:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+}
+
+/* Full Screen Flexible Page Layout */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 10px 25px -15px rgba(15,23,42,.08);
+  width: 100%;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin: 4px 0 8px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  margin: 4px 0 8px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+p { line-height: 1.6; }
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  cursor: pointer;
+  padding: 11px 24px;
+  border-radius: var(--rs);
+  border: 1px solid var(--accent-dark);
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  box-shadow: 0 1px 2px rgba(37,99,235,.2);
+}
+
+.btn-primary:hover:not(:disabled) { 
+  background: var(--accent-dark); 
+}
+
+.btn-secondary {
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover:not(:disabled) { 
+  border-color: var(--ink); 
+  background: var(--light);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notice, .success, .error {
+  border-radius: var(--rs);
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.notice { background: var(--warn); color: var(--warntext); border: 1px solid #fde68a; }
+.success { background: var(--ok); color: var(--oktext); border: 1px solid #bbf7d0; }
+.error { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+
+.stat {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 16px 14px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Reference Images — grouped by character */
+.refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 28px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.ref-group {
+  min-width: 220px;
+  max-width: 420px;
+  flex: 1 1 280px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.ref-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ref-group-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ref-group-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ref-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.ref-card {
+  width: 96px;
+  min-width: 96px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.ref-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+.ref-description {
+  margin-top: 7px;
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.4;
+  max-width: 420px;
+}
+
+.fallback {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+  background: repeating-linear-gradient(45deg, var(--light), var(--light) 8px, #fff 8px, #fff 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Questions */
+.question {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.question:first-child { border-top: none; padding-top: 4px; }
+
+.q-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: var(--text);
+}
+
+.q-desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+
+.q-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.na-btn {
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: white;
+  color: var(--muted);
+}
+
+.na-btn.active { border-color: var(--ink); background: var(--ink); color: white; }
+
+.scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.scale.disabled { opacity: .28; pointer-events: none; }
+
+.scale-btn {
+  cursor: pointer;
+  min-height: 54px;
+  padding: 8px 4px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border);
+  background: var(--light);
+  color: var(--muted);
+  text-align: center;
+}
+
+.scale-btn:hover:not(.selected) { border-color: var(--border-strong); background: #fff; }
+
+.scale-btn.selected {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37,99,235,.25);
+}
+
+.scale-num { font-family: var(--font-mono); font-size: 16px; font-weight: 600; }
+.scale-label { font-size: 10px; margin-top: 2px; }
+
+/* Progress Bar */
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-inner { height: 100%; background: var(--accent); }
+
+.progress-wrap > .label {
+  font-family: var(--font-mono);
+  background: var(--ink);
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.progress-wrap > .label::before { display: none; }
+
+/* Dynamic Flexible Shot Alignment Page Layout */
+.shot-focus-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, .85fr) minmax(420px, 1.15fr);
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+.shot-focus-media img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+}
+
+.alignment-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alignment-text-block p { margin: 0 0 8px 0; }
+
+.alignment-page {
+  min-height: 100vh;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.alignment-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 18px 20px;
+}
+
+.shot-focus-media {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.alignment-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.alignment-copy {
+  max-height: 205px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.alignment-rating-panel {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.alignment-rating-panel .question {
+  padding: 8px 0 10px;
+  border-top: 0;
+}
+
+.alignment-rating-panel .scale-btn {
+  min-height: 48px;
+}
+
+.alignment-next {
+  align-items: center;
+  padding-top: 8px;
+}
+
+/* Dynamic Full-Screen Flexible Sequence Stages */
+.sequence-stage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(360px, .75fr);
+  gap: 24px;
+  align-items: start;
+  width: 100%;
+  flex: 1;
+}
+
+.sequence-sticky-panel {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding-top: 24px;
+  border-top: 3px solid var(--accent);
+}
+
+.sequence-sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.sequence-frame-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 10px;
+}
+
+.sequence-frame-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 6px;
+}
+
+.sequence-frame-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.sequence-caption {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-top: 4px;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+
+.sequence-question-wrap { counter-reset: qnum; }
+
+.sequence-question-wrap .q-title::before {
+  content: counter(qnum, decimal-leading-zero) "  \2014  ";
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sequence-question-wrap .question { counter-increment: qnum; }
+
+/* Lightbox */
+.zoomable-image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.zoom-hint {
+  margin-top: 5px;
+  font-size: 10.5px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(15,23,42,.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox-inner { position: relative; max-width: min(1400px, 96vw); max-height: 94vh; }
+.lightbox img { display: block; max-width: 100%; max-height: 88vh; object-fit: contain; background: #fff; border-radius: 10px; }
+
+.lightbox-close {
+  position: absolute;
+  right: 0;
+  top: -46px;
+  border: 1px solid rgba(255,255,255,.4);
+  background: rgba(15,23,42,.6);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Temporal Viewer */
+.temporal-viewer {
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: var(--light);
+}
+
+.temporal-main .sequence-frame-img { aspect-ratio: auto; max-height: 48vh; }
+
+.temporal-counter {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.temporal-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Upgraded Display Check Component */
+.visual-test {
+  margin-top: 20px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--rs);
+  padding: 18px;
+  background: #fff;
+}
+
+.display-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin: 12px 0;
+  background: #0f172a;
+  padding: 8px;
+  border-radius: var(--rs);
+}
+
+.display-step {
+  height: 60px;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.detail-check-scene {
+  position: relative;
+  height: 170px;
+  max-width: 100%;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #e2e8f0 0%, #e2e8f0 46%, #f1f5f9 46%, #f1f5f9 100%);
+}
+
+.detail-person { position: absolute; left: 54px; bottom: 22px; width: 74px; height: 118px; }
+.detail-head { position: absolute; left: 19px; top: 0; width: 36px; height: 36px; border-radius: 50%; background: #fed7aa; border: 1px solid #fdba74; }
+.detail-body { position: absolute; left: 10px; top: 40px; width: 54px; height: 56px; border-radius: 10px 10px 5px 5px; background: #2563eb; border: 1px solid #1d4ed8; }
+.detail-glasses { position: absolute; left: 12px; top: 13px; width: 11px; height: 7px; border: 2px solid #0f172a; border-radius: 5px; }
+.detail-table { position: absolute; right: 38px; bottom: 34px; width: 128px; height: 14px; border-radius: 4px; background: #64748b; }
+.detail-book { position: absolute; right: 72px; bottom: 49px; width: 30px; height: 14px; border-radius: 2px; background: #dc2626; border: 1px solid #b91c1c; }
+
+.visual-test-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.visual-test-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: var(--light);
+  cursor: pointer;
+  font-size: 13.5px;
+}
+
+.visual-test-card:hover { border-color: var(--border-strong); background: #fff; }
+.visual-test-card.active { border-color: var(--accent); background: var(--accent-tint); font-weight: 600; }
+
+/* Responsive Layout */
+@media(max-width:1000px) {
+  .page { padding: 16px; }
+  .sequence-stage-layout, .shot-focus-grid { grid-template-columns: 1fr; }
+  .sequence-sticky-panel { position: relative; top: 0; max-height: none; }
+  .refs {
+    gap: 18px 22px;
+  }
+  .ref-group {
+    flex: 1 1 240px;
+  }
+}
+
+@media(max-width:640px) {
+  .page { padding: 10px; }
+  .card { padding: 16px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .refs {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ref-group {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+  .ref-card,
+  .ref-img {
+    width: 84px;
+    min-width: 84px;
+    height: 84px;
+  }
+}
+</style>
+</head>
+<body><div id="app"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script>
+const {useState,useEffect}=React;
+
+const CONFIG={
+  title:"Visual Story Consistency Evaluation",
+  institution:"Ritsumeikan University — Visual Information Engineering Lab",
+  dataset:"ViStoryBench-Lite",
+  surveyVersion:"SPICE-HUMAN-2026-08",
+  googleAppsScriptUrl:"PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  requireOnlineSubmission:false, // set false only while testing locally
+  itemsPerParticipant:6,
+  alignmentShotsPerItem:5,
+  requireConditionChecklist:true
+};
+
+const COMPONENT_QUESTIONS={
+  character:[
+    {id:"q1_identity",short:"Character identity consistency",desc:"Focus only on character identity. Are the same characters visually consistent in face, body, proportions, and general visual identity across the story?"},
+    {id:"q2_attribute",short:"Character attribute consistency",desc:"Focus only on character attributes. Are clothing, colors, accessories, body shape, and other important visual details preserved across shots?"}
+  ],
+  scene:[
+    {id:"q3_background",short:"Background / scene consistency",desc:"Focus only on the environment. When the story stays in the same location, is the background or scene visually consistent?"},
+    {id:"q4_temporal",short:"Temporal / sequential continuity",desc:"Focus only on visual continuity across the ordered story. Do characters, scenes, and visual changes progress coherently from one frame to the next?"}
+  ],
+  overall:[
+    {id:"q6_noncopy",short:"Avoidance of repetition / copy-paste",desc:"Focus on repetition. When the story changes, do the images avoid looking overly repeated, duplicated, or copy-pasted?"},
+    {id:"q7_overall",short:"Overall visual story consistency",desc:"Considering all previous aspects, how visually consistent and coherent is this generated story overall?"}
+  ]
+};
+
+const COMPONENT_STAGE_INFO={
+  character:{
+    label:"Stage 3 / 5",
+    title:"Character consistency",
+    instruction:"Compare the reference character images with the generated sequence. On this page, focus only on character identity and character attributes.",
+    footer:"After this page, you will evaluate background and temporal consistency."
+  },
+  scene:{
+    label:"Stage 4 / 5",
+    title:"Scene and temporal consistency",
+    instruction:"View the full generated sequence. On this page, focus only on background/scene consistency and temporal / sequential continuity.",
+    footer:"After this page, you will evaluate repetition and overall consistency."
+  },
+  overall:{
+    label:"Stage 5 / 5",
+    title:"Repetition and overall consistency",
+    instruction:"View the full generated sequence again. On this page, focus on repeated/copy-pasted appearances and then give your overall judgment.",
+    footer:"After this page, your ratings for this story output will be submitted."
+  }
+};
+
+const SCALE=[{v:1,label:"Very poor"},{v:2,label:"Poor"},{v:3,label:"Fair"},{v:4,label:"Good"},{v:5,label:"Excellent"}];
+
+
+function onlineReady(){return CONFIG.googleAppsScriptUrl&&CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/")&&!CONFIG.googleAppsScriptUrl.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE")}
+function genPID(){return "P"+Date.now().toString(36).toUpperCase().slice(-7)+Math.random().toString(36).slice(2,6).toUpperCase()}
+function pad2(n){return String(n).padStart(2,"0")}
+function itemKey(item){return item?.itemId||item?.id||""}
+function storyBase(item){
+  const p=(item?.storyPath||item?.path||"").replace(/\/$/,"");
+  return p ? p+"/" : "";
+}
+function outputBase(item){
+  const p=(item?.outputPath||item?.path||"").replace(/\/$/,"");
+  return p ? p+"/" : "";
+}
+
+function groupReferenceCharacters(characters){
+  const groups=[];
+  const byName=new Map();
+
+  (characters||[]).forEach((ch,index)=>{
+    const name=(ch?.name||`Character ${index+1}`).trim() || `Character ${index+1}`;
+
+    if(!byName.has(name)){
+      const group={
+        name,
+        description:ch?.description||"",
+        images:[]
+      };
+      byName.set(name,group);
+      groups.push(group);
+    }
+
+    const group=byName.get(name);
+
+    if(!group.description && ch?.description){
+      group.description=ch.description;
+    }
+
+    if(ch?.ref){
+      group.images.push({
+        ref:ch.ref,
+        alt:`${name} reference ${group.images.length+1}`
+      });
+    }
+  });
+
+  return groups;
+}
+
+function ReferenceGroups({item,characters,zoomable=false}){
+  const base=storyBase(item);
+  const groups=groupReferenceCharacters(characters);
+
+  if(!groups.length){
+    return React.createElement(
+      "p",
+      {className:"muted"},
+      "No reference images provided."
+    );
+  }
+
+  return React.createElement(
+    "div",
+    {className:"refs"},
+    groups.map((group,groupIndex)=>
+      React.createElement(
+        "section",
+        {className:"ref-group",key:`${group.name}-${groupIndex}`},
+
+        React.createElement(
+          "div",
+          {className:"ref-group-header"},
+          React.createElement(
+            "div",
+            {className:"ref-group-name"},
+            group.name
+          ),
+          React.createElement(
+            "div",
+            {className:"ref-group-count"},
+            `${group.images.length} reference image${group.images.length===1?"":"s"}`
+          )
+        ),
+
+        React.createElement(
+          "div",
+          {className:"ref-image-grid"},
+          group.images.map((img,i)=>
+            React.createElement(
+              "div",
+              {className:"ref-card",key:`${group.name}-${i}`},
+              React.createElement(ImageWithFallback,{
+                src:base+img.ref,
+                alt:img.alt,
+                cls:"ref-img",
+                label:"reference",
+                zoomable
+              })
+            )
+          )
+        ),
+
+        group.description &&
+          React.createElement(
+            "div",
+            {className:"ref-description"},
+            group.description
+          )
+      )
+    )
+  );
+}
+
+function getGroupCodes(assignments){
+  if(!assignments) return [];
+  if(Array.isArray(assignments)) return assignments.map(x => (x.groupId||x.group_id||x.group||x.code||"").toString().toUpperCase()).filter(Boolean);
+  if(assignments.groups && typeof assignments.groups === "object") return Object.keys(assignments.groups).map(x=>x.toUpperCase());
+  if(assignments.assignments && typeof assignments.assignments === "object") return Object.keys(assignments.assignments).map(x=>x.toUpperCase());
+  return Object.keys(assignments).map(x=>x.toUpperCase());
+}
+
+function extractIds(value){
+  if(!value) return [];
+  if(Array.isArray(value)) return value;
+  if(Array.isArray(value.items)) return value.items;
+  if(Array.isArray(value.itemIds)) return value.itemIds;
+  if(Array.isArray(value.item_ids)) return value.item_ids;
+  if(Array.isArray(value.outputs)) return value.outputs;
+  if(Array.isArray(value.assignment)) return value.assignment;
+  return [];
+}
+
+function getAssignmentIds(assignments, group){
+  if(!assignments || !group) return [];
+  const g = group.toString().trim().toUpperCase();
+  if(Array.isArray(assignments)){
+    const row = assignments.find(x => ((x.groupId||x.group_id||x.group||x.code||"").toString().trim().toUpperCase()) === g);
+    return extractIds(row);
+  }
+  const source = assignments.groups || assignments.assignments || assignments;
+  if(!source || typeof source !== "object") return [];
+  const key = Object.keys(source).find(k => k.toString().trim().toUpperCase() === g);
+  return key ? extractIds(source[key]) : [];
+}
+
+function btn(primary,disabled,onClick,text){return React.createElement("button",{className:primary?"btn-primary":"btn-secondary",disabled,onClick},text)}
+async function getJson(url){const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error(url+" not found or not accessible"); return await r.json()}
+function saveBackup(sub){const old=JSON.parse(localStorage.getItem("spice_submission_backups")||"[]"); old.push(sub); localStorage.setItem("spice_submission_backups",JSON.stringify(old));}
+async function submit(sub){saveBackup(sub); if(!onlineReady()){ if(CONFIG.requireOnlineSubmission) throw new Error("Google Apps Script URL is not configured."); return {status:"local_only"}; } await fetch(CONFIG.googleAppsScriptUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(sub)}); return {status:"sent"};}
+
+function buildReferenceFiles(item){
+  if(Array.isArray(item.references) && item.references.length){
+    return item.references.flatMap(group =>
+      (group.files || []).map(file => ({
+        character: group.character || "Reference",
+        file
+      }))
+    );
+  }
+
+  if(Array.isArray(item.refFiles) && item.refFiles.length){
+    return item.refFiles.map(file => ({
+      character:"Reference",
+      file
+    }));
+  }
+
+  return [];
+}
+
+function normalizeStory(storyData,item){
+  const title =
+    storyData.title ||
+    storyData.story_title ||
+    storyData.name ||
+    item.title ||
+    `Story ${item.storyId}`;
+
+  const summary =
+    storyData.summary ||
+    storyData.story_summary ||
+    storyData.story_all_content_en ||
+    storyData.story ||
+    storyData.content ||
+    "Read the story information and generated frames below.";
+
+  let charText=[];
+
+  if(Array.isArray(storyData.characters)){
+    charText=storyData.characters;
+  } else if(Array.isArray(storyData.character_info)){
+    charText=storyData.character_info;
+  } else if(
+    storyData.story_all_characters_info &&
+    typeof storyData.story_all_characters_info === "object"
+  ){
+    charText=Object.entries(storyData.story_all_characters_info).map(
+      ([name,desc]) => ({
+        name,
+        description:
+          typeof desc === "string"
+            ? desc
+            : JSON.stringify(desc)
+      })
+    );
+  }
+
+  charText=charText.map((c,i)=>({
+    name:
+      c.name ||
+      c.character_name ||
+      `Character ${i+1}`,
+    description:
+      c.description ||
+      c.prompt ||
+      c.info ||
+      ""
+  }));
+
+  const chars=[];
+
+  if(Array.isArray(item.references) && item.references.length){
+    item.references.forEach((group,groupIndex)=>{
+      const groupName = group.character || `Character ${groupIndex+1}`;
+
+      const textInfo = charText.find(c =>
+        String(c.name).trim().toLowerCase() ===
+        String(groupName).trim().toLowerCase()
+      );
+
+      (group.files || []).forEach((file,fileIndex)=>{
+        chars.push({
+          name:groupName,
+          description:textInfo?.description || "",
+          ref:file,
+          refIndex:fileIndex
+        });
+      });
+    });
+  } else {
+    const refs=buildReferenceFiles(item);
+    refs.forEach((ref,index)=>{
+      chars.push({
+        name:ref.character || `Reference ${index+1}`,
+        description:"",
+        ref:ref.file
+      });
+    });
+  }
+
+  const rawShots =
+    storyData.shots ||
+    storyData.Shots ||
+    storyData.storyboard ||
+    [];
+
+  let textShots=[];
+
+  if(Array.isArray(rawShots)){
+    textShots=rawShots.map((s,i)=>({
+      shotId:
+        s.shot_id ||
+        s.id ||
+        `shot_${pad2(i)}`,
+      n:i+1,
+      plot:
+        s.plot ||
+        s.plot_en ||
+        s["Plot Correspondence"]?.en ||
+        s.shot_plot_correspondence_en ||
+        s.caption ||
+        s.description ||
+        "",
+      setting:
+        s.setting ||
+        s.setting_en ||
+        s["Setting Description"]?.en ||
+        s.shot_setting_description_en ||
+        "",
+      staticDesc:
+        s.static ||
+        s.static_en ||
+        s["Static Shot Description"]?.en ||
+        s.shot_static_shot_description_en ||
+        ""
+    }));
+  }
+
+  // Prefer rich frame records from manifest.json.
+  // Missing frames are skipped completely, but each available image
+  // still maps to its ORIGINAL story shot via shotNumber.
+  const frameRecords =
+    Array.isArray(item.frames)
+      ? item.frames
+      : [];
+
+  let shots=[];
+
+  if(frameRecords.length){
+    shots = frameRecords
+      .filter(f => !f.missing && f.file)
+      .map(f => {
+        const originalIndex = Math.max(0, (f.shotNumber || 1) - 1);
+        const textShot = textShots[originalIndex] || {};
+
+        return {
+          shotId:
+            textShot.shotId ||
+            `shot_${pad2(f.shotNumber || originalIndex + 1)}`,
+          n:f.shotNumber || originalIndex + 1,
+          plot:textShot.plot || "",
+          setting:textShot.setting || "",
+          staticDesc:textShot.staticDesc || "",
+          frame:f.file
+        };
+      });
+  } else {
+    // Backward-compatible fallback for older manifests.
+    const frameFiles =
+      Array.isArray(item.frameFiles)
+        ? item.frameFiles
+        : [];
+
+    shots = frameFiles
+      .map((frameFile,i)=>({frameFile,i}))
+      .filter(x => !!x.frameFile)
+      .map(({frameFile,i})=>{
+        const textShot=textShots[i] || {};
+
+        return {
+          shotId:
+            textShot.shotId ||
+            `shot_${pad2(i+1)}`,
+          n:i+1,
+          plot:textShot.plot || "",
+          setting:textShot.setting || "",
+          staticDesc:textShot.staticDesc || "",
+          frame:frameFile
+        };
+      });
+  }
+
+  return {
+    title,
+    summary,
+    characters:chars,
+    shots
+  };
+}
+
+function chooseAlignmentShots(shots,k){
+  if(shots.length<=k) return shots;
+  if(k<=1) return [shots[0]];
+  const idx=[];
+  for(let i=0;i<k;i++) idx.push(Math.round(i*(shots.length-1)/(k-1)));
+  return [...new Set(idx)].map(i=>shots[i]).slice(0,k);
+}
+
+function ImageWithFallback({src,alt,cls,label,zoomable=false}){
+  const[bad,setBad]=useState(false);
+  const[open,setOpen]=useState(false);
+  if(src&&!bad){
+    const image=React.createElement("img",{src,alt,className:cls,onError:()=>setBad(true)});
+    if(!zoomable) return image;
+    return React.createElement(
+      React.Fragment,
+      null,
+      React.createElement("button",{type:"button",className:"zoomable-image-button",onClick:()=>setOpen(true),"aria-label":`Enlarge ${alt||label||"image"}`},image),
+      React.createElement("div",{className:"zoom-hint"},"Click image to enlarge"),
+      open&&React.createElement(
+        "div",{className:"lightbox",role:"dialog","aria-modal":"true",onClick:()=>setOpen(false)},
+        React.createElement("div",{className:"lightbox-inner",onClick:e=>e.stopPropagation()},
+          React.createElement("button",{type:"button",className:"lightbox-close",onClick:()=>setOpen(false)},"Close"),
+          React.createElement("img",{src,alt:alt||label||"Enlarged image"})
+        )
+      )
+    );
+  }
+  return React.createElement("div",{className:"fallback"},label||"image missing")
+}
+
+function Q({q,val,isNA,onRate,onNA}){
+  return React.createElement("div",{className:"question"},
+    React.createElement("div",{className:"q-head"},
+      React.createElement("div",null,
+        React.createElement("div",{className:"q-title"},q.short),
+        React.createElement("div",{className:"q-desc"},q.desc)
+      ),
+      React.createElement("button",{className:"na-btn"+(isNA?" active":""),onClick:onNA},"N/A")
+    ),
+    React.createElement("div",{className:"scale"+(isNA?" disabled":"")},
+      SCALE.map(s=>React.createElement("button",{key:s.v,className:"scale-btn"+(val===s.v?" selected":""),onClick:()=>onRate(s.v)},
+        React.createElement("div",{className:"scale-num"},s.v),
+        React.createElement("div",{className:"scale-label"},s.label)
+      ))
+    )
+  );
+}
+
+function Welcome({start,loadError}){
+  const ready=onlineReady();
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"card"},
+      React.createElement("div",{className:"label"},CONFIG.institution),
+      React.createElement("h1",null,CONFIG.title),
+      React.createElement("p",{className:"muted"},"This study evaluates AI-generated visual stories. Each evaluation item uses a side-by-side visual-inspection flow for generated images and questions."),
+      React.createElement("div",{className:"grid-3",style:{margin:"18px 0"}},
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"~30–40 min"),React.createElement("div",{className:"stat-label"},"Estimated time")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},CONFIG.itemsPerParticipant),React.createElement("div",{className:"stat-label"},"Story outputs")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"5 stages"),React.createElement("div",{className:"stat-label"},"Per output"))
+      ),
+      loadError&&React.createElement("div",{className:"error",style:{marginBottom:14}},loadError),
+      !ready&&React.createElement("div",{className:CONFIG.requireOnlineSubmission?"error":"notice",style:{marginBottom:14}},CONFIG.requireOnlineSubmission?"Researcher setup required: Google Apps Script URL has not been configured.":"Test mode: Google Apps Script URL is not configured, so responses will be saved only as local browser backup."),
+      React.createElement("div",{className:"notice",style:{marginBottom:14}},"Please use a laptop or desktop screen, browser zoom 100%, and complete the task alone."),
+      btn(true,CONFIG.requireOnlineSubmission&&!ready,start,"Start evaluation")
+    )
+  );
+}
+
+function ContrastStrip(){
+  const levels=["#020617","#0f172a","#1e293b","#334155","#475569","#64748b"];
+  return React.createElement("div",{className:"display-strip","aria-label":"Six dark gray contrast steps"},
+    levels.map((c,i)=>React.createElement("div",{key:i,className:"display-step",style:{background:c}},`#${i+1}`))
+  );
+}
+
+function DetailCheckScene(){
+  return React.createElement("div",{className:"detail-check-scene","aria-label":"Practice illustration with a person and a small book on a table"},
+    React.createElement("div",{className:"detail-person"},
+      React.createElement("div",{className:"detail-head"},React.createElement("div",{className:"detail-glasses"})),
+      React.createElement("div",{className:"detail-body"})
+    ),
+    React.createElement("div",{className:"detail-table"}),
+    React.createElement("div",{className:"detail-book"})
+  );
+}
+
+function Setup({assignments,onGo}) {
+  const [g,setG] = useState("");
+  const [v,setV] = useState("");
+  const [ai,setAi] = useState("");
+  const [de,setDe] = useState("");
+
+  const [contrastAnswer,setContrastAnswer] = useState("");
+  const [detailAnswer,setDetailAnswer] = useState("");
+
+  const [ck,setCk] = useState({
+    desktop:false,
+    zoom:false,
+    brightness:false,
+    glare:false,
+    alone:false
+  });
+
+  const group = g.trim().toUpperCase();
+  const idsForGroup = getAssignmentIds(assignments, group);
+  const exists = idsForGroup.length > 0;
+  const availableCodes = getGroupCodes(assignments);
+
+  const visualPassed = contrastAnswer === "yes" && detailAnswer === "red";
+
+  const ok = group && exists && v && ai && de && visualPassed && (!CONFIG.requireConditionChecklist || Object.values(ck).every(Boolean));
+
+  function sel(label,val,set,opts) {
+    return React.createElement("div",null,
+      React.createElement("div",{className:"label",style:{marginBottom:6}},label),
+      React.createElement("select",{value:val,onChange:e=>set(e.target.value)},
+        React.createElement("option",{value:""},"Select"),
+        opts.map(o=>React.createElement("option",{key:o,value:o},o))
+      )
+    );
+  }
+
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"card"},
+      React.createElement("div",{className:"label"},"Viewing setup"),
+      React.createElement("h2",null,"Participant setup"),
+      React.createElement("p",{className:"muted"},"Enter the group code given by the researcher, then confirm that your screen and viewing conditions are suitable for image-based evaluation."),
+      React.createElement("div",{className:"label",style:{marginBottom:6}},"Group code"),
+      React.createElement("input",{type:"text",placeholder:"Example: G01",value:g,onChange:e=>setG(e.target.value.toUpperCase())}),
+      g&&!exists&&React.createElement("div",{className:"error",style:{marginTop:10,marginBottom:10}},"This group code does not exist. Available group codes: "+(availableCodes.length?availableCodes.slice(0,12).join(", "):"none loaded.")),
+      React.createElement("div",{className:"grid-3",style:{marginTop:16}},
+        sel("Vision condition",v,setV,["normal","corrected-to-normal","color vision issue","other"]),
+        sel("AI image experience",ai,setAi,["none","low","medium","high"]),
+        sel("Art/design experience",de,setDe,["none","low","medium","high"])
+      ),
+
+      CONFIG.requireConditionChecklist&&React.createElement("div",{style:{marginTop:20}},
+        React.createElement("div",{className:"label",style:{marginBottom:8}},"Viewing-condition checklist"),
+        [
+          ["desktop","I am using a laptop or desktop, not a phone."],
+          ["zoom","Browser zoom is 100%."],
+          ["brightness","Screen brightness is comfortable and image details are clearly visible."],
+          ["glare","There is no strong glare or direct light reflecting on my screen."],
+          ["alone","I am completing this evaluation alone."]
+        ].map(([k,t])=>React.createElement("label",{key:k,style:{display:"flex",gap:10,marginBottom:9,alignItems:"flex-start"}},
+          React.createElement("input",{type:"checkbox",checked:ck[k],onChange:()=>setCk({...ck,[k]:!ck[k]})}),
+          React.createElement("span",{className:"muted"},t)
+        ))
+      ),
+
+      React.createElement("div",{className:"visual-test"},
+        React.createElement("div",{className:"label"},"Display visibility check"),
+        React.createElement("p",{className:"muted",style:{marginBottom:8}},"This check ensures your display accurately presents contrast and colors before evaluation."),
+
+        React.createElement("h3",{style:{marginTop:14}},"1. Dark-detail visibility"),
+        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"Can you distinguish all six separate dark-gray blocks below?"),
+        React.createElement(ContrastStrip),
+        React.createElement("div",{className:"visual-test-options"},
+          [["yes","Yes, I see 6 distinct blocks"],["no","No / indistinguishable"]].map(([value,label])=>
+            React.createElement("label",{key:value,className:"visual-test-card"+(contrastAnswer===value?" active":"")},
+              React.createElement("input",{type:"radio",name:"contrastAnswer",value,checked:contrastAnswer===value,onChange:e=>setContrastAnswer(e.target.value)}),
+              label
+            )
+          )
+        ),
+
+        React.createElement("h3",{style:{marginTop:20}},"2. Small-detail visibility"),
+        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"Examine the scene detail at a normal viewing distance."),
+        React.createElement(DetailCheckScene),
+        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"What color is the small book on the right side of the table?"),
+        React.createElement("div",{className:"visual-test-options"},
+          [["red","Red"],["blue","Blue"],["green","Green"],["cannot_tell","Cannot tell"]].map(([value,label])=>
+            React.createElement("label",{key:value,className:"visual-test-card"+(detailAnswer===value?" active":"")},
+              React.createElement("input",{type:"radio",name:"detailAnswer",value,checked:detailAnswer===value,onChange:e=>setDetailAnswer(e.target.value)}),
+              label
+            )
+          )
+        ),
+
+        (contrastAnswer||detailAnswer)&&!visualPassed&&React.createElement("div",{className:"notice",style:{marginTop:12}},"If details are unclear, please adjust screen brightness or remove room glare before proceeding.")
+      ),
+
+      React.createElement("div",{style:{marginTop:18}},
+        btn(true,!ok,()=>onGo({
+          groupId:group,
+          vision:v,
+          aiExperience:ai,
+          designExperience:de,
+          visualContrastAnswer:contrastAnswer,
+          visualDetailAnswer:detailAnswer,
+          visualTestPassed:visualPassed,
+          conditionChecks:ck
+        }),"Continue to evaluation")
+      )
+    )
+  );
+}
+
+function Consent({onGo}){
+  const[c,setC]=useState(false);
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"card"},
+      React.createElement("h2",null,"Consent"),
+      React.createElement("p",{className:"muted"},"Your anonymous ratings will be used for academic research to validate visual story consistency. Participation is voluntary."),
+      React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},
+        React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),
+        React.createElement("span",{className:"muted"},"I have read the information above and agree to participate.")
+      ),
+      React.createElement("div",{style:{marginTop:18}},btn(true,!c,onGo,"Continue"))
+    )
+  );
+}
+
+function Intro({item,story,onNext,itemNo,total}){
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"progress-wrap"},
+      React.createElement("div",{className:"progress-bar"},React.createElement("div",{className:"progress-inner",style:{width:(itemNo/total*100)+"%"}})),
+      React.createElement("span",{className:"label"},`${itemNo} / ${total}`)
+    ),
+    React.createElement("div",{className:"card"},
+      React.createElement("div",{className:"row-between"},
+        React.createElement("div",null,
+          React.createElement("div",{className:"label"},`${item.storyId}`),
+          React.createElement("h2",null,story.title)
+        ),
+        React.createElement("div",{className:"label"},story.shots.length+" frames")
+      ),
+      React.createElement("p",{className:"muted"},story.summary),
+      React.createElement("h3",{style:{marginTop:18}},"Reference characters"),
+      React.createElement(ReferenceGroups,{
+        item,
+        characters:story.characters,
+        zoomable:true
+      }),
+      React.createElement("div",{className:"notice",style:{marginTop:18}},"Next, you will rate visual elements across shot alignments and full sequence stages using side-by-side display layout."),
+      React.createElement("div",{style:{marginTop:18}},btn(true,false,onNext,"Start alignment rating"))
+    )
+  );
+}
+
+function Alignment({item,story,shots,idx,resp,setResp,onNext}){
+  const ik=itemKey(item);
+  const shot=shots[idx];
+  const key=`align_${shot.shotId}`;
+  const r=resp[ik]||{na:[],alignment:{},alignmentNA:[]};
+  const val=r.alignment?.[key];
+  const isNA=(r.alignmentNA||[]).includes(key);
+  const base=outputBase(item);
+
+  function set(v){
+    setResp(p=>{
+      const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};
+      rr.alignment={...(rr.alignment||{}),[key]:v};
+      rr.alignmentNA=(rr.alignmentNA||[]).filter(x=>x!==key);
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function na(){
+    setResp(p=>{
+      const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};
+      const a=rr.alignmentNA||[];
+      if(a.includes(key)){rr.alignmentNA=a.filter(x=>x!==key)}
+      else{rr.alignmentNA=[...a,key]; if(rr.alignment)delete rr.alignment[key]}
+      return {...p,[ik]:rr};
+    });
+  }
+
+  const complete=typeof val==="number"||isNA;
+
+  return React.createElement("div",{className:"page alignment-page"},
+    React.createElement("div",{className:"card alignment-card"},
+      React.createElement("div",{className:"row-between",style:{marginBottom:12}},
+        React.createElement("div",null,
+          React.createElement("div",{className:"label"},`${item.storyId} · Alignment ${idx+1}/${shots.length}`),
+          React.createElement("h2",{style:{marginBottom:0}},"Text-image alignment")
+        ),
+        React.createElement("div",{className:"label"},`Frame ${shot.n}`)
+      ),
+      React.createElement("div",{className:"shot-focus-grid"},
+        React.createElement("div",{className:"shot-focus-media"},
+          React.createElement(ImageWithFallback,{src:base+shot.frame,alt:shot.shotId,cls:"alignment-image",label:shot.shotId,zoomable:true})
+        ),
+        React.createElement("div",{className:"alignment-text-block"},
+          React.createElement("div",{className:"alignment-copy"},
+            React.createElement("div",{className:"label"},"Plot"),
+            React.createElement("p",{className:"muted"},shot.plot||"No plot text available."),
+            React.createElement("div",{className:"label"},"Setting"),
+            React.createElement("p",{className:"muted"},shot.setting||"No setting text available."),
+            React.createElement("div",{className:"label"},"Shot description"),
+            React.createElement("p",{className:"muted"},shot.staticDesc||"No shot description available.")
+          ),
+          React.createElement("div",{className:"alignment-rating-panel"},
+            React.createElement(Q,{
+              q:{short:"Text-image alignment",desc:"How well does this generated frame match the plot, setting, and shot description?"},
+              val,isNA,onRate:set,onNA:na
+            }),
+            React.createElement("div",{className:"row-between alignment-next"},
+              React.createElement("span",{className:"muted"},complete?"":"Please answer or choose N/A."),
+              btn(true,!complete,onNext,idx===shots.length-1?"Continue to character consistency":"Next alignment frame")
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+function SequencePanel({item,story,title,instruction,showReferences,showTemporalViewer=false}) {
+  const frameBase = outputBase(item);
+  const [activeIdx,setActiveIdx] = useState(0);
+
+  useEffect(()=>setActiveIdx(0),[itemKey(item)]);
+
+  const activeShot = story.shots[Math.min(activeIdx,Math.max(0,story.shots.length-1))];
+
+  return React.createElement("div",{className:"card sequence-sticky-panel"},
+    React.createElement("div",{className:"sequence-sticky-header"},
+      React.createElement("div",null,
+        React.createElement("div",{className:"label"},`${item.storyId}`),
+        React.createElement("h2",null,title)
+      ),
+      React.createElement("div",{className:"label"},`${story.shots.length} frames`)
+    ),
+
+    React.createElement("p",{className:"muted",style:{marginTop:0}},instruction),
+
+    showReferences&&story.characters.length>0&&React.createElement(
+      "div",
+      {style:{margin:"16px 0 20px"}},
+      React.createElement(
+        "div",
+        {className:"label",style:{marginBottom:8}},
+        "Reference characters"
+      ),
+      React.createElement(ReferenceGroups,{
+        item,
+        characters:story.characters,
+        zoomable:true
+      })
+    ),
+
+    showTemporalViewer&&activeShot&&React.createElement("div",{className:"temporal-viewer"},
+      React.createElement("div",{className:"label",style:{marginBottom:8}},"Sequential inspection view"),
+      React.createElement("div",{className:"temporal-main"},
+        React.createElement(ImageWithFallback,{src:frameBase+activeShot.frame,alt:activeShot.shotId,cls:"sequence-frame-img",label:`Frame ${activeShot.n}`,zoomable:true}),
+        React.createElement("div",{className:"temporal-counter"},`Frame ${activeIdx+1} / ${story.shots.length}`),
+        React.createElement("div",{className:"temporal-controls"},
+          btn(false,activeIdx<=0,()=>setActiveIdx(Math.max(0,activeIdx-1)),"← Previous"),
+          btn(false,activeIdx>=story.shots.length-1,()=>setActiveIdx(Math.min(story.shots.length-1,activeIdx+1)),"Next →")
+        )
+      )
+    ),
+
+    React.createElement("div",{className:"label",style:{margin:"12px 0 8px"}},"Full storyboard"),
+    React.createElement("div",{className:"sequence-frame-grid"},
+      story.shots.map((shot,i)=>React.createElement("div",{className:"sequence-frame-card",key:shot.shotId},
+        React.createElement(ImageWithFallback,{src:frameBase+shot.frame,alt:shot.shotId,cls:"sequence-frame-img",label:`Frame ${shot.n}`,zoomable:true}),
+        React.createElement("div",{className:"sequence-caption"},`${shot.n}. ${shot.plot||shot.staticDesc||""}`),
+        showTemporalViewer&&React.createElement("button",{type:"button",className:"na-btn"+(activeIdx===i?" active":""),style:{marginTop:6,width:"100%"},onClick:()=>setActiveIdx(i)},
+          activeIdx===i?"Selected":"Inspect"
+        )
+      ))
+    )
+  );
+}
+
+function ComponentStage({item,story,stage,resp,setResp,onNext,submitting}) {
+  const ik = itemKey(item);
+  const r = resp[ik] || {na:[]};
+  const questions = COMPONENT_QUESTIONS[stage];
+  const info = COMPONENT_STAGE_INFO[stage];
+  const isLast = stage === "overall";
+
+  function rate(qid,v) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      rr[qid] = v;
+      rr.na = (rr.na || []).filter(x => x !== qid);
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function na(qid) {
+    setResp(p => {
+      const rr = {...(p[ik] || {na:[]})};
+      const a = rr.na || [];
+      if (a.includes(qid)) { rr.na = a.filter(x => x !== qid); } 
+      else { rr.na = [...a,qid]; delete rr[qid]; }
+      return {...p,[ik]:rr};
+    });
+  }
+
+  const complete = questions.every(q => typeof r[q.id] === "number" || (r.na || []).includes(q.id));
+
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"sequence-stage-layout"},
+      React.createElement(SequencePanel, {
+        item,
+        story,
+        title:info.title,
+        instruction:info.instruction,
+        showReferences:stage === "character",
+        showTemporalViewer:stage === "scene"
+      }),
+      React.createElement("div",{className:"sequence-question-wrap"},
+        React.createElement("div",{className:"card"},
+          React.createElement("div",{className:"label",style:{marginBottom:6}},info.label),
+          React.createElement("p",{className:"muted",style:{marginTop:0}},info.footer),
+          questions.map(q => React.createElement(Q, {
+            key:q.id,
+            q,
+            val:r[q.id],
+            isNA:(r.na || []).includes(q.id),
+            onRate:v=>rate(q.id,v),
+            onNA:()=>na(q.id)
+          })),
+          React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16,marginTop:12}},
+            React.createElement("span",{className:"muted"},complete ? "" : "Please answer all questions or select N/A."),
+            btn(true,!complete || submitting,onNext,submitting ? "Submitting..." : (isLast ? "Finish story" : "Continue"))
+          )
+        )
+      )
+    )
+  );
+}
+
+function Done({pid,status}){
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"card",style:{textAlign:"center",padding:"44px 22px"}},
+      React.createElement("h2",null,"Thank you for your participation"),
+      React.createElement("p",{className:"muted"},status==="local_only"?"Responses were saved as local backup.":"Your responses have been successfully submitted."),
+      React.createElement("div",{style:{display:"inline-block",background:"var(--light)",borderRadius:"var(--rs)",padding:"12px 24px",marginBottom:16}},
+        React.createElement("div",{className:"label"},"Participant code"),
+        React.createElement("div",{style:{fontSize:24,letterSpacing:".12em",fontWeight:650,color:"var(--accent)"}},pid)
+      ),
+      status==="error"&&React.createElement("div",{className:"error"},"Submission encountered an issue, but local backup was stored."),
+      status==="sent"&&React.createElement("div",{className:"success"},"Responses logged online successfully.")
+    )
+  );
+}
+
+function RuntimeError({message,onBack}){
+  return React.createElement("div",{className:"page"},
+    React.createElement("div",{className:"card"},
+      React.createElement("h2",null,"Unable to load evaluation item"),
+      React.createElement("div",{className:"error"},message),
+      React.createElement("p",{className:"muted"},"Please verify group IDs, storyPath, storyFile, outputPath, references/refFiles, frameFiles in manifest.json, and assignments.json."),
+      btn(false,false,onBack,"Back to setup")
+    )
+  );
+}
+
+function App(){
+  const[phase,setPhase]=useState("loading");
+  const[manifest,setManifest]=useState(null);
+  const[assign,setAssign]=useState(null);
+  const[err,setErr]=useState("");
+  const[pid,setPid]=useState("");
+  const[meta,setMeta]=useState(null);
+  const[items,setItems]=useState([]);
+  const[itemIdx,setItemIdx]=useState(0);
+  const[story,setStory]=useState(null);
+  const[alignShots,setAlignShots]=useState([]);
+  const[alignIdx,setAlignIdx]=useState(0);
+  const[resp,setResp]=useState({});
+  const[submitting,setSubmitting]=useState(false);
+  const[status,setStatus]=useState("sent");
+
+  useEffect(()=>{
+    Promise.all([getJson("data/manifest.json"),getJson("data/assignments.json")])
+      .then(([m,a])=>{setManifest(m);setAssign(a);setPhase("welcome")})
+      .catch(e=>{setErr(String(e));setPhase("welcome")})
+  },[]);
+
+  async function loadItem(i,itemList=items){
+    try{
+      const item=itemList[i];
+
+      if(!item){
+        throw new Error(
+          "No item found. Please verify assignments.json and manifest.json."
+        );
+      }
+
+      const storyFile = item.storyFile || "story.json";
+      const storyUrl = storyBase(item) + storyFile;
+
+      const storyData = await getJson(storyUrl);
+      const st = normalizeStory(storyData,item);
+
+      if(!st.shots.length){
+        throw new Error(
+          `No generated frames were listed for ${item.itemId}. Check frameFiles in manifest.json.`
+        );
+      }
+
+      setStory(st);
+      setAlignShots(
+        chooseAlignmentShots(
+          st.shots,
+          CONFIG.alignmentShotsPerItem
+        )
+      );
+      setAlignIdx(0);
+      setPhase("intro");
+
+    }catch(e){
+      console.error(e);
+      setErr(String(e));
+      setPhase("runtime_error");
+    }
+  }
+
+  function start(){ setPid(genPID()); setPhase("consent"); }
+
+  async function setupDone(m){
+    setMeta(m);
+    const ids=getAssignmentIds(assign,m.groupId);
+    const itemObjs=ids.map(id=>(manifest.items||[]).find(x=>x.itemId===id)).filter(Boolean);
+    if(!itemObjs.length){
+      setErr(`Group ${m.groupId} has no valid items listed in manifest.json.`);
+      setPhase("runtime_error");
+      return;
+    }
+    setItems(itemObjs);
+    setItemIdx(0);
+    await loadItem(0,itemObjs);
+  }
+
+  function nextIntro(){setPhase("alignment")}
+  function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else setPhase("character")}
+  function averageAlignment(r){const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:""}
+
+  async function finishSeq(){
+    const item=items[itemIdx];
+    const ik=itemKey(item);
+    const itemResp=resp[ik]||{};
+    const submission={
+      submissionType:"sequence_rating",
+      surveyVersion:CONFIG.surveyVersion,
+      dataset:CONFIG.dataset,
+      pid,
+      groupId:meta.groupId,
+      timestamp:new Date().toISOString(),
+      participantMeta:meta,
+      itemIndex:itemIdx+1,
+      totalItems:items.length,
+      itemMeta:item,
+      responses:{[ik]:{...itemResp,q5_alignment:averageAlignment(itemResp)}}
+    };
+    setSubmitting(true);
+    try{
+      const result=await submit(submission);
+      setStatus(result.status||"sent")
+    }catch(e){
+      console.error(e);
+      setStatus("error")
+    }
+    setSubmitting(false);
+    if(itemIdx<items.length-1){
+      const ni=itemIdx+1;
+      setItemIdx(ni);
+      await loadItem(ni,items)
+    }else{
+      const completion={
+        submissionType:"session_complete",
+        surveyVersion:CONFIG.surveyVersion,
+        dataset:CONFIG.dataset,
+        pid,
+        groupId:meta.groupId,
+        timestamp:new Date().toISOString(),
+        participantMeta:meta,
+        completedItems:items.length
+      };
+      try{
+        const finalResult=await submit(completion);
+        if(finalResult.status)setStatus(finalResult.status);
+      }catch(e){
+        console.error(e);
+        setStatus("error");
+      }
+      setPhase("done")
+    }
+  }
+
+  if(phase==="loading")return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},"Loading..."));
+  const cur=items[itemIdx];
+  return React.createElement("div",null,
+    phase==="welcome"&&React.createElement(Welcome,{start,loadError:err}),
+    phase==="consent"&&React.createElement(Consent,{onGo:()=>setPhase("setup")}),
+    phase==="setup"&&React.createElement(Setup,{assignments:assign||{},onGo:setupDone}),
+    phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),
+    phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),
+    phase==="character"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"character",resp,setResp,onNext:()=>setPhase("scene"),submitting:false}),
+    phase==="scene"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"scene",resp,setResp,onNext:()=>setPhase("overall"),submitting:false}),
+    phase==="overall"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"overall",resp,setResp,onNext:finishSeq,submitting}),
+    phase==="done"&&React.createElement(Done,{pid,status}),
+    phase==="runtime_error"&&React.createElement(RuntimeError,{message:err,onBack:()=>setPhase("setup")})
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(React.createElement(App));
+</script>
+</body>
+</html>
