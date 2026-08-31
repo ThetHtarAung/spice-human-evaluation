@@ -43,6 +43,7 @@ body {
   background-size: 24px 24px;
   color: var(--text);
   font-family: var(--font-body);
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
@@ -101,7 +102,7 @@ input[type=text]:focus, select:focus, textarea:focus {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
 }
@@ -110,7 +111,7 @@ input[type=text]:focus, select:focus, textarea:focus {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--r);
-  padding: 24px;
+  padding: 28px;
   box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 10px 25px -15px rgba(15,23,42,.08);
   width: 100%;
 }
@@ -121,8 +122,8 @@ input[type=text]:focus, select:focus, textarea:focus {
 
 .label {
   font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -142,8 +143,8 @@ input[type=text]:focus, select:focus, textarea:focus {
 
 h1 {
   font-family: var(--font-display);
-  font-size: 26px;
-  margin: 4px 0 8px;
+  font-size: 34px;
+  margin: 6px 0 12px;
   font-weight: 700;
   letter-spacing: -.02em;
   color: var(--text);
@@ -152,8 +153,8 @@ h1 {
 
 h2 {
   font-family: var(--font-display);
-  font-size: 21px;
-  margin: 4px 0 8px;
+  font-size: 27px;
+  margin: 6px 0 12px;
   font-weight: 700;
   letter-spacing: -.01em;
   color: var(--text);
@@ -162,8 +163,8 @@ h2 {
 
 h3 {
   font-family: var(--font-display);
-  font-size: 15px;
-  margin: 0 0 6px;
+  font-size: 19px;
+  margin: 0 0 8px;
   font-weight: 600;
   color: var(--text);
 }
@@ -172,8 +173,8 @@ p { line-height: 1.6; }
 
 .muted {
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .btn-primary {
@@ -183,8 +184,8 @@ p { line-height: 1.6; }
   border: 1px solid var(--accent-dark);
   background: var(--accent);
   color: #fff;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: .01em;
   box-shadow: 0 1px 2px rgba(37,99,235,.2);
 }
@@ -200,8 +201,8 @@ p { line-height: 1.6; }
   border: 1px solid var(--border-strong);
   background: #fff;
   color: var(--text);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .btn-secondary:hover:not(:disabled) { 
@@ -348,21 +349,33 @@ p { line-height: 1.6; }
 
 /* Questions */
 .question {
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
+  padding: 22px;
+  margin: 0 0 18px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--rs);
+  background: #fbfdff;
 }
 
-.question:first-child { border-top: none; padding-top: 4px; }
+.question:first-child {
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+}
 
 .q-title {
   font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 3px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 7px;
   color: var(--text);
 }
 
-.q-desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.q-desc {
+  font-size: 15.5px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 68ch;
+}
 
 .q-head {
   display: flex;
@@ -375,9 +388,9 @@ p { line-height: 1.6; }
   cursor: pointer;
   flex-shrink: 0;
   font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 600;
-  padding: 6px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   background: white;
@@ -396,8 +409,8 @@ p { line-height: 1.6; }
 
 .scale-btn {
   cursor: pointer;
-  min-height: 54px;
-  padding: 8px 4px;
+  min-height: 64px;
+  padding: 10px 6px;
   border-radius: var(--rs);
   border: 1px solid var(--border);
   background: var(--light);
@@ -414,8 +427,8 @@ p { line-height: 1.6; }
   box-shadow: 0 2px 6px rgba(37,99,235,.25);
 }
 
-.scale-num { font-family: var(--font-mono); font-size: 16px; font-weight: 600; }
-.scale-label { font-size: 10px; margin-top: 2px; }
+.scale-num { font-family: var(--font-mono); font-size: 19px; font-weight: 700; }
+.scale-label { font-size: 12px; margin-top: 4px; }
 
 /* Progress Bar */
 .progress-wrap {
@@ -511,8 +524,8 @@ p { line-height: 1.6; }
 }
 
 .alignment-rating-panel .question {
-  padding: 8px 0 10px;
-  border-top: 0;
+  padding: 18px;
+  margin-bottom: 12px;
 }
 
 .alignment-rating-panel .scale-btn {
@@ -527,8 +540,8 @@ p { line-height: 1.6; }
 /* Dynamic Full-Screen Flexible Sequence Stages */
 .sequence-stage-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(360px, .75fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 3fr) minmax(420px, 2fr);
+  gap: 30px;
   align-items: start;
   width: 100%;
   flex: 1;
@@ -574,7 +587,7 @@ p { line-height: 1.6; }
 }
 
 .sequence-caption {
-  font-size: 11px;
+  font-size: 12.5px;
   color: var(--muted);
   line-height: 1.3;
   margin-top: 4px;
@@ -582,7 +595,28 @@ p { line-height: 1.6; }
   overflow: hidden;
 }
 
-.sequence-question-wrap { counter-reset: qnum; }
+.sequence-question-wrap {
+  counter-reset: qnum;
+  min-width: 0;
+}
+
+.sequence-question-wrap > .card {
+  padding: 30px;
+}
+
+.sequence-question-wrap > .card > .label {
+  font-size: 13px;
+  color: var(--accent-dark);
+}
+
+.sequence-question-wrap > .card > .muted {
+  font-size: 16px;
+  background: var(--accent-tint);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--rs);
+  padding: 12px 14px;
+  margin-bottom: 20px;
+}
 
 .sequence-question-wrap .q-title::before {
   content: counter(qnum, decimal-leading-zero) "  \2014  ";
@@ -635,6 +669,110 @@ p { line-height: 1.6; }
   padding: 8px 14px;
   cursor: pointer;
   font-weight: 600;
+}
+
+
+/* Stage-specific evaluation guidance */
+.stage-focus-guide {
+  margin: 14px 0 18px;
+  padding: 14px 16px;
+  border-radius: var(--rs);
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-tint);
+  color: var(--text);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.stage-focus-guide strong {
+  font-weight: 700;
+}
+
+.reference-zone {
+  margin: 16px 0 22px;
+  padding: 14px;
+  border: 2px solid #93c5fd;
+  border-radius: var(--rs);
+  background: #f8fbff;
+}
+
+.reference-zone-title,
+.generated-zone-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.reference-zone-note,
+.generated-zone-note {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.generated-zone {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 2px solid var(--border-strong);
+}
+
+.scene-context {
+  margin-top: 12px;
+  padding: 13px 14px;
+  border-radius: var(--rs);
+  border: 1px solid #cbd5e1;
+  background: #fff;
+}
+
+.scene-context-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.scene-context-row + .scene-context-row {
+  margin-top: 8px;
+}
+
+.scene-context-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 2px;
+}
+
+.scene-context-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.character-frame-label {
+  margin-top: 5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.overall-check-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.overall-check-list li + li {
+  margin-top: 5px;
 }
 
 /* Temporal Viewer */
@@ -735,8 +873,50 @@ p { line-height: 1.6; }
 .visual-test-card:hover { border-color: var(--border-strong); background: #fff; }
 .visual-test-card.active { border-color: var(--accent); background: var(--accent-tint); font-weight: 600; }
 
+
+/* Main instruction emphasis */
+.main-point {
+  background: var(--accent-tint);
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--rs);
+  padding: 14px 16px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.assignment-status {
+  margin: 14px 0 18px;
+  padding: 14px 16px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.assignment-status.loading {
+  background: var(--accent-tint);
+  border-color: #bfdbfe;
+}
+
+.assignment-status.ready {
+  background: var(--ok);
+  border-color: #bbf7d0;
+  color: var(--oktext);
+  font-weight: 700;
+}
+
+.assignment-status.full,
+.assignment-status.error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: var(--danger);
+  font-weight: 700;
+}
+
 /* Responsive Layout */
-@media(max-width:1000px) {
+@media(max-width:1050px) {
   .page { padding: 16px; }
   .sequence-stage-layout, .shot-focus-grid { grid-template-columns: 1fr; }
   .sequence-sticky-panel { position: relative; top: 0; max-height: none; }
@@ -781,8 +961,15 @@ const CONFIG={
   institution:"Ritsumeikan University — Visual Information Engineering Lab",
   dataset:"ViStoryBench-Lite",
   surveyVersion:"SPICE-HUMAN-2026-08",
+
+  // Paste the deployed Google Apps Script /exec URL here for the real study.
   googleAppsScriptUrl:"PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
-  requireOnlineSubmission:false, // set false only while testing locally
+
+  // true  = final online study: automatically allocate an unused G01-G54.
+  // false = local testing: manually enter a test group code.
+  requireOnlineSubmission:false,
+
+  autoAllocateGroup:true,
   itemsPerParticipant:6,
   alignmentShotsPerItem:5,
   requireConditionChecklist:true
@@ -807,19 +994,19 @@ const COMPONENT_STAGE_INFO={
   character:{
     label:"Stage 3 / 5",
     title:"Character consistency",
-    instruction:"Compare the reference character images with the generated sequence. On this page, focus only on character identity and character attributes.",
+    instruction:"First identify the reference characters, then inspect only how those characters appear across the generated frames.",
     footer:"After this page, you will evaluate background and temporal consistency."
   },
   scene:{
     label:"Stage 4 / 5",
     title:"Scene and temporal consistency",
-    instruction:"View the full generated sequence. On this page, focus only on background/scene consistency and temporal / sequential continuity.",
+    instruction:"Inspect the generated sequence in order. Read the plot and setting for context so you can distinguish an intended scene change from an inconsistency.",
     footer:"After this page, you will evaluate repetition and overall consistency."
   },
   overall:{
     label:"Stage 5 / 5",
     title:"Repetition and overall consistency",
-    instruction:"View the full generated sequence again. On this page, focus on repeated/copy-pasted appearances and then give your overall judgment.",
+    instruction:"Inspect the complete generated sequence again. First check for unnecessary repetition or copy-paste behavior, then judge the visual consistency of the story as a whole.",
     footer:"After this page, your ratings for this story output will be submitted."
   }
 };
@@ -827,10 +1014,118 @@ const COMPONENT_STAGE_INFO={
 const SCALE=[{v:1,label:"Very poor"},{v:2,label:"Poor"},{v:3,label:"Fair"},{v:4,label:"Good"},{v:5,label:"Excellent"}];
 
 
-function onlineReady(){return CONFIG.googleAppsScriptUrl&&CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/")&&!CONFIG.googleAppsScriptUrl.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE")}
-function genPID(){return "P"+Date.now().toString(36).toUpperCase().slice(-7)+Math.random().toString(36).slice(2,6).toUpperCase()}
+function onlineReady(){
+  return CONFIG.googleAppsScriptUrl &&
+    CONFIG.googleAppsScriptUrl.startsWith("https://script.google.com/") &&
+    !CONFIG.googleAppsScriptUrl.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE");
+}
+
+function genPID(){
+  return "P"+
+    Date.now().toString(36).toUpperCase().slice(-7)+
+    Math.random().toString(36).slice(2,6).toUpperCase();
+}
+
+function getOrCreatePID(){
+  const key="spice_participant_id";
+  let pid=localStorage.getItem(key);
+
+  if(!pid){
+    pid=genPID();
+    localStorage.setItem(key,pid);
+  }
+
+  return pid;
+}
+
 function pad2(n){return String(n).padStart(2,"0")}
 function itemKey(item){return item?.itemId||item?.id||""}
+
+function jsonp(url,params={}){
+  return new Promise((resolve,reject)=>{
+    const callbackName=
+      "__spice_cb_"+Date.now()+"_"+Math.random().toString(36).slice(2);
+
+    const timer=setTimeout(()=>{
+      cleanup();
+      reject(new Error("Assignment server timed out."));
+    },15000);
+
+    function cleanup(){
+      clearTimeout(timer);
+      try{ delete window[callbackName]; }catch(_){}
+      if(script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    window[callbackName]=(payload)=>{
+      cleanup();
+      resolve(payload);
+    };
+
+    const qs=new URLSearchParams({
+      ...params,
+      callback:callbackName
+    });
+
+    const script=document.createElement("script");
+    script.src=url+(url.includes("?")?"&":"?")+qs.toString();
+    script.onerror=()=>{
+      cleanup();
+      reject(new Error("Could not contact the assignment server."));
+    };
+
+    document.head.appendChild(script);
+  });
+}
+
+async function claimAutomaticGroup(pid,assignments){
+  const cached=
+    (localStorage.getItem("spice_group_assignment")||"")
+      .trim()
+      .toUpperCase();
+
+  if(cached && getAssignmentIds(assignments,cached).length){
+    return {
+      ok:true,
+      groupId:cached,
+      source:"browser_cache"
+    };
+  }
+
+  if(!onlineReady()){
+    throw new Error("Google Apps Script URL is not configured.");
+  }
+
+  const result=await jsonp(
+    CONFIG.googleAppsScriptUrl,
+    {
+      action:"claim",
+      pid
+    }
+  );
+
+  if(result?.ok && result?.groupId){
+    const group=String(result.groupId).trim().toUpperCase();
+
+    if(!getAssignmentIds(assignments,group).length){
+      throw new Error(
+        "The server allocated an assignment that is not present in assignments.json."
+      );
+    }
+
+    localStorage.setItem("spice_group_assignment",group);
+
+    return {
+      ...result,
+      groupId:group
+    };
+  }
+
+  return result||{
+    ok:false,
+    error:"Assignment server returned no result."
+  };
+}
 function storyBase(item){
   const p=(item?.storyPath||item?.path||"").replace(/\/$/,"");
   return p ? p+"/" : "";
@@ -1230,7 +1525,10 @@ function Welcome({start,loadError}){
     React.createElement("div",{className:"card"},
       React.createElement("div",{className:"label"},CONFIG.institution),
       React.createElement("h1",null,CONFIG.title),
-      React.createElement("p",{className:"muted"},"This study evaluates AI-generated visual stories. Each evaluation item uses a side-by-side visual-inspection flow for generated images and questions."),
+      React.createElement("div",{className:"main-point",style:{margin:"14px 0 18px"}},
+        React.createElement("strong",null,"Main task: "),
+        "You will evaluate 6 AI-generated visual stories. For each story, inspect the images carefully and rate specific aspects of visual consistency. Your story assignment is handled automatically."
+      ),
       React.createElement("div",{className:"grid-3",style:{margin:"18px 0"}},
         React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"~30–40 min"),React.createElement("div",{className:"stat-label"},"Estimated time")),
         React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},CONFIG.itemsPerParticipant),React.createElement("div",{className:"stat-label"},"Story outputs")),
@@ -1262,8 +1560,32 @@ function DetailCheckScene(){
   );
 }
 
-function Setup({assignments,onGo}) {
-  const [g,setG] = useState("");
+function Setup({assignments,pid,onGo}) {
+  const onlineMode =
+    CONFIG.requireOnlineSubmission &&
+    CONFIG.autoAllocateGroup;
+
+  const cachedGroup =
+    (localStorage.getItem("spice_group_assignment")||"")
+      .trim()
+      .toUpperCase();
+
+  const [g,setG] = useState(
+    onlineMode ? cachedGroup : ""
+  );
+
+  const [assignmentState,setAssignmentState] = useState(
+    onlineMode
+      ? (cachedGroup ? "checking" : "loading")
+      : "manual"
+  );
+
+  const [assignmentMessage,setAssignmentMessage] = useState(
+    onlineMode
+      ? "Preparing your study assignment..."
+      : ""
+  );
+
   const [v,setV] = useState("");
   const [ai,setAi] = useState("");
   const [de,setDe] = useState("");
@@ -1284,91 +1606,496 @@ function Setup({assignments,onGo}) {
   const exists = idsForGroup.length > 0;
   const availableCodes = getGroupCodes(assignments);
 
-  const visualPassed = contrastAnswer === "yes" && detailAnswer === "red";
+  useEffect(()=>{
+    let cancelled=false;
 
-  const ok = group && exists && v && ai && de && visualPassed && (!CONFIG.requireConditionChecklist || Object.values(ck).every(Boolean));
+    if(!onlineMode){
+      setAssignmentState("manual");
+      return ()=>{cancelled=true};
+    }
+
+    async function allocate(){
+      try{
+        setAssignmentState("loading");
+        setAssignmentMessage("Preparing your study assignment...");
+
+        const result=
+          await claimAutomaticGroup(pid,assignments);
+
+        if(cancelled)return;
+
+        if(result?.ok && result?.groupId){
+          setG(result.groupId);
+          setAssignmentState("ready");
+          setAssignmentMessage(
+            "Your study assignment is ready. You can continue below."
+          );
+          return;
+        }
+
+        if(result?.full){
+          setAssignmentState("full");
+          setAssignmentMessage(
+            "Thank you for your interest. The required number of participants has already been reached."
+          );
+          return;
+        }
+
+        throw new Error(
+          result?.error ||
+          "Unable to allocate a study assignment."
+        );
+
+      }catch(e){
+        if(cancelled)return;
+
+        console.error(e);
+        setAssignmentState("error");
+        setAssignmentMessage(
+          "We could not prepare your study assignment. Please reopen the survey link or contact the researcher."
+        );
+      }
+    }
+
+    allocate();
+
+    return ()=>{cancelled=true};
+  },[pid,assignments,onlineMode]);
+
+  const visualPassed =
+    contrastAnswer === "yes" &&
+    detailAnswer === "red";
+
+  const assignmentReady =
+    onlineMode
+      ? assignmentState==="ready" && exists
+      : group && exists;
+
+  const ok =
+    assignmentReady &&
+    v &&
+    ai &&
+    de &&
+    visualPassed &&
+    (
+      !CONFIG.requireConditionChecklist ||
+      Object.values(ck).every(Boolean)
+    );
 
   function sel(label,val,set,opts) {
-    return React.createElement("div",null,
-      React.createElement("div",{className:"label",style:{marginBottom:6}},label),
-      React.createElement("select",{value:val,onChange:e=>set(e.target.value)},
-        React.createElement("option",{value:""},"Select"),
-        opts.map(o=>React.createElement("option",{key:o,value:o},o))
+    return React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "div",
+        {className:"label",style:{marginBottom:8}},
+        label
+      ),
+      React.createElement(
+        "select",
+        {
+          value:val,
+          onChange:e=>set(e.target.value)
+        },
+        React.createElement(
+          "option",
+          {value:""},
+          "Select"
+        ),
+        opts.map(o=>
+          React.createElement(
+            "option",
+            {key:o,value:o},
+            o
+          )
+        )
       )
     );
   }
 
-  return React.createElement("div",{className:"page"},
-    React.createElement("div",{className:"card"},
-      React.createElement("div",{className:"label"},"Viewing setup"),
-      React.createElement("h2",null,"Participant setup"),
-      React.createElement("p",{className:"muted"},"Enter the group code given by the researcher, then confirm that your screen and viewing conditions are suitable for image-based evaluation."),
-      React.createElement("div",{className:"label",style:{marginBottom:6}},"Group code"),
-      React.createElement("input",{type:"text",placeholder:"Example: G01",value:g,onChange:e=>setG(e.target.value.toUpperCase())}),
-      g&&!exists&&React.createElement("div",{className:"error",style:{marginTop:10,marginBottom:10}},"This group code does not exist. Available group codes: "+(availableCodes.length?availableCodes.slice(0,12).join(", "):"none loaded.")),
-      React.createElement("div",{className:"grid-3",style:{marginTop:16}},
-        sel("Vision condition",v,setV,["normal","corrected-to-normal","color vision issue","other"]),
-        sel("AI image experience",ai,setAi,["none","low","medium","high"]),
-        sel("Art/design experience",de,setDe,["none","low","medium","high"])
+  return React.createElement(
+    "div",
+    {className:"page"},
+
+    React.createElement(
+      "div",
+      {className:"card"},
+
+      React.createElement(
+        "div",
+        {className:"label"},
+        "Viewing setup"
       ),
 
-      CONFIG.requireConditionChecklist&&React.createElement("div",{style:{marginTop:20}},
-        React.createElement("div",{className:"label",style:{marginBottom:8}},"Viewing-condition checklist"),
-        [
-          ["desktop","I am using a laptop or desktop, not a phone."],
-          ["zoom","Browser zoom is 100%."],
-          ["brightness","Screen brightness is comfortable and image details are clearly visible."],
-          ["glare","There is no strong glare or direct light reflecting on my screen."],
-          ["alone","I am completing this evaluation alone."]
-        ].map(([k,t])=>React.createElement("label",{key:k,style:{display:"flex",gap:10,marginBottom:9,alignItems:"flex-start"}},
-          React.createElement("input",{type:"checkbox",checked:ck[k],onChange:()=>setCk({...ck,[k]:!ck[k]})}),
-          React.createElement("span",{className:"muted"},t)
-        ))
+      React.createElement(
+        "h2",
+        null,
+        "Participant setup"
       ),
 
-      React.createElement("div",{className:"visual-test"},
-        React.createElement("div",{className:"label"},"Display visibility check"),
-        React.createElement("p",{className:"muted",style:{marginBottom:8}},"This check ensures your display accurately presents contrast and colors before evaluation."),
+      React.createElement(
+        "div",
+        {className:"main-point"},
+        onlineMode
+          ? "Your six story outputs are assigned automatically. You do not need to enter or choose a group code. Please complete the survey on a laptop or desktop under suitable viewing conditions."
+          : "Local test mode: enter one assignment code below, then check the viewing conditions before continuing."
+      ),
 
-        React.createElement("h3",{style:{marginTop:14}},"1. Dark-detail visibility"),
-        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"Can you distinguish all six separate dark-gray blocks below?"),
+      onlineMode
+        ? React.createElement(
+            "div",
+            {
+              className:
+                "assignment-status "+
+                (
+                  assignmentState==="ready"
+                    ? "ready"
+                    : assignmentState==="full"
+                      ? "full"
+                      : assignmentState==="error"
+                        ? "error"
+                        : "loading"
+                )
+            },
+            assignmentMessage
+          )
+        : React.createElement(
+            React.Fragment,
+            null,
+
+            React.createElement(
+              "div",
+              {
+                className:"label",
+                style:{
+                  marginTop:18,
+                  marginBottom:8
+                }
+              },
+              "Test group code"
+            ),
+
+            React.createElement(
+              "input",
+              {
+                type:"text",
+                placeholder:"Example: G01",
+                value:g,
+                onChange:e=>
+                  setG(e.target.value.toUpperCase())
+              }
+            ),
+
+            g&&!exists&&React.createElement(
+              "div",
+              {
+                className:"error",
+                style:{
+                  marginTop:10,
+                  marginBottom:10
+                }
+              },
+              "This group code does not exist. Available test codes: "+
+              (
+                availableCodes.length
+                  ? availableCodes.slice(0,12).join(", ")
+                  : "none loaded."
+              )
+            )
+          ),
+
+      React.createElement(
+        "div",
+        {
+          className:"grid-3",
+          style:{marginTop:22}
+        },
+
+        sel(
+          "Vision condition",
+          v,
+          setV,
+          [
+            "normal",
+            "corrected-to-normal",
+            "color vision issue",
+            "other"
+          ]
+        ),
+
+        sel(
+          "AI image experience",
+          ai,
+          setAi,
+          [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        ),
+
+        sel(
+          "Art/design experience",
+          de,
+          setDe,
+          [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        )
+      ),
+
+      CONFIG.requireConditionChecklist&&
+        React.createElement(
+          "div",
+          {style:{marginTop:24}},
+
+          React.createElement(
+            "div",
+            {
+              className:"label",
+              style:{marginBottom:12}
+            },
+            "Viewing-condition checklist"
+          ),
+
+          [
+            [
+              "desktop",
+              "I am using a laptop or desktop, not a phone."
+            ],
+            [
+              "zoom",
+              "Browser zoom is 100%."
+            ],
+            [
+              "brightness",
+              "Screen brightness is comfortable and image details are clearly visible."
+            ],
+            [
+              "glare",
+              "There is no strong glare or direct light reflecting on my screen."
+            ],
+            [
+              "alone",
+              "I am completing this evaluation alone."
+            ]
+          ].map(([k,t])=>
+            React.createElement(
+              "label",
+              {
+                key:k,
+                style:{
+                  display:"flex",
+                  gap:12,
+                  marginBottom:12,
+                  alignItems:"flex-start",
+                  fontSize:16
+                }
+              },
+
+              React.createElement(
+                "input",
+                {
+                  type:"checkbox",
+                  checked:ck[k],
+                  onChange:()=>
+                    setCk({
+                      ...ck,
+                      [k]:!ck[k]
+                    })
+                }
+              ),
+
+              React.createElement(
+                "span",
+                {className:"muted"},
+                t
+              )
+            )
+          )
+        ),
+
+      React.createElement(
+        "div",
+        {className:"visual-test"},
+
+        React.createElement(
+          "div",
+          {className:"label"},
+          "Display visibility check"
+        ),
+
+        React.createElement(
+          "p",
+          {
+            className:"muted",
+            style:{marginBottom:10}
+          },
+          "Before rating images, confirm that your screen presents dark details and small visual features clearly."
+        ),
+
+        React.createElement(
+          "h3",
+          {style:{marginTop:18}},
+          "1. Dark-detail visibility"
+        ),
+
+        React.createElement(
+          "p",
+          {
+            className:"muted",
+            style:{margin:"6px 0"}
+          },
+          "Can you distinguish all six separate dark-gray blocks below?"
+        ),
+
         React.createElement(ContrastStrip),
-        React.createElement("div",{className:"visual-test-options"},
-          [["yes","Yes, I see 6 distinct blocks"],["no","No / indistinguishable"]].map(([value,label])=>
-            React.createElement("label",{key:value,className:"visual-test-card"+(contrastAnswer===value?" active":"")},
-              React.createElement("input",{type:"radio",name:"contrastAnswer",value,checked:contrastAnswer===value,onChange:e=>setContrastAnswer(e.target.value)}),
+
+        React.createElement(
+          "div",
+          {className:"visual-test-options"},
+
+          [
+            ["yes","Yes, I see 6 distinct blocks"],
+            ["no","No / indistinguishable"]
+          ].map(([value,label])=>
+            React.createElement(
+              "label",
+              {
+                key:value,
+                className:
+                  "visual-test-card"+
+                  (
+                    contrastAnswer===value
+                      ? " active"
+                      : ""
+                  )
+              },
+
+              React.createElement(
+                "input",
+                {
+                  type:"radio",
+                  name:"contrastAnswer",
+                  value,
+                  checked:
+                    contrastAnswer===value,
+                  onChange:e=>
+                    setContrastAnswer(e.target.value)
+                }
+              ),
+
               label
             )
           )
         ),
 
-        React.createElement("h3",{style:{marginTop:20}},"2. Small-detail visibility"),
-        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"Examine the scene detail at a normal viewing distance."),
+        React.createElement(
+          "h3",
+          {style:{marginTop:24}},
+          "2. Small-detail visibility"
+        ),
+
+        React.createElement(
+          "p",
+          {
+            className:"muted",
+            style:{margin:"6px 0"}
+          },
+          "Examine the scene detail at a normal viewing distance."
+        ),
+
         React.createElement(DetailCheckScene),
-        React.createElement("p",{className:"muted",style:{margin:"4px 0"}},"What color is the small book on the right side of the table?"),
-        React.createElement("div",{className:"visual-test-options"},
-          [["red","Red"],["blue","Blue"],["green","Green"],["cannot_tell","Cannot tell"]].map(([value,label])=>
-            React.createElement("label",{key:value,className:"visual-test-card"+(detailAnswer===value?" active":"")},
-              React.createElement("input",{type:"radio",name:"detailAnswer",value,checked:detailAnswer===value,onChange:e=>setDetailAnswer(e.target.value)}),
+
+        React.createElement(
+          "p",
+          {
+            className:"muted",
+            style:{margin:"6px 0"}
+          },
+          "What color is the small book on the right side of the table?"
+        ),
+
+        React.createElement(
+          "div",
+          {className:"visual-test-options"},
+
+          [
+            ["red","Red"],
+            ["blue","Blue"],
+            ["green","Green"],
+            ["cannot_tell","Cannot tell"]
+          ].map(([value,label])=>
+            React.createElement(
+              "label",
+              {
+                key:value,
+                className:
+                  "visual-test-card"+
+                  (
+                    detailAnswer===value
+                      ? " active"
+                      : ""
+                  )
+              },
+
+              React.createElement(
+                "input",
+                {
+                  type:"radio",
+                  name:"detailAnswer",
+                  value,
+                  checked:
+                    detailAnswer===value,
+                  onChange:e=>
+                    setDetailAnswer(e.target.value)
+                }
+              ),
+
               label
             )
           )
         ),
 
-        (contrastAnswer||detailAnswer)&&!visualPassed&&React.createElement("div",{className:"notice",style:{marginTop:12}},"If details are unclear, please adjust screen brightness or remove room glare before proceeding.")
+        (
+          contrastAnswer ||
+          detailAnswer
+        ) &&
+        !visualPassed &&
+        React.createElement(
+          "div",
+          {
+            className:"notice",
+            style:{marginTop:14}
+          },
+          "If details are unclear, adjust screen brightness or remove room glare before proceeding."
+        )
       ),
 
-      React.createElement("div",{style:{marginTop:18}},
-        btn(true,!ok,()=>onGo({
-          groupId:group,
-          vision:v,
-          aiExperience:ai,
-          designExperience:de,
-          visualContrastAnswer:contrastAnswer,
-          visualDetailAnswer:detailAnswer,
-          visualTestPassed:visualPassed,
-          conditionChecks:ck
-        }),"Continue to evaluation")
+      React.createElement(
+        "div",
+        {style:{marginTop:22}},
+        btn(
+          true,
+          !ok,
+          ()=>onGo({
+            groupId:group,
+            vision:v,
+            aiExperience:ai,
+            designExperience:de,
+            visualContrastAnswer:contrastAnswer,
+            visualDetailAnswer:detailAnswer,
+            visualTestPassed:visualPassed,
+            conditionChecks:ck
+          }),
+          assignmentState==="loading"
+            ? "Preparing assignment..."
+            : "Continue to evaluation"
+        )
       )
     )
   );
@@ -1379,7 +2106,10 @@ function Consent({onGo}){
   return React.createElement("div",{className:"page"},
     React.createElement("div",{className:"card"},
       React.createElement("h2",null,"Consent"),
-      React.createElement("p",{className:"muted"},"Your anonymous ratings will be used for academic research to validate visual story consistency. Participation is voluntary."),
+      React.createElement("div",{className:"main-point"},
+        React.createElement("strong",null,"Research use: "),
+        "Your anonymous ratings will be used for academic research to validate an automatic visual-story consistency metric. Participation is voluntary."
+      ),
       React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},
         React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),
         React.createElement("span",{className:"muted"},"I have read the information above and agree to participate.")
@@ -1484,61 +2214,333 @@ function Alignment({item,story,shots,idx,resp,setResp,onNext}){
   );
 }
 
-function SequencePanel({item,story,title,instruction,showReferences,showTemporalViewer=false}) {
+
+function StageFocusGuide({stage}){
+  if(stage==="character"){
+    return React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+      React.createElement("strong",null,"Focus only on character appearance. "),
+      "Use the reference images as the identity/attribute anchor, then judge the generated frames. ",
+      React.createElement("strong",null,"Do not judge the plot, text-image alignment, background, or story flow on this page.")
+    );
+  }
+
+  if(stage==="scene"){
+    return React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+      React.createElement("strong",null,"Use the plot and setting as context. "),
+      "A background change is not automatically an inconsistency: if the plot or setting indicates that the location should change, that change is expected. Judge whether each scene is visually stable when it should remain the same, and whether transitions between frames are coherent."
+    );
+  }
+
+  if(stage==="overall"){
+    return React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+      React.createElement("strong",null,"What to check on this page:"),
+      React.createElement(
+        "ul",
+        {className:"overall-check-list"},
+        React.createElement("li",null,"Unnecessary duplicated or near-identical frames when the story content changes."),
+        React.createElement("li",null,"Repeated poses, compositions, camera layouts, or backgrounds that look copy-pasted."),
+        React.createElement("li",null,"Abrupt visual inconsistencies that reduce the coherence of the full story."),
+        React.createElement("li",null,"For the overall score, consider the story as a whole rather than one isolated bad frame.")
+      )
+    );
+  }
+
+  return null;
+}
+
+function SequencePanel({
+  item,
+  story,
+  title,
+  instruction,
+  stage,
+  showReferences,
+  showTemporalViewer=false
+}) {
   const frameBase = outputBase(item);
   const [activeIdx,setActiveIdx] = useState(0);
 
   useEffect(()=>setActiveIdx(0),[itemKey(item)]);
 
-  const activeShot = story.shots[Math.min(activeIdx,Math.max(0,story.shots.length-1))];
+  const activeShot =
+    story.shots[
+      Math.min(
+        activeIdx,
+        Math.max(0,story.shots.length-1)
+      )
+    ];
 
-  return React.createElement("div",{className:"card sequence-sticky-panel"},
-    React.createElement("div",{className:"sequence-sticky-header"},
-      React.createElement("div",null,
-        React.createElement("div",{className:"label"},`${item.storyId}`),
-        React.createElement("h2",null,title)
-      ),
-      React.createElement("div",{className:"label"},`${story.shots.length} frames`)
-    ),
+  const isCharacter = stage==="character";
+  const isScene = stage==="scene";
+  const isOverall = stage==="overall";
 
-    React.createElement("p",{className:"muted",style:{marginTop:0}},instruction),
+  return React.createElement(
+    "div",
+    {className:"card sequence-sticky-panel"},
 
-    showReferences&&story.characters.length>0&&React.createElement(
+    React.createElement(
       "div",
-      {style:{margin:"16px 0 20px"}},
+      {className:"sequence-sticky-header"},
+
       React.createElement(
         "div",
-        {className:"label",style:{marginBottom:8}},
-        "Reference characters"
+        null,
+        React.createElement(
+          "div",
+          {className:"label"},
+          `${item.storyId}`
+        ),
+        React.createElement(
+          "h2",
+          null,
+          title
+        )
       ),
-      React.createElement(ReferenceGroups,{
-        item,
-        characters:story.characters,
-        zoomable:true
-      })
+
+      React.createElement(
+        "div",
+        {className:"label"},
+        `${story.shots.length} available frames`
+      )
     ),
 
-    showTemporalViewer&&activeShot&&React.createElement("div",{className:"temporal-viewer"},
-      React.createElement("div",{className:"label",style:{marginBottom:8}},"Sequential inspection view"),
-      React.createElement("div",{className:"temporal-main"},
-        React.createElement(ImageWithFallback,{src:frameBase+activeShot.frame,alt:activeShot.shotId,cls:"sequence-frame-img",label:`Frame ${activeShot.n}`,zoomable:true}),
-        React.createElement("div",{className:"temporal-counter"},`Frame ${activeIdx+1} / ${story.shots.length}`),
-        React.createElement("div",{className:"temporal-controls"},
-          btn(false,activeIdx<=0,()=>setActiveIdx(Math.max(0,activeIdx-1)),"← Previous"),
-          btn(false,activeIdx>=story.shots.length-1,()=>setActiveIdx(Math.min(story.shots.length-1,activeIdx+1)),"Next →")
+    React.createElement(
+      "p",
+      {
+        className:"muted",
+        style:{marginTop:0}
+      },
+      instruction
+    ),
+
+    React.createElement(
+      StageFocusGuide,
+      {stage}
+    ),
+
+    showReferences &&
+    story.characters.length>0 &&
+    React.createElement(
+      "div",
+      {className:"reference-zone"},
+
+      React.createElement(
+        "div",
+        {className:"reference-zone-title"},
+        "REFERENCE CHARACTER IMAGES"
+      ),
+
+      React.createElement(
+        "div",
+        {className:"reference-zone-note"},
+        "These are reference images only. Use them to understand each character's intended identity and visual attributes."
+      ),
+
+      React.createElement(
+        ReferenceGroups,
+        {
+          item,
+          characters:story.characters,
+          zoomable:true
+        }
+      )
+    ),
+
+    showTemporalViewer &&
+    activeShot &&
+    React.createElement(
+      "div",
+      {className:"temporal-viewer"},
+
+      React.createElement(
+        "div",
+        {
+          className:"label",
+          style:{marginBottom:8}
+        },
+        "Sequential inspection view"
+      ),
+
+      React.createElement(
+        "div",
+        {className:"temporal-main"},
+
+        React.createElement(
+          ImageWithFallback,
+          {
+            src:frameBase+activeShot.frame,
+            alt:activeShot.shotId,
+            cls:"sequence-frame-img",
+            label:`Frame ${activeShot.n}`,
+            zoomable:true
+          }
+        ),
+
+        React.createElement(
+          "div",
+          {className:"temporal-counter"},
+          `Story shot ${activeShot.n} · Available frame ${activeIdx+1} / ${story.shots.length}`
+        ),
+
+        React.createElement(
+          "div",
+          {className:"temporal-controls"},
+          btn(
+            false,
+            activeIdx<=0,
+            ()=>setActiveIdx(
+              Math.max(0,activeIdx-1)
+            ),
+            "← Previous"
+          ),
+          btn(
+            false,
+            activeIdx>=story.shots.length-1,
+            ()=>setActiveIdx(
+              Math.min(
+                story.shots.length-1,
+                activeIdx+1
+              )
+            ),
+            "Next →"
+          )
+        ),
+
+        React.createElement(
+          "div",
+          {className:"scene-context"},
+
+          React.createElement(
+            "div",
+            {className:"scene-context-title"},
+            "Story context for this frame"
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-context-row"},
+            React.createElement(
+              "div",
+              {className:"scene-context-label"},
+              "Plot"
+            ),
+            React.createElement(
+              "div",
+              {className:"scene-context-text"},
+              activeShot.plot ||
+              "No plot text available."
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-context-row"},
+            React.createElement(
+              "div",
+              {className:"scene-context-label"},
+              "Setting"
+            ),
+            React.createElement(
+              "div",
+              {className:"scene-context-text"},
+              activeShot.setting ||
+              "No setting text available."
+            )
+          )
         )
       )
     ),
 
-    React.createElement("div",{className:"label",style:{margin:"12px 0 8px"}},"Full storyboard"),
-    React.createElement("div",{className:"sequence-frame-grid"},
-      story.shots.map((shot,i)=>React.createElement("div",{className:"sequence-frame-card",key:shot.shotId},
-        React.createElement(ImageWithFallback,{src:frameBase+shot.frame,alt:shot.shotId,cls:"sequence-frame-img",label:`Frame ${shot.n}`,zoomable:true}),
-        React.createElement("div",{className:"sequence-caption"},`${shot.n}. ${shot.plot||shot.staticDesc||""}`),
-        showTemporalViewer&&React.createElement("button",{type:"button",className:"na-btn"+(activeIdx===i?" active":""),style:{marginTop:6,width:"100%"},onClick:()=>setActiveIdx(i)},
-          activeIdx===i?"Selected":"Inspect"
+    React.createElement(
+      "div",
+      {className:"generated-zone"},
+
+      React.createElement(
+        "div",
+        {className:"generated-zone-title"},
+        isCharacter
+          ? "GENERATED STORY OUTPUT — CHARACTER CHECK"
+          : isScene
+            ? "GENERATED STORY OUTPUT — SCENE / TEMPORAL CHECK"
+            : "GENERATED STORY OUTPUT — REPETITION / OVERALL CHECK"
+      ),
+
+      React.createElement(
+        "div",
+        {className:"generated-zone-note"},
+        isCharacter
+          ? "The images below are generated outputs, not references. Compare character appearance across these frames and against the reference images above."
+          : isScene
+            ? "Inspect the ordered generated frames below. Use the plot text to decide whether a scene change is expected."
+            : "Inspect the full generated sequence for unnecessary repetition and overall visual coherence."
+      ),
+
+      React.createElement(
+        "div",
+        {className:"sequence-frame-grid"},
+
+        story.shots.map((shot,i)=>
+          React.createElement(
+            "div",
+            {
+              className:"sequence-frame-card",
+              key:shot.shotId
+            },
+
+            React.createElement(
+              ImageWithFallback,
+              {
+                src:frameBase+shot.frame,
+                alt:shot.shotId,
+                cls:"sequence-frame-img",
+                label:`Frame ${shot.n}`,
+                zoomable:true
+              }
+            ),
+
+            isCharacter
+              ? React.createElement(
+                  "div",
+                  {className:"character-frame-label"},
+                  `Generated frame ${shot.n}`
+                )
+              : React.createElement(
+                  "div",
+                  {className:"sequence-caption"},
+                  `${shot.n}. ${shot.plot||shot.staticDesc||""}`
+                ),
+
+            showTemporalViewer &&
+            React.createElement(
+              "button",
+              {
+                type:"button",
+                className:
+                  "na-btn"+
+                  (
+                    activeIdx===i
+                      ? " active"
+                      : ""
+                  ),
+                style:{
+                  marginTop:6,
+                  width:"100%"
+                },
+                onClick:()=>setActiveIdx(i)
+              },
+              activeIdx===i
+                ? "Selected"
+                : "Inspect"
+            )
+          )
         )
-      ))
+      )
     )
   );
 }
@@ -1578,6 +2580,7 @@ function ComponentStage({item,story,stage,resp,setResp,onNext,submitting}) {
         story,
         title:info.title,
         instruction:info.instruction,
+        stage,
         showReferences:stage === "character",
         showTemporalViewer:stage === "scene"
       }),
@@ -1690,7 +2693,10 @@ function App(){
     }
   }
 
-  function start(){ setPid(genPID()); setPhase("consent"); }
+  function start(){
+    setPid(getOrCreatePID());
+    setPhase("consent");
+  }
 
   async function setupDone(m){
     setMeta(m);
@@ -1758,6 +2764,7 @@ function App(){
         console.error(e);
         setStatus("error");
       }
+      localStorage.setItem("spice_study_completed","true");
       setPhase("done")
     }
   }
@@ -1767,7 +2774,7 @@ function App(){
   return React.createElement("div",null,
     phase==="welcome"&&React.createElement(Welcome,{start,loadError:err}),
     phase==="consent"&&React.createElement(Consent,{onGo:()=>setPhase("setup")}),
-    phase==="setup"&&React.createElement(Setup,{assignments:assign||{},onGo:setupDone}),
+    phase==="setup"&&React.createElement(Setup,{assignments:assign||{},pid,onGo:setupDone}),
     phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),
     phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),
     phase==="character"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"character",resp,setResp,onNext:()=>setPhase("scene"),submitting:false}),
