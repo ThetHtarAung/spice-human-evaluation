@@ -1,0 +1,993 @@
+{
+  "story_01": {
+    "shot_01": [
+      "Big Brown Rabbit",
+      "Little Brown Rabbit"
+    ],
+    "shot_02": [
+      "Little Brown Rabbit"
+    ],
+    "shot_03": [
+      "Big Brown Rabbit"
+    ],
+    "shot_04": [
+      "Little Brown Rabbit"
+    ],
+    "shot_05": [
+      "Big Brown Rabbit"
+    ],
+    "shot_06": [
+      "Little Brown Rabbit"
+    ],
+    "shot_07": [
+      "Little Brown Rabbit"
+    ],
+    "shot_08": [
+      "Big Brown Rabbit"
+    ],
+    "shot_09": [
+      "Little Brown Rabbit"
+    ],
+    "shot_10": [
+      "Little Brown Rabbit"
+    ],
+    "shot_11": [
+      "Little Brown Rabbit"
+    ],
+    "shot_12": [
+      "Big Brown Rabbit",
+      "Little Brown Rabbit"
+    ],
+    "shot_13": [
+      "Little Brown Rabbit"
+    ],
+    "shot_14": [
+      "Big Brown Rabbit"
+    ],
+    "shot_15": [
+      "Little Brown Rabbit"
+    ],
+    "shot_16": [
+      "Little Brown Rabbit"
+    ],
+    "shot_17": [
+      "Big Brown Rabbit"
+    ],
+    "shot_18": [
+      "Little Brown Rabbit"
+    ],
+    "shot_19": [
+      "Little Brown Rabbit"
+    ],
+    "shot_20": [
+      "Little Brown Rabbit"
+    ],
+    "shot_21": [
+      "Big Brown Rabbit"
+    ],
+    "shot_22": [
+      "Big Brown Rabbit",
+      "Little Brown Rabbit"
+    ],
+    "shot_23": [
+      "Big Brown Rabbit",
+      "Little Brown Rabbit"
+    ]
+  },
+  "story_08": {
+    "shot_01": [
+      "Consort Jiang"
+    ],
+    "shot_02": [
+      "Consort Jiang"
+    ],
+    "shot_03": [
+      "Consort Jiang"
+    ],
+    "shot_04": [
+      "Consort Jiang"
+    ],
+    "shot_05": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_06": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_07": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_08": [
+      "Consort Jiang"
+    ],
+    "shot_09": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_10": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_11": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_12": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_13": [
+      "Consort Jiang",
+      "Lady Jiang"
+    ],
+    "shot_14": [
+      "Consort Jiang",
+      "Lady Jiang"
+    ],
+    "shot_15": [
+      "Consort Jiang",
+      "Emperor",
+      "Lady Jiang"
+    ],
+    "shot_16": [
+      "Consort Jiang",
+      "Emperor",
+      "Lady Jiang"
+    ],
+    "shot_17": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_18": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_19": [
+      "Consort Jiang"
+    ],
+    "shot_20": [
+      "Consort Jiang",
+      "Emperor"
+    ],
+    "shot_21": [
+      "Consort Jiang"
+    ]
+  },
+  "story_09": {
+    "shot_01": [
+      "Queen"
+    ],
+    "shot_02": [
+      "Queen"
+    ],
+    "shot_03": [
+      "Queen"
+    ],
+    "shot_04": [
+      "Queen",
+      "Snow White"
+    ],
+    "shot_05": [
+      "Snow White",
+      "Queen"
+    ],
+    "shot_06": [
+      "New Queen"
+    ],
+    "shot_07": [
+      "New Queen",
+      "Snow White"
+    ],
+    "shot_08": [
+      "New Queen",
+      "Servant"
+    ],
+    "shot_09": [
+      "Servant",
+      "Snow White"
+    ],
+    "shot_10": [
+      "Servant"
+    ],
+    "shot_11": [
+      "Snow White"
+    ],
+    "shot_12": [
+      "Dwarf",
+      "Snow White"
+    ],
+    "shot_13": [
+      "New Queen"
+    ],
+    "shot_14": [
+      "New Queen",
+      "Snow White"
+    ],
+    "shot_15": [
+      "New Queen",
+      "Snow White"
+    ],
+    "shot_16": [
+      "Dwarf",
+      "Snow White"
+    ],
+    "shot_17": [
+      "New Queen",
+      "Snow White"
+    ],
+    "shot_18": [
+      "Dwarf",
+      "Snow White"
+    ],
+    "shot_19": [
+      "New Queen",
+      "Snow White"
+    ],
+    "shot_20": [
+      "Dwarf",
+      "Snow White"
+    ],
+    "shot_21": [
+      "Prince"
+    ],
+    "shot_22": [
+      "Prince",
+      "Snow White"
+    ],
+    "shot_23": [
+      "Dwarf",
+      "Prince",
+      "Snow White"
+    ],
+    "shot_24": [
+      "Prince",
+      "Snow White"
+    ],
+    "shot_25": [
+      "New Queen",
+      "Prince",
+      "Snow White"
+    ]
+  },
+  "story_15": {
+    "shot_01": [
+      "Mother",
+      "Zhao Qingqing"
+    ],
+    "shot_02": [
+      "Aunt Liu",
+      "Father"
+    ],
+    "shot_03": [
+      "Aunt Liu",
+      "Father"
+    ],
+    "shot_04": [
+      "Father",
+      "Gu Zhenzhen"
+    ],
+    "shot_05": [
+      "Aunt Liu",
+      "Father",
+      "Gu Zhenzhen"
+    ],
+    "shot_06": [
+      "Daughter",
+      "Gu Zhenzhen",
+      "Husband",
+      "Zhao Qingqing"
+    ],
+    "shot_07": [
+      "Daughter",
+      "Gu Zhenzhen",
+      "Zhao Qingqing"
+    ],
+    "shot_08": [
+      "Father",
+      "Gu Zhenzhen",
+      "Zhao Qingqing"
+    ],
+    "shot_09": [
+      "Li Chao",
+      "Zhao Qingqing"
+    ],
+    "shot_10": [
+      "Daughter",
+      "Father",
+      "Husband",
+      "Li Chao",
+      "Zhao Qingqing"
+    ],
+    "shot_11": [
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_12": [
+      "Father",
+      "Gu Zhenzhen",
+      "Husband",
+      "Zhao Qingqing"
+    ],
+    "shot_13": [
+      "Aunt Liu",
+      "Zhao Qingqing"
+    ],
+    "shot_14": [
+      "Aunt Liu",
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_15": [
+      "Lu Ming",
+      "Zhao Qingqing"
+    ],
+    "shot_16": [
+      "Zhao Qingqing"
+    ],
+    "shot_17": [
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_18": [
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_19": [
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_20": [
+      "Father",
+      "Gu Zhenzhen",
+      "Li Chao"
+    ],
+    "shot_21": [
+      "Father",
+      "Gu Zhenzhen"
+    ],
+    "shot_22": [
+      "Madam Wang",
+      "Zhao Qingqing"
+    ],
+    "shot_23": [
+      "Gu Zhenzhen",
+      "Madam Wang"
+    ],
+    "shot_24": [
+      "Father",
+      "Gu Zhenzhen"
+    ],
+    "shot_25": [
+      "Father",
+      "Zhao Qingqing"
+    ],
+    "shot_26": [
+      "Zhao Qingqing"
+    ]
+  },
+  "story_17": {
+    "shot_01": [
+      "Aladdin"
+    ],
+    "shot_02": [
+      "Aladdin",
+      "Sorcerer"
+    ],
+    "shot_03": [
+      "Aladdin",
+      "Sorcerer"
+    ],
+    "shot_04": [
+      "Aladdin",
+      "Sorcerer"
+    ],
+    "shot_05": [
+      "Aladdin",
+      "Sorcerer"
+    ],
+    "shot_06": [
+      "Aladdin",
+      "Genie"
+    ],
+    "shot_07": [
+      "Aladdin"
+    ],
+    "shot_08": [
+      "Aladdin",
+      "Princess"
+    ],
+    "shot_09": [
+      "Aladdin",
+      "King"
+    ],
+    "shot_10": [
+      "Princess",
+      "Sorcerer"
+    ],
+    "shot_11": [
+      "Aladdin",
+      "Sorcerer"
+    ],
+    "shot_12": [
+      "Aladdin",
+      "Genie",
+      "Princess"
+    ],
+    "shot_13": [
+      "Aladdin"
+    ]
+  },
+  "story_24": {
+    "shot_01": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_02": [
+      "Meg"
+    ],
+    "shot_03": [
+      "Jo"
+    ],
+    "shot_04": [
+      "Beth"
+    ],
+    "shot_05": [
+      "Amy"
+    ],
+    "shot_06": [
+      "Mrs. March"
+    ],
+    "shot_07": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_08": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_09": [
+      "Mrs. March"
+    ],
+    "shot_10": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_11": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_12": [
+      "Mrs. March"
+    ],
+    "shot_13": [
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_14": [
+      "Mrs. March",
+      "Amy",
+      "Beth",
+      "Jo",
+      "Meg"
+    ],
+    "shot_15": [
+      "Beth",
+      "Amy",
+      "Jo",
+      "Meg"
+    ]
+  },
+  "story_27": {
+    "shot_01": [
+      "Li Shiqing"
+    ],
+    "shot_02": [
+      "Li Shiqing"
+    ],
+    "shot_03": [
+      "Li Shiqing"
+    ],
+    "shot_04": [
+      "Li Shiqing"
+    ],
+    "shot_05": [
+      "Li Shiqing"
+    ],
+    "shot_06": [
+      "Li Shiqing"
+    ],
+    "shot_07": [
+      "Li Shiqing"
+    ],
+    "shot_08": [
+      "Li Shiqing"
+    ],
+    "shot_09": [
+      "Bus Driver Uncle",
+      "Li Shiqing"
+    ],
+    "shot_10": [
+      "Li Shiqing"
+    ],
+    "shot_11": [
+      "Li Shiqing"
+    ],
+    "shot_12": [
+      "Bus Driver Uncle",
+      "Li Shiqing"
+    ],
+    "shot_13": [
+      "Li Shiqing"
+    ],
+    "shot_14": [
+      "Li Shiqing"
+    ],
+    "shot_15": [
+      "Li Shiqing"
+    ]
+  },
+  "story_28": {
+    "shot_01": [
+      "Ticket Inspector Uncle",
+      "Totto-chan"
+    ],
+    "shot_02": [
+      "Totto-chan"
+    ],
+    "shot_03": [
+      "Totto-chan",
+      "Totto-chan's Mother"
+    ],
+    "shot_04": [
+      "Totto-chan",
+      "Totto-chan's Mother"
+    ],
+    "shot_05": [
+      "Totto-chan"
+    ]
+  },
+  "story_29": {
+    "shot_01": [
+      "Sanuki no Takamuro"
+    ],
+    "shot_02": [
+      "Princess Kaguya",
+      "Sanuki no Takamuro"
+    ],
+    "shot_03": [
+      "Princess Kaguya"
+    ],
+    "shot_04": [
+      "Princess Kaguya",
+      "Great Minister Ōtomo no Miyuki",
+      "Middle Counselor Isonokami no Maro",
+      "Minister Abe no Udomaro",
+      "Prince Ishizukuri",
+      "Prince Kuramochi"
+    ],
+    "shot_05": [
+      "Princess Kaguya"
+    ],
+    "shot_06": [
+      "Prince Ishizukuri",
+      "Princess Kaguya"
+    ],
+    "shot_07": [
+      "Prince Kuramochi",
+      "Princess Kaguya"
+    ],
+    "shot_08": [
+      "Minister Abe no Udomaro",
+      "Princess Kaguya"
+    ],
+    "shot_09": [
+      "Great Minister Ōtomo no Miyuki",
+      "Princess Kaguya"
+    ],
+    "shot_10": [
+      "Middle Counselor Isonokami no Maro",
+      "Princess Kaguya"
+    ],
+    "shot_11": [
+      "Emperor",
+      "Princess Kaguya"
+    ],
+    "shot_12": [
+      "Princess Kaguya",
+      "Sanuki no Takamuro"
+    ],
+    "shot_13": [
+      "Princess Kaguya"
+    ],
+    "shot_14": [
+      "Emperor",
+      "Princess Kaguya"
+    ]
+  },
+  "story_32": {
+    "shot_01": [
+      "Natsuki Subaru"
+    ],
+    "shot_02": [
+      "Natsuki Subaru"
+    ],
+    "shot_03": [
+      "Emilia"
+    ],
+    "shot_04": [
+      "Emilia",
+      "Natsuki Subaru"
+    ],
+    "shot_05": [
+      "Emilia",
+      "Little Girl",
+      "Natsuki Subaru"
+    ],
+    "shot_06": [
+      "Little Girl",
+      "Natsuki Subaru"
+    ],
+    "shot_07": [
+      "Natsuki Subaru"
+    ],
+    "shot_08": [
+      "Natsuki Subaru"
+    ],
+    "shot_09": [
+      "Emilia",
+      "Natsuki Subaru"
+    ],
+    "shot_10": [
+      "Emilia",
+      "Natsuki Subaru"
+    ]
+  },
+  "story_52": {
+    "shot_01": [],
+    "shot_02": [
+      "Daenerys"
+    ],
+    "shot_03": [
+      "Daenerys",
+      "Khal Drogo"
+    ],
+    "shot_04": [
+      "Daenerys"
+    ],
+    "shot_05": [
+      "Daenerys",
+      "Dosh Khaleen Elder"
+    ],
+    "shot_06": [
+      "Daenerys"
+    ],
+    "shot_07": [
+      "Daenerys"
+    ],
+    "shot_08": [
+      "Daenerys",
+      "Khal Drogo"
+    ],
+    "shot_09": [
+      "Daenerys"
+    ],
+    "shot_10": [
+      "Viserys"
+    ],
+    "shot_11": [
+      "Viserys"
+    ],
+    "shot_12": [
+      "Daenerys",
+      "Viserys"
+    ],
+    "shot_13": [
+      "Khal Drogo",
+      "Viserys"
+    ],
+    "shot_14": [
+      "Khal Drogo"
+    ],
+    "shot_15": [
+      "Khal Drogo",
+      "Viserys"
+    ],
+    "shot_16": [
+      "Viserys"
+    ],
+    "shot_17": [
+      "Daenerys",
+      "Viserys"
+    ],
+    "shot_18": [
+      "Daenerys",
+      "Viserys"
+    ],
+    "shot_19": [
+      "Viserys"
+    ]
+  },
+  "story_53": {
+    "shot_01": [
+      "Harry Potter"
+    ],
+    "shot_02": [
+      "Hagrid"
+    ],
+    "shot_03": [
+      "Owl"
+    ],
+    "shot_04": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_05": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_06": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_07": [
+      "Harry Potter"
+    ],
+    "shot_08": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_09": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_10": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_11": [
+      "Harry Potter"
+    ],
+    "shot_12": [
+      "Goblin"
+    ],
+    "shot_13": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_14": [
+      "Hagrid",
+      "Harry Potter"
+    ],
+    "shot_15": [
+      "Ollivander",
+      "Harry Potter"
+    ],
+    "shot_16": [
+      "Ollivander",
+      "Owl",
+      "Harry Potter"
+    ]
+  },
+  "story_55": {
+    "shot_01": [
+      "Professor Aronnax"
+    ],
+    "shot_02": [
+      "Conseil",
+      "Professor Aronnax"
+    ],
+    "shot_03": [
+      "Ned Land"
+    ],
+    "shot_04": [
+      "Professor Aronnax"
+    ],
+    "shot_05": [
+      "Captain Nemo",
+      "Professor Aronnax"
+    ],
+    "shot_06": [
+      "Professor Aronnax"
+    ],
+    "shot_07": [
+      "Conseil",
+      "Ned Land"
+    ],
+    "shot_08": [
+      "Conseil",
+      "Ned Land",
+      "Professor Aronnax"
+    ],
+    "shot_09": [
+      "First Mate",
+      "Professor Aronnax"
+    ],
+    "shot_10": [
+      "First Mate",
+      "Professor Aronnax"
+    ],
+    "shot_11": [],
+    "shot_12": [
+      "Professor Aronnax"
+    ],
+    "shot_13": [
+      "Conseil",
+      "Ned Land",
+      "Professor Aronnax"
+    ],
+    "shot_14": [
+      "Captain Nemo",
+      "Professor Aronnax"
+    ],
+    "shot_15": [
+      "Captain Nemo"
+    ],
+    "shot_16": [
+      "Captain Nemo"
+    ],
+    "shot_17": [
+      "Conseil",
+      "Ned Land",
+      "Professor Aronnax"
+    ]
+  },
+  "story_57": {
+    "shot_01": [
+      "Domestic Donkey"
+    ],
+    "shot_02": [
+      "Wild Donkey"
+    ],
+    "shot_03": [
+      "Domestic Donkey",
+      "Wild Donkey"
+    ],
+    "shot_04": [
+      "Domestic Donkey",
+      "Lion",
+      "Wild Donkey"
+    ]
+  },
+  "story_60": {
+    "shot_01": [],
+    "shot_02": [
+      "Liu Bei"
+    ],
+    "shot_03": [
+      "Liu Bei",
+      "Zhang Fei"
+    ],
+    "shot_04": [
+      "Guan Yu",
+      "Liu Bei",
+      "Zhang Fei"
+    ],
+    "shot_05": [
+      "Guan Yu",
+      "Liu Bei",
+      "Zhang Fei"
+    ],
+    "shot_06": [
+      "Guan Yu",
+      "Liu Bei",
+      "Zhang Fei"
+    ],
+    "shot_07": [
+      "Guan Yu",
+      "Liu Bei",
+      "Zhang Fei"
+    ],
+    "shot_08": [
+      "Guan Yu",
+      "Liu Bei",
+      "Zhang Fei"
+    ]
+  },
+  "story_64": {
+    "shot_01": [
+      "Ah Q",
+      "Young Nun"
+    ],
+    "shot_02": [
+      "Ah Q",
+      "Mr. Zhao",
+      "Mrs. Wu"
+    ],
+    "shot_03": [
+      "Ah Q",
+      "Mrs. Wu"
+    ],
+    "shot_04": [
+      "Ah Q",
+      "Mr. Zhao"
+    ],
+    "shot_05": [
+      "Ah Q"
+    ]
+  },
+  "story_68": {
+    "shot_01": [
+      "Daedalus"
+    ],
+    "shot_02": [
+      "Daedalus"
+    ],
+    "shot_03": [
+      "Daedalus",
+      "Icarus"
+    ],
+    "shot_04": [
+      "Daedalus",
+      "Icarus"
+    ],
+    "shot_05": [
+      "Icarus"
+    ]
+  },
+  "story_79": {
+    "shot_01": [
+      "Jing Lan"
+    ],
+    "shot_02": [
+      "Jing Lan",
+      "Song Yuchen",
+      "Wu Zheng",
+      "Yang Yu"
+    ],
+    "shot_03": [],
+    "shot_04": [
+      "Jing Lan",
+      "Yang Yu"
+    ],
+    "shot_05": [
+      "Jing Lan"
+    ],
+    "shot_06": [
+      "Jiao Jiao",
+      "Jing Lan",
+      "Yang Yu"
+    ],
+    "shot_07": [
+      "Jing Lan"
+    ],
+    "shot_08": [
+      "Jing Lan",
+      "Song Yuchen"
+    ],
+    "shot_09": [
+      "Jing Lan",
+      "Song Yuchen"
+    ],
+    "shot_10": [
+      "Jing Lan",
+      "Song Yuchen"
+    ],
+    "shot_11": [
+      "Jing Lan"
+    ],
+    "shot_12": [
+      "Jing Lan",
+      "Song Yuchen"
+    ],
+    "shot_13": [
+      "Jing Lan"
+    ],
+    "shot_14": [
+      "Jing Lan"
+    ]
+  }
+}
