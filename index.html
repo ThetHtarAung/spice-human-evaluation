@@ -915,6 +915,610 @@ p { line-height: 1.6; }
   font-weight: 700;
 }
 
+
+/* Guided evaluation flow */
+.plot-first-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--r);
+  background: #fff;
+}
+
+.plot-first-box .plot-text {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 10px 0 18px;
+}
+
+.reveal-button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.guided-split {
+  display: grid;
+  grid-template-columns: minmax(0,3fr) minmax(420px,2fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.guided-evidence,
+.guided-questions {
+  min-width: 0;
+}
+
+.guided-questions {
+  position: sticky;
+  top: 78px;
+}
+
+.plot-reminder {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--rs);
+  background: var(--accent-tint);
+}
+
+.plot-reminder .plot-text {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.character-target-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.character-target-tab {
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.character-target-tab.active {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+}
+
+.character-compare-grid {
+  display: grid;
+  grid-template-columns: minmax(220px,0.75fr) minmax(0,1.75fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.character-compare-side {
+  min-width: 0;
+}
+
+.character-compare-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.character-generated-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  gap: 10px;
+}
+
+.character-generated-frame {
+  min-width: 0;
+}
+
+.character-generated-frame .sequence-frame-img {
+  width: 100%;
+}
+
+.character-generated-label {
+  margin-top: 5px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.no-match-note {
+  padding: 14px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--rs);
+  color: var(--muted);
+  background: var(--light);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.scene-reader {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: #fff;
+}
+
+.scene-reader .scene-plot {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 10px 0 14px;
+}
+
+.scene-reader .scene-setting {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.scene-revealed-image {
+  margin-top: 18px;
+}
+
+.scene-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.scene-progress-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.repetition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 14px;
+}
+
+.repetition-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: #fff;
+  padding: 10px;
+}
+
+.repetition-frame .sequence-frame-img {
+  width: 100%;
+}
+
+.repetition-choice-row {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.repetition-choice {
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  border-radius: 6px;
+  padding: 7px 4px;
+  font-size: 10.5px;
+  line-height: 1.25;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.repetition-choice.selected {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.repetition-baseline {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  background: var(--light);
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.independent-overall-note {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: var(--rs);
+  background: #fffbeb;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media(max-width:1050px){
+  .guided-split,
+  .character-compare-grid {
+    grid-template-columns: 1fr;
+  }
+  .guided-questions {
+    position: relative;
+    top: 0;
+  }
+}
+
+
+/* Scene overview + participant feedback */
+.scene-storyboard {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.scene-storyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(135px,1fr));
+  gap: 10px;
+}
+
+.scene-storyboard-item {
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 7px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.scene-storyboard-item.active {
+  border: 2px solid var(--accent);
+  background: var(--accent-tint);
+}
+
+.scene-storyboard-item.visited:not(.active) {
+  border-color: #86efac;
+}
+
+.scene-storyboard-label {
+  margin-top: 5px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-align: center;
+  color: var(--muted);
+}
+
+.result-card {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #bfdbfe;
+  border-left: 5px solid var(--accent);
+  border-radius: var(--r);
+  background: var(--accent-tint);
+}
+
+.result-score {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--accent-dark);
+  margin: 8px 0 6px;
+}
+
+.result-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px 16px;
+  margin-top: 16px;
+}
+
+.result-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid #dbeafe;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.importance-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.importance-row {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 105px;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: #fff;
+}
+
+.importance-name {
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.importance-input {
+  width: 100%;
+  text-align: right;
+  border: 1px solid var(--border-strong);
+  border-radius: 7px;
+  padding: 8px 9px;
+}
+
+.importance-total {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--rs);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.importance-total.good {
+  background: var(--ok);
+  border-color: #bbf7d0;
+  color: var(--oktext);
+}
+
+.importance-total.bad {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+@media(max-width:900px){
+  .result-breakdown,
+  .importance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Sequential repetition pairwise inspection */
+.repetition-seq-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: #fff;
+  padding: 18px;
+}
+
+.repetition-seq-instruction {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--rs);
+  background: var(--accent-tint);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.repetition-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.repetition-pair-panel {
+  min-width: 0;
+}
+
+.repetition-pair-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.repetition-pair-note {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.repetition-answer-box {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.repetition-answer-title {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.repetition-answer-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.repetition-answer-row {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+}
+
+.repetition-answer-btn {
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 11px 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.repetition-answer-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+}
+
+.repetition-progress {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media(max-width:800px){
+  .repetition-pair {
+    grid-template-columns: 1fr;
+  }
+}
+/* Radar/spider result + simple importance ratings */
+.radar-wrap {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.radar-shell {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 18px;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--r);
+  background: #fff;
+}
+
+.radar-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.radar-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.radar-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.radar-grid {
+  fill: none;
+  stroke: #dbe4f0;
+  stroke-width: 1;
+}
+
+.radar-axis {
+  stroke: #dbe4f0;
+  stroke-width: 1;
+}
+
+.radar-profile {
+  fill: rgba(37,99,235,.18);
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.radar-point {
+  fill: var(--accent);
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.radar-label {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.radar-note {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.importance-rating-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.importance-rating-row {
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  padding: 14px;
+  background: #fff;
+}
+
+.importance-rating-name {
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.importance-mini-scale {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 7px;
+}
+
+.importance-mini-btn {
+  border: 1px solid var(--border-strong);
+  border-radius: 7px;
+  background: #fff;
+  padding: 9px 5px;
+  cursor: pointer;
+  text-align: center;
+  color: var(--text);
+}
+
+.importance-mini-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.importance-mini-num {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.importance-mini-label {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+@media(max-width:650px){
+  .importance-mini-label {
+    display:none;
+  }
+}
 /* Responsive Layout */
 @media(max-width:1050px) {
   .page { padding: 16px; }
@@ -1404,7 +2008,14 @@ function normalizeStory(storyData,item){
         s.static_en ||
         s["Static Shot Description"]?.en ||
         s.shot_static_shot_description_en ||
-        ""
+        "",
+      characters:
+        s.characters ||
+        s.character_names ||
+        s.characterNames ||
+        s.characters_in_shot ||
+        s["Characters"] ||
+        []
     }));
   }
 
@@ -1433,6 +2044,7 @@ function normalizeStory(storyData,item){
           plot:textShot.plot || "",
           setting:textShot.setting || "",
           staticDesc:textShot.staticDesc || "",
+          characters:textShot.characters || [],
           frame:f.file
         };
       });
@@ -1457,6 +2069,7 @@ function normalizeStory(storyData,item){
           plot:textShot.plot || "",
           setting:textShot.setting || "",
           staticDesc:textShot.staticDesc || "",
+          characters:textShot.characters || [],
           frame:frameFile
         };
       });
@@ -1468,6 +2081,141 @@ function normalizeStory(storyData,item){
     characters:chars,
     shots
   };
+}
+
+
+function mappingStoryKey(storyId){
+  const raw=String(storyId ?? "").trim();
+  const m=raw.match(/(\d+)/);
+  return m
+    ? `story_${pad2(Number(m[1]))}`
+    : raw;
+}
+
+function validateCharacterMapping(manifest,mapping){
+  if(!mapping || typeof mapping!=="object"){
+    throw new Error(
+      "shot_character_mapping.json could not be loaded."
+    );
+  }
+
+  const items=Array.isArray(manifest?.items)
+    ? manifest.items
+    : [];
+
+  if(!items.length){
+    throw new Error(
+      "manifest.json contains no survey items."
+    );
+  }
+
+  const checked=new Set();
+
+  items.forEach(item=>{
+    const storyKey=mappingStoryKey(item.storyId);
+
+    if(checked.has(storyKey)) return;
+    checked.add(storyKey);
+
+    const storyMap=mapping[storyKey];
+
+    if(!storyMap || typeof storyMap!=="object"){
+      throw new Error(
+        `Verified character mapping is missing ${storyKey}.`
+      );
+    }
+
+    const expectedFrames=Number(
+      item.numFrames ||
+      item.expectedFrames ||
+      item.frameFiles?.length ||
+      item.frames?.length ||
+      0
+    );
+
+    if(!expectedFrames){
+      throw new Error(
+        `Cannot determine expected frame count for ${storyKey}.`
+      );
+    }
+
+    for(let n=1;n<=expectedFrames;n++){
+      const shotKey=`shot_${pad2(n)}`;
+
+      if(!Object.prototype.hasOwnProperty.call(storyMap,shotKey)){
+        throw new Error(
+          `Verified character mapping is missing ${storyKey} / ${shotKey}.`
+        );
+      }
+
+      if(!Array.isArray(storyMap[shotKey])){
+        throw new Error(
+          `${storyKey} / ${shotKey} must contain a character-name array.`
+        );
+      }
+    }
+  });
+
+  return true;
+}
+
+function validateStoryCharacterNames(item,story,mapping){
+  const storyKey=mappingStoryKey(item.storyId);
+  const storyMap=mapping?.[storyKey]||{};
+  const referenceNames=
+    groupReferenceCharacters(story.characters)
+      .map(g=>g.name);
+
+  const unknown=[];
+
+  Object.entries(storyMap).forEach(([shotKey,names])=>{
+    (names||[]).forEach(name=>{
+      const exists=referenceNames.some(
+        ref=>ref.toLowerCase()===String(name).toLowerCase()
+      );
+
+      if(!exists){
+        unknown.push(`${shotKey}: ${name}`);
+      }
+    });
+  });
+
+  if(unknown.length){
+    throw new Error(
+      `Verified character mapping for ${storyKey} contains character name(s) `+
+      `that are not available in this story's reference-character list: `+
+      unknown.slice(0,8).join(", ")+
+      (unknown.length>8?" …":"")
+    );
+  }
+
+  return true;
+}
+
+function buildCharacterComparisonGroups(story,item,mapping){
+  const refs=groupReferenceCharacters(story.characters);
+  const storyKey=mappingStoryKey(item.storyId);
+  const storyMap=mapping?.[storyKey];
+
+  if(!storyMap){
+    throw new Error(
+      `Verified character mapping is unavailable for ${storyKey}.`
+    );
+  }
+
+  return refs.map(group=>({
+    ...group,
+    shots:story.shots.filter(shot=>{
+      const shotKey=`shot_${pad2(shot.n)}`;
+      const intended=storyMap[shotKey]||[];
+
+      return intended.some(
+        name=>
+          String(name).toLowerCase()===
+          group.name.toLowerCase()
+      );
+    })
+  }));
 }
 
 function chooseAlignmentShots(shots,k){
@@ -1508,7 +2256,7 @@ function Q({q,val,isNA,onRate,onNA}){
         React.createElement("div",{className:"q-title"},q.short),
         React.createElement("div",{className:"q-desc"},q.desc)
       ),
-      React.createElement("button",{className:"na-btn"+(isNA?" active":""),onClick:onNA},"N/A")
+      onNA&&React.createElement("button",{className:"na-btn"+(isNA?" active":""),onClick:onNA},"N/A")
     ),
     React.createElement("div",{className:"scale"+(isNA?" disabled":"")},
       SCALE.map(s=>React.createElement("button",{key:s.v,className:"scale-btn"+(val===s.v?" selected":""),onClick:()=>onRate(s.v)},
@@ -1824,26 +2572,28 @@ function Setup({assignments,pid,onGo}) {
         ),
 
         sel(
-          "AI image experience",
+          "AI-generated image experience",
           ai,
           setAi,
           [
-            "none",
-            "low",
-            "medium",
-            "high"
+            "I have never seen AI-generated images before",
+            "I have seen AI-generated images, but have never generated them myself",
+            "I have used AI image-generation tools a few times",
+            "I regularly use or create AI-generated images",
+            "I study, work, or conduct research in generative AI / AI-generated visual media"
           ]
         ),
 
         sel(
-          "Art/design experience",
+          "Art / design experience",
           de,
           setDe,
           [
-            "none",
-            "low",
-            "medium",
-            "high"
+            "I have no art/design background",
+            "I have a general interest in art/design, but no formal experience",
+            "I have taken art/design/visual-media courses or completed related projects",
+            "I study or previously studied art/design/visual media",
+            "I work professionally or conduct research in art/design/visual media"
           ]
         )
       ),
@@ -2133,6 +2883,12 @@ function Intro({item,story,onNext,itemNo,total}){
         ),
         React.createElement("div",{className:"label"},story.shots.length+" frames")
       ),
+      React.createElement(
+        "div",
+        {className:"main-point",style:{margin:"14px 0 18px"}},
+        React.createElement("strong",null,"Story information and reference characters only. "),
+        "Read the story information and review the actual reference characters used for this story. No generated images are shown on this page."
+      ),
       React.createElement("p",{className:"muted"},story.summary),
       React.createElement("h3",{style:{marginTop:18}},"Reference characters"),
       React.createElement(ReferenceGroups,{
@@ -2140,7 +2896,11 @@ function Intro({item,story,onNext,itemNo,total}){
         characters:story.characters,
         zoomable:true
       }),
-      React.createElement("div",{className:"notice",style:{marginTop:18}},"Next, you will rate visual elements across shot alignments and full sequence stages using side-by-side display layout."),
+      React.createElement(
+        "div",
+        {className:"notice",style:{marginTop:18}},
+        "Next, you will evaluate visual elements of AI-generated images created for the story above."
+      ),
       React.createElement("div",{style:{marginTop:18}},btn(true,false,onNext,"Start alignment rating"))
     )
   );
@@ -2154,6 +2914,9 @@ function Alignment({item,story,shots,idx,resp,setResp,onNext}){
   const val=r.alignment?.[key];
   const isNA=(r.alignmentNA||[]).includes(key);
   const base=outputBase(item);
+  const [revealed,setRevealed]=useState(false);
+
+  useEffect(()=>setRevealed(false),[ik,idx]);
 
   function set(v){
     setResp(p=>{
@@ -2168,52 +2931,181 @@ function Alignment({item,story,shots,idx,resp,setResp,onNext}){
     setResp(p=>{
       const rr={...(p[ik]||{na:[],alignment:{},alignmentNA:[]})};
       const a=rr.alignmentNA||[];
-      if(a.includes(key)){rr.alignmentNA=a.filter(x=>x!==key)}
-      else{rr.alignmentNA=[...a,key]; if(rr.alignment)delete rr.alignment[key]}
+      if(a.includes(key)){
+        rr.alignmentNA=a.filter(x=>x!==key);
+      }else{
+        rr.alignmentNA=[...a,key];
+        if(rr.alignment) delete rr.alignment[key];
+      }
       return {...p,[ik]:rr};
     });
   }
 
   const complete=typeof val==="number"||isNA;
 
-  return React.createElement("div",{className:"page alignment-page"},
-    React.createElement("div",{className:"card alignment-card"},
-      React.createElement("div",{className:"row-between",style:{marginBottom:12}},
-        React.createElement("div",null,
-          React.createElement("div",{className:"label"},`${item.storyId} · Alignment ${idx+1}/${shots.length}`),
-          React.createElement("h2",{style:{marginBottom:0}},"Text-image alignment")
-        ),
-        React.createElement("div",{className:"label"},`Frame ${shot.n}`)
-      ),
-      React.createElement("div",{className:"shot-focus-grid"},
-        React.createElement("div",{className:"shot-focus-media"},
-          React.createElement(ImageWithFallback,{src:base+shot.frame,alt:shot.shotId,cls:"alignment-image",label:shot.shotId,zoomable:true})
-        ),
-        React.createElement("div",{className:"alignment-text-block"},
-          React.createElement("div",{className:"alignment-copy"},
-            React.createElement("div",{className:"label"},"Plot"),
-            React.createElement("p",{className:"muted"},shot.plot||"No plot text available."),
-            React.createElement("div",{className:"label"},"Setting"),
-            React.createElement("p",{className:"muted"},shot.setting||"No setting text available."),
-            React.createElement("div",{className:"label"},"Shot description"),
-            React.createElement("p",{className:"muted"},shot.staticDesc||"No shot description available.")
+  return React.createElement(
+    "div",
+    {className:"page alignment-page"},
+
+    React.createElement(
+      "div",
+      {className:"card alignment-card"},
+
+      React.createElement(
+        "div",
+        {className:"row-between",style:{marginBottom:14}},
+
+        React.createElement(
+          "div",
+          null,
+          React.createElement(
+            "div",
+            {className:"label"},
+            `${item.storyId} · Alignment ${idx+1}/${shots.length}`
           ),
-          React.createElement("div",{className:"alignment-rating-panel"},
-            React.createElement(Q,{
-              q:{short:"Text-image alignment",desc:"How well does this generated frame match the plot, setting, and shot description?"},
-              val,isNA,onRate:set,onNA:na
-            }),
-            React.createElement("div",{className:"row-between alignment-next"},
-              React.createElement("span",{className:"muted"},complete?"":"Please answer or choose N/A."),
-              btn(true,!complete,onNext,idx===shots.length-1?"Continue to character consistency":"Next alignment frame")
+          React.createElement(
+            "h2",
+            {style:{marginBottom:0}},
+            "Text-image alignment"
+          )
+        ),
+
+        React.createElement(
+          "div",
+          {className:"label"},
+          `Story shot ${shot.n}`
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"stage-focus-guide"},
+        React.createElement("strong",null,"Step 1: read the plot before viewing the generated image. "),
+        "Imagine what the scene should contain. Then reveal the generated image and judge only how well it represents the plot."
+      ),
+
+      !revealed
+        ? React.createElement(
+            "div",
+            {className:"plot-first-box"},
+
+            React.createElement(
+              "div",
+              {className:"label"},
+              "PLOT — READ FIRST"
+            ),
+
+            React.createElement(
+              "div",
+              {className:"plot-text"},
+              shot.plot||"No plot text available."
+            ),
+
+            React.createElement(
+              "div",
+              {className:"reveal-button-wrap"},
+              btn(
+                true,
+                false,
+                ()=>setRevealed(true),
+                "I have read the plot — show generated image"
+              )
             )
           )
-        )
-      )
+        : React.createElement(
+            "div",
+            {className:"guided-split"},
+
+            React.createElement(
+              "div",
+              {className:"guided-evidence"},
+
+              React.createElement(
+                "div",
+                {className:"plot-reminder"},
+                React.createElement(
+                  "div",
+                  {className:"label"},
+                  "Plot"
+                ),
+                React.createElement(
+                  "div",
+                  {className:"plot-text"},
+                  shot.plot||"No plot text available."
+                )
+              ),
+
+              React.createElement(
+                "div",
+                {className:"label",style:{marginBottom:8}},
+                "GENERATED IMAGE"
+              ),
+
+              React.createElement(
+                ImageWithFallback,
+                {
+                  src:base+shot.frame,
+                  alt:shot.shotId,
+                  cls:"alignment-image",
+                  label:`Generated frame ${shot.n}`,
+                  zoomable:true
+                }
+              )
+            ),
+
+            React.createElement(
+              "div",
+              {className:"guided-questions"},
+
+              React.createElement(
+                "div",
+                {className:"card"},
+
+                React.createElement(
+                  "div",
+                  {className:"label"},
+                  "YOUR RATING"
+                ),
+
+                React.createElement(
+                  Q,
+                  {
+                    q:{
+                      short:"Text-image alignment",
+                      desc:"How well does this generated image represent the plot you read above?"
+                    },
+                    val,
+                    isNA,
+                    onRate:set,
+                    onNA:na
+                  }
+                ),
+
+                React.createElement(
+                  "div",
+                  {className:"row-between alignment-next"},
+                  React.createElement(
+                    "span",
+                    {className:"muted"},
+                    complete
+                      ? ""
+                      : "Please answer or choose N/A."
+                  ),
+                  btn(
+                    true,
+                    !complete,
+                    onNext,
+                    idx===shots.length-1
+                      ? "Continue to character consistency"
+                      : "Next alignment frame"
+                  )
+                )
+              )
+            )
+          )
     )
   );
 }
-
 
 function StageFocusGuide({stage}){
   if(stage==="character"){
@@ -2545,6 +3437,1385 @@ function SequencePanel({
   );
 }
 
+
+function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
+  const ik=itemKey(item);
+  const frameBase=outputBase(item);
+  const refBase=storyBase(item);
+  const groups=buildCharacterComparisonGroups(story,item,characterMapping);
+  const [charIdx,setCharIdx]=useState(0);
+
+  useEffect(()=>setCharIdx(0),[ik]);
+
+  const group=groups[Math.min(charIdx,Math.max(0,groups.length-1))];
+  const r=resp[ik]||{na:[],characterRatings:{}};
+  const charRatings=r.characterRatings||{};
+  const cr=group ? (charRatings[group.name]||{}) : {};
+
+  function rate(field,v){
+    if(!group)return;
+    setResp(p=>{
+      const rr={...(p[ik]||{na:[],characterRatings:{}})};
+      rr.characterRatings={...(rr.characterRatings||{})};
+      rr.characterRatings[group.name]={
+        ...(rr.characterRatings[group.name]||{}),
+        [field]:v
+      };
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function characterComplete(g){
+    if(!g.shots.length) return true;
+    const x=(r.characterRatings||{})[g.name]||{};
+    return typeof x.identity==="number" &&
+           typeof x.attribute==="number";
+  }
+
+  const currentComplete=group ? characterComplete(group) : false;
+  const allComplete=groups.length>0 && groups.every(characterComplete);
+
+  function continueAction(){
+    if(charIdx<groups.length-1){
+      setCharIdx(charIdx+1);
+      window.scrollTo({top:0,behavior:"smooth"});
+    }else{
+      onNext();
+    }
+  }
+
+  if(!group){
+    return React.createElement(
+      "div",
+      {className:"page"},
+      React.createElement(
+        "div",
+        {className:"card"},
+        React.createElement("h2",null,"Character consistency"),
+        React.createElement(
+          "div",
+          {className:"notice"},
+          "No reference characters are available for this story."
+        ),
+        btn(true,false,onNext,"Continue")
+      )
+    );
+  }
+
+  return React.createElement(
+    "div",
+    {className:"page"},
+
+    React.createElement(
+      "div",
+      {className:"row-between",style:{marginBottom:14}},
+      React.createElement(
+        "div",
+        null,
+        React.createElement("div",{className:"label"},"Stage 3 / 5"),
+        React.createElement("h2",{style:{marginBottom:0}},"Character consistency")
+      ),
+      React.createElement(
+        "div",
+        {className:"label"},
+        `Character ${charIdx+1} / ${groups.length}`
+      )
+    ),
+
+    React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+      React.createElement("strong",null,`Target character: ${group.name}. `),
+      "Compare the reference images with the generated appearances shown for this character. Judge only identity and visual attributes; do not judge plot, background, or story flow."
+    ),
+
+    React.createElement(
+      "div",
+      {className:"character-target-tabs"},
+      groups.map((g,i)=>
+        React.createElement(
+          "button",
+          {
+            type:"button",
+            key:g.name,
+            className:"character-target-tab"+(i===charIdx?" active":""),
+            onClick:()=>setCharIdx(i)
+          },
+          `${characterComplete(g)?"✓ ":""}${g.name}`
+        )
+      )
+    ),
+
+    React.createElement(
+      "div",
+      {className:"guided-split"},
+
+      React.createElement(
+        "div",
+        {className:"guided-evidence card"},
+
+        React.createElement(
+          "div",
+          {className:"character-compare-grid"},
+
+          React.createElement(
+            "div",
+            {className:"character-compare-side"},
+
+            React.createElement(
+              "div",
+              {className:"character-compare-title"},
+              `REFERENCE — ${group.name}`
+            ),
+
+            React.createElement(
+              "div",
+              {className:"reference-zone-note"},
+              "These are the intended reference appearances."
+            ),
+
+            React.createElement(
+              "div",
+              {className:"ref-image-grid"},
+              group.images.map((img,i)=>
+                React.createElement(
+                  "div",
+                  {className:"ref-card",key:i},
+                  React.createElement(
+                    ImageWithFallback,
+                    {
+                      src:refBase+img.ref,
+                      alt:`${group.name} reference ${i+1}`,
+                      cls:"ref-img",
+                      label:"Reference image",
+                      zoomable:true
+                    }
+                  )
+                )
+              )
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {className:"character-compare-side"},
+
+            React.createElement(
+              "div",
+              {className:"character-compare-title"},
+              `GENERATED APPEARANCES — ${group.name}`
+            ),
+
+            React.createElement(
+              "div",
+              {className:"reference-zone-note"},
+              "These are generated frames from story shots in which this character is intended to appear."
+            ),
+
+            group.shots.length
+              ? React.createElement(
+                  "div",
+                  {className:"character-generated-grid"},
+                  group.shots.map(shot=>
+                    React.createElement(
+                      "div",
+                      {
+                        className:"character-generated-frame",
+                        key:shot.shotId
+                      },
+                      React.createElement(
+                        ImageWithFallback,
+                        {
+                          src:frameBase+shot.frame,
+                          alt:`Generated frame ${shot.n}`,
+                          cls:"sequence-frame-img",
+                          label:`Generated frame ${shot.n}`,
+                          zoomable:true
+                        }
+                      ),
+                      React.createElement(
+                        "div",
+                        {className:"character-generated-label"},
+                        `Generated frame ${shot.n}`
+                      )
+                    )
+                  )
+                )
+              : React.createElement(
+                  "div",
+                  {className:"no-match-note"},
+                  "No generated shot was automatically matched to this character from the story text. Do not guess from unrelated frames."
+                )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"guided-questions"},
+
+        React.createElement(
+          "div",
+          {className:"card"},
+
+          React.createElement(
+            "div",
+            {className:"label"},
+            `RATE ${group.name.toUpperCase()}`
+          ),
+
+          group.shots.length
+            ? React.createElement(
+                React.Fragment,
+                null,
+
+                React.createElement(
+                  Q,
+                  {
+                    q:{
+                      short:"Identity match",
+                      desc:`Do the generated appearances look like the same character as the reference images for ${group.name}? Consider face, body, proportions, and overall identity.`
+                    },
+                    val:cr.identity,
+                    isNA:false,
+                    onRate:v=>rate("identity",v),
+                    onNA:null
+                  }
+                ),
+
+                React.createElement(
+                  Q,
+                  {
+                    q:{
+                      short:"Attribute consistency",
+                      desc:`Are important visual attributes of ${group.name} preserved in the generated appearances, such as clothing, colors, accessories, hairstyle, and body details?`
+                    },
+                    val:cr.attribute,
+                    isNA:false,
+                    onRate:v=>rate("attribute",v),
+                    onNA:null
+                  }
+                )
+              )
+            : React.createElement(
+                "div",
+                {className:"notice"},
+                "This character has no automatically matched generated appearances, so it will be skipped rather than rated from unrelated frames."
+              ),
+
+          React.createElement(
+            "div",
+            {
+              className:"row-between",
+              style:{
+                borderTop:"1px solid var(--border)",
+                paddingTop:16,
+                marginTop:12
+              }
+            },
+            React.createElement(
+              "span",
+              {className:"muted"},
+              !group.shots.length
+                ? "No matched generated appearances — this character will be skipped."
+                : currentComplete
+                  ? ""
+                  : "Please rate both character questions."
+            ),
+            btn(
+              true,
+              !currentComplete,
+              continueAction,
+              charIdx<groups.length-1
+                ? "Next character"
+                : "Continue to scene consistency"
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+
+function SceneStage({item,story,resp,setResp,onNext}){
+  const ik=itemKey(item);
+  const base=outputBase(item);
+  const r=resp[ik]||{na:[]};
+  const [idx,setIdx]=useState(0);
+  const [seen,setSeen]=useState(()=>new Set());
+
+  useEffect(()=>{
+    setIdx(0);
+    setSeen(
+      story.shots.length
+        ? new Set([story.shots[0].shotId])
+        : new Set()
+    );
+  },[ik]);
+
+  const shot=story.shots[idx];
+
+  function rate(qid,v){
+    setResp(p=>{
+      const rr={...(p[ik]||{na:[]})};
+      rr[qid]=v;
+      rr.na=(rr.na||[]).filter(x=>x!==qid);
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function inspect(nextIdx){
+    const safeIdx=Math.max(
+      0,
+      Math.min(
+        story.shots.length-1,
+        nextIdx
+      )
+    );
+
+    setIdx(safeIdx);
+
+    setSeen(prev=>{
+      const next=new Set(prev);
+      const target=story.shots[safeIdx];
+      if(target) next.add(target.shotId);
+      return next;
+    });
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }
+
+  const allSeen=
+    seen.size>=story.shots.length;
+
+  const complete=
+    typeof r.q3_background==="number" &&
+    typeof r.q4_temporal==="number";
+
+  return React.createElement(
+    "div",
+    {className:"page"},
+
+    React.createElement(
+      "div",
+      {className:"row-between",style:{marginBottom:14}},
+      React.createElement(
+        "div",
+        null,
+        React.createElement("div",{className:"label"},"Stage 4 / 5"),
+        React.createElement(
+          "h2",
+          {style:{marginBottom:0}},
+          "Scene and temporal consistency"
+        )
+      ),
+      React.createElement(
+        "div",
+        {className:"label"},
+        `Story shot ${shot.n} · ${idx+1}/${story.shots.length}`
+      )
+    ),
+
+    React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+      React.createElement(
+        "strong",
+        null,
+        "For each shot, read the plot and setting first, then inspect the generated image directly below. "
+      ),
+      "A scene change is not automatically an inconsistency. If the plot indicates a change of place, time, or action, that change is expected. Use the full generated storyboard below to judge continuity across the sequence."
+    ),
+
+    React.createElement(
+      "div",
+      {className:"guided-split"},
+
+      React.createElement(
+        "div",
+        {className:"guided-evidence"},
+
+        React.createElement(
+          "div",
+          {className:"scene-reader"},
+
+          React.createElement(
+            "div",
+            {className:"label"},
+            "PLOT"
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-plot"},
+            shot.plot||
+            "No plot text available."
+          ),
+
+          React.createElement(
+            "div",
+            {className:"label"},
+            "SETTING"
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-setting"},
+            shot.setting||
+            "No setting text available."
+          ),
+
+          React.createElement(
+            "div",
+            {
+              className:"scene-revealed-image",
+              style:{marginTop:18}
+            },
+
+            React.createElement(
+              "div",
+              {
+                className:"label",
+                style:{marginBottom:8}
+              },
+              "GENERATED IMAGE"
+            ),
+
+            React.createElement(
+              ImageWithFallback,
+              {
+                src:base+shot.frame,
+                alt:`Generated frame ${shot.n}`,
+                cls:"alignment-image",
+                label:`Generated frame ${shot.n}`,
+                zoomable:true
+              }
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-nav"},
+
+            btn(
+              false,
+              idx===0,
+              ()=>inspect(idx-1),
+              "← Previous shot"
+            ),
+
+            btn(
+              false,
+              idx===story.shots.length-1,
+              ()=>inspect(idx+1),
+              "Next shot →"
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-progress-note"},
+            `${seen.size} / ${story.shots.length} shots inspected in the sequential view`
+          )
+        ),
+
+        React.createElement(
+          "div",
+          {className:"scene-storyboard"},
+
+          React.createElement(
+            "div",
+            {className:"label",style:{marginBottom:8}},
+            "FULL GENERATED STORY OUTPUT"
+          ),
+
+          React.createElement(
+            "p",
+            {
+              className:"muted",
+              style:{marginTop:0}
+            },
+            "Use this overview to compare scenes across the whole story. Click any frame to inspect its plot, setting, and generated image above."
+          ),
+
+          React.createElement(
+            "div",
+            {className:"scene-storyboard-grid"},
+
+            story.shots.map((s,i)=>
+              React.createElement(
+                "div",
+                {
+                  key:s.shotId,
+                  className:
+                    "scene-storyboard-item"+
+                    (idx===i?" active":"")+
+                    (seen.has(s.shotId)?" visited":""),
+                  onClick:()=>inspect(i)
+                },
+
+                React.createElement(
+                  ImageWithFallback,
+                  {
+                    src:base+s.frame,
+                    alt:`Generated frame ${s.n}`,
+                    cls:"sequence-frame-img",
+                    label:`Frame ${s.n}`,
+                    zoomable:true
+                  }
+                ),
+
+                React.createElement(
+                  "div",
+                  {className:"scene-storyboard-label"},
+                  `Shot ${s.n}`
+                )
+              )
+            )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"guided-questions"},
+
+        React.createElement(
+          "div",
+          {className:"card"},
+
+          React.createElement(
+            "div",
+            {className:"label"},
+            "SEQUENCE-LEVEL RATING"
+          ),
+
+          !allSeen &&
+          React.createElement(
+            "div",
+            {
+              className:"notice",
+              style:{marginBottom:16}
+            },
+            "Please inspect every available shot at least once. You may rate while reviewing, but the Continue button will remain locked until all shots have been inspected."
+          ),
+
+          React.createElement(
+            Q,
+            {
+              q:COMPONENT_QUESTIONS.scene[0],
+              val:r.q3_background,
+              isNA:false,
+              onRate:v=>rate("q3_background",v),
+              onNA:null
+            }
+          ),
+
+          React.createElement(
+            Q,
+            {
+              q:COMPONENT_QUESTIONS.scene[1],
+              val:r.q4_temporal,
+              isNA:false,
+              onRate:v=>rate("q4_temporal",v),
+              onNA:null
+            }
+          ),
+
+          React.createElement(
+            "div",
+            {
+              className:"row-between",
+              style:{
+                borderTop:"1px solid var(--border)",
+                paddingTop:16,
+                marginTop:12
+              }
+            },
+
+            React.createElement(
+              "span",
+              {className:"muted"},
+              !allSeen
+                ? "Inspect every shot before continuing."
+                : complete
+                  ? ""
+                  : "Please answer both questions."
+            ),
+
+            btn(
+              true,
+              !allSeen||!complete,
+              onNext,
+              "Continue to repetition"
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+
+function RadarChart({components}){
+  const cx=210;
+  const cy=210;
+  const radius=135;
+  const levels=5;
+  const count=components.length;
+
+  function pointFor(index,fraction){
+    const angle=
+      -Math.PI/2+
+      (Math.PI*2*index/count);
+
+    return {
+      x:cx+Math.cos(angle)*radius*fraction,
+      y:cy+Math.sin(angle)*radius*fraction
+    };
+  }
+
+  function polygonPoints(fraction){
+    return components
+      .map((_,i)=>{
+        const p=pointFor(i,fraction);
+        return `${p.x},${p.y}`;
+      })
+      .join(" ");
+  }
+
+  const profilePoints=
+    components
+      .map((c,i)=>{
+        const fraction=
+          typeof c.value==="number"
+            ? Math.max(
+                0,
+                Math.min(
+                  1,
+                  c.value/5
+                )
+              )
+            : 0;
+
+        const p=pointFor(
+          i,
+          fraction
+        );
+
+        return `${p.x},${p.y}`;
+      })
+      .join(" ");
+
+  return React.createElement(
+    "div",
+    {className:"radar-shell"},
+
+    React.createElement(
+      "div",
+      {className:"radar-title"},
+      "Your consistency profile"
+    ),
+
+    React.createElement(
+      "div",
+      {className:"radar-subtitle"},
+      "The shape summarizes the six consistency components you rated. A profile extending farther outward indicates stronger perceived consistency."
+    ),
+
+    React.createElement(
+      "svg",
+      {
+        className:"radar-svg",
+        viewBox:"0 0 420 420",
+        role:"img",
+        "aria-label":"Radar chart of the six visual consistency components"
+      },
+
+      Array.from(
+        {length:levels},
+        (_,i)=>
+          React.createElement(
+            "polygon",
+            {
+              key:`grid-${i}`,
+              className:"radar-grid",
+              points:polygonPoints(
+                (i+1)/levels
+              )
+            }
+          )
+      ),
+
+      components.map((c,i)=>{
+        const p=pointFor(i,1);
+
+        return React.createElement(
+          "line",
+          {
+            key:`axis-${c.key}`,
+            className:"radar-axis",
+            x1:cx,
+            y1:cy,
+            x2:p.x,
+            y2:p.y
+          }
+        );
+      }),
+
+      React.createElement(
+        "polygon",
+        {
+          className:"radar-profile",
+          points:profilePoints
+        }
+      ),
+
+      components.map((c,i)=>{
+        const fraction=
+          typeof c.value==="number"
+            ? Math.max(
+                0,
+                Math.min(
+                  1,
+                  c.value/5
+                )
+              )
+            : 0;
+
+        const p=pointFor(
+          i,
+          fraction
+        );
+
+        return React.createElement(
+          "circle",
+          {
+            key:`point-${c.key}`,
+            className:"radar-point",
+            cx:p.x,
+            cy:p.y,
+            r:5
+          }
+        );
+      }),
+
+      components.map((c,i)=>{
+        const p=pointFor(i,1.18);
+
+        const anchor=
+          Math.abs(p.x-cx)<12
+            ? "middle"
+            : p.x>cx
+              ? "start"
+              : "end";
+
+        return React.createElement(
+          "text",
+          {
+            key:`label-${c.key}`,
+            className:"radar-label",
+            x:p.x,
+            y:p.y,
+            textAnchor:anchor,
+            dominantBaseline:"middle"
+          },
+          c.shortLabel
+        );
+      })
+    ),
+
+    React.createElement(
+      "div",
+      {className:"radar-note"},
+      "Your direct overall-consistency judgment was recorded before this graphic appeared and is stored separately."
+    )
+  );
+}
+
+function OverallStage({item,story,resp,setResp,onNext,submitting}){
+  const ik=itemKey(item);
+  const base=outputBase(item);
+  const r=resp[ik]||{
+    na:[],
+    repetition:{}
+  };
+  const repetition=r.repetition||{};
+
+  const [repIdx,setRepIdx]=useState(1);
+  const [resultShown,setResultShown]=useState(false);
+
+  useEffect(()=>{
+    setRepIdx(1);
+    setResultShown(false);
+  },[ik]);
+
+  function setRep(shotId,value){
+    setResp(p=>{
+      const rr={
+        ...(p[ik]||{
+          na:[],
+          repetition:{}
+        })
+      };
+
+      rr.repetition={
+        ...(rr.repetition||{}),
+        [shotId]:value
+      };
+
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function rate(qid,v){
+    if(resultShown)return;
+
+    setResp(p=>{
+      const rr={
+        ...(p[ik]||{
+          na:[],
+          repetition:{}
+        })
+      };
+
+      rr[qid]=v;
+      rr.na=(rr.na||[])
+        .filter(x=>x!==qid);
+
+      return {...p,[ik]:rr};
+    });
+  }
+
+  function mean(vals){
+    const x=vals.filter(
+      v=>typeof v==="number"
+    );
+
+    return x.length
+      ? x.reduce((a,b)=>a+b,0)/x.length
+      : null;
+  }
+
+  const identity=
+    mean(
+      Object.values(r.characterRatings||{})
+        .map(x=>x?.identity)
+    );
+
+  const attribute=
+    mean(
+      Object.values(r.characterRatings||{})
+        .map(x=>x?.attribute)
+    );
+
+  const alignment=
+    mean(
+      Object.values(r.alignment||{})
+    );
+
+  const componentValues=[
+    {
+      key:"identity",
+      label:"Character identity",
+      shortLabel:"Identity",
+      value:identity
+    },
+    {
+      key:"attribute",
+      label:"Character attributes",
+      shortLabel:"Attributes",
+      value:attribute
+    },
+    {
+      key:"background",
+      label:"Background / scene",
+      shortLabel:"Scene",
+      value:
+        typeof r.q3_background==="number"
+          ? r.q3_background
+          : null
+    },
+    {
+      key:"temporal",
+      label:"Temporal continuity",
+      shortLabel:"Temporal",
+      value:
+        typeof r.q4_temporal==="number"
+          ? r.q4_temporal
+          : null
+    },
+    {
+      key:"alignment",
+      label:"Text-image alignment",
+      shortLabel:"Alignment",
+      value:alignment
+    },
+    {
+      key:"noncopy",
+      label:"Avoidance of repetition",
+      shortLabel:"Non-copy",
+      value:
+        typeof r.q6_noncopy==="number"
+          ? r.q6_noncopy
+          : null
+    }
+  ];
+
+  const repetitionTargets=
+    story.shots.slice(1);
+
+  const repetitionComplete=
+    repetitionTargets.every(
+      s=>!!repetition[s.shotId]
+    );
+
+  const sequenceComplete=
+    typeof r.q6_noncopy==="number" &&
+    typeof r.q7_overall==="number";
+
+  const complete=
+    repetitionComplete &&
+    sequenceComplete;
+
+  const currentIndex=
+    Math.max(
+      1,
+      Math.min(
+        repIdx,
+        story.shots.length-1
+      )
+    );
+
+  const prevShot=
+    story.shots[
+      Math.max(
+        0,
+        currentIndex-1
+      )
+    ];
+
+  const currentShot=
+    story.shots[currentIndex];
+
+  const currentRepValue=
+    currentShot
+      ? repetition[currentShot.shotId]
+      : null;
+
+  function advanceRepetition(){
+    if(!currentShot || !currentRepValue)return;
+
+    if(currentIndex<story.shots.length-1){
+      setRepIdx(currentIndex+1);
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+    }
+  }
+
+  const ratedCount=
+    repetitionTargets.filter(
+      s=>!!repetition[s.shotId]
+    ).length;
+
+  return React.createElement(
+    "div",
+    {className:"page"},
+
+    React.createElement(
+      "div",
+      {
+        className:"row-between",
+        style:{marginBottom:14}
+      },
+
+      React.createElement(
+        "div",
+        null,
+
+        React.createElement(
+          "div",
+          {className:"label"},
+          "Stage 5 / 5"
+        ),
+
+        React.createElement(
+          "h2",
+          {style:{marginBottom:0}},
+          "Repetition and overall consistency"
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"label"},
+        `${story.shots.length} available frames`
+      )
+    ),
+
+    React.createElement(
+      "div",
+      {className:"stage-focus-guide"},
+
+      React.createElement(
+        "strong",
+        null,
+        "Repetition is checked sequentially. "
+      ),
+
+      "Frame 1 is the starting frame. From Frame 2 onward, compare each generated frame with the immediately previous frame and decide whether it is distinct, visually similar, or near-duplicated/copy-pasted."
+    ),
+
+    React.createElement(
+      "div",
+      {className:"guided-split"},
+
+      React.createElement(
+        "div",
+        {className:"guided-evidence"},
+
+        !repetitionComplete &&
+        React.createElement(
+          "div",
+          {className:"repetition-seq-card"},
+
+          React.createElement(
+            "div",
+            {className:"repetition-seq-instruction"},
+
+            React.createElement(
+              "strong",
+              null,
+              "How to compare: "
+            ),
+
+            "Look at the previous generated frame on the left, then the current generated frame on the right. Judge the current frame only in relation to the previous one."
+          ),
+
+          React.createElement(
+            "div",
+            {className:"repetition-pair"},
+
+            React.createElement(
+              "div",
+              {className:"repetition-pair-panel"},
+
+              React.createElement(
+                "div",
+                {className:"repetition-pair-title"},
+                `Previous frame — ${prevShot.n}`
+              ),
+
+              React.createElement(
+                ImageWithFallback,
+                {
+                  src:base+prevShot.frame,
+                  alt:`Previous generated frame ${prevShot.n}`,
+                  cls:"sequence-frame-img",
+                  label:`Generated frame ${prevShot.n}`,
+                  zoomable:true
+                }
+              ),
+
+              React.createElement(
+                "div",
+                {className:"repetition-pair-note"},
+                "Use this as the comparison reference."
+              )
+            ),
+
+            React.createElement(
+              "div",
+              {className:"repetition-pair-panel"},
+
+              React.createElement(
+                "div",
+                {className:"repetition-pair-title"},
+                `Current frame — ${currentShot.n}`
+              ),
+
+              React.createElement(
+                ImageWithFallback,
+                {
+                  src:base+currentShot.frame,
+                  alt:`Current generated frame ${currentShot.n}`,
+                  cls:"sequence-frame-img",
+                  label:`Generated frame ${currentShot.n}`,
+                  zoomable:true
+                }
+              ),
+
+              React.createElement(
+                "div",
+                {className:"repetition-pair-note"},
+                "Rate how repetitive this frame is compared with the previous frame."
+              )
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {className:"repetition-answer-box"},
+
+            React.createElement(
+              "div",
+              {className:"repetition-answer-title"},
+              `How does Frame ${currentShot.n} compare with Frame ${prevShot.n}?`
+            ),
+
+            React.createElement(
+              "div",
+              {className:"repetition-answer-desc"},
+              "Choose the option that best describes unnecessary visual repetition. Similar story content is allowed; focus on whether the generated image itself looks reused or copy-pasted."
+            ),
+
+            React.createElement(
+              "div",
+              {className:"repetition-answer-row"},
+
+              [
+                [
+                  "distinct",
+                  "Distinct"
+                ],
+                [
+                  "similar",
+                  "Similar"
+                ],
+                [
+                  "near_duplicate",
+                  "Near-duplicate"
+                ]
+              ].map(([value,label])=>
+                React.createElement(
+                  "button",
+                  {
+                    type:"button",
+                    key:value,
+                    className:
+                      "repetition-answer-btn"+
+                      (
+                        currentRepValue===value
+                          ? " selected"
+                          : ""
+                      ),
+                    onClick:()=>
+                      setRep(
+                        currentShot.shotId,
+                        value
+                      )
+                  },
+                  label
+                )
+              )
+            ),
+
+            React.createElement(
+              "div",
+              {className:"row-between",style:{marginTop:14}},
+
+              React.createElement(
+                "span",
+                {className:"muted"},
+                `Comparison ${ratedCount+1} of ${repetitionTargets.length}`
+              ),
+
+              btn(
+                true,
+                !currentRepValue,
+                advanceRepetition,
+                currentIndex<story.shots.length-1
+                  ? "Save & compare next frame"
+                  : "Complete repetition check"
+              )
+            ),
+
+            React.createElement(
+              "div",
+              {className:"repetition-progress"},
+              `${ratedCount} / ${repetitionTargets.length} repetition comparisons completed`
+            )
+          )
+        ),
+
+        repetitionComplete &&
+        React.createElement(
+          "div",
+          {className:"success"},
+          "Repetition check complete. You compared every available frame with its immediately previous frame."
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"guided-questions"},
+
+        React.createElement(
+          "div",
+          {className:"card"},
+
+          React.createElement(
+            "div",
+            {className:"label"},
+            resultShown
+              ? "YOUR CONSISTENCY PROFILE"
+              : "SEQUENCE-LEVEL RATING"
+          ),
+
+          !repetitionComplete &&
+          React.createElement(
+            "div",
+            {
+              className:"notice",
+              style:{marginBottom:16}
+            },
+            "Complete the sequential repetition comparisons on the left before giving the sequence-level ratings."
+          ),
+
+          repetitionComplete &&
+          !resultShown &&
+          React.createElement(
+            React.Fragment,
+            null,
+
+            React.createElement(
+              Q,
+              {
+                q:COMPONENT_QUESTIONS.overall[0],
+                val:r.q6_noncopy,
+                isNA:false,
+                onRate:v=>
+                  rate(
+                    "q6_noncopy",
+                    v
+                  ),
+                onNA:null
+              }
+            ),
+
+            React.createElement(
+              "div",
+              {
+                className:
+                  "independent-overall-note"
+              },
+
+              React.createElement(
+                "strong",
+                null,
+                "Give your independent overall judgment first. "
+              ),
+
+              "The visual component profile is intentionally hidden until after you answer, so it cannot influence your overall rating."
+            ),
+
+            React.createElement(
+              Q,
+              {
+                q:COMPONENT_QUESTIONS.overall[1],
+                val:r.q7_overall,
+                isNA:false,
+                onRate:v=>
+                  rate(
+                    "q7_overall",
+                    v
+                  ),
+                onNA:null
+              }
+            )
+          ),
+
+          resultShown &&
+          React.createElement(
+            "div",
+            {className:"result-card"},
+
+            React.createElement(
+              "div",
+              {className:"label"},
+              "YOUR CONSISTENCY PROFILE"
+            ),
+
+            React.createElement(
+              RadarChart,
+              {
+                components:
+                  componentValues
+              }
+            ),
+
+            React.createElement(
+              "div",
+              {
+                className:
+                  "independent-overall-note",
+                style:{marginBottom:0}
+              },
+
+              React.createElement(
+                "strong",
+                null,
+                "Compare the shape with your own overall impression. "
+              ),
+
+              "There is no single calculated number shown to you. Differences between your direct overall judgment and the component profile are useful research information."
+            )
+          ),
+
+          React.createElement(
+            "div",
+            {
+              className:"row-between",
+              style:{
+                borderTop:
+                  "1px solid var(--border)",
+                paddingTop:16,
+                marginTop:16
+              }
+            },
+
+            React.createElement(
+              "span",
+              {className:"muted"},
+
+              !repetitionComplete
+                ? "Complete the sequential repetition check first."
+                : !sequenceComplete
+                  ? "Please answer both sequence-level questions."
+                  : !resultShown
+                    ? "Your ratings are complete. View your visual consistency profile before continuing."
+                    : ""
+            ),
+
+            !resultShown
+              ? btn(
+                  true,
+                  !complete,
+                  ()=>setResultShown(true),
+                  "Show my consistency profile"
+                )
+              : btn(
+                  true,
+                  submitting,
+                  onNext,
+                  submitting
+                    ? "Submitting..."
+                    : "Finish story"
+                )
+          )
+        )
+      )
+    )
+  );
+}
+
 function ComponentStage({item,story,stage,resp,setResp,onNext,submitting}) {
   const ik = itemKey(item);
   const r = resp[ik] || {na:[]};
@@ -2606,21 +4877,300 @@ function ComponentStage({item,story,stage,resp,setResp,onNext,submitting}) {
   );
 }
 
-function Done({pid,status}){
-  return React.createElement("div",{className:"page"},
-    React.createElement("div",{className:"card",style:{textAlign:"center",padding:"44px 22px"}},
-      React.createElement("h2",null,"Thank you for your participation"),
-      React.createElement("p",{className:"muted"},status==="local_only"?"Responses were saved as local backup.":"Your responses have been successfully submitted."),
-      React.createElement("div",{style:{display:"inline-block",background:"var(--light)",borderRadius:"var(--rs)",padding:"12px 24px",marginBottom:16}},
-        React.createElement("div",{className:"label"},"Participant code"),
-        React.createElement("div",{style:{fontSize:24,letterSpacing:".12em",fontWeight:650,color:"var(--accent)"}},pid)
+
+const IMPORTANCE_COMPONENTS=[
+  {
+    key:"identity",
+    label:"Character identity consistency"
+  },
+  {
+    key:"attribute",
+    label:"Character attribute consistency"
+  },
+  {
+    key:"background",
+    label:"Background / scene consistency"
+  },
+  {
+    key:"temporal",
+    label:"Temporal / sequential continuity"
+  },
+  {
+    key:"alignment",
+    label:"Text-image alignment"
+  },
+  {
+    key:"noncopy",
+    label:"Avoidance of repetition / copy-paste"
+  }
+];
+
+const IMPORTANCE_SCALE=[
+  {v:1,label:"Not important"},
+  {v:2,label:"Slightly"},
+  {v:3,label:"Moderately"},
+  {v:4,label:"Very"},
+  {v:5,label:"Extremely"}
+];
+
+function ComponentImportance({onSubmit,submitting}){
+  const [mostImportant,setMostImportant]=useState("");
+
+  const [ratings,setRatings]=useState(
+    Object.fromEntries(
+      IMPORTANCE_COMPONENTS.map(
+        c=>[c.key,null]
+      )
+    )
+  );
+
+  function updateRating(key,value){
+    setRatings({
+      ...ratings,
+      [key]:value
+    });
+  }
+
+  const allRated=
+    IMPORTANCE_COMPONENTS.every(
+      c=>typeof ratings[c.key]==="number"
+    );
+
+  const valid=
+    mostImportant &&
+    allRated;
+
+  return React.createElement(
+    "div",
+    {className:"page"},
+
+    React.createElement(
+      "div",
+      {className:"card"},
+
+      React.createElement(
+        "div",
+        {className:"label"},
+        "FINAL QUESTION"
       ),
-      status==="error"&&React.createElement("div",{className:"error"},"Submission encountered an issue, but local backup was stored."),
-      status==="sent"&&React.createElement("div",{className:"success"},"Responses logged online successfully.")
+
+      React.createElement(
+        "h2",
+        null,
+        "What matters most for visual story consistency?"
+      ),
+
+      React.createElement(
+        "div",
+        {className:"main-point"},
+        React.createElement(
+          "strong",
+          null,
+          "Think across all six stories you evaluated. "
+        ),
+        "There is no need to calculate percentages or make your answers add up to a fixed total."
+      ),
+
+      React.createElement(
+        "div",
+        {
+          className:"question",
+          style:{marginTop:20}
+        },
+
+        React.createElement(
+          "div",
+          {className:"q-title"},
+          "Which single component do you consider the most important?"
+        ),
+
+        React.createElement(
+          "div",
+          {className:"q-desc"},
+          "Choose the one component that contributes most strongly to your judgment of whether a generated visual story is consistent."
+        ),
+
+        React.createElement(
+          "select",
+          {
+            value:mostImportant,
+            onChange:e=>
+              setMostImportant(
+                e.target.value
+              ),
+            style:{
+              marginTop:14,
+              width:"100%",
+              maxWidth:620
+            }
+          },
+
+          React.createElement(
+            "option",
+            {value:""},
+            "Select one component"
+          ),
+
+          IMPORTANCE_COMPONENTS.map(
+            c=>
+              React.createElement(
+                "option",
+                {
+                  key:c.key,
+                  value:c.key
+                },
+                c.label
+              )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {
+          className:"question",
+          style:{marginTop:18}
+        },
+
+        React.createElement(
+          "div",
+          {className:"q-title"},
+          "How important is each component to your overall consistency judgment?"
+        ),
+
+        React.createElement(
+          "div",
+          {className:"q-desc"},
+          "Rate each component independently from 1 to 5. You do not need to compare totals or make the ratings add up to anything."
+        ),
+
+        React.createElement(
+          "div",
+          {className:"importance-rating-list"},
+
+          IMPORTANCE_COMPONENTS.map(
+            c=>
+              React.createElement(
+                "div",
+                {
+                  className:"importance-rating-row",
+                  key:c.key
+                },
+
+                React.createElement(
+                  "div",
+                  {className:"importance-rating-name"},
+                  c.label
+                ),
+
+                React.createElement(
+                  "div",
+                  {className:"importance-mini-scale"},
+
+                  IMPORTANCE_SCALE.map(
+                    s=>
+                      React.createElement(
+                        "button",
+                        {
+                          type:"button",
+                          key:s.v,
+                          className:
+                            "importance-mini-btn"+
+                            (
+                              ratings[c.key]===s.v
+                                ? " selected"
+                                : ""
+                            ),
+                          onClick:()=>
+                            updateRating(
+                              c.key,
+                              s.v
+                            )
+                        },
+
+                        React.createElement(
+                          "div",
+                          {className:"importance-mini-num"},
+                          s.v
+                        ),
+
+                        React.createElement(
+                          "div",
+                          {className:"importance-mini-label"},
+                          s.label
+                        )
+                      )
+                  )
+                )
+              )
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {
+          className:"row-between",
+          style:{
+            borderTop:
+              "1px solid var(--border)",
+            marginTop:20,
+            paddingTop:18
+          }
+        },
+
+        React.createElement(
+          "span",
+          {className:"muted"},
+          valid
+            ? ""
+            : "Choose one most-important component and rate all six components."
+        ),
+
+        btn(
+          true,
+          !valid||submitting,
+          ()=>onSubmit({
+            mostImportant,
+            ratings
+          }),
+          submitting
+            ? "Submitting..."
+            : "Submit final response"
+        )
+      )
     )
   );
 }
 
+function Done({pid,status}){
+  return React.createElement(
+    "div",
+    {className:"page"},
+    React.createElement(
+      "div",
+      {
+        className:"card",
+        style:{
+          textAlign:"center",
+          padding:"48px 24px"
+        }
+      },
+      React.createElement(
+        "h2",
+        null,
+        "Thank you for your participation"
+      ),
+      React.createElement(
+        "p",
+        {className:"muted"},
+        status==="local_only"
+          ? "This was local test mode. Your responses were saved only in this browser."
+          : "Your responses have been successfully submitted."
+      )
+    )
+  );
+}
 function RuntimeError({message,onBack}){
   return React.createElement("div",{className:"page"},
     React.createElement("div",{className:"card"},
@@ -2636,6 +5186,7 @@ function App(){
   const[phase,setPhase]=useState("loading");
   const[manifest,setManifest]=useState(null);
   const[assign,setAssign]=useState(null);
+  const[characterMapping,setCharacterMapping]=useState(null);
   const[err,setErr]=useState("");
   const[pid,setPid]=useState("");
   const[meta,setMeta]=useState(null);
@@ -2647,11 +5198,25 @@ function App(){
   const[resp,setResp]=useState({});
   const[submitting,setSubmitting]=useState(false);
   const[status,setStatus]=useState("sent");
+  const[componentImportance,setComponentImportance]=useState(null);
 
   useEffect(()=>{
-    Promise.all([getJson("data/manifest.json"),getJson("data/assignments.json")])
-      .then(([m,a])=>{setManifest(m);setAssign(a);setPhase("welcome")})
-      .catch(e=>{setErr(String(e));setPhase("welcome")})
+    Promise.all([
+      getJson("data/manifest.json"),
+      getJson("data/assignments.json"),
+      getJson("data/shot_character_mapping.json")
+    ])
+      .then(([m,a,c])=>{
+        validateCharacterMapping(m,c);
+        setManifest(m);
+        setAssign(a);
+        setCharacterMapping(c);
+        setPhase("welcome");
+      })
+      .catch(e=>{
+        setErr(String(e));
+        setPhase("welcome");
+      })
   },[]);
 
   async function loadItem(i,itemList=items){
@@ -2660,7 +5225,7 @@ function App(){
 
       if(!item){
         throw new Error(
-          "No item found. Please verify assignments.json and manifest.json."
+          "No item found. Please verify assignments.json, manifest.json, and shot_character_mapping.json."
         );
       }
 
@@ -2669,6 +5234,12 @@ function App(){
 
       const storyData = await getJson(storyUrl);
       const st = normalizeStory(storyData,item);
+
+      validateStoryCharacterNames(
+        item,
+        st,
+        characterMapping
+      );
 
       if(!st.shots.length){
         throw new Error(
@@ -2714,7 +5285,32 @@ function App(){
 
   function nextIntro(){setPhase("alignment")}
   function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else setPhase("character")}
-  function averageAlignment(r){const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:""}
+  function averageAlignment(r){
+    const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");
+    return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:"";
+  }
+
+  function averageCharacterRating(r,field){
+    const vals=Object.values(r.characterRatings||{})
+      .map(x=>x?.[field])
+      .filter(v=>typeof v==="number");
+    return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:"";
+  }
+
+  function componentBasedScore(r){
+    const values=[
+      averageCharacterRating(r,"identity"),
+      averageCharacterRating(r,"attribute"),
+      r.q3_background,
+      r.q4_temporal,
+      averageAlignment(r),
+      r.q6_noncopy
+    ].filter(v=>typeof v==="number");
+
+    return values.length
+      ? values.reduce((a,b)=>a+b,0)/values.length
+      : "";
+  }
 
   async function finishSeq(){
     const item=items[itemIdx];
@@ -2731,7 +5327,15 @@ function App(){
       itemIndex:itemIdx+1,
       totalItems:items.length,
       itemMeta:item,
-      responses:{[ik]:{...itemResp,q5_alignment:averageAlignment(itemResp)}}
+      responses:{
+        [ik]:{
+          ...itemResp,
+          q1_identity:averageCharacterRating(itemResp,"identity"),
+          q2_attribute:averageCharacterRating(itemResp,"attribute"),
+          q5_alignment:averageAlignment(itemResp),
+          component_based_score:componentBasedScore(itemResp)
+        }
+      }
     };
     setSubmitting(true);
     try{
@@ -2745,28 +5349,49 @@ function App(){
     if(itemIdx<items.length-1){
       const ni=itemIdx+1;
       setItemIdx(ni);
-      await loadItem(ni,items)
+      await loadItem(ni,items);
     }else{
-      const completion={
-        submissionType:"session_complete",
-        surveyVersion:CONFIG.surveyVersion,
-        dataset:CONFIG.dataset,
-        pid,
-        groupId:meta.groupId,
-        timestamp:new Date().toISOString(),
-        participantMeta:meta,
-        completedItems:items.length
-      };
-      try{
-        const finalResult=await submit(completion);
-        if(finalResult.status)setStatus(finalResult.status);
-      }catch(e){
-        console.error(e);
-        setStatus("error");
-      }
-      localStorage.setItem("spice_study_completed","true");
-      setPhase("done")
+      setPhase("importance");
     }
+  }
+
+  async function finishSession(importance){
+    setComponentImportance(importance);
+    setSubmitting(true);
+
+    const completion={
+      submissionType:"session_complete",
+      surveyVersion:CONFIG.surveyVersion,
+      dataset:CONFIG.dataset,
+      pid,
+      groupId:meta.groupId,
+      timestamp:new Date().toISOString(),
+      participantMeta:meta,
+      completedItems:items.length,
+      componentImportance:importance
+    };
+
+    try{
+      const finalResult=
+        await submit(completion);
+
+      if(finalResult.status){
+        setStatus(finalResult.status);
+      }
+
+      localStorage.setItem(
+        "spice_study_completed",
+        "true"
+      );
+
+      setPhase("done");
+
+    }catch(e){
+      console.error(e);
+      setStatus("error");
+    }
+
+    setSubmitting(false);
   }
 
   if(phase==="loading")return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},"Loading..."));
@@ -2777,9 +5402,10 @@ function App(){
     phase==="setup"&&React.createElement(Setup,{assignments:assign||{},pid,onGo:setupDone}),
     phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),
     phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),
-    phase==="character"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"character",resp,setResp,onNext:()=>setPhase("scene"),submitting:false}),
-    phase==="scene"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"scene",resp,setResp,onNext:()=>setPhase("overall"),submitting:false}),
-    phase==="overall"&&story&&React.createElement(ComponentStage,{item:cur,story,stage:"overall",resp,setResp,onNext:finishSeq,submitting}),
+    phase==="character"&&story&&React.createElement(CharacterStage,{item:cur,story,characterMapping,resp,setResp,onNext:()=>setPhase("scene")}),
+    phase==="scene"&&story&&React.createElement(SceneStage,{item:cur,story,resp,setResp,onNext:()=>setPhase("overall")}),
+    phase==="overall"&&story&&React.createElement(OverallStage,{item:cur,story,resp,setResp,onNext:finishSeq,submitting}),
+    phase==="importance"&&React.createElement(ComponentImportance,{onSubmit:finishSession,submitting}),
     phase==="done"&&React.createElement(Done,{pid,status}),
     phase==="runtime_error"&&React.createElement(RuntimeError,{message:err,onBack:()=>setPhase("setup")})
   );
