@@ -3828,7 +3828,7 @@ function SceneStage({item,story,resp,setResp,onNext}){
         null,
         "For each shot, read the plot and setting first, then inspect the generated image directly below. "
       ),
-      "A scene change is not automatically an inconsistency. If the plot indicates a change of place, time, or action, that change is expected. Use the full generated storyboard below to judge continuity across the sequence."
+      "Please inspect every available shot at least once. You may rate while reviewing, but the Continue button will remain locked until all shots have been inspected."
     ),
 
     React.createElement(
@@ -4000,9 +4000,8 @@ function SceneStage({item,story,resp,setResp,onNext}){
             {
               className:"notice",
               style:{marginBottom:16}
-            },
-            "Please inspect every available shot at least once. You may rate while reviewing, but the Continue button will remain locked until all shots have been inspected."
-          ),
+            }),
+          
 
           React.createElement(
             Q,
