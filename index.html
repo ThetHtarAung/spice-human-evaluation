@@ -1683,23 +1683,12 @@ function jsonp(url,params={}){
 }
 
 async function claimAutomaticGroup(pid,assignments){
-  const cached=
-    (localStorage.getItem("spice_group_assignment")||"")
-      .trim()
-      .toUpperCase();
-
-  if(cached && getAssignmentIds(assignments,cached).length){
-    return {
-      ok:true,
-      groupId:cached,
-      source:"browser_cache"
-    };
-  }
-
   if(!onlineReady()){
     throw new Error("Google Apps Script URL is not configured.");
   }
 
+  // Always ask the server.
+  // Google Sheets / Apps Script is the source of truth for assignment.
   const result=await jsonp(
     CONFIG.googleAppsScriptUrl,
     {
@@ -1717,11 +1706,10 @@ async function claimAutomaticGroup(pid,assignments){
       );
     }
 
-    localStorage.setItem("spice_group_assignment",group);
-
     return {
       ...result,
-      groupId:group
+      groupId:group,
+      source:"server"
     };
   }
 
@@ -2313,19 +2301,12 @@ function Setup({assignments,pid,onGo}) {
     CONFIG.requireOnlineSubmission &&
     CONFIG.autoAllocateGroup;
 
-  const cachedGroup =
-    (localStorage.getItem("spice_group_assignment")||"")
-      .trim()
-      .toUpperCase();
-
-  const [g,setG] = useState(
-    onlineMode ? cachedGroup : ""
-  );
+  // Do not load an assignment group from browser cache.
+  // The server will decide the current group for this PID.
+  const [g,setG] = useState("");
 
   const [assignmentState,setAssignmentState] = useState(
-    onlineMode
-      ? (cachedGroup ? "checking" : "loading")
-      : "manual"
+    onlineMode ? "loading" : "manual"
   );
 
   const [assignmentMessage,setAssignmentMessage] = useState(
