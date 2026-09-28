@@ -1569,6 +1569,20 @@ p { line-height: 1.6; }
 .scene-context-shot { font-weight: 700; color: var(--muted); }
 .scene-context-copy { line-height: 1.5; }
 .scene-context-setting-inline { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.scene-current-context {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--rs);
+  background: #f8fafc;
+  padding: 14px 16px;
+}
+.scene-current-context-title {
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.scene-current-context-copy {
+  line-height: 1.55;
+}
 .scene-inspection-card {
   border: 1px solid var(--border);
   border-radius: var(--r);
@@ -1714,7 +1728,7 @@ const CONFIG={
   surveyVersion:"SPICE-HUMAN-2026-08",
 
   // Paste the deployed Google Apps Script /exec URL here for the real study.
-  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbzpEnfVu7PozrcApfmqbSL6xX2J5qUFNRDQtO1pYWIGdKiGF951rmWhKnZG0UKuH4Ws/exec",
+  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbz4M6sgaZOzLRRlp6OElCtWMZ9jqKScD_ECtqAVPpC4g3u1735xfajckd68inmK_-OU/exec",
 
   // true  = final online study: automatically allocate an unused G01-G54.
   // false = local testing: manually enter a test group code.
@@ -4023,30 +4037,38 @@ function SceneStage({item,story,resp,setResp,onNext}){
     React.createElement(
       "div",
       {className:"stage-focus-guide"},
-      React.createElement("strong",null,"1. Read the story context. 2. Inspect every generated frame in order. 3. Answer the two questions.")
-    ),
-
-    React.createElement(
-      "div",
-      {className:"scene-context-list"},
-      React.createElement("div",{className:"scene-context-list-title"},"Story context — read before rating"),
-      story.shots.map(sht=>
-        React.createElement(
-          "div",
-          {className:"scene-context-item",key:`context-${sht.shotId}`},
-          React.createElement("div",{className:"scene-context-shot"},`Shot ${sht.n}`),
-          React.createElement("div",{className:"scene-context-copy"},
-            React.createElement("div",null,sht.plot||"No plot text available."),
-            sht.setting&&React.createElement("div",{className:"scene-context-setting-inline"},`Setting: ${sht.setting}`)
-          )
-        )
-      )
+      React.createElement("strong",null,"For each shot, read the story context and inspect the generated frame together. Then answer the two questions.")
     ),
 
     React.createElement(
       "div",
       {className:"scene-inspection-card"},
-      React.createElement("div",{className:"label",style:{marginBottom:10}},"Inspect generated sequence"),
+
+      React.createElement(
+        "div",
+        {className:"scene-current-context"},
+        React.createElement(
+          "div",
+          {className:"scene-current-context-title"},
+          `Story context · Shot ${shot.n}`
+        ),
+        React.createElement(
+          "div",
+          {className:"scene-current-context-copy"},
+          React.createElement("div",null,shot.plot||"No plot text available."),
+          shot.setting&&React.createElement(
+            "div",
+            {className:"scene-context-setting-inline"},
+            `Setting: ${shot.setting}`
+          )
+        )
+      ),
+
+      React.createElement(
+        "div",
+        {className:"label",style:{margin:"16px 0 10px"}},
+        "Generated frame"
+      ),
 
       React.createElement(
         "div",
