@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Visual Story Consistency Human Evaluation</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -31,19 +30,17 @@
   --oktext: #166534;
   --r: 12px;
   --rs: 8px;
-  --font-display: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-mono: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
   background: var(--bg);
-  background-image: radial-gradient(circle at 1px 1px, rgba(15,23,42,.04) 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
@@ -1519,6 +1516,156 @@ p { line-height: 1.6; }
     display:none;
   }
 }
+
+/* Formal academic introduction */
+.study-intro {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.study-meta {
+  margin: 18px 0 22px;
+  padding: 16px 18px;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+}
+.study-meta-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  padding: 6px 0;
+  font-size: 15px;
+}
+.study-meta-row + .study-meta-row { border-top: 1px solid var(--border); }
+.study-meta-key { font-weight: 700; }
+.study-section { margin-top: 22px; }
+.study-section h3 { margin-bottom: 7px; }
+.study-section p { margin: 0; color: var(--text); line-height: 1.65; }
+.study-facts {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  line-height: 1.7;
+}
+
+/* Simplified Scene / Temporal stage */
+.scene-context-list {
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: #fff;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+.scene-context-list-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.scene-context-item {
+  display: grid;
+  grid-template-columns: 70px minmax(0,1fr);
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--border);
+}
+.scene-context-item:first-of-type { border-top: 0; }
+.scene-context-shot { font-weight: 700; color: var(--muted); }
+.scene-context-copy { line-height: 1.5; }
+.scene-context-setting-inline { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.scene-inspection-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: #fff;
+  padding: 18px;
+}
+.scene-fixed-viewer {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  overflow: hidden;
+}
+.scene-fixed-viewer .zoomable-image-button {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.scene-fixed-viewer .zoom-hint {
+  flex: 0 0 22px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.scene-fixed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.scene-step-caption {
+  text-align: center;
+  margin: 10px 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.scene-question-panel {
+  margin-top: 18px;
+  border-top: 2px solid var(--border-strong);
+  padding-top: 18px;
+}
+.scene-question-panel h3 { margin-bottom: 4px; }
+.scene-question-panel > .muted { margin-top: 0; }
+
+/* Specific repetition scale */
+.repetition-summary-scale {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+.repetition-summary-btn {
+  min-height: 74px;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  border-radius: var(--rs);
+  padding: 9px 6px;
+  cursor: pointer;
+  text-align: center;
+}
+.repetition-summary-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+.repetition-summary-num { font-size: 18px; font-weight: 700; }
+.repetition-summary-label { margin-top: 4px; font-size: 11.5px; line-height: 1.25; }
+.radar-summary {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.radar-summary-item {
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  background: #f8fafc;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.radar-summary-item strong { display: block; margin-bottom: 2px; }
+
+@media(max-width:700px){
+  .study-meta-row { grid-template-columns: 1fr; gap: 3px; }
+  .scene-fixed-viewer { height: 340px; }
+  .scene-context-item { grid-template-columns: 55px minmax(0,1fr); }
+  .repetition-summary-scale { grid-template-columns: 1fr; }
+  .radar-summary { grid-template-columns: 1fr; }
+}
+
 /* Responsive Layout */
 @media(max-width:1050px) {
   .page { padding: 16px; }
@@ -1562,7 +1709,7 @@ const {useState,useEffect}=React;
 
 const CONFIG={
   title:"Visual Story Consistency Evaluation",
-  institution:"Ritsumeikan University — Visual Information Engineering Lab",
+  institution:"Ritsumeikan University — Visual Information Engineering Laboratory",
   dataset:"ViStoryBench-Lite",
   surveyVersion:"SPICE-HUMAN-2026-08",
 
@@ -1589,7 +1736,7 @@ const COMPONENT_QUESTIONS={
     {id:"q4_temporal",short:"Temporal / sequential continuity",desc:"Focus only on visual continuity across the ordered story. Do characters, scenes, and visual changes progress coherently from one frame to the next?"}
   ],
   overall:[
-    {id:"q6_noncopy",short:"Avoidance of repetition / copy-paste",desc:"Focus on repetition. When the story changes, do the images avoid looking overly repeated, duplicated, or copy-pasted?"},
+    {id:"q6_noncopy",short:"Unnecessary visual repetition / copy-paste",desc:"How much unnecessary visual repetition or copy-paste did you notice across this generated story?"},
     {id:"q7_overall",short:"Overall visual story consistency",desc:"Considering all previous aspects, how visually consistent and coherent is this generated story overall?"}
   ]
 };
@@ -1604,13 +1751,13 @@ const COMPONENT_STAGE_INFO={
   scene:{
     label:"Stage 4 / 5",
     title:"Scene and temporal consistency",
-    instruction:"Inspect the generated sequence in order. Read the plot and setting for context so you can distinguish an intended scene change from an inconsistency.",
+    instruction:"Read the story context, inspect the generated sequence in order, then answer two consistency questions.",
     footer:"After this page, you will evaluate repetition and overall consistency."
   },
   overall:{
     label:"Stage 5 / 5",
     title:"Repetition and overall consistency",
-    instruction:"Inspect the complete generated sequence again. First check for unnecessary repetition or copy-paste behavior, then judge the visual consistency of the story as a whole.",
+    instruction:"Compare consecutive frames for repetition, then rate the story as a whole.",
     footer:"After this page, your ratings for this story output will be submitted."
   }
 };
@@ -2255,25 +2402,111 @@ function Q({q,val,isNA,onRate,onNA}){
   );
 }
 
+function RepetitionSummaryQuestion({val,onRate}){
+  const options=[
+    {v:1,label:"Very high repetition"},
+    {v:2,label:"High repetition"},
+    {v:3,label:"Moderate repetition"},
+    {v:4,label:"Low repetition"},
+    {v:5,label:"None / almost none"}
+  ];
+
+  return React.createElement(
+    "div",
+    {className:"question"},
+    React.createElement("div",{className:"q-title"},"Unnecessary visual repetition / copy-paste"),
+    React.createElement("div",{className:"q-desc"},"How much unnecessary visual repetition or copy-paste did you notice across this generated story?"),
+    React.createElement(
+      "div",
+      {className:"repetition-summary-scale"},
+      options.map(o=>
+        React.createElement(
+          "button",
+          {
+            type:"button",
+            key:o.v,
+            className:"repetition-summary-btn"+(val===o.v?" selected":""),
+            onClick:()=>onRate(o.v)
+          },
+          React.createElement("div",{className:"repetition-summary-num"},o.v),
+          React.createElement("div",{className:"repetition-summary-label"},o.label)
+        )
+      )
+    )
+  );
+}
+
 function Welcome({start,loadError}){
   const ready=onlineReady();
-  return React.createElement("div",{className:"page"},
-    React.createElement("div",{className:"card"},
-      React.createElement("div",{className:"label"},CONFIG.institution),
-      React.createElement("h1",null,CONFIG.title),
-      React.createElement("div",{className:"main-point",style:{margin:"14px 0 18px"}},
-        React.createElement("strong",null,"Main task: "),
-        "You will evaluate 6 AI-generated visual stories. For each story, inspect the images carefully and rate specific aspects of visual consistency."
+  return React.createElement(
+    "div",
+    {className:"page"},
+    React.createElement(
+      "div",
+      {className:"card study-intro"},
+
+      React.createElement("div",{className:"label"},"Research Study"),
+      React.createElement("h1",null,"Visual Story Consistency Evaluation"),
+
+      React.createElement(
+        "div",
+        {className:"study-meta"},
+        React.createElement("div",{className:"study-meta-row"},
+          React.createElement("div",{className:"study-meta-key"},"Institution"),
+          React.createElement("div",null,"Ritsumeikan University")
+        ),
+        React.createElement("div",{className:"study-meta-row"},
+          React.createElement("div",{className:"study-meta-key"},"Laboratory"),
+          React.createElement("div",null,"Visual Information Engineering Laboratory")
+        ),
+        React.createElement("div",{className:"study-meta-row"},
+          React.createElement("div",{className:"study-meta-key"},"Researcher"),
+          React.createElement("div",null,"LIU ZHUORONG")
+        ),
+        React.createElement("div",{className:"study-meta-row"},
+          React.createElement("div",{className:"study-meta-key"},"Study"),
+          React.createElement("div",null,"Human evaluation of AI-generated visual-story consistency")
+        )
       ),
-      React.createElement("div",{className:"grid-3",style:{margin:"18px 0"}},
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"~30–40 min"),React.createElement("div",{className:"stat-label"},"Estimated time")),
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},CONFIG.itemsPerParticipant),React.createElement("div",{className:"stat-label"},"Story outputs")),
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"stat-number"},"5 stages"),React.createElement("div",{className:"stat-label"},"Per output"))
+
+      React.createElement("div",{className:"study-section"},
+        React.createElement("h3",null,"Purpose of the study"),
+        React.createElement("p",null,
+          "This study investigates how people perceive consistency in AI-generated visual stories. The responses will be used to evaluate an automatic visual-story consistency metric for academic research."
+        )
       ),
-      loadError&&React.createElement("div",{className:"error",style:{marginBottom:14}},loadError),
-      !ready&&React.createElement("div",{className:CONFIG.requireOnlineSubmission?"error":"notice",style:{marginBottom:14}},CONFIG.requireOnlineSubmission?"Researcher setup required: Google Apps Script URL has not been configured.":"Test mode: Google Apps Script URL is not configured, so responses will be saved only as local browser backup."),
-      React.createElement("div",{className:"notice",style:{marginBottom:14}},"Please use a laptop or desktop screen, browser zoom 100%, and complete the task alone."),
-      btn(true,CONFIG.requireOnlineSubmission&&!ready,start,"Start evaluation")
+
+      React.createElement("div",{className:"study-section"},
+        React.createElement("h3",null,"What you will do"),
+        React.createElement("p",null,
+          "You will review six AI-generated visual stories and rate specific aspects such as text-image alignment, character consistency, scene continuity, temporal continuity, and visual repetition."
+        ),
+        React.createElement("ul",{className:"study-facts"},
+          React.createElement("li",null,"Estimated time: approximately 30–40 minutes."),
+          React.createElement("li",null,"Please use a laptop or desktop at 100% browser zoom."),
+          React.createElement("li",null,"Complete the evaluation alone and inspect the images carefully.")
+        )
+      ),
+
+      React.createElement("div",{className:"study-section"},
+        React.createElement("h3",null,"Participation and data use"),
+        React.createElement("p",null,
+          "Participation is voluntary. Responses are collected for academic research purposes, and the survey does not require your name or other directly identifying information. You may stop at any time before final submission."
+        )
+      ),
+
+      loadError&&React.createElement("div",{className:"error",style:{marginTop:18}},loadError),
+      !ready&&React.createElement(
+        "div",
+        {className:CONFIG.requireOnlineSubmission?"error":"notice",style:{marginTop:18}},
+        CONFIG.requireOnlineSubmission
+          ? "Researcher setup required: Google Apps Script URL has not been configured."
+          : "Test mode: responses will be saved only as a local browser backup."
+      ),
+
+      React.createElement("div",{style:{marginTop:24}},
+        btn(true,CONFIG.requireOnlineSubmission&&!ready,start,"Continue to consent")
+      )
     )
   );
 }
@@ -3725,9 +3958,11 @@ function SceneStage({item,story,resp,setResp,onNext}){
   const r=resp[ik]||{na:[]};
   const [idx,setIdx]=useState(0);
   const [seen,setSeen]=useState(()=>new Set());
+  const [questionsVisible,setQuestionsVisible]=useState(false);
 
   useEffect(()=>{
     setIdx(0);
+    setQuestionsVisible(false);
     setSeen(
       story.shots.length
         ? new Set([story.shots[0].shotId])
@@ -3747,32 +3982,28 @@ function SceneStage({item,story,resp,setResp,onNext}){
   }
 
   function inspect(nextIdx){
-    const safeIdx=Math.max(
-      0,
-      Math.min(
-        story.shots.length-1,
-        nextIdx
-      )
-    );
-
+    const safeIdx=Math.max(0,Math.min(story.shots.length-1,nextIdx));
     setIdx(safeIdx);
-
     setSeen(prev=>{
       const next=new Set(prev);
       const target=story.shots[safeIdx];
       if(target) next.add(target.shotId);
       return next;
     });
-
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
   }
 
-  const allSeen=
-    seen.size>=story.shots.length;
+  function nextOrQuestions(){
+    if(idx<story.shots.length-1){
+      inspect(idx+1);
+    }else{
+      setQuestionsVisible(true);
+      setTimeout(()=>{
+        document.getElementById("scene-survey-questions")?.scrollIntoView({behavior:"smooth",block:"start"});
+      },50);
+    }
+  }
 
+  const allSeen=seen.size>=story.shots.length;
   const complete=
     typeof r.q3_background==="number" &&
     typeof r.q4_temporal==="number";
@@ -3781,258 +4012,98 @@ function SceneStage({item,story,resp,setResp,onNext}){
     "div",
     {className:"page"},
 
-    React.createElement(
-      "div",
-      {className:"row-between",style:{marginBottom:14}},
-      React.createElement(
-        "div",
-        null,
+    React.createElement("div",{className:"row-between",style:{marginBottom:14}},
+      React.createElement("div",null,
         React.createElement("div",{className:"label"},"Stage 4 / 5"),
-        React.createElement(
-          "h2",
-          {style:{marginBottom:0}},
-          "Scene and temporal consistency"
-        )
+        React.createElement("h2",{style:{marginBottom:0}},"Scene and temporal consistency")
       ),
-      React.createElement(
-        "div",
-        {className:"label"},
-        `Story shot ${shot.n} · ${idx+1}/${story.shots.length}`
-      )
+      React.createElement("div",{className:"label"},`${story.shots.length} frames`)
     ),
 
     React.createElement(
       "div",
       {className:"stage-focus-guide"},
-      React.createElement(
-        "strong",
-        null,
-        "For each shot, read the plot and setting first, then inspect the generated image directly below. "
-      ),
-      "Please inspect every available shot at least once. You may rate while reviewing, but the Continue button will remain locked until all shots have been inspected."
+      React.createElement("strong",null,"1. Read the story context. 2. Inspect every generated frame in order. 3. Answer the two questions.")
     ),
 
     React.createElement(
       "div",
-      {className:"guided-split"},
+      {className:"scene-context-list"},
+      React.createElement("div",{className:"scene-context-list-title"},"Story context — read before rating"),
+      story.shots.map(sht=>
+        React.createElement(
+          "div",
+          {className:"scene-context-item",key:`context-${sht.shotId}`},
+          React.createElement("div",{className:"scene-context-shot"},`Shot ${sht.n}`),
+          React.createElement("div",{className:"scene-context-copy"},
+            React.createElement("div",null,sht.plot||"No plot text available."),
+            sht.setting&&React.createElement("div",{className:"scene-context-setting-inline"},`Setting: ${sht.setting}`)
+          )
+        )
+      )
+    ),
+
+    React.createElement(
+      "div",
+      {className:"scene-inspection-card"},
+      React.createElement("div",{className:"label",style:{marginBottom:10}},"Inspect generated sequence"),
 
       React.createElement(
         "div",
-        {className:"guided-evidence"},
-
-        React.createElement(
-          "div",
-          {className:"scene-reader"},
-
-          React.createElement(
-            "div",
-            {className:"label"},
-            "PLOT"
-          ),
-
-          React.createElement(
-            "div",
-            {className:"scene-plot"},
-            shot.plot||
-            "No plot text available."
-          ),
-
-          React.createElement(
-            "div",
-            {className:"label"},
-            "SETTING"
-          ),
-
-          React.createElement(
-            "div",
-            {className:"scene-setting"},
-            shot.setting||
-            "No setting text available."
-          ),
-
-          React.createElement(
-            "div",
-            {
-              className:"scene-revealed-image",
-              style:{marginTop:18}
-            },
-
-            React.createElement(
-              "div",
-              {
-                className:"label",
-                style:{marginBottom:8}
-              },
-              "GENERATED IMAGE"
-            ),
-
-            React.createElement(
-              ImageWithFallback,
-              {
-                src:base+shot.frame,
-                alt:`Generated frame ${shot.n}`,
-                cls:"alignment-image",
-                label:`Generated frame ${shot.n}`,
-                zoomable:true
-              }
-            )
-          ),
-
-          React.createElement(
-            "div",
-            {className:"scene-nav"},
-
-            btn(
-              false,
-              idx===0,
-              ()=>inspect(idx-1),
-              "← Previous shot"
-            ),
-
-            btn(
-              false,
-              idx===story.shots.length-1,
-              ()=>inspect(idx+1),
-              "Next shot →"
-            )
-          ),
-
-          React.createElement(
-            "div",
-            {className:"scene-progress-note"},
-            `${seen.size} / ${story.shots.length} shots inspected in the sequential view`
-          )
-        ),
-
-        React.createElement(
-          "div",
-          {className:"scene-storyboard"},
-
-          React.createElement(
-            "div",
-            {className:"label",style:{marginBottom:8}},
-            "FULL GENERATED STORY OUTPUT"
-          ),
-
-          React.createElement(
-            "p",
-            {
-              className:"muted",
-              style:{marginTop:0}
-            },
-            "Use this overview to compare scenes across the whole story. Click any frame to inspect its plot, setting, and generated image above."
-          ),
-
-          React.createElement(
-            "div",
-            {className:"scene-storyboard-grid"},
-
-            story.shots.map((s,i)=>
-              React.createElement(
-                "div",
-                {
-                  key:s.shotId,
-                  className:
-                    "scene-storyboard-item"+
-                    (idx===i?" active":"")+
-                    (seen.has(s.shotId)?" visited":""),
-                  onClick:()=>inspect(i)
-                },
-
-                React.createElement(
-                  ImageWithFallback,
-                  {
-                    src:base+s.frame,
-                    alt:`Generated frame ${s.n}`,
-                    cls:"sequence-frame-img",
-                    label:`Frame ${s.n}`,
-                    zoomable:true
-                  }
-                ),
-
-                React.createElement(
-                  "div",
-                  {className:"scene-storyboard-label"},
-                  `Shot ${s.n}`
-                )
-              )
-            )
-          )
-        )
+        {className:"scene-fixed-viewer"},
+        React.createElement(ImageWithFallback,{
+          src:base+shot.frame,
+          alt:`Generated frame ${shot.n}`,
+          cls:"scene-fixed-image",
+          label:`Generated frame ${shot.n}`,
+          zoomable:true
+        })
       ),
 
+      React.createElement("div",{className:"scene-step-caption"},`Shot ${shot.n} · ${idx+1} / ${story.shots.length}`),
+      React.createElement("div",{className:"scene-progress-note",style:{textAlign:"center"}},`${seen.size} / ${story.shots.length} frames inspected`),
+
       React.createElement(
         "div",
-        {className:"guided-questions"},
-
-        React.createElement(
-          "div",
-          {className:"card"},
-
-          React.createElement(
-            "div",
-            {className:"label"},
-            "SEQUENCE-LEVEL RATING"
-          ),
-
-          
-
-          React.createElement(
-            Q,
-            {
-              q:COMPONENT_QUESTIONS.scene[0],
-              val:r.q3_background,
-              isNA:false,
-              onRate:v=>rate("q3_background",v),
-              onNA:null
-            }
-          ),
-
-          React.createElement(
-            Q,
-            {
-              q:COMPONENT_QUESTIONS.scene[1],
-              val:r.q4_temporal,
-              isNA:false,
-              onRate:v=>rate("q4_temporal",v),
-              onNA:null
-            }
-          ),
-
-          React.createElement(
-            "div",
-            {
-              className:"row-between",
-              style:{
-                borderTop:"1px solid var(--border)",
-                paddingTop:16,
-                marginTop:12
-              }
-            },
-
-            React.createElement(
-              "span",
-              {className:"muted"},
-              !allSeen
-                ? "Inspect every shot before continuing."
-                : complete
-                  ? ""
-                  : "Please answer both questions."
-            ),
-
-            btn(
-              true,
-              !allSeen||!complete,
-              onNext,
-              "Continue to repetition"
-            )
-          )
+        {className:"scene-nav"},
+        btn(false,idx===0,()=>inspect(idx-1),"← Previous"),
+        btn(
+          true,
+          false,
+          nextOrQuestions,
+          idx===story.shots.length-1
+            ? "Answer survey questions"
+            : "Next frame →"
         )
+      )
+    ),
+
+    questionsVisible&&allSeen&&React.createElement(
+      "div",
+      {className:"scene-question-panel",id:"scene-survey-questions"},
+      React.createElement("h3",null,"Survey questions"),
+      React.createElement("p",{className:"muted"},"Rate the generated story as a whole based on the sequence you just inspected."),
+      React.createElement(Q,{
+        q:COMPONENT_QUESTIONS.scene[0],
+        val:r.q3_background,
+        isNA:false,
+        onRate:v=>rate("q3_background",v),
+        onNA:null
+      }),
+      React.createElement(Q,{
+        q:COMPONENT_QUESTIONS.scene[1],
+        val:r.q4_temporal,
+        isNA:false,
+        onRate:v=>rate("q4_temporal",v),
+        onNA:null
+      }),
+      React.createElement("div",{className:"row-between",style:{marginTop:12}},
+        React.createElement("span",{className:"muted"},complete?"":"Please answer both questions."),
+        btn(true,!complete,onNext,"Continue to repetition")
       )
     )
   );
 }
-
 
 function RadarChart({components}){
   const cx=210;
@@ -4040,6 +4111,9 @@ function RadarChart({components}){
   const radius=135;
   const levels=5;
   const count=components.length;
+  const available=components.filter(c=>typeof c.value==="number");
+  const strongest=available.length ? available.reduce((a,b)=>b.value>a.value?b:a) : null;
+  const lowest=available.length ? available.reduce((a,b)=>b.value<a.value?b:a) : null;
 
   function pointFor(index,fraction){
     const angle=
@@ -4097,7 +4171,7 @@ function RadarChart({components}){
     React.createElement(
       "div",
       {className:"radar-subtitle"},
-      "The shape summarizes the six consistency components you rated. A profile extending farther outward indicates stronger perceived consistency."
+      "This graph summarizes your ratings. Farther from the center means stronger perceived consistency."
     ),
 
     React.createElement(
@@ -4202,10 +4276,27 @@ function RadarChart({components}){
       })
     ),
 
+    strongest&&lowest&&React.createElement(
+      "div",
+      {className:"radar-summary"},
+      React.createElement(
+        "div",
+        {className:"radar-summary-item"},
+        React.createElement("strong",null,"Highest-rated component"),
+        `${strongest.label}: ${strongest.value.toFixed(1)} / 5`
+      ),
+      React.createElement(
+        "div",
+        {className:"radar-summary-item"},
+        React.createElement("strong",null,"Lowest-rated component"),
+        `${lowest.label}: ${lowest.value.toFixed(1)} / 5`
+      )
+    ),
+
     React.createElement(
       "div",
       {className:"radar-note"},
-      "Your direct overall-consistency judgment was recorded before this graphic appeared and is stored separately."
+      "The graph reflects your ratings for this generated story output."
     )
   );
 }
@@ -4435,19 +4526,6 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
 
     React.createElement(
       "div",
-      {className:"stage-focus-guide"},
-
-      React.createElement(
-        "strong",
-        null,
-        "Repetition is checked sequentially. "
-      ),
-
-      "Frame 1 is the starting frame. From Frame 2 onward, compare each generated frame with the immediately previous frame and decide whether it is distinct, visually similar, or near-duplicated/copy-pasted."
-    ),
-
-    React.createElement(
-      "div",
       {className:"guided-split"},
 
       React.createElement(
@@ -4469,7 +4547,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
               "How to compare: "
             ),
 
-            "Look at the previous generated frame on the left, then the current generated frame on the right. Judge the current frame only in relation to the previous one."
+            "Compare the current frame with the previous frame. Similar story content is acceptable; judge whether the image itself appears reused or copy-pasted."
           ),
 
           React.createElement(
@@ -4497,11 +4575,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
                 }
               ),
 
-              React.createElement(
-                "div",
-                {className:"repetition-pair-note"},
-                "Use this as the comparison reference."
-              )
+              null
             ),
 
             React.createElement(
@@ -4525,11 +4599,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
                 }
               ),
 
-              React.createElement(
-                "div",
-                {className:"repetition-pair-note"},
-                "Rate how repetitive this frame is compared with the previous frame."
-              )
+              null
             )
           ),
 
@@ -4546,7 +4616,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
             React.createElement(
               "div",
               {className:"repetition-answer-desc"},
-              "Choose the option that best describes unnecessary visual repetition. Similar story content is allowed; focus on whether the generated image itself looks reused or copy-pasted."
+              "Choose the closest visual relationship."
             ),
 
             React.createElement(
@@ -4622,7 +4692,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
         React.createElement(
           "div",
           {className:"success"},
-          "Repetition check complete. You compared every available frame with its immediately previous frame."
+          "Frame comparison complete."
         )
       ),
 
@@ -4649,7 +4719,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
               className:"notice",
               style:{marginBottom:16}
             },
-            "Complete the sequential repetition comparisons on the left before giving the sequence-level ratings."
+            "Complete the frame comparisons before answering the final two questions."
           ),
 
           repetitionComplete &&
@@ -4659,34 +4729,11 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
             null,
 
             React.createElement(
-              Q,
+              RepetitionSummaryQuestion,
               {
-                q:COMPONENT_QUESTIONS.overall[0],
                 val:r.q6_noncopy,
-                isNA:false,
-                onRate:v=>
-                  rate(
-                    "q6_noncopy",
-                    v
-                  ),
-                onNA:null
+                onRate:v=>rate("q6_noncopy",v)
               }
-            ),
-
-            React.createElement(
-              "div",
-              {
-                className:
-                  "independent-overall-note"
-              },
-
-              React.createElement(
-                "strong",
-                null,
-                "Give your independent overall judgment first. "
-              ),
-
-              "The visual component profile is intentionally hidden until after you answer, so it cannot influence your overall rating."
             ),
 
             React.createElement(
@@ -4723,23 +4770,6 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
                   componentValues
               }
             ),
-
-            React.createElement(
-              "div",
-              {
-                className:
-                  "independent-overall-note",
-                style:{marginBottom:0}
-              },
-
-              React.createElement(
-                "strong",
-                null,
-                "Compare the shape with your own overall impression. "
-              ),
-
-              "Differences between your direct overall judgment and the component profile are useful research information."
-            )
           ),
 
           React.createElement(
@@ -4763,7 +4793,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
                 : !sequenceComplete
                   ? "Please answer both sequence-level questions."
                   : !resultShown
-                    ? "Your ratings are complete. View your visual consistency profile before continuing."
+                    ? "Your ratings are complete. View the summary before continuing."
                     : ""
             ),
 
@@ -4772,7 +4802,7 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
                   true,
                   !complete,
                   ()=>setResultShown(true),
-                  "Show my consistency profile"
+                  "View rating summary"
                 )
               : btn(
                   true,
