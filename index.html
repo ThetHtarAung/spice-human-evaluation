@@ -2418,11 +2418,11 @@ function Q({q,val,isNA,onRate,onNA}){
 
 function RepetitionSummaryQuestion({val,onRate}){
   const options=[
-    {v:1,label:"Very high repetition"},
-    {v:2,label:"High repetition"},
+    {v:1,label:"None / almost none"},
+    {v:2,label:"Low repetiton"},
     {v:3,label:"Moderate repetition"},
-    {v:4,label:"Low repetition"},
-    {v:5,label:"None / almost none"}
+    {v:4,label:"High repetition"},
+    {v:5,label:"Very high repetition"}
   ];
 
   return React.createElement(
@@ -3114,8 +3114,7 @@ function Intro({item,story,onNext,itemNo,total}){
       React.createElement(
         "div",
         {className:"main-point",style:{margin:"14px 0 18px"}},
-        React.createElement("strong",null,"Story information and reference characters only. "),
-        "Read the story information and review the actual reference characters used for this story. No generated images are shown on this page."
+        React.createElement("strong",null,"Story information and reference characters only. ")
       ),
       React.createElement("p",{className:"muted"},story.summary),
       React.createElement("h3",{style:{marginTop:18}},"Reference characters"),
@@ -3754,7 +3753,7 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
       "div",
       {className:"stage-focus-guide"},
       React.createElement("strong",null,`Target character: ${group.name}. `),
-      "Compare the reference images with the generated appearances shown for this character. Judge only identity and visual attributes; do not judge plot, background, or story flow."
+      "Compare the reference images with the generated appearances shown for this character."
     ),
 
     React.createElement(
@@ -3798,8 +3797,8 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
 
             React.createElement(
               "div",
-              {className:"reference-zone-note"},
-              "These are the intended reference appearances."
+              {className:"reference-zone-note"}
+              
             ),
 
             React.createElement(
@@ -4186,8 +4185,8 @@ function RadarChart({components}){
 
     React.createElement(
       "div",
-      {className:"radar-title"},
-      "Your consistency profile"
+      {className:"radar-title"}
+  
     ),
 
     React.createElement(
