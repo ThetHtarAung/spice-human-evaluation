@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Visual Story Consistency Human Evaluation</title>
+<title>Visual Story Consistency Human Evaluation — FIX-2026-09-30</title>
 <style>
 
 * {
@@ -1785,10 +1785,10 @@ const COMPONENT_STAGE_INFO={
 const SCALE=[{v:1,label:"Very poor"},{v:2,label:"Poor"},{v:3,label:"Fair"},{v:4,label:"Good"},{v:5,label:"Excellent"}];
 
 
+const BUILD_ID="SPICE-CONNECTION-FIX-2026-09-30";
+
 function onlineReady(){
-  const url = String(CONFIG.googleAppsScriptUrl || "").trim();
-  return url.startsWith("https://script.google.com/macros/s/") &&
-         url.endsWith("/exec");
+  return Boolean(String(CONFIG.googleAppsScriptUrl || "").trim());
 }
 
 function genPID(){
