@@ -1737,7 +1737,13 @@ const CONFIG={
   autoAllocateGroup:true,
   itemsPerParticipant:6,
   alignmentShotsPerItem:5,
-  requireConditionChecklist:true
+  requireConditionChecklist:true,
+
+  // PILOT ONLY:
+  // true  = after one fully confirmed completed session, reopening the survey
+  //         creates a fresh participant ID so another pilot run can be tested.
+  // false = keep the same participant ID after completion (use for real study).
+  allowRepeatPilotSessions:true
 };
 
 const COMPONENT_QUESTIONS={
@@ -1794,6 +1800,17 @@ function genPID(){
 function getOrCreatePID(){
   const key="spice_participant_id";
   let pid=localStorage.getItem(key);
+
+  // During pilot testing only, start a genuinely new participant session
+  // after the previous session was confirmed saved to Google Sheets.
+  if(
+    CONFIG.allowRepeatPilotSessions &&
+    localStorage.getItem("spice_study_completed")==="true"
+  ){
+    pid=genPID();
+    localStorage.setItem(key,pid);
+    localStorage.removeItem("spice_study_completed");
+  }
 
   if(!pid){
     pid=genPID();
@@ -2020,8 +2037,105 @@ function getAssignmentIds(assignments, group){
 
 function btn(primary,disabled,onClick,text){return React.createElement("button",{className:primary?"btn-primary":"btn-secondary",disabled,onClick},text)}
 async function getJson(url){const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error(url+" not found or not accessible"); return await r.json()}
-function saveBackup(sub){const old=JSON.parse(localStorage.getItem("spice_submission_backups")||"[]"); old.push(sub); localStorage.setItem("spice_submission_backups",JSON.stringify(old));}
-async function submit(sub){saveBackup(sub); if(!onlineReady()){ if(CONFIG.requireOnlineSubmission) throw new Error("Google Apps Script URL is not configured."); return {status:"local_only"}; } await fetch(CONFIG.googleAppsScriptUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(sub)}); return {status:"sent"};}
+function saveBackup(sub){
+  const old=JSON.parse(localStorage.getItem("spice_submission_backups")||"[]");
+  old.push(sub);
+  localStorage.setItem("spice_submission_backups",JSON.stringify(old));
+}
+
+function submissionCheckParams(sub){
+  if(sub.submissionType==="sequence_rating"){
+    const itemId=Object.keys(sub.responses||{})[0]||"";
+    return {
+      action:"check",
+      submissionType:"sequence_rating",
+      pid:sub.pid||"",
+      groupId:sub.groupId||"",
+      itemId
+    };
+  }
+
+  if(sub.submissionType==="session_complete"){
+    return {
+      action:"check",
+      submissionType:"session_complete",
+      pid:sub.pid||"",
+      groupId:sub.groupId||""
+    };
+  }
+
+  return null;
+}
+
+function sleep(ms){
+  return new Promise(resolve=>setTimeout(resolve,ms));
+}
+
+async function confirmSavedSubmission(sub){
+  const params=submissionCheckParams(sub);
+
+  if(!params){
+    throw new Error("Cannot verify unknown submission type.");
+  }
+
+  // Apps Script/Google Sheets can take a short moment to finish writing.
+  // Poll the read-only JSONP endpoint until the expected row exists.
+  for(let attempt=0;attempt<10;attempt++){
+    if(attempt>0){
+      await sleep(700);
+    }
+
+    const result=await jsonp(
+      CONFIG.googleAppsScriptUrl,
+      {
+        ...params,
+        t:Date.now()
+      }
+    );
+
+    if(result?.ok && result?.saved){
+      return result;
+    }
+
+    if(result?.ok===false && result?.error){
+      throw new Error(result.error);
+    }
+  }
+
+  throw new Error(
+    "The response was sent, but Google Sheets did not confirm that it was saved. Please do not close this page; contact the researcher."
+  );
+}
+
+async function submit(sub){
+  saveBackup(sub);
+
+  if(!onlineReady()){
+    if(CONFIG.requireOnlineSubmission){
+      throw new Error("Google Apps Script URL is not configured.");
+    }
+    return {status:"local_only"};
+  }
+
+  // POST is intentionally no-cors for Apps Script compatibility.
+  // We DO NOT trust the POST itself as proof of saving.
+  await fetch(
+    CONFIG.googleAppsScriptUrl,
+    {
+      method:"POST",
+      mode:"no-cors",
+      headers:{
+        "Content-Type":"text/plain;charset=utf-8"
+      },
+      body:JSON.stringify(sub)
+    }
+  );
+
+  // Confirm from Google Sheets through a JSONP GET before continuing.
+  await confirmSavedSubmission(sub);
+
+  return {status:"saved"};
+}
 
 function buildReferenceFiles(item){
   if(Array.isArray(item.references) && item.references.length){
@@ -2418,11 +2532,11 @@ function Q({q,val,isNA,onRate,onNA}){
 
 function RepetitionSummaryQuestion({val,onRate}){
   const options=[
-    {v:1,label:"None / almost none"},
-    {v:2,label:"Low repetiton"},
+    {v:1,label:"Very high repetition"},
+    {v:2,label:"High repetition"},
     {v:3,label:"Moderate repetition"},
-    {v:4,label:"High repetition"},
-    {v:5,label:"Very high repetition"}
+    {v:4,label:"Low repetition"},
+    {v:5,label:"None / almost none"}
   ];
 
   return React.createElement(
@@ -2474,7 +2588,7 @@ function Welcome({start,loadError}){
           React.createElement("div",null,"Visual Information Engineering Laboratory")
         ),
         React.createElement("div",{className:"study-meta-row"},
-          React.createElement("div",{className:"study-meta-key"},"4th year student"),
+          React.createElement("div",{className:"study-meta-key"},"4th Year Student"),
           React.createElement("div",null,"THET HTAR AUNG")
         ),
         React.createElement("div",{className:"study-meta-row"},
@@ -3114,7 +3228,8 @@ function Intro({item,story,onNext,itemNo,total}){
       React.createElement(
         "div",
         {className:"main-point",style:{margin:"14px 0 18px"}},
-        React.createElement("strong",null,"Story information and reference characters only. ")
+        React.createElement("strong",null,"Story information and reference characters only. "),
+        "Read the story information and review the actual reference characters used for this story. No generated images are shown on this page."
       ),
       React.createElement("p",{className:"muted"},story.summary),
       React.createElement("h3",{style:{marginTop:18}},"Reference characters"),
@@ -3753,7 +3868,7 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
       "div",
       {className:"stage-focus-guide"},
       React.createElement("strong",null,`Target character: ${group.name}. `),
-      "Compare the reference images with the generated appearances shown for this character."
+      "Compare the reference images with the generated appearances shown for this character. Judge only identity and visual attributes; do not judge plot, background, or story flow."
     ),
 
     React.createElement(
@@ -3797,8 +3912,8 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
 
             React.createElement(
               "div",
-              {className:"reference-zone-note"}
-              
+              {className:"reference-zone-note"},
+              "These are the intended reference appearances."
             ),
 
             React.createElement(
@@ -4185,8 +4300,8 @@ function RadarChart({components}){
 
     React.createElement(
       "div",
-      {className:"radar-title"}
-  
+      {className:"radar-title"},
+      "Your consistency profile"
     ),
 
     React.createElement(
