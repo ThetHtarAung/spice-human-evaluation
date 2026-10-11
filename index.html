@@ -1789,7 +1789,7 @@ p { line-height: 1.6; }
 }
 
 
-/* ===== Training v3: compact, real-task-style calibration ===== */
+/* ===== Training v4: same-story model comparisons + compact calibration ===== */
 .tr3-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .tr3-progress{font-weight:750;color:var(--muted);white-space:nowrap}
 .tr3-bar{height:7px;background:var(--light);border:1px solid var(--border);border-radius:99px;overflow:hidden;margin:10px 0 18px}
@@ -1849,6 +1849,46 @@ p { line-height: 1.6; }
 .room-demo.changed .w{left:auto;right:8px}.room-demo.changed .sofa{left:auto;right:12px;width:70px}.room-demo.changed .table{right:auto;left:12px;bottom:52px}
 @media(max-width:800px){.tr3-rules,.tr3-grid2,.tr3-demo-grid{grid-template-columns:1fr}.tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+
+/* ===== v4 navigation + de-crowded late-stage layout ===== */
+.page-back-row{display:flex;align-items:center;justify-content:flex-start;margin:0 0 12px}
+.page-back-row .btn-secondary{padding:8px 13px}
+.late-stage-page{max-width:1180px;margin:0 auto}
+.late-stage-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;margin-bottom:14px}
+.late-stage-evidence{border:1px solid var(--border);border-radius:14px;background:#fff;padding:16px;margin-bottom:14px}
+.late-stage-question{max-width:860px;margin:0 auto}
+.context-details{border:1px solid var(--border);border-radius:10px;background:var(--light);margin:10px 0 14px;overflow:hidden}
+.context-details>summary{cursor:pointer;font-weight:750;padding:11px 13px;list-style:none}
+.context-details>summary::-webkit-details-marker{display:none}
+.context-details-body{padding:0 13px 13px;display:grid;gap:8px}
+.context-line{border-top:1px solid var(--border);padding-top:8px;font-size:13px;line-height:1.45;color:var(--muted)}
+.compact-sequence-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.compact-sequence-item{min-width:0}
+.compact-sequence-item .sequence-frame-img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:9px}
+.compact-sequence-label{text-align:center;font-size:12px;color:var(--muted);margin-top:4px}
+.reference-strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;scroll-snap-type:x proximity}
+.reference-strip .ref-card{flex:0 0 120px;scroll-snap-align:start}
+.reference-strip .ref-img{width:120px;height:120px;object-fit:cover}
+.reference-strip-name{font-size:11px;text-align:center;color:var(--muted);margin-top:4px}
+.repetition-compact-context{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 14px}
+.repetition-context-mini{border:1px solid var(--border);border-radius:9px;background:var(--light);padding:10px;font-size:12px;line-height:1.4;color:var(--muted)}
+.repetition-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0 14px}
+.repetition-legend-item{border:1px solid var(--border);border-radius:9px;padding:9px;background:#fff;text-align:center}
+.repetition-legend-item strong{display:block;margin-bottom:3px}
+.repetition-legend-item span{font-size:12px;color:var(--muted)}
+.style-cue-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.style-cue{border:1px solid var(--border);border-radius:9px;padding:8px;text-align:center;background:#fff;font-size:12px}
+.style-cue strong{display:block;margin-bottom:2px}
+.training-model-label{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px}
+.training-shared-story{padding:9px 11px;border-radius:9px;background:var(--light);border:1px solid var(--border);margin:8px 0 12px;font-size:13px}
+.tr4-change-meter{height:7px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:8px 0 6px}
+.tr4-change-meter>div{height:100%;background:var(--accent)}
+.tr4-demo-cue{font-size:12px;font-weight:700;margin-top:6px}
+.style-demo-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+@media(max-width:900px){.compact-sequence-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.repetition-compact-context{grid-template-columns:1fr}}
+@media(max-width:650px){.compact-sequence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.repetition-legend{grid-template-columns:1fr}.style-cue-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 </head>
 <body><div id="app"></div>
@@ -1861,10 +1901,10 @@ const CONFIG={
   title:"Visual Story Consistency Evaluation",
   institution:"Ritsumeikan University — Visual Information Engineering Laboratory",
   dataset:"ViStoryBench-Lite",
-  surveyVersion:"SPICE-HUMAN-2026-MAIN-v3",
+  surveyVersion:"SPICE-HUMAN-2026-MAIN-v4",
 
   // Paste the deployed Google Apps Script /exec URL here for the real study.
-  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbzlurfHN9XVY0BVyoP9W-Z7fGV8_xpCc9y74cb3HrPtaHsdvZ1SYkfbsbvWo7P1P7W_eg/exec",
+  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbxu_n0IDYi5ho1jEJQjhPxdYau2gHzrTWNVilT3g0HvDJnGtJqleKYXj4wT8-n_r55A/exec",
 
   // true  = final online study: automatically allocate an unused G01-G50.
   // false = local testing: manually enter a test group code.
@@ -1879,7 +1919,7 @@ const CONFIG={
   // are used only for calibration/training examples and never appear in the
   // main assignment file.
   mainStoryIds:["01","08","09","15","17","27","28","29","32","53","57","64"],
-  trainingVersion:"SPICE-TRAINING-v3",
+  trainingVersion:"SPICE-TRAINING-v4",
 
   // PILOT ONLY:
   // true  = after one fully confirmed completed session, reopening the survey
@@ -2278,6 +2318,7 @@ function getAssignmentIds(assignments, group){
 }
 
 function btn(primary,disabled,onClick,text){return React.createElement("button",{className:primary?"btn-primary":"btn-secondary",disabled,onClick},text)}
+function PageBack({onClick,disabled=false,label="← Back"}){return React.createElement("div",{className:"page-back-row"},btn(false,disabled,onClick,label))}
 async function getJson(url){const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error(url+" not found or not accessible"); return await r.json()}
 function saveBackup(sub){
   const old=JSON.parse(localStorage.getItem("spice_submission_backups")||"[]");
@@ -2898,10 +2939,20 @@ function RepFrame({personX=58,bookX=112,variant="same"}){
 }
 
 function RepetitionDemo(){
-  return React.createElement("div",{className:"tr3-demo-grid"},
-    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Distinct"),React.createElement(RepFrame,{personX:22,variant:"same"}),React.createElement(RepFrame,{personX:145,variant:"distinct"}),React.createElement("div",{className:"tr3-small"},"Substantially different content or composition.")),
-    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Similar"),React.createElement(RepFrame,{personX:55,bookX:112}),React.createElement(RepFrame,{personX:112,bookX:78}),React.createElement("div",{className:"tr3-small"},"Same context, but pose/composition changes meaningfully. Similar is not bad.")),
-    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Near-duplicate"),React.createElement(RepFrame,{personX:72,bookX:116}),React.createElement(RepFrame,{personX:75,bookX:116}),React.createElement("div",{className:"tr3-small"},"Almost unchanged image/composition; very little meaningful change."))
+  const card=(title,a,b,width,text,cue)=>React.createElement("div",{className:"tr3-demo-card"},
+    React.createElement("div",{className:"tr3-demo-title"},title),
+    React.createElement("div",{className:"tr3-grid2",style:{marginTop:0}},a,b),
+    React.createElement("div",{className:"tr4-change-meter"},React.createElement("div",{style:{width}})),
+    React.createElement("div",{className:"tr4-demo-cue"},cue),
+    React.createElement("div",{className:"tr3-small"},text)
+  );
+  return React.createElement(React.Fragment,null,
+    React.createElement("div",{className:"tr3-demo-grid"},
+      card("Distinct",React.createElement(RepFrame,{personX:22,variant:"same"}),React.createElement(RepFrame,{personX:145,variant:"distinct"}),"92%","Substantially different content or composition.","Large meaningful change"),
+      card("Similar",React.createElement(RepFrame,{personX:55,bookX:112}),React.createElement(RepFrame,{personX:112,bookX:78}),"55%","Same context, but pose/action/composition changes meaningfully.","Moderate meaningful change"),
+      card("Near-duplicate",React.createElement(RepFrame,{personX:72,bookX:116}),React.createElement(RepFrame,{personX:75,bookX:116}),"8%","Almost unchanged image/composition.","Very little meaningful change")
+    ),
+    React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Decision rule: "),"Ask how much meaningful visual change happened — not whether the story topic stayed similar. Similar is allowed; Near-duplicate is the copy-paste warning.")
   );
 }
 
@@ -2913,14 +2964,20 @@ function BackgroundDemo(){
 }
 
 function StyleDemo(){
-  const row=(classes)=>React.createElement("div",{className:"style-demo-row"},classes.map((c,i)=>React.createElement("div",{className:`style-tile ${c}`,key:i},React.createElement("div",{className:"style-face"}))));
-  return React.createElement("div",{className:"tr3-grid2"},
-    React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row(["","",""])),
-    React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — visible style shifts"),row(["","sketch","soft"]))
+  const tile=(cls,label)=>React.createElement("div",null,React.createElement("div",{className:`style-tile ${cls}`},React.createElement("div",{className:"style-face"})),React.createElement("div",{className:"style-demo-caption"},label));
+  const row=(items)=>React.createElement("div",{className:"style-demo-row"},items.map((x,i)=>React.createElement(React.Fragment,{key:i},tile(x[0],x[1]))));
+  return React.createElement(React.Fragment,null,
+    React.createElement("div",{className:"tr3-grid2"},
+      React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row([["","same rendering"],["","same shading"],["","same color treatment"],["","same realism level"]])),
+      React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — visible style shifts"),row([["","realistic"],["sketch","sketch-like"],["soft","soft painting"],["sketch","line-art shift"]]))
+    ),
+    React.createElement("div",{className:"style-cue-row"},
+      ["Rendering style","Realism level","Line work / texture","Shading / color treatment"].map(x=>React.createElement("div",{className:"style-cue",key:x},React.createElement("strong",null,x),"Compare across generated frames only."))
+    )
   );
 }
 
-function TrainingStage({manifest,onComplete}){
+function TrainingStage({manifest,onComplete,onBack}){
   const [step,setStep]=useState(0);
   const [answers,setAnswers]=useState({});
   const total=7;
@@ -2941,67 +2998,75 @@ function TrainingStage({manifest,onComplete}){
       React.createElement("div",{className:"tr3-rules"},
         React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"5 = best, 1 = worst"),"This direction is the same on every 1–5 question, including Reference Reuse."),
         React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"Judge one dimension only"),"A problem in Style should not automatically lower Identity, Background, or another score."),
-        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"N/A = not enough evidence"),"Use N/A only when the requested character/scene cannot reasonably be judged — not when you are deciding between two scores.")
+        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"N/A = not enough evidence"),"Use N/A only when the requested character or scene cannot reasonably be judged.")
       ),
-      React.createElement("div",{className:"tr3-note"},"The practice examples are not research ratings. After each page, answer one quick check; if it is wrong, the correct rule appears immediately."));
+      React.createElement("div",{className:"tr3-note"},"Practice examples are not research ratings. The examples use the same story on both sides whenever possible so the visual difference comes from the generation model, not from different story content."));
 
     if(step===1)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"1. Character Identity and Attributes"),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same character: Story 60 · Guan Yu. "),"Only the generation model changes."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Identity: face · body · recognizable person"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Identity: clothing · style"),React.createElement("span",{className:"tr3-chip look"},"Attributes: clothing · colors · hair · accessories"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Attributes: whether the face is the same person")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Clear preservation example",anchor:"EXPECTED: Identity 4–5 · Attributes 4–5"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Clear inconsistency example",anchor:"EXPECTED: Identity 1–2 · Attributes 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[3,7,8],character:"Jo",showRefs:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Model example A",anchor:"GOOD — Identity / Attributes should be high"},React.createElement("div",{className:"training-model-label"},"NaiveBaseline · Story 60"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Model example B",anchor:"LOW — clear character/attribute inconsistency"},React.createElement("div",{className:"training-model-label"},"UNO · Story 60"),React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu",showRefs:true}))
       ),
-      React.createElement("div",{className:"tr3-note"},"Important: the first sequence is later used as a poor Reference-Reuse example. That is intentional: one sequence can be strong on Identity but weak on another dimension."),
+      React.createElement("div",{className:"tr3-note"},"Pilot ratings support this contrast for the same story: Guan Yu was rated very high for NaiveBaseline and low for UNO. The point is to separate Identity from Attributes and Style."),
       React.createElement(TrainingCheck,{id:"identity_style",q:"The same face/body remains recognizable, but the artistic style changes. Should style change alone lower the Identity score?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Identity ignores artistic-style change by itself; Style is rated separately."}));
 
     if(step===2)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"2. Text–Image Alignment"),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same shots: Story 60. "),"Compare NanoBanana with NaiveBaseline against the same Setting + Static Shot Description."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Compare with: Setting + Static Shot Description"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore: beauty · realism · art style")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Strong match",anchor:"EXPECTED: 4–5"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[3],showText:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Weak match",anchor:"EXPECTED: 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[12],showText:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Better alignment",anchor:"GOOD — intended shot content is represented"},React.createElement("div",{className:"training-model-label"},"NanoBanana · Story 60 · Shots 1–2"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2],showText:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Weaker alignment",anchor:"LOW — important intended content is missing / wrong"},React.createElement("div",{className:"training-model-label"},"NaiveBaseline · Story 60 · Shots 1–2"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2],showText:true}))
       ),
       React.createElement(TrainingCheck,{id:"alignment_beauty",q:"An image is beautiful, but it contradicts the Setting and Static Shot Description. Should beauty make its Alignment score high?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Alignment measures intended visual content, not image quality or artistic attractiveness."}));
 
     if(step===3)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"3. Background and Temporal Continuity"),
-      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Background: same-location physical environment"),React.createElement("span",{className:"tr3-chip ignore"},"Do not penalize an expected move"),React.createElement("span",{className:"tr3-chip look"},"Temporal: progression from frame to frame")),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 60. "),"The first three shots share the same stated street location; later shots intentionally move to new locations."),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Background: same-location physical environment"),React.createElement("span",{className:"tr3-chip ignore"},"Do not penalize an expected move"),React.createElement("span",{className:"tr3-chip look"},"Temporal: understandable progression")),
       React.createElement(BackgroundDemo,null),
-      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Expected location change is allowed. "),"If the descriptions move the story from a bedroom to a street, the background should change."),
-      React.createElement("h3",{style:{marginTop:18}},"Temporal examples"),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Mostly coherent progression",anchor:"PILOT ANCHOR: Temporal ≈ 4"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[1,2,3,4,5,6]})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Abrupt / weak progression",anchor:"PILOT ANCHOR: Temporal ≈ 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6]}))
+        React.createElement(TrainingExample,{tone:"good",title:"GOOD — same location remains recognizable",anchor:"NanoBanana · Story 60 · Shots 1–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"LOW — same stated location unexpectedly drifts",anchor:"NaiveBaseline · Story 60 · Shots 1–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2,3]}))
       ),
-      React.createElement(TrainingCheck,{id:"background_move",q:"The descriptions explicitly change the location from a bedroom to a street. Is that expected change itself a Background-consistency error?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Only unexpected changes within an intended same location should reduce Background consistency."}));
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Expected moves are allowed. "),"When Story 60 later changes from the street to a tavern / peach garden / training ground, the background should change. Temporal asks whether those transitions make sense, not whether all frames look alike."),
+      React.createElement("h3",{style:{marginTop:18}},"Temporal continuity — compare the same full story"),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"More coherent progression",anchor:"NanoBanana · Story 60"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Less coherent progression",anchor:"NaiveBaseline · Story 60"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2,3,4,5,6,7,8]}))
+      ),
+      React.createElement(TrainingCheck,{id:"background_move",q:"The descriptions explicitly change the location from one place to another. Is that expected change itself a Background-consistency error?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Only unexpected changes within an intended same location should reduce Background consistency."}));
 
     if(step===4)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"4. Adjacent-Frame Repetition"),
-      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Similar is NOT automatically bad. "),"Choose Near-duplicate only when there is very little meaningful visual change."),
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Think in terms of meaningful visual change. "),"Distinct = large change; Similar = meaningful change within related content; Near-duplicate = almost no meaningful change."),
       React.createElement(RepetitionDemo,null),
       React.createElement(TrainingCheck,{id:"similar_rule",q:"Two adjacent frames stay in the same scene, but the character changes pose/action and the composition changes meaningfully. Which label is the best fit?",options:[["distinct","Distinct"],["similar","Similar"],["near","Near-duplicate"]],correct:"similar",answers,setAnswers,feedback:"Related context plus meaningful visual change is Similar. Near-duplicate is for almost unchanged imagery."}));
 
     if(step===5)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"5. Reference Reuse and Visual Style"),
-      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Reference reuse: copied composition/image"),React.createElement("span",{className:"tr3-chip ignore"},"Same character identity is allowed")),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Reference reuse: copied image / composition"),React.createElement("span",{className:"tr3-chip ignore"},"Same character identity is allowed")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Newly composed",anchor:"REFERENCE REUSE SCORE: high (4–5)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6],showRefs:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Close reference reuse",anchor:"REFERENCE REUSE SCORE: low (1–2)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],showRefs:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Newly composed",anchor:"REFERENCE REUSE: high score (4–5)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6],showRefs:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Close reference reuse",anchor:"REFERENCE REUSE: low score (1–2)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],showRefs:true}))
       ),
       React.createElement("h3",{style:{marginTop:18}},"Style consistency — generated frames only"),
       React.createElement(StyleDemo,null),
-      React.createElement("div",{className:"tr3-small",style:{marginTop:8}},"The style illustration is deliberately simplified so the distinction is unambiguous: judge rendering/realism/line work/shading/color treatment, not identity or scene correctness."),
-      React.createElement(TrainingCheck,{id:"reuse_identity",q:"A generated frame shows the same character as the reference but uses a genuinely new pose, background, and composition. Is that automatically reference copying?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"P_ref targets direct or close image/composition reuse, not legitimate identity similarity."}));
+      React.createElement("div",{className:"tr3-note"},"For Style, compare only rendering / realism / line work / shading / color treatment across generated frames. Do not use reference images, identity, clothing, or background correctness."),
+      React.createElement(TrainingCheck,{id:"reuse_identity",q:"A generated frame shows the same character as the reference but uses a genuinely new pose, background, and composition. Is that automatically reference copying?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Reference reuse targets direct or close image/composition reuse, not legitimate identity similarity."}));
 
     return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"6. Overall Visual Story Consistency"),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 24. "),"Compare two generation models while keeping story content fixed."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story"),React.createElement("span",{className:"tr3-chip ignore"},"Do not calculate an average")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"More coherent pilot example",anchor:"PILOT OVERALL: about 3–4"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[1,2,3,4,5,6,7,8]})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Clear low-consistency pilot example",anchor:"PILOT OVERALL: 1"},React.createElement(TrainingSequence,{manifest,itemId:"story68_NaiveBaseline",shots:[1,2,3,4,5]}))
+        React.createElement(TrainingExample,{tone:"good",title:"More coherent overall",anchor:"QwenImageEdit-2509 · Story 24"},React.createElement(TrainingSequence,{manifest,itemId:"story24_QwenImageEdit-2509",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Lower overall consistency",anchor:"StoryDiffusion · Story 24"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6,7,8]}))
       ),
-      React.createElement("div",{className:"tr3-note"},"Overall is your independent final impression. A story may have one strong component and still feel inconsistent overall, or vice versa."),
+      React.createElement("div",{className:"tr3-note"},"Overall is your independent final impression of whether the generated sequence functions as one visually unified story. Do not mechanically average the earlier component scores."),
       React.createElement(TrainingCheck,{id:"overall_average",q:"For Overall consistency, should you calculate the arithmetic average of the component ratings you already gave?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Overall is an independent holistic human target, not a formula."}),
       pageReady&&React.createElement("div",{className:"success",style:{marginTop:13}},"Calibration complete. The next page starts the real study; no feedback or suggested ratings will be shown.")
     );
@@ -3014,7 +3079,7 @@ function TrainingStage({manifest,onComplete}){
     React.createElement("div",{className:"tr3-bar"},React.createElement("div",{style:{width:progress+"%"}})),
     body(),
     React.createElement("div",{className:"tr3-nav"},
-      btn(false,step===0,()=>{setStep(Math.max(0,step-1));window.scrollTo({top:0})},"← Back"),
+      btn(false,false,()=>{if(step>0){setStep(step-1);window.scrollTo({top:0})}else if(onBack){onBack()}},"← Back"),
       last
         ? btn(true,!pageReady,()=>onComplete({completed:true}),"Start main evaluation")
         : btn(true,!pageReady,()=>{setStep(step+1);window.scrollTo({top:0})},step===0?"Start practice":"Next")
@@ -3115,7 +3180,7 @@ function DetailCheckScene(){
   );
 }
 
-function Setup({assignments,pid,onGo}) {
+function Setup({assignments,pid,onGo,onBack}) {
   const onlineMode =
     CONFIG.requireOnlineSubmission &&
     CONFIG.autoAllocateGroup;
@@ -3271,6 +3336,7 @@ function Setup({assignments,pid,onGo}) {
   return React.createElement(
     "div",
     {className:"page"},
+    React.createElement(PageBack,{onClick:onBack}),
 
     React.createElement(
       "div",
@@ -3660,10 +3726,11 @@ function Setup({assignments,pid,onGo}) {
   );
 }
 
-function Consent({onGo}){
+function Consent({onGo,onBack}){
   const[c,setC]=useState(false);
   return React.createElement("div",{className:"page"},
     React.createElement("div",{className:"card"},
+      React.createElement(PageBack,{onClick:onBack}),
       React.createElement("h2",null,"Consent"),
       React.createElement("div",{className:"main-point"},
         React.createElement("strong",null,"Research use: "),
@@ -3678,8 +3745,9 @@ function Consent({onGo}){
   );
 }
 
-function Intro({item,story,onNext,itemNo,total}){
+function Intro({item,story,onNext,onBack,itemNo,total}){
   return React.createElement("div",{className:"page"},
+    React.createElement(PageBack,{onClick:onBack,disabled:!onBack,label:onBack?"← Back":"Previous story submitted"}),
     React.createElement("div",{className:"progress-wrap"},
       React.createElement("div",{className:"progress-bar"},React.createElement("div",{className:"progress-inner",style:{width:(itemNo/total*100)+"%"}})),
       React.createElement("span",{className:"label"},`${itemNo} / ${total}`)
@@ -3715,7 +3783,7 @@ function Intro({item,story,onNext,itemNo,total}){
   );
 }
 
-function Alignment({item,story,shots,idx,resp,setResp,onNext}){
+function Alignment({item,story,shots,idx,resp,setResp,onNext,onBack}){
   const ik=itemKey(item);
   const shot=shots[idx];
   const key=`align_${shot.shotId}`;
@@ -3771,6 +3839,7 @@ function Alignment({item,story,shots,idx,resp,setResp,onNext}){
     React.createElement(
       "div",
       {className:"card alignment-card"},
+      React.createElement(PageBack,{onClick:onBack}),
       React.createElement("div",{className:"row-between",style:{marginBottom:14}},
         React.createElement("div",null,
           React.createElement("div",{className:"label"},`${item.storyId} · Alignment ${idx+1}/${shots.length}`),
@@ -4169,14 +4238,14 @@ function SequencePanel({
 }
 
 
-function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
+function CharacterStage({item,story,characterMapping,resp,setResp,onNext,onBack,startAtEnd=false}){
   const ik=itemKey(item);
   const frameBase=outputBase(item);
   const refBase=storyBase(item);
   const groups=buildCharacterComparisonGroups(story,item,characterMapping);
   const [charIdx,setCharIdx]=useState(0);
 
-  useEffect(()=>setCharIdx(0),[ik]);
+  useEffect(()=>setCharIdx(startAtEnd?Math.max(0,groups.length-1):0),[ik,startAtEnd,groups.length]);
 
   const group=groups[Math.min(charIdx,Math.max(0,groups.length-1))];
   const r=resp[ik]||{na:[],characterRatings:{}};
@@ -4311,7 +4380,10 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
               )
             : React.createElement("div",{className:"notice"},"This character has no matched generated appearances and is skipped."),
           React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16,marginTop:12}},
-            React.createElement("span",{className:"muted"},currentComplete?"":"Please rate both questions or choose N/A."),
+            React.createElement("div",{style:{display:"flex",gap:8}},
+              btn(false,false,()=>{if(charIdx>0){setCharIdx(charIdx-1);window.scrollTo({top:0})}else if(onBack){onBack()}},"← Back"),
+              React.createElement("span",{className:"muted"},currentComplete?"":"Please rate both questions or choose N/A.")
+            ),
             btn(true,!currentComplete,continueAction,charIdx<groups.length-1?"Next character":"Continue to scene consistency")
           )
         )
@@ -4320,7 +4392,7 @@ function CharacterStage({item,story,characterMapping,resp,setResp,onNext}){
   );
 }
 
-function SceneStage({item,story,resp,setResp,onNext}){
+function SceneStage({item,story,resp,setResp,onNext,onBack,startAtQuestions=false}){
   const ik=itemKey(item);
   const base=outputBase(item);
   const r=resp[ik]||{na:[]};
@@ -4329,10 +4401,16 @@ function SceneStage({item,story,resp,setResp,onNext}){
   const [questionsVisible,setQuestionsVisible]=useState(false);
 
   useEffect(()=>{
-    setIdx(0);
-    setQuestionsVisible(false);
-    setSeen(story.shots.length?new Set([story.shots[0].shotId]):new Set());
-  },[ik]);
+    if(startAtQuestions && story.shots.length){
+      setIdx(story.shots.length-1);
+      setQuestionsVisible(true);
+      setSeen(new Set(story.shots.map(s=>s.shotId)));
+    }else{
+      setIdx(0);
+      setQuestionsVisible(false);
+      setSeen(story.shots.length?new Set([story.shots[0].shotId]):new Set());
+    }
+  },[ik,startAtQuestions]);
 
   const shot=story.shots[idx];
 
@@ -4379,6 +4457,7 @@ function SceneStage({item,story,resp,setResp,onNext}){
   const complete=backgroundDone&&typeof r.q5_temporal==="number";
 
   return React.createElement("div",{className:"page"},
+    React.createElement(PageBack,{onClick:()=>{if(questionsVisible){setQuestionsVisible(false);setIdx(Math.max(0,story.shots.length-1));window.scrollTo({top:0})}else if(idx>0){inspect(idx-1);window.scrollTo({top:0})}else if(onBack){onBack()}}}),
     React.createElement("div",{className:"row-between",style:{marginBottom:14}},
       React.createElement("div",null,
         React.createElement("div",{className:"label"},"Stage 4 / 5"),
@@ -4656,56 +4735,24 @@ function ShotEvidenceCompact({shot,label}){
   );
 }
 
-function OverallStage({item,story,resp,setResp,onNext,submitting}){
+function OverallStage({item,story,resp,setResp,onNext,onBack,submitting}){
   const ik=itemKey(item);
   const base=outputBase(item);
   const r=resp[ik]||{na:[],repetition:{}};
   const repetition=r.repetition||{};
   const [repIdx,setRepIdx]=useState(1);
-  const [postStep,setPostStep]=useState(0); // 0=P_ref, 1=Style, 2=Overall, 3=Summary
+  const [postStep,setPostStep]=useState(0); // -1 review repetition; 0=P_ref; 1=Style; 2=Overall; 3=Summary
 
-  useEffect(()=>{
-    setRepIdx(1);
-    setPostStep(0);
-  },[ik]);
+  useEffect(()=>{setRepIdx(1);setPostStep(0)},[ik]);
 
-  function repetitionJudgment(entry){
-    return entry&&typeof entry==="object"?entry.judgment:entry;
-  }
-
-  function setRep(prevShot,currentShot,value){
-    setResp(p=>{
-      const rr={...(p[ik]||{na:[],repetition:{}})};
-      rr.repetition={...(rr.repetition||{})};
-      rr.repetition[currentShot.shotId]={
-        judgment:value,
-        previousShotId:prevShot.shotId,
-        previousShotNumber:prevShot.n,
-        currentShotId:currentShot.shotId,
-        currentShotNumber:currentShot.n
-      };
-      return {...p,[ik]:rr};
-    });
-  }
-
-  function rate(qid,v){
-    if(postStep===3)return;
-    setResp(p=>{
-      const rr={...(p[ik]||{na:[],repetition:{}})};
-      rr[qid]=v;
-      return {...p,[ik]:rr};
-    });
-  }
-
-  function mean(vals){
-    const x=vals.filter(v=>typeof v==="number");
-    return x.length?x.reduce((a,b)=>a+b,0)/x.length:null;
-  }
+  function repetitionJudgment(entry){return entry&&typeof entry==="object"?entry.judgment:entry}
+  function setRep(prevShot,currentShot,value){setResp(p=>{const rr={...(p[ik]||{na:[],repetition:{}})};rr.repetition={...(rr.repetition||{})};rr.repetition[currentShot.shotId]={judgment:value,previousShotId:prevShot.shotId,previousShotNumber:prevShot.n,currentShotId:currentShot.shotId,currentShotNumber:currentShot.n};return {...p,[ik]:rr}})}
+  function rate(qid,v){if(postStep===3)return;setResp(p=>{const rr={...(p[ik]||{na:[],repetition:{}})};rr[qid]=v;return {...p,[ik]:rr}})}
+  function mean(vals){const x=vals.filter(v=>typeof v==="number");return x.length?x.reduce((a,b)=>a+b,0)/x.length:null}
 
   const identity=mean(Object.values(r.characterRatings||{}).map(x=>x?.identity));
   const attribute=mean(Object.values(r.characterRatings||{}).map(x=>x?.attribute));
   const alignment=mean(Object.values(r.alignment||{}));
-
   const componentValues=[
     {key:"identity",label:"Character identity",shortLabel:"Identity",value:identity},
     {key:"attribute",label:"Character attributes",shortLabel:"Attributes",value:attribute},
@@ -4718,145 +4765,106 @@ function OverallStage({item,story,resp,setResp,onNext,submitting}){
 
   const repetitionTargets=story.shots.slice(1);
   const repetitionComplete=repetitionTargets.every(s=>!!repetitionJudgment(repetition[s.shotId]));
-
   const currentIndex=Math.max(1,Math.min(repIdx,story.shots.length-1));
   const prevShot=story.shots[Math.max(0,currentIndex-1)];
   const currentShot=story.shots[currentIndex];
   const currentRepValue=currentShot?repetitionJudgment(repetition[currentShot.shotId]):null;
+  const ratedCount=repetitionTargets.filter(s=>!!repetitionJudgment(repetition[s.shotId])).length;
+  const nearDupCount=repetitionTargets.filter(s=>repetitionJudgment(repetition[s.shotId])==="near_duplicate").length;
+  const showingRepetition=!repetitionComplete||postStep===-1;
 
   function advanceRepetition(){
     if(!currentShot||!currentRepValue)return;
-    if(currentIndex<story.shots.length-1){
-      setRepIdx(currentIndex+1);
-      window.scrollTo({top:0,behavior:"smooth"});
+    if(currentIndex<story.shots.length-1){setRepIdx(currentIndex+1);window.scrollTo({top:0,behavior:"smooth"})}
+    else if(postStep===-1){setPostStep(0);window.scrollTo({top:0,behavior:"smooth"})}
+  }
+
+  function sequenceGallery(){return React.createElement("div",{className:"compact-sequence-grid"},story.shots.map(shot=>React.createElement("div",{className:"compact-sequence-item",key:shot.shotId},React.createElement(ImageWithFallback,{src:base+shot.frame,alt:`Generated frame ${shot.n}`,cls:"sequence-frame-img",label:`Generated frame ${shot.n}`,zoomable:true}),React.createElement("div",{className:"compact-sequence-label"},`Frame ${shot.n}`))))}
+  function contextDetails(){return React.createElement("details",{className:"context-details"},React.createElement("summary",null,"View shot context (optional)"),React.createElement("div",{className:"context-details-body"},story.shots.map(shot=>React.createElement("div",{className:"context-line",key:shot.shotId},React.createElement("strong",null,`Frame ${shot.n}: `),shot.setting||"",shot.staticDesc?` — ${shot.staticDesc}`:""))))}
+  function referenceStrip(){
+    const groups=groupReferenceCharacters(story.characters||[]);
+    const cards=groups.flatMap(g=>(g.images||[]).slice(0,2).map((img,i)=>
+      React.createElement(
+        "div",
+        {className:"ref-card",key:g.name+"_"+i},
+        React.createElement(ImageWithFallback,{src:storyBase(item)+img.ref,alt:`${g.name} reference`,cls:"ref-img",label:g.name,zoomable:true}),
+        React.createElement("div",{className:"reference-strip-name"},g.name)
+      )
+    ));
+    return React.createElement("div",{className:"reference-strip"},cards);
+  }
+
+  function backAction(){
+    if(showingRepetition){
+      if(currentIndex>1){setRepIdx(currentIndex-1);window.scrollTo({top:0})}
+      else if(onBack){onBack()}
+      return;
     }
+    if(postStep===0){setPostStep(-1);setRepIdx(Math.max(1,story.shots.length-1));window.scrollTo({top:0});return}
+    if(postStep>0){setPostStep(postStep-1);window.scrollTo({top:0});return}
   }
 
-  const ratedCount=repetitionTargets.filter(s=>!!repetitionJudgment(repetition[s.shotId])).length;
-  const nearDupCount=repetitionTargets.filter(s=>repetitionJudgment(repetition[s.shotId])==="near_duplicate").length;
+  let title=""; let evidence=null; let questionPanel=null; let actionButton=null; let footerText="";
 
-  function generatedSequence(withContext=false){
-    return React.createElement("div",{className:"reference-reuse-panel"},
-      React.createElement("h3",null,withContext?"Generated sequence with shot context":"Generated sequence"),
-      React.createElement("div",{className:"full-sequence-mini-grid"},
-        story.shots.map(shot=>React.createElement("div",{key:shot.shotId},
-          React.createElement(ImageWithFallback,{src:base+shot.frame,alt:`Generated frame ${shot.n}`,cls:"sequence-frame-img",label:`Generated frame ${shot.n}`,zoomable:true}),
-          React.createElement("div",{className:"character-generated-label"},`Frame ${shot.n}`),
-          withContext&&React.createElement("div",{className:"scene-context-setting-inline"},shot.setting||""),
-          withContext&&shot.staticDesc&&React.createElement("div",{className:"scene-context-setting-inline"},shot.staticDesc)
-        ))
-      )
-    );
-  }
-
-  let evidence;
-  let questionPanel;
-  let footerText="";
-  let actionButton=null;
-
-  if(!repetitionComplete){
-    evidence=React.createElement("div",{className:"repetition-seq-card"},
-      React.createElement("div",{className:"repetition-seq-instruction"},
-        React.createElement("strong",null,"Adjacent-frame repetition: "),
-        "Compare the current generated frame with the previous generated frame. The shot text is shown because the automatic P_copy component uses Plot, Setting, Static Shot Description, and on-stage characters to determine whether visible change is expected. Similar is not automatically bad. Choose Near-duplicate only when very little meaningful visual change is present."
-      ),
-      React.createElement("div",{className:"repetition-text-context"},
-        React.createElement(ShotEvidenceCompact,{shot:prevShot,label:`PREVIOUS SHOT ${prevShot.n} — EXPECTED CONTENT`}),
-        React.createElement(ShotEvidenceCompact,{shot:currentShot,label:`CURRENT SHOT ${currentShot.n} — EXPECTED CONTENT`})
-      ),
-      React.createElement("div",{className:"repetition-pair"},
-        React.createElement("div",{className:"repetition-pair-panel"},
-          React.createElement("div",{className:"repetition-pair-title"},`Previous frame — ${prevShot.n}`),
-          React.createElement(ImageWithFallback,{src:base+prevShot.frame,alt:`Previous generated frame ${prevShot.n}`,cls:"sequence-frame-img",label:`Generated frame ${prevShot.n}`,zoomable:true})
-        ),
-        React.createElement("div",{className:"repetition-pair-panel"},
-          React.createElement("div",{className:"repetition-pair-title"},`Current frame — ${currentShot.n}`),
-          React.createElement(ImageWithFallback,{src:base+currentShot.frame,alt:`Current generated frame ${currentShot.n}`,cls:"sequence-frame-img",label:`Generated frame ${currentShot.n}`,zoomable:true})
-        )
-      ),
-      React.createElement("div",{className:"repetition-answer-box"},
-        React.createElement("div",{className:"repetition-answer-title"},"How does the current frame compare visually with the previous frame?"),
-        React.createElement("div",{className:"repetition-answer-desc"},"Similar is not automatically bad. Choose Near-duplicate only when very little meaningful visual change is present."),
-        React.createElement("div",{className:"repetition-answer-row"},
-          [
-            ["distinct","Distinct","Substantially different visual content or composition"],
-            ["similar","Similar","Related scene/layout, but meaningful visual change is present"],
-            ["near_duplicate","Near-duplicate","Almost the same image/composition with very little meaningful visual change"]
-          ].map(([value,label,definition])=>React.createElement("button",{
-            type:"button",key:value,className:"repetition-answer-btn"+(currentRepValue===value?" selected":""),
-            onClick:()=>setRep(prevShot,currentShot,value)
-          },label,React.createElement("span",{className:"repetition-answer-definition"},definition)))
-        ),
-        React.createElement("div",{className:"row-between",style:{marginTop:14}},
-          React.createElement("span",{className:"muted"},`Comparison ${Math.min(ratedCount+1,repetitionTargets.length)} of ${repetitionTargets.length}`),
-          btn(true,!currentRepValue,advanceRepetition,currentIndex<story.shots.length-1?"Save & compare next frame":"Complete repetition check")
-        ),
-        React.createElement("div",{className:"repetition-progress"},`${ratedCount} / ${repetitionTargets.length} repetition comparisons completed`)
-      )
-    );
-    questionPanel=React.createElement("div",{className:"notice"},"Complete all adjacent-frame comparisons first. The remaining sequence-level questions will appear one at a time afterward.");
-    footerText="Complete the adjacent-frame repetition check first.";
-  }else if(postStep===0){
+  if(showingRepetition){
+    title="Adjacent-Frame Repetition";
     evidence=React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"success"},`Adjacent repetition check complete. Near-duplicate pairs marked: ${nearDupCount} / ${repetitionTargets.length}.`),
-      React.createElement("div",{className:"reference-reuse-panel"},
-        React.createElement("h3",null,"Reference images and generated sequence"),
-        React.createElement("p",{className:"muted"},"The automatic P_ref component compares generated frames against the supplied reference images. Use the same evidence here. Same character identity is allowed; judge direct or close image reuse."),
-        story.characters.length>0&&React.createElement(ReferenceGroups,{item,characters:story.characters,zoomable:true}),
-        generatedSequence(false)
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Compare only these two generated frames. "),"Use the compact context only to decide whether visual change was expected."),
+      React.createElement("div",{className:"repetition-legend"},
+        [["Distinct","large meaningful change"],["Similar","meaningful change, related scene"],["Near-duplicate","almost no meaningful change"]].map(x=>React.createElement("div",{className:"repetition-legend-item",key:x[0]},React.createElement("strong",null,x[0]),React.createElement("span",null,x[1])))
+      ),
+      React.createElement("details",{className:"context-details"},React.createElement("summary",null,"View expected shot context"),React.createElement("div",{className:"repetition-compact-context"},React.createElement("div",{className:"repetition-context-mini"},React.createElement("strong",null,`Previous ${prevShot.n}: `),(prevShot.setting||""),prevShot.staticDesc?` — ${prevShot.staticDesc}`:""),React.createElement("div",{className:"repetition-context-mini"},React.createElement("strong",null,`Current ${currentShot.n}: `),(currentShot.setting||""),currentShot.staticDesc?` — ${currentShot.staticDesc}`:""))),
+      React.createElement("div",{className:"repetition-pair"},
+        React.createElement("div",{className:"repetition-pair-panel"},React.createElement("div",{className:"repetition-pair-title"},`Previous frame — ${prevShot.n}`),React.createElement(ImageWithFallback,{src:base+prevShot.frame,alt:`Previous generated frame ${prevShot.n}`,cls:"sequence-frame-img",label:`Generated frame ${prevShot.n}`,zoomable:true})),
+        React.createElement("div",{className:"repetition-pair-panel"},React.createElement("div",{className:"repetition-pair-title"},`Current frame — ${currentShot.n}`),React.createElement(ImageWithFallback,{src:base+currentShot.frame,alt:`Current generated frame ${currentShot.n}`,cls:"sequence-frame-img",label:`Generated frame ${currentShot.n}`,zoomable:true}))
       )
+    );
+    questionPanel=React.createElement("div",null,
+      React.createElement("div",{className:"q-title"},"How does the current frame compare visually with the previous frame?"),
+      React.createElement("div",{className:"repetition-answer-row"},[["distinct","Distinct","Substantially different visual content or composition"],["similar","Similar","Related scene/layout, but meaningful visual change is present"],["near_duplicate","Near-duplicate","Almost the same image/composition with very little meaningful visual change"]].map(([value,label,definition])=>React.createElement("button",{type:"button",key:value,className:"repetition-answer-btn"+(currentRepValue===value?" selected":""),onClick:()=>setRep(prevShot,currentShot,value)},label,React.createElement("span",{className:"repetition-answer-definition"},definition))))
+    );
+    footerText=`Comparison ${currentIndex} of ${repetitionTargets.length}`;
+    actionButton=btn(true,!currentRepValue,advanceRepetition,currentIndex<story.shots.length-1?"Save & compare next":"Continue");
+  }else if(postStep===0){
+    title="Reference-Image Reuse";
+    evidence=React.createElement(React.Fragment,null,
+      React.createElement("div",{className:"tr3-note"},"Reference images are shown as a small strip. Same character identity is allowed; judge whether generated frames directly or closely reuse the reference image/composition."),
+      React.createElement("h3",null,"Reference images"),referenceStrip(),
+      React.createElement("h3",{style:{marginTop:12}},"Generated sequence"),sequenceGallery()
     );
     questionPanel=React.createElement(Q,{q:COMPONENT_QUESTIONS.overall[0],val:r.q7_reference_reuse,isNA:false,onRate:v=>rate("q7_reference_reuse",v),onNA:null});
     footerText=typeof r.q7_reference_reuse==="number"?"Reference-reuse rating complete.":"Answer the Reference-Image Reuse question.";
-    actionButton=btn(true,typeof r.q7_reference_reuse!=="number",()=>{setPostStep(1);window.scrollTo({top:0,behavior:"smooth"})},"Continue to visual style");
+    actionButton=btn(true,typeof r.q7_reference_reuse!=="number",()=>{setPostStep(1);window.scrollTo({top:0})},"Continue to visual style");
   }else if(postStep===1){
+    title="Visual Style Consistency";
     evidence=React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"Reference images are intentionally hidden on this step. Visual Style is a diagnostic judgment about consistency among the generated frames themselves."),
-      generatedSequence(false)
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Generated frames only. "),"Compare rendering style, realism level, line work, shading and color treatment. Ignore identity, clothing, background correctness and reference similarity."),
+      sequenceGallery()
     );
     questionPanel=React.createElement(Q,{q:COMPONENT_QUESTIONS.overall[1],val:r.q8_style,isNA:false,onRate:v=>rate("q8_style",v),onNA:null});
     footerText=typeof r.q8_style==="number"?"Style rating complete.":"Answer the Visual Style Consistency question.";
-    actionButton=btn(true,typeof r.q8_style!=="number",()=>{setPostStep(2);window.scrollTo({top:0,behavior:"smooth"})},"Continue to overall consistency");
+    actionButton=btn(true,typeof r.q8_style!=="number",()=>{setPostStep(2);window.scrollTo({top:0})},"Continue to overall consistency");
   }else if(postStep===2){
+    title="Overall Visual Story Consistency";
     evidence=React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"Give an independent holistic judgment. Do not calculate or average your previous component ratings."),
-      generatedSequence(true)
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Holistic judgment. "),"Do not calculate or average your previous ratings. Expected story changes are allowed."),
+      sequenceGallery(),contextDetails()
     );
     questionPanel=React.createElement(Q,{q:COMPONENT_QUESTIONS.overall[2],val:r.q9_overall,isNA:false,onRate:v=>rate("q9_overall",v),onNA:null});
     footerText=typeof r.q9_overall==="number"?"Overall rating complete.":"Answer the Overall Visual Story Consistency question.";
-    actionButton=btn(true,typeof r.q9_overall!=="number",()=>{setPostStep(3);window.scrollTo({top:0,behavior:"smooth"})},"View rating summary");
+    actionButton=btn(true,typeof r.q9_overall!=="number",()=>{setPostStep(3);window.scrollTo({top:0})},"View rating summary");
   }else{
-    evidence=React.createElement("div",{className:"result-card"},
-      React.createElement("div",{className:"label"},"YOUR CONSISTENCY PROFILE"),
-      React.createElement(RadarChart,{components:componentValues}),
-      React.createElement("div",{className:"radar-note"},`Adjacent repetition is stored separately as categorical P_copy judgments (${nearDupCount} near-duplicate pair${nearDupCount===1?"":"s"}). Your holistic Overall score is ${r.q9_overall} / 5.`)
-    );
+    title="Story rating summary";
+    evidence=React.createElement("div",{className:"result-card"},React.createElement("div",{className:"label"},"YOUR CONSISTENCY PROFILE"),React.createElement(RadarChart,{components:componentValues}),React.createElement("div",{className:"radar-note"},`Adjacent repetition is stored separately (${nearDupCount} near-duplicate pair${nearDupCount===1?"":"s"}). Your Overall score is ${r.q9_overall} / 5.`));
     questionPanel=React.createElement("div",{className:"success"},"All ratings for this story are complete.");
-    footerText="";
     actionButton=btn(true,submitting,onNext,submitting?"Submitting...":"Finish story");
   }
 
-  return React.createElement("div",{className:"page"},
-    React.createElement("div",{className:"row-between",style:{marginBottom:14}},
-      React.createElement("div",null,
-        React.createElement("div",{className:"label"},"Stage 5 / 5"),
-        React.createElement("h2",{style:{marginBottom:0}},"Repetition, reference reuse, style and overall consistency")
-      ),
-      React.createElement("div",{className:"label"},`${story.shots.length} available frames`)
-    ),
-    React.createElement("div",{className:"guided-split"},
-      React.createElement("div",{className:"guided-evidence"},evidence),
-      React.createElement("div",{className:"guided-questions"},
-        React.createElement("div",{className:"card"},
-          React.createElement("div",{className:"label"},postStep===3?"SUMMARY":"YOUR RATING"),
-          questionPanel,
-          React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16,marginTop:16}},
-            React.createElement("span",{className:"muted"},footerText),
-            actionButton
-          )
-        )
-      )
-    )
+  return React.createElement("div",{className:"page late-stage-page"},
+    React.createElement(PageBack,{onClick:backAction}),
+    React.createElement("div",{className:"late-stage-header"},React.createElement("div",null,React.createElement("div",{className:"label"},"Stage 5 / 5"),React.createElement("h2",{style:{marginBottom:0}},title)),React.createElement("div",{className:"label"},`${story.shots.length} frames`)),
+    React.createElement("div",{className:"late-stage-evidence"},evidence),
+    React.createElement("div",{className:"card late-stage-question"},React.createElement("div",{className:"label"},postStep===3?"SUMMARY":"YOUR RATING"),questionPanel,React.createElement("div",{className:"row-between",style:{borderTop:"1px solid var(--border)",paddingTop:16,marginTop:16}},React.createElement("span",{className:"muted"},footerText),actionButton))
   );
 }
 
@@ -4975,6 +4983,8 @@ function ComponentImportance({onSubmit,submitting}){
     React.createElement(
       "div",
       {className:"card"},
+
+      React.createElement(PageBack,{onClick:null,disabled:true,label:"Story ratings already submitted"}),
 
       React.createElement(
         "div",
@@ -5227,6 +5237,8 @@ function App(){
   const[submitting,setSubmitting]=useState(false);
   const[status,setStatus]=useState("sent");
   const[componentImportance,setComponentImportance]=useState(null);
+  const[characterReturnEnd,setCharacterReturnEnd]=useState(false);
+  const[sceneReturnQuestions,setSceneReturnQuestions]=useState(false);
 
   useEffect(()=>{
     Promise.all([
@@ -5283,6 +5295,8 @@ function App(){
         )
       );
       setAlignIdx(0);
+      setCharacterReturnEnd(false);
+      setSceneReturnQuestions(false);
       setPhase("intro");
 
     }catch(e){
@@ -5332,7 +5346,14 @@ function App(){
   }
 
   function nextIntro(){setPhase("alignment")}
-  function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else setPhase("character")}
+  function backFromIntro(){if(itemIdx===0)setPhase("training")}
+  function backFromAlignment(){if(alignIdx>0)setAlignIdx(alignIdx-1);else setPhase("intro")}
+  function nextAlign(){if(alignIdx<alignShots.length-1)setAlignIdx(alignIdx+1);else{setCharacterReturnEnd(false);setPhase("character")}}
+  function backFromCharacter(){setAlignIdx(Math.max(0,alignShots.length-1));setPhase("alignment")}
+  function toScene(){setSceneReturnQuestions(false);setPhase("scene")}
+  function backFromScene(){setCharacterReturnEnd(true);setPhase("character")}
+  function toOverall(){setSceneReturnQuestions(false);setPhase("overall")}
+  function backFromOverall(){setSceneReturnQuestions(true);setPhase("scene")}
   function averageAlignment(r){
     const vals=Object.values(r.alignment||{}).filter(v=>typeof v==="number");
     return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:"";
@@ -5457,14 +5478,14 @@ function App(){
   const cur=items[itemIdx];
   return React.createElement("div",null,
     phase==="welcome"&&React.createElement(Welcome,{start,loadError:err}),
-    phase==="consent"&&React.createElement(Consent,{onGo:()=>setPhase("setup")}),
-    phase==="setup"&&React.createElement(Setup,{assignments:assign||{},pid,onGo:setupDone}),
-    phase==="training"&&React.createElement(TrainingStage,{manifest,onComplete:finishTraining}),
-    phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,itemNo:itemIdx+1,total:items.length}),
-    phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign}),
-    phase==="character"&&story&&React.createElement(CharacterStage,{item:cur,story,characterMapping,resp,setResp,onNext:()=>setPhase("scene")}),
-    phase==="scene"&&story&&React.createElement(SceneStage,{item:cur,story,resp,setResp,onNext:()=>setPhase("overall")}),
-    phase==="overall"&&story&&React.createElement(OverallStage,{item:cur,story,resp,setResp,onNext:finishSeq,submitting}),
+    phase==="consent"&&React.createElement(Consent,{onGo:()=>setPhase("setup"),onBack:()=>setPhase("welcome")}),
+    phase==="setup"&&React.createElement(Setup,{assignments:assign||{},pid,onGo:setupDone,onBack:()=>setPhase("consent")}),
+    phase==="training"&&React.createElement(TrainingStage,{manifest,onComplete:finishTraining,onBack:()=>setPhase("setup")}),
+    phase==="intro"&&story&&React.createElement(Intro,{item:cur,story,onNext:nextIntro,onBack:itemIdx===0?backFromIntro:null,itemNo:itemIdx+1,total:items.length}),
+    phase==="alignment"&&story&&React.createElement(Alignment,{item:cur,story,shots:alignShots,idx:alignIdx,resp,setResp,onNext:nextAlign,onBack:backFromAlignment}),
+    phase==="character"&&story&&React.createElement(CharacterStage,{item:cur,story,characterMapping,resp,setResp,onNext:toScene,onBack:backFromCharacter,startAtEnd:characterReturnEnd}),
+    phase==="scene"&&story&&React.createElement(SceneStage,{item:cur,story,resp,setResp,onNext:toOverall,onBack:backFromScene,startAtQuestions:sceneReturnQuestions}),
+    phase==="overall"&&story&&React.createElement(OverallStage,{item:cur,story,resp,setResp,onNext:finishSeq,onBack:backFromOverall,submitting}),
     phase==="importance"&&React.createElement(ComponentImportance,{onSubmit:finishSession,submitting}),
     phase==="done"&&React.createElement(Done,{pid,status}),
     phase==="runtime_error"&&React.createElement(RuntimeError,{message:err,onBack:()=>setPhase("setup")})
