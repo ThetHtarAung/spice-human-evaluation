@@ -1788,6 +1788,67 @@ p { line-height: 1.6; }
   .scale-label { margin-top:0; }
 }
 
+
+/* ===== Training v3: compact, real-task-style calibration ===== */
+.tr3-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tr3-progress{font-weight:750;color:var(--muted);white-space:nowrap}
+.tr3-bar{height:7px;background:var(--light);border:1px solid var(--border);border-radius:99px;overflow:hidden;margin:10px 0 18px}
+.tr3-bar>div{height:100%;background:var(--accent);transition:width .2s ease}
+.tr3-rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.tr3-rule{border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:10px;background:#fff;padding:14px;line-height:1.45}
+.tr3-rule strong{display:block;margin-bottom:5px}
+.tr3-focus{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.tr3-chip{padding:6px 10px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid var(--border)}
+.tr3-chip.look{background:var(--accent-tint);color:var(--accent-dark)}
+.tr3-chip.ignore{background:#f8fafc;color:var(--muted)}
+.tr3-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.tr3-example{border:2px solid var(--border);border-radius:12px;padding:13px;background:#fff;min-width:0}
+.tr3-example.good{border-color:#16a34a;background:#f0fdf4}
+.tr3-example.bad{border-color:#dc2626;background:#fef2f2}
+.tr3-example h3{margin:2px 0 8px}
+.tr3-anchor{font-weight:800;margin-bottom:8px}
+.tr3-anchor.good{color:#166534}.tr3-anchor.bad{color:#991b1b}
+.tr3-small{font-size:13px;line-height:1.45;color:var(--muted)}
+.tr3-refline{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tr3-refline .ref-img{width:82px;height:82px;object-fit:cover}
+.tr3-thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin-top:8px}
+.tr3-thumbs .sequence-frame-img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.tr3-evidence{border:1px solid var(--border);border-radius:9px;padding:10px;background:var(--light);font-size:13px;line-height:1.45;margin-bottom:9px}
+.tr3-evidence .label{font-size:10px;margin:5px 0 2px}
+.tr3-rating{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.tr3-rating span{font-weight:800;padding:6px 9px;border-radius:7px;border:1px solid var(--border);background:#fff}
+.tr3-note{padding:11px 13px;border-left:4px solid var(--accent);background:var(--accent-tint);border-radius:8px;line-height:1.45;margin:12px 0}
+.tr3-check{margin-top:16px;border:1px solid var(--border);border-radius:10px;padding:13px;background:#fff}
+.tr3-check-q{font-weight:800;line-height:1.4;margin-bottom:9px}
+.tr3-check-options{display:flex;gap:8px;flex-wrap:wrap}
+.tr3-check-options button{border:1px solid var(--border-strong);background:#fff;border-radius:8px;padding:9px 13px;cursor:pointer}
+.tr3-check-options button.selected{border-color:var(--accent);background:var(--accent-tint);font-weight:800}
+.tr3-feedback{margin-top:9px;padding:9px 11px;border-radius:8px;font-size:13px;line-height:1.45}
+.tr3-feedback.ok{background:#ecfdf5;border:1px solid #86efac;color:#166534}
+.tr3-feedback.no{background:#fff7ed;border:1px solid #fdba74;color:#9a3412}
+.tr3-nav{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--border);padding-top:17px;margin-top:19px}
+.tr3-demo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.tr3-demo-card{border:1px solid var(--border);border-radius:10px;padding:10px;background:#fff}
+.tr3-demo-title{font-weight:800;margin-bottom:7px}
+.rep-scene{height:118px;border:1px solid #cbd5e1;border-radius:8px;position:relative;overflow:hidden;background:#f8fafc;margin:5px 0}
+.rep-window{position:absolute;left:10px;top:10px;width:28px;height:25px;border:2px solid #64748b;background:#dbeafe}
+.rep-table{position:absolute;left:34%;bottom:20px;width:44%;height:12px;border:2px solid #64748b;background:#e2e8f0}
+.rep-person{position:absolute;bottom:32px;width:22px;height:42px;border:2px solid #475569;border-radius:12px 12px 5px 5px;background:#fff}
+.rep-person:before{content:"";position:absolute;width:18px;height:18px;border:2px solid #475569;border-radius:50%;top:-20px;left:0;background:#fff}
+.rep-book{position:absolute;bottom:34px;width:22px;height:6px;background:#94a3b8}
+.style-demo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.style-tile{height:95px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:2px solid #64748b;background:#f8fafc;position:relative;overflow:hidden}
+.style-face{width:42px;height:42px;border:3px solid #475569;border-radius:50%;background:white;position:relative}
+.style-face:before,.style-face:after{content:"";position:absolute;width:5px;height:5px;background:#475569;border-radius:50%;top:13px}.style-face:before{left:9px}.style-face:after{right:9px}
+.style-tile.sketch{border-style:dashed;background:repeating-linear-gradient(45deg,#fff,#fff 6px,#f1f5f9 6px,#f1f5f9 8px)}
+.style-tile.soft{border-radius:22px;background:linear-gradient(135deg,#f8fafc,#e2e8f0)}
+.room-demo{height:115px;border:1px solid #cbd5e1;border-radius:8px;position:relative;background:#f8fafc;overflow:hidden}
+.room-demo .w{position:absolute;left:10px;top:10px;width:28px;height:24px;border:2px solid #64748b;background:#dbeafe}
+.room-demo .sofa{position:absolute;left:16px;bottom:14px;width:48px;height:25px;border:2px solid #64748b;border-radius:6px;background:#e2e8f0}
+.room-demo .table{position:absolute;right:18px;bottom:18px;width:35px;height:18px;border:2px solid #64748b;background:#fff}
+.room-demo.changed .w{left:auto;right:8px}.room-demo.changed .sofa{left:auto;right:12px;width:70px}.room-demo.changed .table{right:auto;left:12px;bottom:52px}
+@media(max-width:800px){.tr3-rules,.tr3-grid2,.tr3-demo-grid{grid-template-columns:1fr}.tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 </head>
 <body><div id="app"></div>
@@ -1800,10 +1861,10 @@ const CONFIG={
   title:"Visual Story Consistency Evaluation",
   institution:"Ritsumeikan University — Visual Information Engineering Laboratory",
   dataset:"ViStoryBench-Lite",
-  surveyVersion:"SPICE-HUMAN-2026-MAIN-v2",
+  surveyVersion:"SPICE-HUMAN-2026-MAIN-v3",
 
   // Paste the deployed Google Apps Script /exec URL here for the real study.
-  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbzlurfHN9XVY0BVyoP9W-Z7fGV8_xpCc9y74cb3HrPtaHsdvZ1SYkfbsbvWo7P1P7W_eg/exec",
+  googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbxu_n0IDYi5ho1jEJQjhPxdYau2gHzrTWNVilT3g0HvDJnGtJqleKYXj4wT8-n_r55A/exec",
 
   // true  = final online study: automatically allocate an unused G01-G50.
   // false = local testing: manually enter a test group code.
@@ -1818,13 +1879,7 @@ const CONFIG={
   // are used only for calibration/training examples and never appear in the
   // main assignment file.
   mainStoryIds:["01","08","09","15","17","27","28","29","32","53","57","64"],
-  trainingVersion:"SPICE-TRAINING-v1",
-  trainingExampleItemIds:{
-    characterGood:"story60_NaiveBaseline",
-    characterBad:"story24_StoryDiffusion_photomaker",
-    temporalGood:"story60_Gemini",
-    overallBad:"story68_NaiveBaseline"
-  },
+  trainingVersion:"SPICE-TRAINING-v3",
 
   // PILOT ONLY:
   // true  = after one fully confirmed completed session, reopening the survey
@@ -2755,191 +2810,216 @@ function RepetitionSummaryQuestion({val,onRate}){
 }
 
 
-function TrainingExamplePreview({manifest,itemId,title,tone="good",showRefs=false,frameLimit=4,showShotText=false}){
-  const [state,setState]=useState({loading:true,error:"",item:null,story:null});
 
+function useTrainingItem(manifest,itemId){
+  const [state,setState]=useState({loading:true,error:"",item:null,story:null});
   useEffect(()=>{
     let alive=true;
-    async function run(){
+    (async()=>{
       try{
         const item=(manifest?.items||[]).find(x=>x.itemId===itemId);
-        if(!item) throw new Error(`Training item ${itemId} was not found in manifest.json.`);
-        const storyData=await getJson(storyBase(item)+(item.storyFile||"story.json"));
-        const st=normalizeStory(storyData,item);
-        if(alive)setState({loading:false,error:"",item,story:st});
+        if(!item)throw new Error(`Training item ${itemId} not found in manifest.json.`);
+        const raw=await getJson(storyBase(item)+(item.storyFile||"story.json"));
+        const story=normalizeStory(raw,item);
+        if(alive)setState({loading:false,error:"",item,story});
       }catch(e){
-        if(alive)setState({loading:false,error:String(e),item:null,story:null});
+        if(alive)setState({loading:false,error:String(e.message||e),item:null,story:null});
       }
-    }
-    run();
+    })();
     return()=>{alive=false};
   },[manifest,itemId]);
+  return state;
+}
 
-  if(state.loading)return React.createElement("div",{className:`training-example ${tone}`},React.createElement("h3",null,title),React.createElement("p",{className:"muted"},"Loading practice example..."));
-  if(state.error)return React.createElement("div",{className:`training-example ${tone}`},React.createElement("h3",null,title),React.createElement("div",{className:"error"},state.error));
+function TrainingRefs({item,story,character}){
+  const groups=groupReferenceCharacters(story.characters||[]);
+  const selected=character
+    ? groups.filter(g=>String(g.name).toLowerCase()===String(character).toLowerCase())
+    : groups;
+  return React.createElement("div",{className:"tr3-refline"},
+    selected.flatMap(g=>(g.images||[]).slice(0,2).map((img,i)=>
+      React.createElement(ImageWithFallback,{key:g.name+"_"+i,src:storyBase(item)+img.ref,alt:`${g.name} reference`,cls:"ref-img",label:g.name,zoomable:true})
+    ))
+  );
+}
 
-  const {item,story}=state;
-  const frames=story.shots.slice(0,Math.max(1,frameLimit));
+function TrainingSequence({manifest,itemId,shots,character=null,showRefs=false,showText=false}){
+  const st=useTrainingItem(manifest,itemId);
+  if(st.loading)return React.createElement("div",{className:"muted"},"Loading example...");
+  if(st.error)return React.createElement("div",{className:"error"},st.error);
+  const {item,story}=st;
+  const wanted=(shots||[]).map(n=>story.shots.find(s=>s.n===n)).filter(Boolean);
   const base=outputBase(item);
-  return React.createElement("div",{className:`training-example ${tone}`},
-    React.createElement("div",{className:"label"},tone==="good"?"HIGH / POSITIVE EXAMPLE":"LOW / PROBLEM EXAMPLE"),
-    React.createElement("h3",null,title),
-    showRefs&&React.createElement("div",{className:"training-ref-wrap"},React.createElement(ReferenceGroups,{item,characters:story.characters,zoomable:true})),
-    React.createElement("div",{className:"training-thumb-grid"},
-      frames.map(shot=>React.createElement("div",{key:shot.shotId},
-        React.createElement(ImageWithFallback,{src:base+shot.frame,alt:`Practice frame ${shot.n}`,cls:"sequence-frame-img",label:`Frame ${shot.n}`,zoomable:true}),
-        React.createElement("div",{className:"character-generated-label"},`Frame ${shot.n}`),
-        showShotText&&React.createElement("div",{className:"training-shot-text"},
+  return React.createElement(React.Fragment,null,
+    showRefs&&React.createElement(TrainingRefs,{item,story,character}),
+    React.createElement("div",{className:"tr3-thumbs"},wanted.map(shot=>
+      React.createElement("div",{key:shot.shotId},
+        showText&&React.createElement("div",{className:"tr3-evidence"},
           React.createElement("div",{className:"label"},"SETTING"),
           React.createElement("div",null,shot.setting||"—"),
           React.createElement("div",{className:"label"},"STATIC SHOT"),
           React.createElement("div",null,shot.staticDesc||"—")
-        )
-      ))
-    )
+        ),
+        React.createElement(ImageWithFallback,{src:base+shot.frame,alt:`Practice frame ${shot.n}`,cls:"sequence-frame-img",label:`Frame ${shot.n}`,zoomable:true}),
+        React.createElement("div",{className:"tr3-small",style:{marginTop:4}},`Frame ${shot.n}`)
+      )
+    ))
+  );
+}
+
+function TrainingExample({tone,title,anchor,children}){
+  return React.createElement("div",{className:`tr3-example ${tone}`},
+    React.createElement("div",{className:`tr3-anchor ${tone}`},anchor),
+    React.createElement("h3",null,title),children
+  );
+}
+
+function TrainingCheck({id,q,options,correct,answers,setAnswers,feedback}){
+  const selected=answers[id];
+  const answered=selected!==undefined;
+  const ok=selected===correct;
+  return React.createElement("div",{className:"tr3-check"},
+    React.createElement("div",{className:"tr3-check-q"},q),
+    React.createElement("div",{className:"tr3-check-options"},
+      options.map(([v,label])=>React.createElement("button",{type:"button",key:v,className:selected===v?"selected":"",onClick:()=>setAnswers(a=>({...a,[id]:v}))},label))
+    ),
+    answered&&React.createElement("div",{className:`tr3-feedback ${ok?"ok":"no"}`},ok?"✓ Correct. "+feedback:"Not quite. "+feedback)
+  );
+}
+
+function RepFrame({personX=58,bookX=112,variant="same"}){
+  const showTable=variant!=="distinct";
+  return React.createElement("div",{className:"rep-scene"},
+    React.createElement("div",{className:"rep-window",style:variant==="distinct"?{left:"auto",right:"10px"}:null}),
+    showTable&&React.createElement("div",{className:"rep-table"}),
+    React.createElement("div",{className:"rep-person",style:{left:personX}}),
+    showTable&&React.createElement("div",{className:"rep-book",style:{left:bookX}})
+  );
+}
+
+function RepetitionDemo(){
+  return React.createElement("div",{className:"tr3-demo-grid"},
+    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Distinct"),React.createElement(RepFrame,{personX:22,variant:"same"}),React.createElement(RepFrame,{personX:145,variant:"distinct"}),React.createElement("div",{className:"tr3-small"},"Substantially different content or composition.")),
+    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Similar"),React.createElement(RepFrame,{personX:55,bookX:112}),React.createElement(RepFrame,{personX:112,bookX:78}),React.createElement("div",{className:"tr3-small"},"Same context, but pose/composition changes meaningfully. Similar is not bad.")),
+    React.createElement("div",{className:"tr3-demo-card"},React.createElement("div",{className:"tr3-demo-title"},"Near-duplicate"),React.createElement(RepFrame,{personX:72,bookX:116}),React.createElement(RepFrame,{personX:75,bookX:116}),React.createElement("div",{className:"tr3-small"},"Almost unchanged image/composition; very little meaningful change."))
+  );
+}
+
+function BackgroundDemo(){
+  return React.createElement("div",{className:"tr3-grid2"},
+    React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — same location remains recognizable"),React.createElement("div",{className:"tr3-grid2",style:{marginTop:6}},React.createElement("div",{className:"room-demo"},React.createElement("div",{className:"w"}),React.createElement("div",{className:"sofa"}),React.createElement("div",{className:"table"})),React.createElement("div",{className:"room-demo"},React.createElement("div",{className:"w"}),React.createElement("div",{className:"sofa"}),React.createElement("div",{className:"table"})))),
+    React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — same stated location unexpectedly changes"),React.createElement("div",{className:"tr3-grid2",style:{marginTop:6}},React.createElement("div",{className:"room-demo"},React.createElement("div",{className:"w"}),React.createElement("div",{className:"sofa"}),React.createElement("div",{className:"table"})),React.createElement("div",{className:"room-demo changed"},React.createElement("div",{className:"w"}),React.createElement("div",{className:"sofa"}),React.createElement("div",{className:"table"}))))
+  );
+}
+
+function StyleDemo(){
+  const row=(classes)=>React.createElement("div",{className:"style-demo-row"},classes.map((c,i)=>React.createElement("div",{className:`style-tile ${c}`,key:i},React.createElement("div",{className:"style-face"}))));
+  return React.createElement("div",{className:"tr3-grid2"},
+    React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row(["","",""])),
+    React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — visible style shifts"),row(["","sketch","soft"]))
   );
 }
 
 function TrainingStage({manifest,onComplete}){
   const [step,setStep]=useState(0);
-  const [checks,setChecks]=useState({});
-  const total=6;
-  const ex=CONFIG.trainingExampleItemIds;
+  const [answers,setAnswers]=useState({});
+  const total=7;
+  const checks={
+    1:{id:"identity_style",correct:"no"},
+    2:{id:"alignment_beauty",correct:"no"},
+    3:{id:"background_move",correct:"no"},
+    4:{id:"similar_rule",correct:"similar"},
+    5:{id:"reuse_identity",correct:"no"},
+    6:{id:"overall_average",correct:"no"}
+  };
+  const pageCheck=checks[step];
+  const pageReady=!pageCheck||answers[pageCheck.id]===pageCheck.correct;
 
-  const anchors=[
-    ["Text–Image Alignment","High: the generated frame clearly matches the Setting Description and Static Shot Description. Low: the main intended scene/action/object content is missing or contradicted."],
-    ["Character Identity","High: the same character remains recognizable in face/body/proportions even if clothing or style changes. Low: the generated person/creature looks like a different identity."],
-    ["Character Attributes","High: important clothing, colors, hairstyle, accessories and characteristic details are preserved. Low: several important attributes change. Do not re-score identity here."],
-    ["Background / Scene","High: frames intended to show the same location preserve the physical environment. Low: the same location unexpectedly changes. Expected location changes are not errors."],
-    ["Temporal / Sequential","High: visible changes form a plausible understandable progression. Low: there are abrupt unexplained jumps. Do not re-score identity/style/background appearance here."],
-    ["Adjacent Repetition","Distinct = clearly different; Similar = related but meaningful change; Near-duplicate = almost the same image/composition with very little meaningful change. Similar is not automatically bad."],
-    ["Reference Reuse","High newly-composed score: generated story frames are newly composed. Low score: frames directly or closely reuse a supplied reference image."],
-    ["Visual Style","High: rendering/realism/line work/shading/color treatment remains stable. Low: major artistic-style shifts occur across generated frames."],
-    ["Overall","Give a direct holistic judgment. Do not calculate the average of your previous answers."]
-  ];
-
-  const checkDefs=[
-    {
-      id:"identity_style",
-      q:"A character keeps the same recognizable face/body identity, but the artistic rendering style changes. Should the style change alone lower the Identity score?",
-      options:[["yes","Yes"],["no","No"]],
-      correct:"no",
-      feedback:"Correct interpretation: do not penalize Identity for artistic-style change by itself. Style is rated separately."
-    },
-    {
-      id:"background_move",
-      q:"The shot descriptions explicitly move the story from a bedroom to a street. Should that expected location change be treated as a Background-consistency error?",
-      options:[["yes","Yes"],["no","No"]],
-      correct:"no",
-      feedback:"Correct interpretation: Background evaluates preservation of the physical environment only when the location is intended to remain the same."
-    },
-    {
-      id:"repetition_similar",
-      q:"Two adjacent frames remain in the same scene, but the character meaningfully changes pose/action and the composition changes. Which category is the best default interpretation?",
-      options:[["distinct","Distinct"],["similar","Similar"],["near_duplicate","Near-duplicate"]],
-      correct:"similar",
-      feedback:"Correct interpretation: Similar is allowed when meaningful visual change is present. Near-duplicate is reserved for almost unchanged imagery/composition."
-    },
-    {
-      id:"overall_independent",
-      q:"For Overall consistency, should you calculate the arithmetic average of your earlier component ratings?",
-      options:[["yes","Yes"],["no","No"]],
-      correct:"no",
-      feedback:"Correct interpretation: Overall is an independent holistic judgment, not a calculation of previous answers."
-    }
-  ];
-
-  const allChecksAnswered=checkDefs.every(c=>checks[c.id]);
-  const allChecksCorrect=checkDefs.every(c=>checks[c.id]===c.correct);
-
-  function page(){
+  function body(){
     if(step===0)return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"main-point"},React.createElement("strong",null,"Practice only — no research ratings are stored here. "),"The purpose is to make sure everyone interprets each component in the same way before the main study."),
-      React.createElement("div",{className:"training-step-list"},anchors.map(([a,b])=>React.createElement("div",{className:"training-anchor",key:a},React.createElement("strong",null,a),b)))
-    );
+      React.createElement("h2",null,"Three rules before the real study"),
+      React.createElement("div",{className:"tr3-rules"},
+        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"5 = best, 1 = worst"),"This direction is the same on every 1–5 question, including Reference Reuse."),
+        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"Judge one dimension only"),"A problem in Style should not automatically lower Identity, Background, or another score."),
+        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"N/A = not enough evidence"),"Use N/A only when the requested character/scene cannot reasonably be judged — not when you are deciding between two scores.")
+      ),
+      React.createElement("div",{className:"tr3-note"},"The practice examples are not research ratings. After each page, answer one quick check; if it is wrong, the correct rule appears immediately."));
 
     if(step===1)return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"Character dimensions are separate from scene/style quality. A sequence can have strong Identity/Attributes but weak Background, and you should score those dimensions independently."),
-      React.createElement("div",{className:"training-grid"},
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.characterGood,title:"Character preservation example",tone:"good",showRefs:true,frameLimit:6}),
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.characterBad,title:"Character inconsistency example",tone:"bad",showRefs:true,frameLimit:6})
+      React.createElement("h2",null,"1. Character Identity and Attributes"),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Identity: face · body · recognizable person"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Identity: clothing · style"),React.createElement("span",{className:"tr3-chip look"},"Attributes: clothing · colors · hair · accessories"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Attributes: whether the face is the same person")),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"Clear preservation example",anchor:"EXPECTED: Identity 4–5 · Attributes 4–5"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Clear inconsistency example",anchor:"EXPECTED: Identity 1–2 · Attributes 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[3,7,8],character:"Jo",showRefs:true}))
       ),
-      React.createElement("div",{className:"training-anchor",style:{marginTop:14}},React.createElement("strong",null,"How to rate"),"Identity: ignore artistic-style and clothing changes unless recognizability changes. Attributes: ignore whether it is the same identity; judge the visual traits themselves.")
-    );
+      React.createElement("div",{className:"tr3-note"},"Important: the first sequence is later used as a poor Reference-Reuse example. That is intentional: one sequence can be strong on Identity but weak on another dimension."),
+      React.createElement(TrainingCheck,{id:"identity_style",q:"The same face/body remains recognizable, but the artistic style changes. Should style change alone lower the Identity score?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Identity ignores artistic-style change by itself; Style is rated separately."}));
 
     if(step===2)return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"For Alignment, compare the generated frame with the same text evidence used by the automatic alignment component: Setting Description + Static Shot Description. For Temporal, use the ordered generated frames to judge progression."),
-      React.createElement("div",{className:"training-grid"},
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.temporalGood,title:"More coherent progression example",tone:"good",frameLimit:3,showShotText:true}),
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.characterBad,title:"Lower-coherence example",tone:"bad",frameLimit:3,showShotText:true})
+      React.createElement("h2",null,"2. Text–Image Alignment"),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Compare with: Setting + Static Shot Description"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore: beauty · realism · art style")),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"Strong match",anchor:"EXPECTED: 4–5"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[3],showText:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Weak match",anchor:"EXPECTED: 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[12],showText:true}))
       ),
-      React.createElement("div",{className:"training-anchor",style:{marginTop:14}},React.createElement("strong",null,"Alignment evidence"),"The main study will show Setting Description and Static Shot Description before revealing each generated image. Plot Correspondence is not shown for Q1 because the current automatic S_align implementation does not use it.")
-    );
+      React.createElement(TrainingCheck,{id:"alignment_beauty",q:"An image is beautiful, but it contradicts the Setting and Static Shot Description. Should beauty make its Alignment score high?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Alignment measures intended visual content, not image quality or artistic attractiveness."}));
 
     if(step===3)return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-step-list"},
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Background"),"Use Setting Description to decide which frames are intended to share the same physical environment. Expected changes of location are allowed."),
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Distinct"),"Substantially different visual content or composition."),
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Similar"),"Related scene/layout, but meaningful visual change is present. This is NOT automatically bad."),
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Near-duplicate"),"Almost the same image/composition with very little meaningful visual change."),
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Reference reuse"),"Compare generated frames directly with the supplied reference images. Same identity is allowed; penalize direct or close image reuse."),
-        React.createElement("div",{className:"training-anchor"},React.createElement("strong",null,"Visual style"),"Judge only the generated frames relative to one another: realism level, rendering, line work, shading and color treatment.")
-      )
-    );
+      React.createElement("h2",null,"3. Background and Temporal Continuity"),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Background: same-location physical environment"),React.createElement("span",{className:"tr3-chip ignore"},"Do not penalize an expected move"),React.createElement("span",{className:"tr3-chip look"},"Temporal: progression from frame to frame")),
+      React.createElement(BackgroundDemo,null),
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Expected location change is allowed. "),"If the descriptions move the story from a bedroom to a street, the background should change."),
+      React.createElement("h3",{style:{marginTop:18}},"Temporal examples"),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"Mostly coherent progression",anchor:"PILOT ANCHOR: Temporal ≈ 4"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[1,2,3,4,5,6]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Abrupt / weak progression",anchor:"PILOT ANCHOR: Temporal ≈ 1–2"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6]}))
+      ),
+      React.createElement(TrainingCheck,{id:"background_move",q:"The descriptions explicitly change the location from a bedroom to a street. Is that expected change itself a Background-consistency error?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Only unexpected changes within an intended same location should reduce Background consistency."}));
 
     if(step===4)return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"Overall is an independent holistic target. Do not calculate it from your component scores."),
-      React.createElement("div",{className:"training-grid"},
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.characterGood,title:"More coherent overall example",tone:"good",frameLimit:8}),
-        React.createElement(TrainingExamplePreview,{manifest,itemId:ex.overallBad,title:"Low overall-consistency example",tone:"bad",frameLimit:5})
+      React.createElement("h2",null,"4. Adjacent-Frame Repetition"),
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Similar is NOT automatically bad. "),"Choose Near-duplicate only when there is very little meaningful visual change."),
+      React.createElement(RepetitionDemo,null),
+      React.createElement(TrainingCheck,{id:"similar_rule",q:"Two adjacent frames stay in the same scene, but the character changes pose/action and the composition changes meaningfully. Which label is the best fit?",options:[["distinct","Distinct"],["similar","Similar"],["near","Near-duplicate"]],correct:"similar",answers,setAnswers,feedback:"Related context plus meaningful visual change is Similar. Near-duplicate is for almost unchanged imagery."}));
+
+    if(step===5)return React.createElement(React.Fragment,null,
+      React.createElement("h2",null,"5. Reference Reuse and Visual Style"),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Reference reuse: copied composition/image"),React.createElement("span",{className:"tr3-chip ignore"},"Same character identity is allowed")),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"Newly composed",anchor:"REFERENCE REUSE SCORE: high (4–5)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6],showRefs:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Close reference reuse",anchor:"REFERENCE REUSE SCORE: low (1–2)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],showRefs:true}))
       ),
-      React.createElement("div",{className:"training-anchor",style:{marginTop:14}},React.createElement("strong",null,"Important"),"Training labels are guidance only. During the real study you will not receive feedback, model identities, or suggested ratings.")
-    );
+      React.createElement("h3",{style:{marginTop:18}},"Style consistency — generated frames only"),
+      React.createElement(StyleDemo,null),
+      React.createElement("div",{className:"tr3-small",style:{marginTop:8}},"The style illustration is deliberately simplified so the distinction is unambiguous: judge rendering/realism/line work/shading/color treatment, not identity or scene correctness."),
+      React.createElement(TrainingCheck,{id:"reuse_identity",q:"A generated frame shows the same character as the reference but uses a genuinely new pose, background, and composition. Is that automatically reference copying?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"P_ref targets direct or close image/composition reuse, not legitimate identity similarity."}));
 
     return React.createElement(React.Fragment,null,
-      React.createElement("div",{className:"training-note"},"Answer these four checks before the main study. If an answer is incorrect, read the feedback and choose again. These answers are not saved as research ratings."),
-      React.createElement("div",{className:"training-check-list"},
-        checkDefs.map(c=>{
-          const selected=checks[c.id];
-          const answered=!!selected;
-          const correct=selected===c.correct;
-          return React.createElement("div",{className:"training-check",key:c.id},
-            React.createElement("div",{className:"training-check-title"},c.q),
-            React.createElement("div",{className:"training-check-options"},
-              c.options.map(([v,label])=>React.createElement("button",{
-                type:"button",
-                key:v,
-                className:"training-check-option"+(selected===v?" selected":""),
-                onClick:()=>setChecks(prev=>({...prev,[c.id]:v}))
-              },label))
-            ),
-            answered&&React.createElement("div",{className:"training-feedback "+(correct?"correct":"wrong")},
-              correct?"✓ "+c.feedback:"Not quite. "+c.feedback
-            )
-          );
-        })
+      React.createElement("h2",null,"6. Overall Visual Story Consistency"),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story"),React.createElement("span",{className:"tr3-chip ignore"},"Do not calculate an average")),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"More coherent pilot example",anchor:"PILOT OVERALL: about 3–4"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Clear low-consistency pilot example",anchor:"PILOT OVERALL: 1"},React.createElement(TrainingSequence,{manifest,itemId:"story68_NaiveBaseline",shots:[1,2,3,4,5]}))
       ),
-      allChecksCorrect&&React.createElement("div",{className:"success",style:{marginTop:16}},"Calibration complete. The next page begins the real study. From that point onward, no feedback or example labels will be shown.")
+      React.createElement("div",{className:"tr3-note"},"Overall is your independent final impression. A story may have one strong component and still feel inconsistent overall, or vice versa."),
+      React.createElement(TrainingCheck,{id:"overall_average",q:"For Overall consistency, should you calculate the arithmetic average of the component ratings you already gave?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Overall is an independent holistic human target, not a formula."}),
+      pageReady&&React.createElement("div",{className:"success",style:{marginTop:13}},"Calibration complete. The next page starts the real study; no feedback or suggested ratings will be shown.")
     );
   }
 
-  const isLast=step===total-1;
-  return React.createElement("div",{className:"page"},
-    React.createElement("div",{className:"card"},
-      React.createElement("div",{className:"row-between"},
-        React.createElement("div",null,React.createElement("div",{className:"label"},"Guided practice"),React.createElement("h2",null,"Rating calibration")),
-        React.createElement("div",{className:"training-progress"},`${step+1} / ${total}`)
-      ),
-      React.createElement("p",{className:"muted"},"These examples come from reserved stories that are excluded from the 12-story main validation pool."),
-      page(),
-      React.createElement("div",{className:"training-nav"},
-        btn(false,step===0,()=>setStep(Math.max(0,step-1)),"← Previous"),
-        !isLast
-          ? btn(true,false,()=>setStep(step+1),"Next practice page")
-          : btn(true,!allChecksCorrect,onComplete,allChecksAnswered&&!allChecksCorrect?"Correct the highlighted checks":"Start main evaluation")
-      )
+  const progress=Math.round(step/(total-1)*100);
+  const last=step===total-1;
+  return React.createElement("div",{className:"page"},React.createElement("div",{className:"card"},
+    React.createElement("div",{className:"tr3-top"},React.createElement("div",null,React.createElement("div",{className:"label"},"Guided practice"),React.createElement("div",{className:"tr3-small"},"Practice only — not part of the research ratings.")),React.createElement("div",{className:"tr3-progress"},`${step+1} / ${total}`)),
+    React.createElement("div",{className:"tr3-bar"},React.createElement("div",{style:{width:progress+"%"}})),
+    body(),
+    React.createElement("div",{className:"tr3-nav"},
+      btn(false,step===0,()=>{setStep(Math.max(0,step-1));window.scrollTo({top:0})},"← Back"),
+      last
+        ? btn(true,!pageReady,()=>onComplete({completed:true}),"Start main evaluation")
+        : btn(true,!pageReady,()=>{setStep(step+1);window.scrollTo({top:0})},step===0?"Start practice":"Next")
     )
-  );
+  ));
 }
 
 function Welcome({start,loadError}){
@@ -5241,11 +5321,12 @@ function App(){
     setPhase("training");
   }
 
-  async function finishTraining(){
+  async function finishTraining(training){
     setMeta(prev=>({
       ...(prev||{}),
       trainingCompleted:true,
-      trainingVersion:CONFIG.trainingVersion
+      trainingVersion:CONFIG.trainingVersion,
+      trainingCalibrationComplete:training?.completed===true
     }));
     await loadItem(0,items);
   }
