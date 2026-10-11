@@ -1,40 +1,22 @@
 """
-SPICE Human Evaluation — Participant/Story/Model Assignment Generator
+SPICE Main Study v2 assignment generator
 
-Builds a randomized assignment of participants to (story, model) evaluation
-items satisfying all four design conditions from the human-evaluation plan:
+Design:
+- 12 main-study stories
+- 6 generation models
+- 50 participant groups (G01-G50)
+- 4 sequences per participant
+- 200 total sequence evaluations
+- each participant sees 4 different stories and 4 different models
+- every story-model cell receives either 2 or 3 raters
+- total coverage: 56 cells x 3 raters + 16 cells x 2 raters = 200
+- presentation order randomized within each participant
 
-  1. Every participant sees each model exactly once.
-  2. No participant sees the same story twice.
-  3. Every (story, model) combination is rated by exactly REPLICATES_PER_CELL
-     independent participants.
-  4. Presentation order (the order items appear within a participant's
-     session) is randomized.
-
-Construction: a randomized, most-constrained-first greedy assignment with
-restart-on-failure. This is NOT trial-and-error luck for these parameters —
-18 stories is an exact multiple of 6 models, which makes this a balanced,
-highly-resolvable design; the constrained-first heuristic exists mainly to
-make the script robust if you change the story/model counts later to
-something less balanced.
-
-Independent verification: after construction, verify_assignment() re-checks
-all three combinatorial conditions completely from scratch (it does not
-reuse any bookkeeping from the builder), so a bad assignment can never be
-silently written to disk.
-
-Output:
-  data/assignments.json          — {"groups": {"G01": [itemId, ...], ...}},
-                                    in the format the evaluation app reads.
-  data/assignment_summary.csv    — story x model grid of replicate counts,
-                                    for a quick visual sanity check.
-  data/participant_assignments.csv — one row per participant x model,
-                                    for manual spot-checking.
-
-IMPORTANT: item_id() below encodes the itemId convention this script
-assumes your manifest.json uses. If your actual manifest IDs are built
-differently, edit that one function — nothing else needs to change.
+The six reserved stories (24, 52, 55, 60, 68, 79) are NOT used here.
+They are reserved for calibration/training examples.
 """
+
+from __future__ import annotations
 
 import csv
 import json
@@ -42,13 +24,8 @@ import random
 from collections import Counter
 from pathlib import Path
 
-# ============================================================
-# Study configuration — edit this section only.
-# Everything downstream is derived from these lists/numbers,
-# nothing else in the script hardcodes counts.
-# ============================================================
-
-STORY_IDS = [1, 8, 9, 15, 17, 24, 27, 28, 29, 32, 52, 53, 55, 57, 60, 64, 68, 79]
+MAIN_STORY_IDS = [1, 8, 9, 15, 17, 27, 28, 29, 32, 53, 57, 64]
+RESERVED_TRAINING_STORY_IDS = [24, 52, 55, 60, 68, 79]
 
 MODELS = [
     "NaiveBaseline",
@@ -59,9 +36,11 @@ MODELS = [
     "Gemini",
 ]
 
-REPLICATES_PER_CELL = 3     # ratings required per (story, model) combination
-RANDOM_SEED = 20260827          # set an int for a reproducible assignment
-MAX_RESTARTS = 500          # restart budget if a random attempt dead-ends
+NUM_GROUPS = 50
+ITEMS_PER_GROUP = 4
+TOTAL_EVALUATIONS = NUM_GROUPS * ITEMS_PER_GROUP
+RANDOM_SEED = 20261008
+MAX_RESTARTS = 10000
 
 OUTPUT_DIR = Path("data")
 ASSIGNMENTS_JSON = OUTPUT_DIR / "assignments.json"
@@ -69,260 +48,230 @@ SUMMARY_CSV = OUTPUT_DIR / "assignment_summary.csv"
 PARTICIPANT_CSV = OUTPUT_DIR / "participant_assignments.csv"
 
 
-def item_id(story_id, model) -> str:
-    """
-    itemId convention expected in manifest.json. Adjust this to match your
-    actual manifest if item IDs are built differently there — this is the
-    only place that assumption lives.
-    """
+def item_id(story_id: int, model: str) -> str:
     return f"story{story_id:02d}_{model}"
 
 
-# ============================================================
-# Assignment construction
-# ============================================================
-
-def build_assignment(story_ids, models, replicates, seed=None, max_restarts=500):
+def choose_double_rated_cells(stories, models, rng):
     """
-    Returns a list of participant rows: [{model: story_id, ...}, ...], one
-    row per participant, satisfying conditions 1-3. Presentation order
-    (condition 4) is applied separately at output time, not here. Raises
-    RuntimeError if no valid assignment is found within max_restarts random
-    attempts.
+    There are 72 story-model cells. If every cell had 3 raters we would need
+    216 ratings, but the 50x4 design provides 200. Therefore exactly 16 cells
+    receive 2 raters and the remaining 56 receive 3.
+
+    Balance target:
+    - 8 stories have one double-rated cell -> 17 ratings/story
+    - 4 stories have two double-rated cells -> 16 ratings/story
+    - 2 models have two double-rated cells -> 34 ratings/model
+    - 4 models have three double-rated cells -> 33 ratings/model
     """
-    num_stories = len(story_ids)
-    num_models = len(models)
+    story_degree = {s: 1 for s in stories}
+    # Give four stories one additional double-rated cell.
+    extra_stories = list(stories)
+    rng.shuffle(extra_stories)
+    for s in extra_stories[:4]:
+        story_degree[s] = 2
 
-    if num_models > num_stories:
-        raise ValueError(
-            f"Need at least as many stories ({num_stories}) as models "
-            f"({num_models}) so each participant can see distinct stories."
-        )
+    model_degree = {m: 3 for m in models}
+    # Two models have only two double-rated cells.
+    lighter_models = list(models)
+    rng.shuffle(lighter_models)
+    for m in lighter_models[:2]:
+        model_degree[m] = 2
 
-    total_participants = num_stories * replicates
-    rng = random.Random(seed)
-
-    for attempt in range(1, max_restarts + 1):
-        need = {m: {s: replicates for s in story_ids} for m in models}
-        rows = []
+    # Randomized degree-constrained bipartite construction.
+    for _ in range(5000):
+        remaining_model = dict(model_degree)
+        chosen = []
         ok = True
 
-        for _ in range(total_participants):
-            used_stories = set()
-            row = {}
-            remaining_models = list(models)
+        story_order = list(stories)
+        rng.shuffle(story_order)
+        story_order.sort(key=lambda s: -story_degree[s])
 
-            while remaining_models:
-                # Break ties randomly before sorting by scarcity, so we
-                # don't always resolve ties in a fixed model order.
-                rng.shuffle(remaining_models)
-
-                def candidates_for(m):
-                    return [
-                        s for s in story_ids
-                        if need[m][s] > 0 and s not in used_stories
-                    ]
-
-                # Most-constrained-first: place the model with the fewest
-                # currently-valid candidates first, to minimize the chance
-                # of a later model getting boxed in with zero options.
-                remaining_models.sort(key=lambda m: len(candidates_for(m)))
-                m = remaining_models.pop(0)
-                candidates = candidates_for(m)
-
-                if not candidates:
-                    ok = False
-                    break
-
-                # Among valid candidates, prefer the story with the least
-                # remaining slack across all models, so scarce stories
-                # don't get starved of their required replicates later.
-                def slack(s):
-                    return sum(need[mm][s] for mm in models)
-
-                min_slack = min(slack(s) for s in candidates)
-                tightest = [s for s in candidates if slack(s) == min_slack]
-                s = rng.choice(tightest)
-
-                row[m] = s
-                used_stories.add(s)
-                need[m][s] -= 1
-
-            if not ok:
+        for s in story_order:
+            need = story_degree[s]
+            candidates = [m for m in models if remaining_model[m] > 0]
+            rng.shuffle(candidates)
+            candidates.sort(key=lambda m: -remaining_model[m])
+            picks = candidates[:need]
+            if len(picks) != need:
+                ok = False
                 break
-            rows.append(row)
+            for m in picks:
+                chosen.append((s, m))
+                remaining_model[m] -= 1
 
-        if ok and len(rows) == total_participants:
+        if ok and all(v == 0 for v in remaining_model.values()):
+            return set(chosen)
+
+    raise RuntimeError("Could not construct balanced 2-rater cells.")
+
+
+def build_target_counts(stories, models, rng):
+    double_cells = choose_double_rated_cells(stories, models, rng)
+    counts = {
+        (s, m): (2 if (s, m) in double_cells else 3)
+        for s in stories
+        for m in models
+    }
+    assert sum(counts.values()) == TOTAL_EVALUATIONS
+    return counts, double_cells
+
+
+def build_groups(target_counts, rng):
+    """Pack all required cell copies into 50 four-item participant groups.
+
+    Each group is a matching in the story x model bipartite graph:
+    no repeated story and no repeated model. With 50 groups, this is much
+    less restrictive than the maximum story/model degree, so randomized
+    balanced coloring converges quickly.
+    """
+    base_edges = []
+    for cell, n in target_counts.items():
+        base_edges.extend([cell] * n)
+
+    for attempt in range(1, MAX_RESTARTS + 1):
+        edges = list(base_edges)
+        rng.shuffle(edges)
+        # Place the 3-copy cells before 2-copy cells; random order remains
+        # within equal multiplicities.
+        edges.sort(key=lambda c: -target_counts[c])
+
+        groups = [[] for _ in range(NUM_GROUPS)]
+        used_stories = [set() for _ in range(NUM_GROUPS)]
+        used_models = [set() for _ in range(NUM_GROUPS)]
+        failed = False
+
+        for s, m in edges:
+            candidates = [
+                g for g in range(NUM_GROUPS)
+                if len(groups[g]) < ITEMS_PER_GROUP
+                and s not in used_stories[g]
+                and m not in used_models[g]
+            ]
+
+            if not candidates:
+                failed = True
+                break
+
+            # Keep groups balanced while retaining randomized assignment.
+            min_load = min(len(groups[g]) for g in candidates)
+            candidates = [g for g in candidates if len(groups[g]) == min_load]
+            g = rng.choice(candidates)
+
+            groups[g].append((s, m))
+            used_stories[g].add(s)
+            used_models[g].add(m)
+
+        if not failed and all(len(g) == ITEMS_PER_GROUP for g in groups):
+            for group in groups:
+                rng.shuffle(group)
             if attempt > 1:
-                print(f"Built valid assignment on attempt {attempt}.")
-            return rows
+                print(f"Assignment built on restart {attempt}.")
+            return groups
 
     raise RuntimeError(
-        f"Failed to build a valid assignment in {max_restarts} attempts. "
-        f"Try increasing MAX_RESTARTS, or check that REPLICATES_PER_CELL "
-        f"and the story/model counts are compatible."
+        f"Failed to pack the assignment after {MAX_RESTARTS} restarts."
     )
 
 
-# ============================================================
-# Independent verification
-# ============================================================
+def verify(groups, target_counts, stories, models):
+    assert len(groups) == NUM_GROUPS
+    assert all(len(g) == ITEMS_PER_GROUP for g in groups)
 
-def verify_assignment(rows, story_ids, models, replicates):
-    """
-    Re-checks all combinatorial design conditions from scratch against the
-    final assignment — does not reuse any bookkeeping from build_assignment,
-    so this catches bugs in the builder itself, not just confirm its own
-    accounting. Raises AssertionError with a specific message on the first
-    failure. Returns (True, report) on success.
-    """
-    report = {}
+    observed = Counter()
+    for i, group in enumerate(groups, start=1):
+        ss = [s for s, _m in group]
+        mm = [m for _s, m in group]
+        assert len(ss) == len(set(ss)), f"G{i:02d} repeats a story: {ss}"
+        assert len(mm) == len(set(mm)), f"G{i:02d} repeats a model: {mm}"
+        for cell in group:
+            assert cell[0] in stories
+            assert cell[1] in models
+            observed[cell] += 1
 
-    # Condition 1: every participant sees each model exactly once.
-    for i, row in enumerate(rows):
-        assert set(row.keys()) == set(models), (
-            f"Participant {i}: does not have exactly one entry per model. "
-            f"Got models {sorted(row.keys())}, expected {sorted(models)}."
-        )
-    report["condition_1_each_model_once"] = "pass"
+    assert dict(observed) == target_counts
 
-    # Condition 2: no repeated story within a participant.
-    for i, row in enumerate(rows):
-        stories_seen = list(row.values())
-        assert len(stories_seen) == len(set(stories_seen)), (
-            f"Participant {i}: repeats a story across models: {stories_seen}"
-        )
-    report["condition_2_no_repeated_story"] = "pass"
+    story_counts = Counter()
+    model_counts = Counter()
+    for (s, m), n in observed.items():
+        story_counts[s] += n
+        model_counts[m] += n
 
-    # Condition 3: every (story, model) cell rated exactly `replicates` times.
-    counts = Counter()
-    for row in rows:
-        for m, s in row.items():
-            counts[(s, m)] += 1
+    assert max(story_counts.values()) - min(story_counts.values()) <= 1
+    assert max(model_counts.values()) - min(model_counts.values()) <= 1
+    assert set(observed.values()) <= {2, 3}
+    assert sum(observed.values()) == TOTAL_EVALUATIONS
 
-    bad_cells = {cell: n for cell, n in counts.items() if n != replicates}
-    missing_cells = [
-        (s, m) for s in story_ids for m in models if (s, m) not in counts
-    ]
-    assert not bad_cells and not missing_cells, (
-        f"Cell replicate mismatch. Wrong-count cells: {bad_cells}. "
-        f"Never-rated cells: {missing_cells}."
+    return story_counts, model_counts
+
+
+def write_outputs(groups, target_counts, double_cells):
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    groups_json = {
+        "groups": {
+            f"G{i:02d}": [item_id(s, m) for s, m in group]
+            for i, group in enumerate(groups, start=1)
+        },
+        "design": {
+            "version": "SPICE-HUMAN-2026-MAIN-v2",
+            "main_story_ids": MAIN_STORY_IDS,
+            "reserved_training_story_ids": RESERVED_TRAINING_STORY_IDS,
+            "participants": NUM_GROUPS,
+            "items_per_participant": ITEMS_PER_GROUP,
+            "total_evaluations": TOTAL_EVALUATIONS,
+            "cell_replication": "56 cells x3; 16 cells x2",
+            "random_seed": RANDOM_SEED,
+        },
+    }
+    ASSIGNMENTS_JSON.write_text(
+        json.dumps(groups_json, indent=2), encoding="utf-8"
     )
-    report["condition_3_replicates_per_cell"] = "pass"
-    report["total_participants"] = len(rows)
-    report["total_ratings"] = sum(counts.values())
-    report["expected_ratings"] = len(story_ids) * len(models) * replicates
 
-    return True, report
+    with SUMMARY_CSV.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["story_id", *MODELS, "story_total"])
+        for s in MAIN_STORY_IDS:
+            vals = [target_counts[(s, m)] for m in MODELS]
+            w.writerow([s, *vals, sum(vals)])
+        model_totals = [
+            sum(target_counts[(s, m)] for s in MAIN_STORY_IDS)
+            for m in MODELS
+        ]
+        w.writerow(["MODEL_TOTAL", *model_totals, sum(model_totals)])
 
+    with PARTICIPANT_CSV.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["group_id", "position", "story_id", "model", "item_id"])
+        for i, group in enumerate(groups, start=1):
+            for pos, (s, m) in enumerate(group, start=1):
+                w.writerow([f"G{i:02d}", pos, s, m, item_id(s, m)])
 
-def verify_presentation_order(groups: dict, item_ids_by_participant_unordered: dict):
-    """
-    Sanity check for condition 4: confirms the item SET shown to each
-    participant is unchanged by shuffling (i.e. shuffling didn't drop or
-    duplicate an item) and that at least some shuffling actually happened
-    across the study (not e.g. every list left in the same relative order
-    by coincidence).
-    """
-    for code, ordered in groups.items():
-        unordered_expected = item_ids_by_participant_unordered[code]
-        assert sorted(ordered) == sorted(unordered_expected), (
-            f"{code}: shuffled item list does not match the original set. "
-            f"Got {ordered}, expected some order of {unordered_expected}."
-        )
+    print(f"Wrote {ASSIGNMENTS_JSON}")
+    print(f"Wrote {SUMMARY_CSV}")
+    print(f"Wrote {PARTICIPANT_CSV}")
+    print("Double-rated cells (2 raters):")
+    for s, m in sorted(double_cells):
+        print(f"  story {s:02d} x {m}")
 
-    identical_order_count = sum(
-        1
-        for code, ordered in groups.items()
-        if ordered == item_ids_by_participant_unordered[code]
-    )
-    total = len(groups)
-    if total >= 10 and identical_order_count > total * 0.5:
-        raise AssertionError(
-            f"{identical_order_count}/{total} participants have an "
-            f"unshuffled item order — presentation-order randomization "
-            f"looks broken, not just unlucky."
-        )
-
-
-# ============================================================
-# Output
-# ============================================================
-
-def to_assignments_json(rows, models, seed_for_order=None):
-    """
-    Converts participant rows into the {"groups": {code: [itemId, ...]}}
-    structure the evaluation app reads, applying condition 4 (randomized
-    presentation order) independently of the story/model assignment above.
-    Also returns the pre-shuffle item sets per group, for
-    verify_presentation_order().
-    """
-    rng = random.Random(seed_for_order)
-    groups = {}
-    unordered_by_group = {}
-
-    for i, row in enumerate(rows, start=1):
-        code = f"G{i:02d}"
-        item_ids = [item_id(story_id, m) for m, story_id in row.items()]
-        unordered_by_group[code] = list(item_ids)
-        rng.shuffle(item_ids)  # condition 4
-        groups[code] = item_ids
-
-    return {"groups": groups}, unordered_by_group
-
-
-def write_summary_csv(rows, story_ids, models, path):
-    counts = Counter()
-    for row in rows:
-        for m, s in row.items():
-            counts[(s, m)] += 1
-
-    with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["story_id", *models])
-        for s in story_ids:
-            writer.writerow([s, *[counts[(s, m)] for m in models]])
-
-
-def write_participant_csv(rows, path):
-    with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["participant", "model", "story_id", "item_id"])
-        for i, row in enumerate(rows, start=1):
-            code = f"G{i:02d}"
-            for m, s in row.items():
-                writer.writerow([code, m, s, item_id(s, m)])
-
-
-# ============================================================
-# Main
-# ============================================================
 
 def main():
-    rows = build_assignment(
-        STORY_IDS, MODELS, REPLICATES_PER_CELL,
-        seed=RANDOM_SEED, max_restarts=MAX_RESTARTS,
+    rng = random.Random(RANDOM_SEED)
+    target_counts, double_cells = build_target_counts(
+        MAIN_STORY_IDS, MODELS, rng
+    )
+    groups = build_groups(target_counts, rng)
+    story_counts, model_counts = verify(
+        groups, target_counts, MAIN_STORY_IDS, MODELS
     )
 
-    _, report = verify_assignment(rows, STORY_IDS, MODELS, REPLICATES_PER_CELL)
-    print("Combinatorial verification:")
-    for k, v in report.items():
-        print(f"  {k}: {v}")
+    print("Verification passed.")
+    print("Story totals:", dict(sorted(story_counts.items())))
+    print("Model totals:", dict(model_counts))
+    print("Cell count distribution:", dict(Counter(target_counts.values())))
 
-    assignments, unordered_by_group = to_assignments_json(
-        rows, MODELS, seed_for_order=RANDOM_SEED
-    )
-    verify_presentation_order(assignments["groups"], unordered_by_group)
-    print("Presentation-order verification: pass")
-
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    ASSIGNMENTS_JSON.write_text(json.dumps(assignments, indent=2), encoding="utf-8")
-    write_summary_csv(rows, STORY_IDS, MODELS, SUMMARY_CSV)
-    write_participant_csv(rows, PARTICIPANT_CSV)
-
-    print(f"\nWrote {len(rows)} participant groups to {ASSIGNMENTS_JSON}")
-    print(f"Wrote per-cell replicate summary to {SUMMARY_CSV}")
-    print(f"Wrote per-participant breakdown to {PARTICIPANT_CSV}")
+    write_outputs(groups, target_counts, double_cells)
 
 
 if __name__ == "__main__":
