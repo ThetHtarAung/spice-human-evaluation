@@ -1836,12 +1836,19 @@ p { line-height: 1.6; }
 .rep-person{position:absolute;bottom:32px;width:22px;height:42px;border:2px solid #475569;border-radius:12px 12px 5px 5px;background:#fff}
 .rep-person:before{content:"";position:absolute;width:18px;height:18px;border:2px solid #475569;border-radius:50%;top:-20px;left:0;background:#fff}
 .rep-book{position:absolute;bottom:34px;width:22px;height:6px;background:#94a3b8}
-.style-demo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.style-demo-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
 .style-tile{height:95px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:2px solid #64748b;background:#f8fafc;position:relative;overflow:hidden}
 .style-face{width:42px;height:42px;border:3px solid #475569;border-radius:50%;background:white;position:relative}
 .style-face:before,.style-face:after{content:"";position:absolute;width:5px;height:5px;background:#475569;border-radius:50%;top:13px}.style-face:before{left:9px}.style-face:after{right:9px}
-.style-tile.sketch{border-style:dashed;background:repeating-linear-gradient(45deg,#fff,#fff 6px,#f1f5f9 6px,#f1f5f9 8px)}
-.style-tile.soft{border-radius:22px;background:linear-gradient(135deg,#f8fafc,#e2e8f0)}
+.style-tile.style-photo{background:linear-gradient(135deg,#e2e8f0,#f8fafc);border:1px solid #94a3b8}
+.style-tile.style-photo .style-face{border:1px solid #64748b;background:radial-gradient(circle at 40% 35%,#fff 0,#e2e8f0 55%,#94a3b8 100%);box-shadow:0 5px 12px rgba(15,23,42,.2)}
+.style-tile.style-cartoon{background:#fef3c7;border:4px solid #111827}
+.style-tile.style-cartoon .style-face{border:5px solid #111827;background:#fde68a;box-shadow:none}
+.style-tile.style-sketch{background:repeating-linear-gradient(45deg,#fff,#fff 5px,#e5e7eb 5px,#e5e7eb 7px);border:2px dashed #111827}
+.style-tile.style-sketch .style-face{border:3px dashed #111827;background:transparent;box-shadow:none}
+.style-tile.style-pixel{background:repeating-linear-gradient(90deg,#cbd5e1 0 10px,#f8fafc 10px 20px);border:4px solid #475569}
+.style-tile.style-pixel .style-face{border-radius:3px;border:4px solid #334155;background:#cbd5e1;box-shadow:7px 7px 0 #94a3b8}
+@media(max-width:650px){.style-demo-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .room-demo{height:115px;border:1px solid #cbd5e1;border-radius:8px;position:relative;background:#f8fafc;overflow:hidden}
 .room-demo .w{position:absolute;left:10px;top:10px;width:28px;height:24px;border:2px solid #64748b;background:#dbeafe}
 .room-demo .sofa{position:absolute;left:16px;bottom:14px;width:48px;height:25px;border:2px solid #64748b;border-radius:6px;background:#e2e8f0}
@@ -1903,7 +1910,7 @@ const CONFIG={
   dataset:"ViStoryBench-Lite",
   surveyVersion:"SPICE-HUMAN-2026-MAIN-v4",
 
- 
+  // Paste the deployed Google Apps Script /exec URL here for the real study.
   googleAppsScriptUrl:"https://script.google.com/macros/s/AKfycbzlurfHN9XVY0BVyoP9W-Z7fGV8_xpCc9y74cb3HrPtaHsdvZ1SYkfbsbvWo7P1P7W_eg/exec",
 
   // true  = final online study: automatically allocate an unused G01-G50.
@@ -1937,11 +1944,11 @@ const SCALE=[
 ];
 
 const ALIGNMENT_SCALE=[
-  {v:1,label:"Intended visual content is missing or incorrect"},
-  {v:2,label:"Major elements are wrong / missing"},
-  {v:3,label:"Main idea is partially represented"},
-  {v:4,label:"Most important content is represented correctly"},
-  {v:5,label:"Intended visual content is represented very clearly and completely"}
+  {v:1,label:"Does not match"},
+  {v:2,label:"Matches a little"},
+  {v:3,label:"Partly matches"},
+  {v:4,label:"Mostly matches"},
+  {v:5,label:"Matches very well"}
 ];
 
 const IDENTITY_SCALE=[
@@ -2968,8 +2975,8 @@ function StyleDemo(){
   const row=(items)=>React.createElement("div",{className:"style-demo-row"},items.map((x,i)=>React.createElement(React.Fragment,{key:i},tile(x[0],x[1]))));
   return React.createElement(React.Fragment,null,
     React.createElement("div",{className:"tr3-grid2"},
-      React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row([["","same rendering"],["","same shading"],["","same color treatment"],["","same realism level"]])),
-      React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — visible style shifts"),row([["","realistic"],["sketch","sketch-like"],["soft","soft painting"],["sketch","line-art shift"]]))
+      React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row([["style-photo","Frame 1"],["style-photo","Frame 2"],["style-photo","Frame 3"],["style-photo","Frame 4"]])),
+      React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — obvious style shifts"),row([["style-photo","Realistic"],["style-cartoon","Cartoon"],["style-sketch","Sketch"],["style-pixel","Pixel-like"]]))
     ),
     React.createElement("div",{className:"style-cue-row"},
       ["Rendering style","Realism level","Line work / texture","Shading / color treatment"].map(x=>React.createElement("div",{className:"style-cue",key:x},React.createElement("strong",null,x),"Compare across generated frames only."))
@@ -2982,12 +2989,12 @@ function TrainingStage({manifest,onComplete,onBack}){
   const [answers,setAnswers]=useState({});
   const total=7;
   const checks={
-    1:{id:"identity_style",correct:"no"},
+    1:{id:"identity_style",correct:"yes"},
     2:{id:"alignment_beauty",correct:"no"},
-    3:{id:"background_move",correct:"no"},
+    3:{id:"background_move",correct:"yes"},
     4:{id:"similar_rule",correct:"similar"},
     5:{id:"reuse_identity",correct:"no"},
-    6:{id:"overall_average",correct:"no"}
+    6:{id:"overall_direct",correct:"yes"}
   };
   const pageCheck=checks[step];
   const pageReady=!pageCheck||answers[pageCheck.id]===pageCheck.correct;
@@ -3004,41 +3011,41 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     if(step===1)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"1. Character Identity and Attributes"),
-      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same character: Story 60 · Guan Yu. "),"Only the generation model changes."),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same character: Story 60 · Guan Yu. "),"Compare the two generated versions while keeping the story and character fixed."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Identity: face · body · recognizable person"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Identity: clothing · style"),React.createElement("span",{className:"tr3-chip look"},"Attributes: clothing · colors · hair · accessories"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Attributes: whether the face is the same person")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Model example A",anchor:"GOOD — Identity / Attributes should be high"},React.createElement("div",{className:"training-model-label"},"NaiveBaseline · Story 60"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Model example B",anchor:"LOW — clear character/attribute inconsistency"},React.createElement("div",{className:"training-model-label"},"UNO · Story 60"),React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu",showRefs:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Example A",anchor:"GOOD — Identity / Attributes should be high"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Example B",anchor:"LOW — clear character/attribute inconsistency"},React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu",showRefs:true}))
       ),
-      React.createElement("div",{className:"tr3-note"},"Pilot ratings support this contrast for the same story: Guan Yu was rated very high for NaiveBaseline and low for UNO. The point is to separate Identity from Attributes and Style."),
-      React.createElement(TrainingCheck,{id:"identity_style",q:"The same face/body remains recognizable, but the artistic style changes. Should style change alone lower the Identity score?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Identity ignores artistic-style change by itself; Style is rated separately."}));
+      React.createElement("div",{className:"tr3-note"},"Both examples use the same story and character. Focus only on the dimension being demonstrated."),
+      React.createElement(TrainingCheck,{id:"identity_style",q:"The same face and body remain recognizable even though the artistic style changes. Should the Identity rating still be high?",options:[["yes","Yes"],["no","No"]],correct:"yes",answers,setAnswers,feedback:"Correct. Identity focuses on recognizable character identity. Artistic style is rated separately."}));
 
     if(step===2)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"2. Text–Image Alignment"),
-      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same shots: Story 60. "),"Compare NanoBanana with NaiveBaseline against the same Setting + Static Shot Description."),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same shots: Story 60 · Shots 3–4. "),"Compare two generated versions using exactly the same Setting + Static Shot Description."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Compare with: Setting + Static Shot Description"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore: beauty · realism · art style")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Better alignment",anchor:"GOOD — intended shot content is represented"},React.createElement("div",{className:"training-model-label"},"NanoBanana · Story 60 · Shots 1–2"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2],showText:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Weaker alignment",anchor:"LOW — important intended content is missing / wrong"},React.createElement("div",{className:"training-model-label"},"NaiveBaseline · Story 60 · Shots 1–2"),React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2],showText:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Better alignment",anchor:"GOOD — intended shot content is represented"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[3,4],showText:true})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Weaker alignment",anchor:"LOW — important intended content is missing / wrong"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[3,4],showText:true}))
       ),
       React.createElement(TrainingCheck,{id:"alignment_beauty",q:"An image is beautiful, but it contradicts the Setting and Static Shot Description. Should beauty make its Alignment score high?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Alignment measures intended visual content, not image quality or artistic attractiveness."}));
 
     if(step===3)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"3. Background and Temporal Continuity"),
-      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 60. "),"The first three shots share the same stated street location; later shots intentionally move to new locations."),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 60. "),"Shots 2 and 3 share the same stated street location; later shots intentionally move to new locations."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Background: same-location physical environment"),React.createElement("span",{className:"tr3-chip ignore"},"Do not penalize an expected move"),React.createElement("span",{className:"tr3-chip look"},"Temporal: understandable progression")),
       React.createElement(BackgroundDemo,null),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"GOOD — same location remains recognizable",anchor:"NanoBanana · Story 60 · Shots 1–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3]})),
-        React.createElement(TrainingExample,{tone:"bad",title:"LOW — same stated location unexpectedly drifts",anchor:"NaiveBaseline · Story 60 · Shots 1–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2,3]}))
+        React.createElement(TrainingExample,{tone:"good",title:"GOOD — same location remains recognizable",anchor:"Story 60 · Shots 2–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"LOW — same stated location unexpectedly changes",anchor:"Story 60 · Shots 2–3"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3]}))
       ),
       React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Expected moves are allowed. "),"When Story 60 later changes from the street to a tavern / peach garden / training ground, the background should change. Temporal asks whether those transitions make sense, not whether all frames look alike."),
       React.createElement("h3",{style:{marginTop:18}},"Temporal continuity — compare the same full story"),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"More coherent progression",anchor:"NanoBanana · Story 60"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3,4,5,6,7,8]})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Less coherent progression",anchor:"NaiveBaseline · Story 60"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2,3,4,5,6,7,8]}))
+        React.createElement(TrainingExample,{tone:"good",title:"More coherent progression",anchor:"Story 60 · Example A"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Less coherent progression",anchor:"Story 60 · Example B"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[1,2,3,4,5,6,7,8]}))
       ),
-      React.createElement(TrainingCheck,{id:"background_move",q:"The descriptions explicitly change the location from one place to another. Is that expected change itself a Background-consistency error?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Only unexpected changes within an intended same location should reduce Background consistency."}));
+      React.createElement(TrainingCheck,{id:"background_move",q:"If the story description intentionally changes to a new location, should that location change be allowed?",options:[["yes","Yes"],["no","No"]],correct:"yes",answers,setAnswers,feedback:"Correct. Background should only be penalized when a location that is supposed to remain the same changes unexpectedly."}));
 
     if(step===4)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"4. Adjacent-Frame Repetition"),
@@ -3060,14 +3067,14 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"6. Overall Visual Story Consistency"),
-      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 24. "),"Compare two generation models while keeping story content fixed."),
-      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story"),React.createElement("span",{className:"tr3-chip ignore"},"Do not calculate an average")),
+      React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 24. "),"Compare two generated versions while keeping the story content fixed."),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story"),React.createElement("span",{className:"tr3-chip ignore"},"Do not use a formula")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"More coherent overall",anchor:"QwenImageEdit-2509 · Story 24"},React.createElement(TrainingSequence,{manifest,itemId:"story24_QwenImageEdit-2509",shots:[1,2,3,4,5,6,7,8]})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Lower overall consistency",anchor:"StoryDiffusion · Story 24"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6,7,8]}))
+        React.createElement(TrainingExample,{tone:"good",title:"More coherent overall",anchor:"Story 24 · Example A"},React.createElement(TrainingSequence,{manifest,itemId:"story24_QwenImageEdit-2509",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",title:"Lower overall consistency",anchor:"Story 24 · Example B"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6,7,8]}))
       ),
-      React.createElement("div",{className:"tr3-note"},"Overall is your independent final impression of whether the generated sequence functions as one visually unified story. Do not mechanically average the earlier component scores."),
-      React.createElement(TrainingCheck,{id:"overall_average",q:"For Overall consistency, should you calculate the arithmetic average of the component ratings you already gave?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Overall is an independent holistic human target, not a formula."}),
+      React.createElement("div",{className:"tr3-note"},"Overall is your final impression of the whole visual story. Consider whether the sequence feels unified and consistent as a whole."),
+      React.createElement(TrainingCheck,{id:"overall_direct",q:"When rating Overall consistency, should you judge the whole visual story directly?",options:[["yes","Yes"],["no","No"]],correct:"yes",answers,setAnswers,feedback:"Correct. Give one direct overall impression of the whole story. Do not use a formula based on your earlier ratings."}),
       pageReady&&React.createElement("div",{className:"success",style:{marginTop:13}},"Calibration complete. The next page starts the real study; no feedback or suggested ratings will be shown.")
     );
   }
