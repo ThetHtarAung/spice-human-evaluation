@@ -1932,7 +1932,7 @@ const CONFIG={
   // true  = after one fully confirmed completed session, reopening the survey
   //         creates a fresh participant ID so another pilot run can be tested.
   // false = keep the same participant ID after completion (use for real study).
-  allowRepeatPilotSessions:false
+  allowRepeatPilotSessions:true
 };
 
 const SCALE=[
@@ -2006,22 +2006,21 @@ const OVERALL_SCALE=[
   {v:4,label:"Good"},
   {v:5,label:"Excellent"}
 ];
-
 const COMPONENT_QUESTIONS={
   scene:[
     {
       id:"q4_background",
       short:"Background / Scene Consistency",
-      desc:"Considering only frames intended to show the same location, how consistently is the physical environment preserved?",
-      instruction:"Use the Setting Descriptions to identify frames intended to show the same physical location. Focus on important scene elements, spatial layout, environmental appearance, and recognizable location details. Do not penalize an expected location change, camera-angle change by itself, or artistic-style change.",
+      desc:"For frames showing the same location, how consistent is the environment?",
+      instruction:"Use the Setting Descriptions to find frames meant to show the same location. Check key objects, layout, and look of the place. Do not penalize planned location changes, camera-angle changes alone, or style changes.",
       scale:BACKGROUND_SCALE,
-      naText:"No suitable repeated location / cannot judge"
+      naText:"No repeated location / cannot judge"
     },
     {
       id:"q5_temporal",
       short:"Temporal / Sequential Continuity",
-      desc:"From one frame to the next, do the visual changes occur in a plausible and understandable sequence, without abrupt unexplained jumps?",
-      instruction:"Focus only on progression and transitions between the ordered generated frames. Use the shot descriptions only to understand what visible change is expected. Do not re-evaluate character identity, attributes, background appearance, alignment, or artistic style here.",
+      desc:"From frame to frame, do changes follow a logical order without sudden, unexplained jumps?",
+      instruction:"Judge only the progression between frames, in order. Use the shot descriptions only to know what change to expect. Do not rate character identity, attributes, background, or style here.",
       scale:TEMPORAL_SCALE
     }
   ],
@@ -2029,22 +2028,22 @@ const COMPONENT_QUESTIONS={
     {
       id:"q7_reference_reuse",
       short:"Reference-Image Reuse",
-      desc:"Do the generated story frames appear newly composed rather than directly reusing or closely copying the provided reference images?",
-      instruction:"Compare the generated story frames with the provided reference images. Judge direct or close visual reuse, not ordinary identity consistency.",
+      desc:"Are the story frames newly created, not copied from the reference images?",
+      instruction:"Compare the story frames with the reference images. Judge direct or close copying, not normal character consistency.",
       scale:REFERENCE_REUSE_SCALE
     },
     {
       id:"q8_style",
       short:"Visual Style Consistency",
-      desc:"Across the generated frames, how consistent is the overall visual or artistic style?",
-      instruction:"Consider rendering style, realism level, line work, shading, color treatment, and overall artistic appearance. Judge the generated frames relative to one another. Do not mix style changes into Identity, Attribute, or Background ratings.",
+      desc:"How consistent is the visual style across the frames?",
+      instruction:"Look at rendering style, realism, line work, shading, and color. Compare the frames to each other. Do not mix style changes into Identity, Attribute, or Background ratings.",
       scale:STYLE_SCALE
     },
     {
       id:"q9_overall",
       short:"Overall Visual Story Consistency",
-      desc:"Taking the generated sequence as a whole, how well does it function as one visually unified and consistent story?",
-      instruction:"Consider your overall impression rather than calculating or averaging your previous ratings. Expected story changes are allowed.",
+      desc:"Overall, how well do the frames work as one consistent story?",
+      instruction:"Give your overall impression. Do not average your earlier ratings. Expected story changes are fine.",
       scale:OVERALL_SCALE
     }
   ]
@@ -2054,20 +2053,20 @@ const COMPONENT_STAGE_INFO={
   character:{
     label:"Stage 3 / 5",
     title:"Character consistency",
-    instruction:"First identify the reference characters, then inspect only how those characters appear across the generated frames.",
-    footer:"After this page, you will evaluate background and temporal consistency."
+    instruction:"First identify the reference characters. Then check how they look across the generated frames.",
+    footer:"Next: background and temporal consistency."
   },
   scene:{
     label:"Stage 4 / 5",
     title:"Scene and temporal consistency",
-    instruction:"Read the story context, inspect the generated sequence in order, then answer two consistency questions.",
-    footer:"After this page, you will evaluate repetition and overall consistency."
+    instruction:"Read the story context, view the frames in order, then answer two questions.",
+    footer:"Next: repetition and overall consistency."
   },
   overall:{
     label:"Stage 5 / 5",
-    title:"Repetition, reference reuse, style and overall consistency",
-    instruction:"Compare adjacent frames for repetition, then judge reference-image reuse, visual style consistency, and the story as a whole.",
-    footer:"After this page, your ratings for this story output will be submitted."
+    title:"Repetition, reference reuse, style, and overall consistency",
+    instruction:"Check adjacent frames for repetition. Then rate reference-image reuse, style consistency, and the story as a whole.",
+    footer:"After this page, your ratings will be submitted."
   }
 };
 
