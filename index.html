@@ -2985,7 +2985,6 @@ function TrainingRefs({item,story,character}){
     );
   });
   return React.createElement(React.Fragment,null,
-    character&&React.createElement("div",{className:"tr3-small",style:{marginBottom:6}},React.createElement("strong",null,`Reference images — ${character}`)," · Compare the generated appearances with all references below."),
     React.createElement("div",{className:"tr3-refline"},items)
   );
 }
@@ -3216,7 +3215,7 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Identity = same character. "),"Look mainly at the recognizable face/body. ",React.createElement("strong",null,"Attributes = same visual traits. "),"Look at clothing, colors, hair, accessories, and characteristic details."),
       React.createElement(TrainingCharacterReferenceStrip,{manifest,itemId:"story60_NaiveBaseline",character:"Guan Yu"}),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — These three generated appearances still look like the same Guan Yu, and his main visual traits stay mostly consistent."},
+        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD —  \n Identity: \n Attributes: Important clothing, colors, hair, and accessories are mostly preserved."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu"}),
           React.createElement("div",{className:"training-why good"},
             React.createElement("div",null,React.createElement("b",null,"Identity: "),"The face/body remain recognizable as the same person across the three frames."),
