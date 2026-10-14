@@ -2958,7 +2958,7 @@ function RepetitionDemo(){
       card("Similar",React.createElement(RepFrame,{personX:55,bookX:112}),React.createElement(RepFrame,{personX:112,bookX:78}),"55%","Same context, but pose/action/composition changes meaningfully.","Moderate meaningful change"),
       card("Near-duplicate",React.createElement(RepFrame,{personX:72,bookX:116}),React.createElement(RepFrame,{personX:75,bookX:116}),"8%","Almost unchanged image/composition.","Very little meaningful change")
     ),
-    React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Decision rule: "),"Ask how much meaningful visual change happened — not whether the story topic stayed similar. Similar is allowed; Near-duplicate is the copy-paste warning.")
+    React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Decision rule: "),"Ask how much meaningful visual change happened. Similar is allowed; Near-duplicate is the copy-paste warning.")
   );
 }
 
@@ -3067,7 +3067,7 @@ function TrainingStage({manifest,onComplete,onBack}){
     return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"6. Overall Visual Story Consistency"),
       React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story: Story 24. "),"Compare two generated versions while keeping the story content fixed."),
-      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story"),React.createElement("span",{className:"tr3-chip ignore"},"Do not use a formula")),
+      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Holistic impression of the whole story")),
       React.createElement("div",{className:"tr3-grid2"},
         React.createElement(TrainingExample,{tone:"good",title:"More coherent overall",anchor:"Story 24 · Example A"},React.createElement(TrainingSequence,{manifest,itemId:"story24_QwenImageEdit-2509",shots:[1,2,3,4,5,6,7,8]})),
         React.createElement(TrainingExample,{tone:"bad",title:"Lower overall consistency",anchor:"Story 24 · Example B"},React.createElement(TrainingSequence,{manifest,itemId:"story24_StoryDiffusion_photomaker",shots:[1,2,3,4,5,6,7,8]}))
@@ -3770,7 +3770,7 @@ function Intro({item,story,onNext,onBack,itemNo,total}){
         "div",
         {className:"main-point",style:{margin:"14px 0 18px"}},
         React.createElement("strong",null,"Story information and reference characters only. "),
-        "Read the story information and review the actual reference characters used for this story. No generated images are shown on this page."
+        "Review the actual reference characters used for this story. No generated images are shown on this page."
       ),
       React.createElement("p",{className:"muted"},story.summary),
       React.createElement("h3",{style:{marginTop:18}},"Reference characters"),
@@ -3855,7 +3855,7 @@ function Alignment({item,story,shots,idx,resp,setResp,onNext,onBack}){
       ),
       React.createElement("div",{className:"stage-focus-guide"},
         React.createElement("strong",null,"Read the Setting Description and Static Shot Description before viewing the generated image. "),
-        "These are the same shot-level text fields used by the automatic alignment component. Do not judge image beauty, realism, or artistic style."
+        "Do not judge image beauty, realism, or artistic style."
       ),
       !revealed
         ? React.createElement(React.Fragment,null,
