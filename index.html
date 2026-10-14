@@ -1943,6 +1943,20 @@ p { line-height: 1.6; }
 .style-cue strong{display:block;margin-bottom:2px}
 .training-model-label{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px}
 .training-shared-story{padding:9px 11px;border-radius:9px;background:var(--light);border:1px solid var(--border);margin:8px 0 12px;font-size:13px}
+.training-ref-item{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:82px}
+.training-ref-caption{font-size:11px;font-weight:700;color:var(--muted);text-align:center}
+.training-why{margin-top:10px;padding:10px 11px;border-radius:9px;font-size:13px;line-height:1.5}
+.training-why.good{background:#f0fdf4;border:1px solid #86efac;color:#14532d}
+.training-why.bad{background:#fef2f2;border:1px solid #fca5a5;color:#7f1d1d}
+.training-why strong{display:block;margin-bottom:5px}
+.training-why div+div{margin-top:4px}
+.reuse-reference-strip{margin:12px 0 16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--light)}
+.reuse-reference-strip-title{font-weight:800;margin-bottom:4px}
+.reuse-reference-strip-note{font-size:13px;line-height:1.45;color:var(--muted);margin-bottom:8px}
+.reuse-reference-strip .tr3-refline{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;padding:2px 0 6px;margin:0}
+.reuse-reference-strip .training-ref-item{flex:0 0 94px;min-width:94px}
+.reuse-reference-strip .ref-img{width:94px;height:94px;object-fit:cover}
+.reuse-reference-strip .training-ref-caption{font-size:11px;line-height:1.25;max-width:94px}
 .tr4-change-meter{height:7px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:8px 0 6px}
 .tr4-change-meter>div{height:100%;background:var(--accent)}
 .tr4-demo-cue{font-size:12px;font-weight:700;margin-top:6px}
@@ -2937,10 +2951,29 @@ function TrainingRefs({item,story,character}){
   const selected=character
     ? groups.filter(g=>String(g.name).toLowerCase()===String(character).toLowerCase())
     : groups;
-  return React.createElement("div",{className:"tr3-refline"},
-    selected.flatMap(g=>(g.images||[]).slice(0,2).map((img,i)=>
-      React.createElement(ImageWithFallback,{key:g.name+"_"+i,src:storyBase(item)+img.ref,alt:`${g.name} reference`,cls:"ref-img",label:g.name,zoomable:true})
-    ))
+  const items=selected.flatMap(g=>{
+    const images=character ? (g.images||[]) : (g.images||[]).slice(0,2);
+    return images.map((img,i)=>
+      React.createElement("div",{className:"training-ref-item",key:g.name+"_"+i},
+        React.createElement(ImageWithFallback,{src:storyBase(item)+img.ref,alt:`${g.name} reference ${i+1}`,cls:"ref-img",label:g.name,zoomable:true}),
+        React.createElement("div",{className:"training-ref-caption"},character?`Reference ${i+1}`:`${g.name} · Ref ${i+1}`)
+      )
+    );
+  });
+  return React.createElement(React.Fragment,null,
+    character&&React.createElement("div",{className:"tr3-small",style:{marginBottom:6}},React.createElement("strong",null,`Reference images — ${character}`)," · Compare the generated appearances with all references below."),
+    React.createElement("div",{className:"tr3-refline"},items)
+  );
+}
+
+function TrainingReferenceStrip({manifest,itemId}){
+  const st=useTrainingItem(manifest,itemId);
+  if(st.loading)return React.createElement("div",{className:"muted"},"Loading reference images...");
+  if(st.error)return React.createElement("div",{className:"error"},st.error);
+  return React.createElement("div",{className:"reuse-reference-strip"},
+    React.createElement("div",{className:"reuse-reference-strip-title"},"Reference images"),
+    React.createElement("div",{className:"reuse-reference-strip-note"},"Use these only to check whether generated frames closely copy a reference image or composition."),
+    React.createElement(TrainingRefs,{item:st.item,story:st.story})
   );
 }
 
@@ -3028,8 +3061,24 @@ function StyleDemo(){
   const row=(items)=>React.createElement("div",{className:"style-demo-row"},items.map((x,i)=>React.createElement(React.Fragment,{key:i},tile(x[0],x[1]))));
   return React.createElement(React.Fragment,null,
     React.createElement("div",{className:"tr3-grid2"},
-      React.createElement("div",{className:"tr3-example good"},React.createElement("div",{className:"tr3-anchor good"},"GOOD — one stable visual style"),row([["style-photo","Frame 1"],["style-photo","Frame 2"],["style-photo","Frame 3"],["style-photo","Frame 4"]])),
-      React.createElement("div",{className:"tr3-example bad"},React.createElement("div",{className:"tr3-anchor bad"},"LOW — obvious style shifts"),row([["style-photo","Realistic"],["style-cartoon","Cartoon"],["style-sketch","Sketch"],["style-pixel","Pixel-like"]]))
+      React.createElement("div",{className:"tr3-example good"},
+        React.createElement("div",{className:"tr3-anchor good"},"GOOD — the visual style stays the same"),
+        row([["style-photo","Frame 1"],["style-photo","Frame 2"],["style-photo","Frame 3"],["style-photo","Frame 4"]]),
+        React.createElement("div",{className:"training-why good"},
+          React.createElement("strong",null,"Why this is consistent"),
+          React.createElement("div",null,"The frames keep the same type of rendering, realism, line treatment, shading, and color treatment."),
+          React.createElement("div",null,"The story therefore looks like it was produced in one stable visual style.")
+        )
+      ),
+      React.createElement("div",{className:"tr3-example bad"},
+        React.createElement("div",{className:"tr3-anchor bad"},"LOW — the visual style changes between frames"),
+        row([["style-photo","Realistic"],["style-cartoon","Cartoon"],["style-sketch","Sketch"],["style-pixel","Pixel-like"]]),
+        React.createElement("div",{className:"training-why bad"},
+          React.createElement("strong",null,"Why this is inconsistent"),
+          React.createElement("div",null,"The rendering changes from realistic to cartoon, sketch, and pixel-like appearances."),
+          React.createElement("div",null,"These are style changes even if the character or scene content is still correct.")
+        )
+      )
     ),
     React.createElement("div",{className:"style-cue-row"},
       ["Rendering style","Realism level","Line work / texture","Shading / color treatment"].map(x=>React.createElement("div",{className:"style-cue",key:x},React.createElement("strong",null,x),"Compare across generated frames only."))
@@ -3170,10 +3219,24 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("div",{className:"training-shared-story"},React.createElement("strong",null,"Same story and same character: Story 60 · Guan Yu. "),"Compare the two generated versions while keeping the story and character fixed."),
       React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Identity: face · body · recognizable person"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Identity: clothing · style"),React.createElement("span",{className:"tr3-chip look"},"Attributes: clothing · colors · hair · accessories"),React.createElement("span",{className:"tr3-chip ignore"},"Ignore for Attributes: whether the face is the same person")),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Example A",anchor:"GOOD — Identity / Attributes should be high"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Example B",anchor:"LOW — clear character/attribute inconsistency"},React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu",showRefs:true}))
+        React.createElement(TrainingExample,{tone:"good",title:"Example A — Same character",anchor:"GOOD — The three generated appearances still look like the same Guan Yu."},
+          React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu",showRefs:true}),
+          React.createElement("div",{className:"training-why good"},
+            React.createElement("strong",null,"Why this is a good example"),
+            React.createElement("div",null,React.createElement("b",null,"Identity: "),"The face and body remain recognizable as the same person across all three generated frames and compared with the reference images."),
+            React.createElement("div",null,React.createElement("b",null,"Attributes: "),"Important visual traits such as clothing, colors, hair, and accessories remain mostly consistent.")
+          )
+        ),
+        React.createElement(TrainingExample,{tone:"bad",title:"Example B — Character changes",anchor:"LOW — The generated appearances do not consistently look like the same Guan Yu."},
+          React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu",showRefs:true}),
+          React.createElement("div",{className:"training-why bad"},
+            React.createElement("strong",null,"Why this is a low example"),
+            React.createElement("div",null,React.createElement("b",null,"Identity: "),"The face or body changes noticeably, so the three generated appearances do not clearly look like the same person."),
+            React.createElement("div",null,React.createElement("b",null,"Attributes: "),"Important visual traits change noticeably between appearances instead of being preserved consistently.")
+          )
+        )
       ),
-      React.createElement("div",{className:"tr3-note"},"Both examples use the same story and character. Focus only on the dimension being demonstrated."),
+      React.createElement("div",{className:"tr3-note"},React.createElement("strong",null,"Remember: "),"Identity asks whether it is the same person. Attributes ask whether that person's important visual traits stay consistent."),
       React.createElement(TrainingCheck,{id:"identity_style",q:"The same face and body remain recognizable even though the artistic style changes. Should the Identity rating still be high?",options:[["yes","Yes"],["no","No"]],correct:"yes",answers,setAnswers,feedback:"Correct. Identity focuses on recognizable character identity. Artistic style is rated separately."}));
 
     if(step===2)return React.createElement(React.Fragment,null,
@@ -3211,14 +3274,35 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     if(step===5)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"5. Reference Reuse and Visual Style"),
-      React.createElement("div",{className:"tr3-focus"},React.createElement("span",{className:"tr3-chip look"},"Reference reuse: copied image / composition"),React.createElement("span",{className:"tr3-chip ignore"},"Same character identity is allowed")),
-      React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",title:"Newly composed",anchor:"REFERENCE REUSE: high score (4–5)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6],showRefs:true})),
-        React.createElement(TrainingExample,{tone:"bad",title:"Close reference reuse",anchor:"REFERENCE REUSE: low score (1–2)"},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],showRefs:true}))
+      React.createElement("div",{className:"tr3-note"},
+        React.createElement("strong",null,"Reference Reuse = Did the generated frame copy a reference image too closely? "),
+        "The same character is allowed. Focus on copied pose, framing, layout, background arrangement, or overall composition."
       ),
-      React.createElement("h3",{style:{marginTop:18}},"Style consistency — generated frames only"),
+      React.createElement(TrainingReferenceStrip,{manifest,itemId:"story60_Gemini"}),
+      React.createElement("div",{className:"tr3-grid2"},
+        React.createElement(TrainingExample,{tone:"good",title:"Newly composed",anchor:"GOOD — same character, but a new composition"},
+          React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6]}),
+          React.createElement("div",{className:"training-why good"},
+            React.createElement("strong",null,"Why this is newly composed"),
+            React.createElement("div",null,"The characters can still look like the references, but the pose, framing, background, and scene arrangement are newly created."),
+            React.createElement("div",null,"It does not closely reproduce the layout or composition of a reference image.")
+          )
+        ),
+        React.createElement(TrainingExample,{tone:"bad",title:"Close reference reuse",anchor:"LOW — the generated image stays too close to the reference"},
+          React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6]}),
+          React.createElement("div",{className:"training-why bad"},
+            React.createElement("strong",null,"Why this looks reused"),
+            React.createElement("div",null,"The generated frame closely repeats reference-image visual information instead of creating a clearly new composition."),
+            React.createElement("div",null,"Look especially for a very similar pose, framing, spatial layout, or background arrangement.")
+          )
+        )
+      ),
+      React.createElement("h3",{style:{marginTop:20}},"Visual Style Consistency"),
+      React.createElement("div",{className:"tr3-note"},
+        React.createElement("strong",null,"Style = How the images are rendered. "),
+        "Compare realism, line work, texture, shading, and color treatment across the generated frames. Do not use the reference images for this rating."
+      ),
       React.createElement(StyleDemo,null),
-      React.createElement("div",{className:"tr3-note"},"For Style, compare only rendering / realism / line work / shading / color treatment across generated frames. Do not use reference images, identity, clothing, or background correctness."),
       React.createElement(TrainingCheck,{id:"reuse_identity",q:"A generated frame shows the same character as the reference but uses a genuinely new pose, background, and composition. Is that automatically reference copying?",options:[["yes","Yes"],["no","No"]],correct:"no",answers,setAnswers,feedback:"Reference reuse targets direct or close image/composition reuse, not legitimate identity similarity."}));
 
     return React.createElement(React.Fragment,null,
@@ -3521,7 +3605,7 @@ function Setup({assignments,pid,onGo,onBack}) {
         "div",
         {className:"main-point"},
         onlineMode
-          ? "Your four main-study story outputs will be assigned automatically. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
+          ? "You will evaluate AI-generated output of stories texts. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
           : "Local test mode: enter one assignment code below, then check the viewing conditions before continuing."
       ),
 
@@ -3897,7 +3981,7 @@ function Consent({onGo,onBack}){
       React.createElement("h2",null,"Consent"),
       React.createElement("div",{className:"main-point"},
         React.createElement("strong",null,"Research use: "),
-        "Your anonymous ratings will be used for academic research to validate an automatic visual-story consistency metric. Participation is voluntary."
+        "Your anonymous ratings will be used for academic research to validate a consistency metric for AI-generated visualization of stories texts. Participation is voluntary."
       ),
       React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},
         React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),
