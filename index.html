@@ -1988,6 +1988,33 @@ p { line-height: 1.6; }
 .practice-reference-strip .training-ref-caption{font-size:11px}
 @media(max-width:850px){.training-component-groups{grid-template-columns:1fr}.generated-repetition-grid{grid-template-columns:1fr}}
 
+/* ===== Guided practice v4.10 readability + image sizing ===== */
+.training-example-grade{font-size:17px;font-weight:900;letter-spacing:.02em;margin-bottom:8px}
+.tr3-example.good .training-example-grade{color:#166534}
+.tr3-example.bad .training-example-grade{color:#991b1b}
+.training-example-metric{font-size:14.5px;line-height:1.5;margin-top:5px}
+.training-example-metric strong{display:block;font-size:14.5px;margin-bottom:1px}
+.training-align-example .tr3-thumbs{grid-template-columns:1fr;max-width:360px;margin:8px auto 0}
+.training-align-example .tr3-thumbs .sequence-frame-img{width:100%;height:245px;aspect-ratio:auto;object-fit:contain;background:#fff}
+.training-background-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,145px));justify-content:center;gap:7px}
+.training-background-example .tr3-thumbs .sequence-frame-img{width:100%;height:135px;aspect-ratio:auto;object-fit:contain;background:#fff}
+.training-temporal-example .tr3-thumbs{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.training-temporal-example .tr3-thumbs .sequence-frame-img{width:100%;height:120px;aspect-ratio:auto;object-fit:contain;background:#fff}
+.training-temporal-example .tr3-small,.training-background-example .tr3-small{font-size:11px}
+.generated-repetition-desc{font-size:15.5px;line-height:1.5;color:var(--text);margin-top:8px}
+.generated-repetition-label{font-size:17px}
+@media(max-width:900px){
+  .training-align-example .tr3-thumbs{max-width:320px}
+  .training-temporal-example .tr3-thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .training-align-example .tr3-thumbs .sequence-frame-img{height:210px}
+  .training-background-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .training-background-example .tr3-thumbs .sequence-frame-img{height:120px}
+  .training-temporal-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .training-temporal-example .tr3-thumbs .sequence-frame-img{height:135px}
+}
+
 </style>
 </head>
 <body><div id="app"></div>
@@ -3056,8 +3083,8 @@ function TrainingSequence({manifest,itemId,shots,character=null,showRefs=false,s
   );
 }
 
-function TrainingExample({tone,title=null,anchor,children}){
-  return React.createElement("div",{className:`tr3-example ${tone}`},
+function TrainingExample({tone,title=null,anchor,children,className=""}){
+  return React.createElement("div",{className:`tr3-example ${tone}${className?" "+className:""}`},
     React.createElement("div",{className:`tr3-anchor ${tone}`},anchor),
     title&&React.createElement("h3",null,title),children
   );
@@ -3236,14 +3263,16 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement(TrainingAllCharacterReferenceStrip,{manifest,itemId:"story60_NaiveBaseline"}),
       React.createElement("div",{className:"tr3-grid2"},
         React.createElement(TrainingExample,{tone:"good",anchor:React.createElement(React.Fragment,null,
-          React.createElement("div",null,React.createElement("b",null,"GOOD — Identity: "),"These generated characters still look like the reference images, and the face/body remain recognizable as the same person across the three frames."),
-          React.createElement("div",{style:{marginTop:6}},React.createElement("b",null,"Attributes: "),"Their visual traits (clothing, colors, hair, accessories) stay mostly consistent.")
+          React.createElement("div",{className:"training-example-grade"},"GOOD"),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity:"),"These generated characters still look like the reference images, and the face/body remain as the same person across the three frames."),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes:"),"All their visual traits (clothing, colors, hair, accessories) stay mostly consistent.")
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu"})
         ),
         React.createElement(TrainingExample,{tone:"bad",anchor:React.createElement(React.Fragment,null,
-          React.createElement("div",null,React.createElement("b",null,"LOW — Identity: "),"These generated characters do not look like the reference images, and the face/body change noticeably between frames."),
-          React.createElement("div",{style:{marginTop:6}},React.createElement("b",null,"Attributes: "),"Important visual traits are not preserved consistently.")
+          React.createElement("div",{className:"training-example-grade"},"LOW"),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity:"),"These generated characters do not look like the reference images, and the face/body change noticeably between frames."),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes:"),"Important visual traits are not preserved consistently.")
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu"})
         )
@@ -3254,10 +3283,10 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("h2",null,"2. Text–Image Alignment"),
       React.createElement("div",{className:"training-simple-intro"},"Compare the generated image with the shot description and check whether the described people and actions are actually shown."),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — The generated image shows the characters standing next to each other, with one character patting the other's shoulder with his right hand."},
+        React.createElement(TrainingExample,{tone:"good",className:"training-align-example",anchor:"GOOD — The generated image shows the characters standing next to each other, with one character patting the other's shoulder with his right hand."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[3],showText:true,showStaticOnly:true})
         ),
-        React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — The generated image does not show the intended action; it is only a close-up face shot."},
+        React.createElement(TrainingExample,{tone:"bad",className:"training-align-example",anchor:"LOW — The generated image does not show the intended action; it is only a close-up face shot."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[3],showText:true,showStaticOnly:true})
         )
       ),
@@ -3267,13 +3296,13 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("h2",null,"3. Background and Temporal Continuity"),
       React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Background: "),"when two frames are meant to show the same location, the important environment and layout should still look like the same place."),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — The street environment remains recognizable as the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3]})),
-        React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — The background becomes difficult to differentiate and no longer clearly looks like the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3]}))
+        React.createElement(TrainingExample,{tone:"good",className:"training-background-example",anchor:"GOOD — The street environment remains recognizable as the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3]})),
+        React.createElement(TrainingExample,{tone:"bad",className:"training-background-example",anchor:"LOW — The background becomes difficult to differentiate and no longer clearly looks like the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3]}))
       ),
       React.createElement("div",{className:"training-simple-intro",style:{marginTop:18}},React.createElement("strong",null,"Temporal Continuity: "),"look at the generated frames in order and ask whether you can understand how the story moves from one moment to the next. Expected action or location changes are okay when the progression still makes sense."),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — There is a clear story flow, and the changes between frames are understandable, so you can follow what is happening."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3,4,5,6,7,8]})),
-        React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — Some transitions feel abrupt or disconnected, making it harder to follow what is happening."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3,4,5,6,7,8]}))
+        React.createElement(TrainingExample,{tone:"good",className:"training-temporal-example",anchor:"GOOD — There is a clear story flow, and the changes between frames are understandable, so you can follow what is happening."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"bad",className:"training-temporal-example",anchor:"LOW — Some transitions feel abrupt or disconnected, making it harder to follow what is happening."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3,4,5,6,7,8]}))
       ),
       React.createElement(TrainingCheck,{id:"background_move",q:"If the story intentionally moves to a new location, should that background change be allowed?",options:[["yes","Yes"],["no","No"]],correct:"yes",answers,setAnswers,feedback:"Background is only penalized when a location that should stay the same changes unexpectedly."}));
 
