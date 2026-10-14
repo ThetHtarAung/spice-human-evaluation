@@ -3406,7 +3406,7 @@ function Setup({assignments,pid,onGo,onBack}) {
         "div",
         {className:"main-point"},
         onlineMode
-          ? "Your four main-study story outputs will be assigned automatically. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
+          ? "You will evaluate AI-generated outputs of stories texts. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
           : "Local test mode: enter one assignment code below, then check the viewing conditions before continuing."
       ),
 
@@ -3782,7 +3782,7 @@ function Consent({onGo,onBack}){
       React.createElement("h2",null,"Consent"),
       React.createElement("div",{className:"main-point"},
         React.createElement("strong",null,"Research use: "),
-        "Your anonymous ratings will be used for academic research to validate an automatic visual-story consistency metric. Participation is voluntary."
+        "Your anonymous ratings will be used for academic research to validate a consistency metric for AI-generated visualization of stories texts. Participation is voluntary."
       ),
       React.createElement("label",{style:{display:"flex",gap:10,marginTop:16}},
         React.createElement("input",{type:"checkbox",checked:c,onChange:e=>setC(e.target.checked)}),
