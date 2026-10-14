@@ -1855,6 +1855,20 @@ p { line-height: 1.6; }
 .room-demo .table{position:absolute;right:18px;bottom:18px;width:35px;height:18px;border:2px solid #64748b;background:#fff}
 .room-demo.changed .w{left:auto;right:8px}.room-demo.changed .sofa{left:auto;right:12px;width:70px}.room-demo.changed .table{right:auto;left:12px;bottom:52px}
 @media(max-width:800px){.tr3-rules,.tr3-grid2,.tr3-demo-grid{grid-template-columns:1fr}.tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* ===== Guided-practice component overview ===== */
+.component-overview-intro{margin:4px 0 14px;color:var(--muted);font-size:15px;line-height:1.55}
+.component-overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 20px}
+.component-overview-card{border:1px solid var(--border);border-radius:10px;background:#fff;padding:12px;min-width:0}
+.component-overview-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.component-overview-badge{flex:0 0 auto;min-width:34px;height:28px;padding:0 7px;border-radius:7px;background:var(--accent-tint);border:1px solid #bfdbfe;color:var(--accent-dark);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:.03em}
+.component-overview-title{font-size:14px;font-weight:800;line-height:1.25}
+.component-overview-meaning{font-size:13px;line-height:1.4;color:var(--text)}
+.component-overview-example{margin-top:7px;padding:7px 8px;border-radius:7px;background:var(--light);font-size:12px;line-height:1.35;color:var(--muted)}
+.component-overview-example strong{color:var(--text)}
+.component-rules-title{margin:22px 0 8px;font-size:18px}
+@media(max-width:950px){.component-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.component-overview-grid{grid-template-columns:1fr}}
+
 
 
 
@@ -2999,14 +3013,42 @@ function TrainingStage({manifest,onComplete,onBack}){
   const pageReady=!pageCheck||answers[pageCheck.id]===pageCheck.correct;
 
   function body(){
-    if(step===0)return React.createElement(React.Fragment,null,
-      React.createElement("h2",null,"Three rules before the real study"),
-      React.createElement("div",{className:"tr3-rules"},
-        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"5 = best, 1 = worst"),"This direction is the same on every 1–5 question, including Reference Reuse."),
-        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"Judge one dimension only"),"A problem in Style should not automatically lower Identity, Background, or another score."),
-        React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"N/A = not enough evidence"),"Use N/A only when the requested character or scene cannot reasonably be judged.")
-      ),
-      React.createElement("div",{className:"tr3-note"},"Practice examples are not research ratings. The examples use the same story on both sides whenever possible so the visual difference comes from the generation model, not from different story content."));
+    if(step===0){
+      const components=[
+        {badge:"ID",title:"Character Identity",meaning:"Is it still the same character?",example:"Same recognizable face/body across frames, even if clothing changes."},
+        {badge:"AT",title:"Character Attributes",meaning:"Are the character's important visual traits kept?",example:"Clothing, colors, hairstyle, accessories, or distinctive body details stay consistent."},
+        {badge:"TI",title:"Text–Image Alignment",meaning:"Does the generated image match the shot description?",example:"Text says ‘a character reading at a desk’ → the image actually shows that content."},
+        {badge:"BG",title:"Background Consistency",meaning:"When the story stays in the same place, does that place stay recognizable?",example:"The same room keeps its important layout and objects. A planned move to a new place is allowed."},
+        {badge:"TM",title:"Temporal Continuity",meaning:"Do the frames progress in a logical order?",example:"An action develops naturally from one frame to the next, without an unexplained visual jump."},
+        {badge:"RP",title:"Adjacent-Frame Repetition",meaning:"How much meaningful visual change happens between neighboring frames?",example:"A new pose/action can be Similar; an almost identical image is a Near-duplicate."},
+        {badge:"RR",title:"Reference Reuse",meaning:"Is the story frame newly composed instead of copying the reference image?",example:"Same character + new pose/background is fine; nearly the same reference composition is reuse."},
+        {badge:"ST",title:"Visual Style",meaning:"Does the visual look stay consistent across the generated frames?",example:"Realistic → realistic is consistent; realistic → cartoon → sketch is a style shift."},
+        {badge:"OV",title:"Overall Consistency",meaning:"Does the whole sequence feel like one coherent visual story?",example:"Judge the full story directly, allowing changes that are expected by the story."}
+      ];
+      return React.createElement(React.Fragment,null,
+        React.createElement("h2",null,"What will you evaluate?"),
+        React.createElement("div",{className:"component-overview-intro"},"Before practice, learn what each rating means. Keep these dimensions separate when you answer the survey."),
+        React.createElement("div",{className:"component-overview-grid"},
+          components.map(c=>React.createElement("div",{className:"component-overview-card",key:c.badge},
+            React.createElement("div",{className:"component-overview-head"},
+              React.createElement("div",{className:"component-overview-badge"},c.badge),
+              React.createElement("div",{className:"component-overview-title"},c.title)
+            ),
+            React.createElement("div",{className:"component-overview-meaning"},c.meaning),
+            React.createElement("div",{className:"component-overview-example"},
+              React.createElement("strong",null,"Example: "),c.example
+            )
+          ))
+        ),
+        React.createElement("h3",{className:"component-rules-title"},"Three rules to remember"),
+        React.createElement("div",{className:"tr3-rules"},
+          React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"5 = best, 1 = worst"),"This direction is the same on every 1–5 question, including Reference Reuse."),
+          React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"Judge one dimension only"),"A problem in Style should not automatically lower Identity, Background, or another score."),
+          React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"N/A = not enough evidence"),"Use N/A only when the requested character or scene cannot reasonably be judged.")
+        ),
+        React.createElement("div",{className:"tr3-note"},"The next pages show guided visual examples. Practice answers are not part of the research data.")
+      );
+    }
 
     if(step===1)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"1. Character Identity and Attributes"),
