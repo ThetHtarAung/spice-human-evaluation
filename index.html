@@ -1855,44 +1855,62 @@ p { line-height: 1.6; }
 .room-demo .table{position:absolute;right:18px;bottom:18px;width:35px;height:18px;border:2px solid #64748b;background:#fff}
 .room-demo.changed .w{left:auto;right:8px}.room-demo.changed .sofa{left:auto;right:12px;width:70px}.room-demo.changed .table{right:auto;left:12px;bottom:52px}
 @media(max-width:800px){.tr3-rules,.tr3-grid2,.tr3-demo-grid{grid-template-columns:1fr}.tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-/* ===== Guided-practice component overview ===== */
-.component-overview-intro{margin:4px 0 14px;color:var(--muted);font-size:15px;line-height:1.55}
-.component-overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 20px}
-.component-overview-card{border:1px solid var(--border);border-radius:10px;background:#fff;padding:12px;min-width:0}
-.component-overview-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-.component-overview-badge{flex:0 0 auto;min-width:34px;height:28px;padding:0 7px;border-radius:7px;background:var(--accent-tint);border:1px solid #bfdbfe;color:var(--accent-dark);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:.03em}
-.component-overview-title{font-size:14px;font-weight:800;line-height:1.25}
-.component-overview-meaning{font-size:13px;line-height:1.4;color:var(--text)}
-.component-overview-example{margin-top:7px;padding:7px 8px;border-radius:7px;background:var(--light);font-size:12px;line-height:1.35;color:var(--muted)}
-.component-overview-example strong{color:var(--text)}
-.component-mini-visual{height:92px;margin:9px 0 8px;border:1px solid var(--border);border-radius:9px;background:#f8fafc;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.component-mini-caption{position:absolute;left:7px;bottom:6px;padding:3px 6px;border-radius:999px;background:#fff;border:1px solid var(--border);font-size:9.5px;font-weight:800;color:var(--accent-dark);letter-spacing:.03em}
-.cm-person{position:relative;width:54px;height:70px}
-.cm-head{position:absolute;left:15px;top:2px;width:25px;height:25px;border:2px solid #64748b;border-radius:50%;background:#fff}
-.cm-body{position:absolute;left:8px;top:29px;width:39px;height:36px;border:2px solid #64748b;border-radius:11px 11px 6px 6px;background:#e2e8f0}
-.cm-highlight{position:absolute;border:3px solid var(--accent);border-radius:999px;box-shadow:0 0 0 3px rgba(37,99,235,.10)}
-.cm-identity .cm-highlight{width:37px;height:37px;left:9px;top:-4px}
-.cm-attr .cm-highlight{width:51px;height:42px;left:2px;top:27px;border-radius:10px}
-.cm-hair{position:absolute;left:14px;top:0;width:27px;height:10px;border-radius:12px 12px 4px 4px;background:#475569}
-.cm-badge-dot{position:absolute;right:4px;top:37px;width:9px;height:9px;border-radius:50%;background:#64748b}
-.cm-align{display:grid;grid-template-columns:1fr 26px 1fr;gap:5px;align-items:center;width:88%;height:58px}
-.cm-textbox,.cm-imgbox{height:54px;border:1px solid #94a3b8;border-radius:6px;background:#fff;padding:6px}
-.cm-textline{height:5px;background:#cbd5e1;border-radius:3px;margin:4px 0}.cm-textline.short{width:65%}
-.cm-arrow{text-align:center;font-size:21px;font-weight:800;color:var(--accent)}
-.cm-imgbox{position:relative}.cm-imgbox:before{content:"";position:absolute;left:10px;right:10px;bottom:8px;height:17px;background:#dbeafe;border-radius:4px}.cm-imgbox:after{content:"●";position:absolute;left:50%;top:8px;transform:translateX(-50%);font-size:17px;color:#475569}
-.cm-room{width:78%;height:58px;position:relative;border:1px solid #94a3b8;border-radius:7px;background:#fff}
-.cm-room-window{position:absolute;left:8px;top:8px;width:22px;height:18px;border:2px solid #64748b;background:#dbeafe}.cm-room-sofa{position:absolute;left:10px;bottom:8px;width:34px;height:17px;border:2px solid #64748b;border-radius:5px;background:#e2e8f0}.cm-room-table{position:absolute;right:9px;bottom:10px;width:24px;height:14px;border:2px solid #64748b}.cm-room .cm-highlight{left:3px;right:3px;top:3px;bottom:3px;border-radius:7px}
-.cm-sequence{display:flex;align-items:center;gap:4px;width:90%;justify-content:center}.cm-frame{width:42px;height:48px;border:1px solid #94a3b8;border-radius:5px;background:#fff;position:relative}.cm-frame:before{content:"";position:absolute;left:9px;bottom:7px;width:15px;height:22px;border:2px solid #64748b;border-radius:8px 8px 4px 4px}.cm-frame.shift:before{left:17px}.cm-frame.far:before{left:23px}.cm-mini-arrow{font-size:13px;color:var(--accent);font-weight:900}
-.cm-repeat{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;gap:5px;width:86%}.cm-repeat .cm-frame{width:100%;height:52px}.cm-delta{text-align:center;font-size:10px;font-weight:900;color:var(--accent-dark)}
-.cm-refreuse{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;gap:5px;width:88%}.cm-ref-card,.cm-gen-card{height:54px;border:1px solid #94a3b8;border-radius:6px;background:#fff;position:relative}.cm-ref-card:before,.cm-gen-card:before{content:"";position:absolute;width:17px;height:25px;border:2px solid #64748b;border-radius:9px 9px 4px 4px;bottom:7px}.cm-ref-card:before{left:12px}.cm-gen-card:before{right:10px}.cm-compare{text-align:center;font-size:18px;font-weight:900;color:var(--accent)}
-.cm-style{display:flex;gap:5px;width:90%;justify-content:center}.cm-style-tile{width:42px;height:52px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #94a3b8}.cm-style-tile .dot{width:22px;height:22px;border-radius:50%;border:2px solid #475569}.cm-style-tile.cartoon{border:3px solid #334155;background:#fef3c7}.cm-style-tile.cartoon .dot{border:4px solid #334155;background:#fde68a}.cm-style-tile.sketch{border:2px dashed #475569;background:repeating-linear-gradient(45deg,#fff,#fff 4px,#e5e7eb 4px,#e5e7eb 6px)}
-.cm-overall{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;width:84%;padding:7px;border:2px solid var(--accent);border-radius:8px}.cm-overall .cm-frame{width:100%;height:43px}.cm-overall-label{position:absolute;top:5px;right:7px;font-size:9px;font-weight:800;color:var(--accent-dark)}
-.component-rules-title{margin:22px 0 8px;font-size:18px}
-@media(max-width:950px){.component-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.component-overview-grid{grid-template-columns:1fr}.component-mini-visual{height:100px}}
-
-
-
+/* ===== Guided-practice overview map v4.5 ===== */
+.component-map-intro{margin:4px 0 8px;color:var(--text);font-size:16px;line-height:1.55}
+.component-map-reminder{margin:0 0 20px;color:var(--muted);font-size:15px;line-height:1.5}
+.component-map-section{margin:20px 0 0}
+.component-map-section-title{font-size:18px;font-weight:800;color:var(--text);margin:0 0 10px;padding-bottom:7px;border-bottom:2px solid var(--border)}
+.component-map-grid{display:grid;gap:12px}
+.component-map-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.component-map-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.component-map-card{border:1px solid var(--border);border-radius:12px;background:#fff;padding:16px;min-width:0}
+.component-map-name{font-size:17px;font-weight:800;line-height:1.3;color:var(--text);margin:0 0 9px}
+.component-map-question{font-size:16px;line-height:1.48;color:var(--text);margin-top:10px}
+.component-map-visual{height:128px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;min-width:0}
+.component-map-overall{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:18px;align-items:center;border:1px solid var(--border);border-radius:12px;background:#fff;padding:18px}
+.component-map-overall .component-map-visual{height:118px;margin:0}
+.component-map-overall-copy{min-width:0}
+.component-map-overall-copy .component-map-name{font-size:19px;margin-bottom:7px}
+.component-map-label{font-size:13px;font-weight:800;color:var(--muted);text-align:center;margin-top:4px}
+.component-map-arrow{font-size:24px;font-weight:900;color:var(--accent);padding:0 4px}
+.component-map-pair{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;gap:6px;width:100%;max-width:300px}
+.component-map-side{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cm-person{position:relative;width:58px;height:76px}
+.cm-head{position:absolute;left:16px;top:2px;width:27px;height:27px;border:2px solid #475569;border-radius:50%;background:#fff}
+.cm-body{position:absolute;left:8px;top:31px;width:43px;height:39px;border:2px solid #475569;border-radius:11px 11px 6px 6px;background:#e2e8f0}
+.cm-hair{position:absolute;left:15px;top:0;width:29px;height:11px;border-radius:12px 12px 4px 4px;background:#475569}
+.cm-badge-dot{position:absolute;right:3px;top:40px;width:10px;height:10px;border-radius:50%;background:#64748b}
+.cm-highlight{position:absolute;border:3px solid var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.10)}
+.cm-highlight.face{width:39px;height:39px;left:10px;top:-4px;border-radius:50%}
+.cm-highlight.attr{width:54px;height:46px;left:2px;top:28px;border-radius:10px}
+.cm-textbox,.cm-imgbox{width:92px;height:70px;border:1px solid #94a3b8;border-radius:7px;background:#fff;padding:8px;position:relative}
+.cm-textline{height:6px;background:#cbd5e1;border-radius:3px;margin:5px 0}.cm-textline.short{width:62%}
+.cm-imgbox:before{content:"";position:absolute;left:14px;right:14px;bottom:10px;height:22px;background:#dbeafe;border-radius:4px}.cm-imgbox:after{content:"●";position:absolute;left:50%;top:11px;transform:translateX(-50%);font-size:20px;color:#475569}
+.cm-room{width:100%;max-width:106px;height:72px;position:relative;border:1px solid #94a3b8;border-radius:7px;background:#fff}
+.cm-room-window{position:absolute;left:9px;top:9px;width:25px;height:20px;border:2px solid #64748b;background:#dbeafe}
+.cm-room-sofa{position:absolute;left:11px;bottom:9px;width:40px;height:20px;border:2px solid #64748b;border-radius:5px;background:#e2e8f0}
+.cm-room-table{position:absolute;right:10px;bottom:11px;width:27px;height:16px;border:2px solid #64748b}
+.cm-room.alt .cm-window{left:auto;right:9px}
+.cm-sequence{display:flex;align-items:center;gap:7px;width:100%;justify-content:center}
+.cm-frame{width:52px;height:60px;border:1px solid #94a3b8;border-radius:6px;background:#fff;position:relative;flex:0 0 auto}
+.cm-frame:before{content:"";position:absolute;left:11px;bottom:8px;width:17px;height:26px;border:2px solid #64748b;border-radius:8px 8px 4px 4px}
+.cm-frame.shift:before{left:21px}.cm-frame.far:before{left:28px}.cm-frame.near:before{left:13px}
+.cm-mini-arrow{font-size:18px;color:var(--accent);font-weight:900}
+.cm-ref-card,.cm-gen-card{width:94px;height:72px;border:1px solid #94a3b8;border-radius:7px;background:#fff;position:relative}
+.cm-ref-card:before,.cm-gen-card:before{content:"";position:absolute;width:19px;height:30px;border:2px solid #475569;border-radius:9px 9px 4px 4px;bottom:9px}
+.cm-ref-card:before{left:16px}.cm-gen-card:before{right:15px}
+.cm-ref-card:after{content:"";position:absolute;left:47px;bottom:12px;width:28px;height:13px;border:2px solid #94a3b8}
+.cm-gen-card:after{content:"";position:absolute;left:12px;top:10px;width:30px;height:18px;border:2px solid #94a3b8;background:#dbeafe}
+.cm-style{display:flex;gap:8px;align-items:center;justify-content:center;width:100%}
+.cm-style-tile{width:56px;height:68px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #94a3b8}
+.cm-style-tile .dot{width:27px;height:27px;border-radius:50%;border:2px solid #475569}
+.cm-style-tile.cartoon{border:4px solid #334155;background:#fef3c7}.cm-style-tile.cartoon .dot{border:4px solid #334155;background:#fde68a}
+.cm-style-tile.sketch{border:2px dashed #475569;background:repeating-linear-gradient(45deg,#fff,#fff 5px,#e5e7eb 5px,#e5e7eb 7px)}
+.cm-overall-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;width:100%;max-width:440px;padding:10px;border:2px solid var(--accent);border-radius:9px;background:#fff}
+.cm-overall-strip .cm-frame{width:100%;height:62px}
+.component-rules-title{margin:24px 0 8px;font-size:18px}
+@media(max-width:950px){.component-map-grid.three{grid-template-columns:1fr 1fr}.component-map-overall{grid-template-columns:1fr}}
+@media(max-width:680px){.component-map-grid.two,.component-map-grid.three{grid-template-columns:1fr}.component-map-visual{height:140px}.component-map-overall{padding:16px}.component-map-pair{max-width:330px}}
 
 /* ===== v4 navigation + de-crowded late-stage layout ===== */
 .page-back-row{display:flex;align-items:center;justify-content:flex-start;margin:0 0 12px}
@@ -3020,29 +3038,57 @@ function StyleDemo(){
 }
 
 function ComponentMiniVisual({type}){
-  const caption=(text)=>React.createElement("div",{className:"component-mini-caption"},text);
   const frame=(extra="")=>React.createElement("div",{className:`cm-frame ${extra}`.trim()});
+  const person=(highlight,variant="")=>React.createElement("div",{className:"cm-person"},
+    React.createElement("div",{className:"cm-hair"}),
+    React.createElement("div",{className:"cm-head"}),
+    React.createElement("div",{className:"cm-body",style:variant==="changed"?{background:"#fde68a"}:null}),
+    React.createElement("div",{className:"cm-badge-dot"}),
+    React.createElement("div",{className:`cm-highlight ${highlight}`})
+  );
+  const side=(visual,label)=>React.createElement("div",{className:"component-map-side"},visual,React.createElement("div",{className:"component-map-label"},label));
+  const arrow=()=>React.createElement("div",{className:"component-map-arrow"},"→");
 
-  if(type==="identity")return React.createElement("div",{className:"component-mini-visual cm-identity"},
-    React.createElement("div",{className:"cm-person"},React.createElement("div",{className:"cm-head"}),React.createElement("div",{className:"cm-body"}),React.createElement("div",{className:"cm-highlight"})),caption("LOOK: face + body identity"));
+  if(type==="identity")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},side(person("face"),"Reference"),arrow(),side(person("face","changed"),"Generated")));
 
-  if(type==="attribute")return React.createElement("div",{className:"component-mini-visual cm-attr"},
-    React.createElement("div",{className:"cm-person"},React.createElement("div",{className:"cm-hair"}),React.createElement("div",{className:"cm-head"}),React.createElement("div",{className:"cm-body"}),React.createElement("div",{className:"cm-badge-dot"}),React.createElement("div",{className:"cm-highlight"})),caption("LOOK: clothes · hair · traits"));
+  if(type==="attribute")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},side(person("attr"),"Reference"),arrow(),side(person("attr","changed"),"Generated")));
 
-  if(type==="alignment")return React.createElement("div",{className:"component-mini-visual"},
-    React.createElement("div",{className:"cm-align"},React.createElement("div",{className:"cm-textbox"},React.createElement("div",{className:"cm-textline"}),React.createElement("div",{className:"cm-textline short"}),React.createElement("div",{className:"cm-textline"})),React.createElement("div",{className:"cm-arrow"},"→"),React.createElement("div",{className:"cm-imgbox"})),caption("COMPARE: description ↔ image"));
+  if(type==="alignment")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},
+      side(React.createElement("div",{className:"cm-textbox"},React.createElement("div",{className:"cm-textline"}),React.createElement("div",{className:"cm-textline short"}),React.createElement("div",{className:"cm-textline"})),"Description"),
+      arrow(),
+      side(React.createElement("div",{className:"cm-imgbox"}),"Generated image")
+    ));
 
-  if(type==="background")return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-room"},React.createElement("div",{className:"cm-room-window"}),React.createElement("div",{className:"cm-room-sofa"}),React.createElement("div",{className:"cm-room-table"}),React.createElement("div",{className:"cm-highlight"})),caption("LOOK: place · layout · objects"));
+  if(type==="background")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},
+      side(React.createElement("div",{className:"cm-room"},React.createElement("div",{className:"cm-room-window"}),React.createElement("div",{className:"cm-room-sofa"}),React.createElement("div",{className:"cm-room-table"})),"Frame A"),
+      arrow(),
+      side(React.createElement("div",{className:"cm-room"},React.createElement("div",{className:"cm-room-window"}),React.createElement("div",{className:"cm-room-sofa"}),React.createElement("div",{className:"cm-room-table"})),"Frame B")
+    ));
 
-  if(type==="temporal")return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-sequence"},frame(),React.createElement("div",{className:"cm-mini-arrow"},"→"),frame("shift"),React.createElement("div",{className:"cm-mini-arrow"},"→"),frame("far")),caption("LOOK: frame-to-frame progression"));
+  if(type==="temporal")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"cm-sequence"},frame(),React.createElement("div",{className:"cm-mini-arrow"},"→"),frame("shift"),React.createElement("div",{className:"cm-mini-arrow"},"→"),frame("far")));
 
-  if(type==="repetition")return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-repeat"},frame(),React.createElement("div",{className:"cm-delta"},"CHANGE?"),frame("shift")),caption("COMPARE: adjacent frames"));
+  if(type==="repetition")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},side(frame(),"Frame A"),arrow(),side(frame("near"),"Frame B")));
 
-  if(type==="reference")return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-refreuse"},React.createElement("div",{className:"cm-ref-card"}),React.createElement("div",{className:"cm-compare"},"↔"),React.createElement("div",{className:"cm-gen-card"})),caption("COMPARE: reference ↔ generated"));
+  if(type==="reference")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"component-map-pair"},side(React.createElement("div",{className:"cm-ref-card"}),"Reference"),arrow(),side(React.createElement("div",{className:"cm-gen-card"}),"Generated")));
 
-  if(type==="style")return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-style"},React.createElement("div",{className:"cm-style-tile"},React.createElement("div",{className:"dot"})),React.createElement("div",{className:"cm-style-tile cartoon"},React.createElement("div",{className:"dot"})),React.createElement("div",{className:"cm-style-tile sketch"},React.createElement("div",{className:"dot"}))),caption("LOOK: rendering style across frames"));
+  if(type==="style")return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"cm-style"},
+      React.createElement("div",{className:"cm-style-tile"},React.createElement("div",{className:"dot"})),
+      React.createElement("div",{className:"cm-mini-arrow"},"→"),
+      React.createElement("div",{className:"cm-style-tile cartoon"},React.createElement("div",{className:"dot"})),
+      React.createElement("div",{className:"cm-mini-arrow"},"→"),
+      React.createElement("div",{className:"cm-style-tile sketch"},React.createElement("div",{className:"dot"}))
+    ));
 
-  return React.createElement("div",{className:"component-mini-visual"},React.createElement("div",{className:"cm-overall-label"},"WHOLE STORY"),React.createElement("div",{className:"cm-overall"},frame(),frame("shift"),frame(),frame("far")),caption("LOOK: the full sequence together"));
+  return React.createElement("div",{className:"component-map-visual"},
+    React.createElement("div",{className:"cm-overall-strip"},frame(),frame("shift"),frame(),frame("far")));
 }
 
 function TrainingStage({manifest,onComplete,onBack}){
@@ -3062,33 +3108,53 @@ function TrainingStage({manifest,onComplete,onBack}){
 
   function body(){
     if(step===0){
-      const components=[
-        {badge:"ID",type:"identity",title:"Character Identity",meaning:"Is it still the same character?",example:"Same recognizable face/body across frames, even if clothing changes."},
-        {badge:"AT",type:"attribute",title:"Character Attributes",meaning:"Are the character's important visual traits kept?",example:"Clothing, colors, hairstyle, accessories, or distinctive body details stay consistent."},
-        {badge:"TI",type:"alignment",title:"Text–Image Alignment",meaning:"Does the generated image match the shot description?",example:"Text says ‘a character reading at a desk’ → the image actually shows that content."},
-        {badge:"BG",type:"background",title:"Background Consistency",meaning:"When the story stays in the same place, does that place stay recognizable?",example:"The same room keeps its important layout and objects. A planned move to a new place is allowed."},
-        {badge:"TM",type:"temporal",title:"Temporal Continuity",meaning:"Do the frames progress in a logical order?",example:"An action develops naturally from one frame to the next, without an unexplained visual jump."},
-        {badge:"RP",type:"repetition",title:"Adjacent-Frame Repetition",meaning:"How much meaningful visual change happens between neighboring frames?",example:"A new pose/action can be Similar; an almost identical image is a Near-duplicate."},
-        {badge:"RR",type:"reference",title:"Reference Reuse",meaning:"Is the story frame newly composed instead of copying the reference image?",example:"Same character + new pose/background is fine; nearly the same reference composition is reuse."},
-        {badge:"ST",type:"style",title:"Visual Style",meaning:"Does the visual look stay consistent across the generated frames?",example:"Realistic → realistic is consistent; realistic → cartoon → sketch is a style shift."},
-        {badge:"OV",type:"overall",title:"Overall Consistency",meaning:"Does the whole sequence feel like one coherent visual story?",example:"Judge the full story directly, allowing changes that are expected by the story."}
-      ];
+      const card=(type,name,question)=>React.createElement("div",{className:"component-map-card",key:name},
+        React.createElement("div",{className:"component-map-name"},name),
+        React.createElement(ComponentMiniVisual,{type}),
+        React.createElement("div",{className:"component-map-question"},question)
+      );
       return React.createElement(React.Fragment,null,
         React.createElement("h2",null,"What will you evaluate?"),
-        React.createElement("div",{className:"component-overview-intro"},"Before practice, learn what each rating means. Keep these dimensions separate when you answer the survey."),
-        React.createElement("div",{className:"component-overview-grid"},
-          components.map(c=>React.createElement("div",{className:"component-overview-card",key:c.badge},
-            React.createElement("div",{className:"component-overview-head"},
-              React.createElement("div",{className:"component-overview-badge"},c.badge),
-              React.createElement("div",{className:"component-overview-title"},c.title)
-            ),
-            React.createElement(ComponentMiniVisual,{type:c.type}),
-            React.createElement("div",{className:"component-overview-meaning"},c.meaning),
-            React.createElement("div",{className:"component-overview-example"},
-              React.createElement("strong",null,"Example: "),c.example
-            )
-          ))
+        React.createElement("div",{className:"component-map-intro"},"This page is only a map of the ratings you will use."),
+        React.createElement("div",{className:"component-map-reminder"},"You do not need to memorize them — each part will be practised on the next pages."),
+
+        React.createElement("section",{className:"component-map-section"},
+          React.createElement("div",{className:"component-map-section-title"},"Characters"),
+          React.createElement("div",{className:"component-map-grid two"},
+            card("identity","Character Identity","Does this look like the same character?"),
+            card("attribute","Character Attributes","Are the character's important visual traits kept?")
+          )
         ),
+
+        React.createElement("section",{className:"component-map-section"},
+          React.createElement("div",{className:"component-map-section-title"},"Story & Scene"),
+          React.createElement("div",{className:"component-map-grid three"},
+            card("alignment","Text–Image Alignment","Does the generated image match what the shot describes?"),
+            card("background","Background Consistency","When the story stays in the same place, does that place remain recognizable?"),
+            card("temporal","Temporal Continuity","Do the frames progress in a logical, understandable order?")
+          )
+        ),
+
+        React.createElement("section",{className:"component-map-section"},
+          React.createElement("div",{className:"component-map-section-title"},"Copying & Style"),
+          React.createElement("div",{className:"component-map-grid three"},
+            card("repetition","Adjacent-Frame Repetition","How much meaningful visual change is there between adjacent frames?"),
+            card("reference","Reference Reuse","Was the generated image newly composed rather than closely copied from the reference?"),
+            card("style","Visual Style Consistency","Does the rendering style stay visually consistent across the generated frames?")
+          )
+        ),
+
+        React.createElement("section",{className:"component-map-section"},
+          React.createElement("div",{className:"component-map-section-title"},"Overall"),
+          React.createElement("div",{className:"component-map-overall"},
+            React.createElement(ComponentMiniVisual,{type:"overall"}),
+            React.createElement("div",{className:"component-map-overall-copy"},
+              React.createElement("div",{className:"component-map-name"},"Overall Visual Story Consistency"),
+              React.createElement("div",{className:"component-map-question"},"Does the whole sequence feel like one coherent visual story?")
+            )
+          )
+        ),
+
         React.createElement("h3",{className:"component-rules-title"},"Three rules to remember"),
         React.createElement("div",{className:"tr3-rules"},
           React.createElement("div",{className:"tr3-rule"},React.createElement("strong",null,"5 = best, 1 = worst"),"This direction is the same on every 1–5 question, including Reference Reuse."),
