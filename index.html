@@ -1994,23 +1994,25 @@ p { line-height: 1.6; }
 .tr3-example.bad .training-example-grade{color:#991b1b}
 .training-example-metric{font-size:14.5px;line-height:1.5;margin-top:5px}
 .training-example-metric strong{display:block;font-size:14.5px;margin-bottom:1px}
-.training-align-example .tr3-thumbs{grid-template-columns:1fr;max-width:360px;margin:8px auto 0}
-.training-align-example .tr3-thumbs .sequence-frame-img{width:100%;height:245px;aspect-ratio:auto;object-fit:contain;background:#fff}
-.training-background-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,145px));justify-content:center;gap:7px}
-.training-background-example .tr3-thumbs .sequence-frame-img{width:100%;height:135px;aspect-ratio:auto;object-fit:contain;background:#fff}
+.training-align-example .tr3-evidence{font-size:15px;line-height:1.55;padding:11px 12px}
+.training-align-example .tr3-evidence .label{font-size:11px}
+.training-align-example .tr3-thumbs{grid-template-columns:1fr;max-width:400px;margin:8px auto 0}
+.training-align-example .tr3-thumbs .sequence-frame-img{width:100%;height:275px;aspect-ratio:auto;object-fit:contain;background:#fff}
+.training-background-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,165px));justify-content:center;gap:8px}
+.training-background-example .tr3-thumbs .sequence-frame-img{width:100%;height:150px;aspect-ratio:auto;object-fit:contain;background:#fff}
 .training-temporal-example .tr3-thumbs{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
 .training-temporal-example .tr3-thumbs .sequence-frame-img{width:100%;height:120px;aspect-ratio:auto;object-fit:contain;background:#fff}
 .training-temporal-example .tr3-small,.training-background-example .tr3-small{font-size:11px}
 .generated-repetition-desc{font-size:15.5px;line-height:1.5;color:var(--text);margin-top:8px}
 .generated-repetition-label{font-size:17px}
 @media(max-width:900px){
-  .training-align-example .tr3-thumbs{max-width:320px}
+  .training-align-example .tr3-thumbs{max-width:360px}
   .training-temporal-example .tr3-thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media(max-width:650px){
-  .training-align-example .tr3-thumbs .sequence-frame-img{height:210px}
+  .training-align-example .tr3-thumbs .sequence-frame-img{height:230px}
   .training-background-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .training-background-example .tr3-thumbs .sequence-frame-img{height:120px}
+  .training-background-example .tr3-thumbs .sequence-frame-img{height:135px}
   .training-temporal-example .tr3-thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .training-temporal-example .tr3-thumbs .sequence-frame-img{height:135px}
 }
@@ -3043,7 +3045,7 @@ function TrainingAllCharacterReferenceStrip({manifest,itemId}){
   if(st.error)return React.createElement("div",{className:"error"},st.error);
   const groups=groupReferenceCharacters(st.story.characters||[]);
   return React.createElement("div",{className:"practice-reference-strip"},
-    React.createElement("div",{className:"reuse-reference-strip-title"},"Reference characters — one image per character"),
+    React.createElement("div",{className:"reuse-reference-strip-title"},"Reference characters"),
     React.createElement("div",{className:"tr3-refline"},
       groups.map((g,i)=>{
         const img=(g.images||[])[0];
