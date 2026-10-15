@@ -2162,9 +2162,9 @@ const COMPONENT_QUESTIONS={
     },
     {
       id:"q9_overall",
-      short:"Overall Visual Story Consistency",
-      desc:"Overall, how well do the frames work as one consistent story?",
-      instruction:"Give your overall impression. Do not average your earlier ratings. Expected story changes are fine.",
+      short:"Overall Visual Story ",
+      desc:"Overall, how well do the frames work as one consistent story? Can you imagine or understand the story plot from generated frames?",
+      instruction:"Give your overall impression. Do not average your earlier ratings.",
       scale:OVERALL_SCALE
     }
   ]
@@ -3231,24 +3231,24 @@ function TrainingStage({manifest,onComplete,onBack}){
         React.createElement("div",{className:"training-component-groups"},
           React.createElement("div",{className:"training-component-group"},
             React.createElement("div",{className:"training-component-group-title"},"Characters"),
-            line("Identity","Does the generated person still look like the same character?"),
+            line("Identity","Does the generated person still look like the reference image?"),
             line("Attributes","Are important traits such as clothing, hair, colors, and accessories kept?")
           ),
           React.createElement("div",{className:"training-component-group"},
             React.createElement("div",{className:"training-component-group-title"},"Story and scene"),
-            line("Text–Image Alignment","Does the generated image show what the shot description asks for?"),
-            line("Background","When the story stays in the same place, does that place remain recognizable?"),
+            line("Text–Image Alignment","Does the generated frame(s) show what the shot description asks for?"),
+            line("Background","When the story stays in the same place, does that place remain recognizable in relevant frames?"),
             line("Temporal Continuity","Can you follow what happens from one frame to the next?")
           ),
           React.createElement("div",{className:"training-component-group"},
             React.createElement("div",{className:"training-component-group-title"},"Copying and style"),
             line("Repetition","How much meaningful visual change occurs between adjacent frames?"),
-            line("Reference Reuse","Is the generated image newly composed rather than closely copied from a reference?"),
-            line("Visual Style","Does the rendering style stay consistent across the generated frames?")
+            line("Reference Reuse","Is the generated frame(s) newly composed rather than closely copied from a reference?"),
+            line("Visual Style","Does the rendering style stay consistent across the generated frame(s)?")
           ),
           React.createElement("div",{className:"training-component-group"},
             React.createElement("div",{className:"training-component-group-title"},"Overall"),
-            line("Overall Consistency","Can you understand or imagine the overall story plot from the generated images, and do the frames feel connected as one story?")
+            line("Overall Consistency","Can you understand or imagine the overall story plot from the generated frame(s), and do the frames feel connected as one story?")
           )
         ),
         React.createElement("h3",{className:"component-rules-title"},"Three rules to remember"),
@@ -3266,14 +3266,14 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("div",{className:"tr3-grid2"},
         React.createElement(TrainingExample,{tone:"good",anchor:React.createElement(React.Fragment,null,
           React.createElement("div",{className:"training-example-grade"},"GOOD"),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters still look like the reference images, and the face/body remain as the same person across the three frames.")),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters still look like the reference images, and the face/body remains as the same person across the three frames.")),
           React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes: All their visual traits (clothing, colors, hair, accessories) stay mostly consistent."))
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu"})
         ),
         React.createElement(TrainingExample,{tone:"bad",anchor:React.createElement(React.Fragment,null,
           React.createElement("div",{className:"training-example-grade"},"LOW"),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters do not look like the reference images, and the face/body change noticeably between frames.")),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters do not look like the reference images, and the face/body changes noticeably between frames.")),
           React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes: Important visual traits are not preserved consistently."))
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu"})
@@ -3283,12 +3283,12 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     if(step===2)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"2. Text–Image Alignment"),
-      React.createElement("div",{className:"training-simple-intro"},"Compare the generated image with the shot description and check whether the described people and actions are actually shown."),
+      React.createElement("div",{className:"training-simple-intro"},"Compare the generated frame(s) with the shot description and check whether the described people and actions are actually shown."),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",className:"training-align-example",anchor:"GOOD — The generated image shows the characters standing next to each other, with one character patting the other's shoulder with his right hand."},
+        React.createElement(TrainingExample,{tone:"good",className:"training-align-example",anchor:"GOOD — The generated frame shows the characters standing next to each other, with one character patting the other's shoulder with his right hand."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[3],showText:true,showStaticOnly:true})
         ),
-        React.createElement(TrainingExample,{tone:"bad",className:"training-align-example",anchor:"LOW — The generated image does not show the intended action; it is only a close-up face shot."},
+        React.createElement(TrainingExample,{tone:"bad",className:"training-align-example",anchor:"LOW — The generated frame does not show the intended action; it is only a close-up face shot."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[3],showText:true,showStaticOnly:true})
         )
       ),
@@ -3299,7 +3299,7 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Background: "),"when two frames are meant to show the same location, the important environment and layout should still look like the same place."),
       React.createElement("div",{className:"tr3-grid2"},
         React.createElement(TrainingExample,{tone:"good",className:"training-background-example",anchor:"GOOD — The street environment remains recognizable as the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[2,3]})),
-        React.createElement(TrainingExample,{tone:"bad",className:"training-background-example",anchor:"LOW — The background becomes difficult to differentiate and no longer clearly looks like the same place."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3]}))
+        React.createElement(TrainingExample,{tone:"bad",className:"training-background-example",anchor:"LOW — The background becomes difficult to differentiate (no longer looks like the same place). "},React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[2,3]}))
       ),
       React.createElement("div",{className:"training-simple-intro",style:{marginTop:18}},React.createElement("strong",null,"Temporal Continuity: "),"look at the generated frames in order and ask whether you can understand how the story moves from one moment to the next. Expected action or location changes are okay when the progression still makes sense."),
       React.createElement("div",{className:"tr3-grid2"},
@@ -3316,14 +3316,14 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     if(step===5)return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"5. Reference Reuse and Visual Style"),
-      React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Reference Reuse: "),"compare references with generated frames and ask whether the generated image is newly composed or closely copies a reference pose, framing, layout, or composition."),
+      React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Reference Reuse: "),"compare references with generated frames and ask whether the generated frame(s) are newly composed or closely copies a reference pose, framing, layout, or composition."),
       React.createElement(TrainingReferenceStrip,{manifest,itemId:"story60_Gemini"}),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — The same character can appear, but the pose, framing, background, and composition are clearly newly created."},
+        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — The same character appear, but the pose, framing, background, and composition are clearly newly created."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_Gemini",shots:[4,5,6]}),
           React.createElement("div",{className:"training-why good"},"Why: it keeps the character identity without closely reproducing the reference image layout.")
         ),
-        React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — The generated frame stays too close to a reference image instead of creating a clearly new composition."},
+        React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — The generated frames stay too close to reference images instead of creating a clearly new composition."},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6]}),
           React.createElement("div",{className:"training-why bad"},"Why: pose, framing, spatial layout, or background arrangement closely repeats reference-image information.")
         )
@@ -3334,9 +3334,9 @@ function TrainingStage({manifest,onComplete,onBack}){
 
     return React.createElement(React.Fragment,null,
       React.createElement("h2",null,"6. Overall Visual Story Consistency"),
-      React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Main question: "),"Looking only at the generated image sequence, can you understand or imagine the overall story plot? Do the frames connect well enough to feel like one visual story?"),
+      React.createElement("div",{className:"training-simple-intro"},React.createElement("strong",null,"Main question: "),"Looking only at the generated frames sequence, can you understand or imagine the overall story plot? Do the frames connect well enough to feel like one visual story?"),
       React.createElement("div",{className:"tr3-grid2"},
-        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — You can follow or imagine the main story plot from the generated images, and the frames feel connected as one sequence."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3,4,5,6,7,8]})),
+        React.createElement(TrainingExample,{tone:"good",anchor:"GOOD — You can follow or imagine the main story plot from the generated frames, and the frames feel connected as one sequence."},React.createElement(TrainingSequence,{manifest,itemId:"story60_NanoBanana",shots:[1,2,3,4,5,6,7,8]})),
         React.createElement(TrainingExample,{tone:"bad",anchor:"LOW — The generated frames feel disconnected enough that it is difficult to understand or imagine the overall story plot."},React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[1,2,3,4,5,6,7,8]}))
       ),
       React.createElement("div",{className:"tr3-note"},"Do not calculate an average of your previous ratings. Give one direct judgment of whether the generated sequence works as an understandable, connected visual story."),
@@ -3631,7 +3631,7 @@ function Setup({assignments,pid,onGo,onBack}) {
         "div",
         {className:"main-point"},
         onlineMode
-          ? "Your four main-study story outputs will be assigned automatically. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
+          ? "You will evaluate AI-generated output of stories texts. Before the main evaluation, you will complete a short guided practice session. Please complete the survey on a laptop or desktop under suitable viewing conditions."
           : "Local test mode: enter one assignment code below, then check the viewing conditions before continuing."
       ),
 
@@ -4846,7 +4846,7 @@ function RadarChart({components}){
     React.createElement(
       "div",
       {className:"radar-title"},
-      "Your consistency profile"
+      "Your evaluation of the story"
     ),
 
     React.createElement(
@@ -5094,7 +5094,7 @@ function OverallStage({item,story,resp,setResp,onNext,onBack,submitting}){
     );
     questionPanel=React.createElement("div",null,
       React.createElement("div",{className:"q-title"},"How does the current frame compare visually with the previous frame?"),
-      React.createElement("div",{className:"repetition-answer-row"},[["distinct","Distinct","Substantially different visual content or composition"],["similar","Similar","Related scene/layout, but meaningful visual change is present"],["near_duplicate","Near-duplicate","Almost the same image/composition with very little meaningful visual change"]].map(([value,label,definition])=>React.createElement("button",{type:"button",key:value,className:"repetition-answer-btn"+(currentRepValue===value?" selected":""),onClick:()=>setRep(prevShot,currentShot,value)},label,React.createElement("span",{className:"repetition-answer-definition"},definition))))
+      React.createElement("div",{className:"repetition-answer-row"},[["distinct","Distinct","Substantially different visual content or composition"],["similar","Similar","Same Location/scene/layout, but meaningful visual change is present"],["near_duplicate","Near-duplicate","Almost the same image/composition with very little meaningful visual change"]].map(([value,label,definition])=>React.createElement("button",{type:"button",key:value,className:"repetition-answer-btn"+(currentRepValue===value?" selected":""),onClick:()=>setRep(prevShot,currentShot,value)},label,React.createElement("span",{className:"repetition-answer-definition"},definition))))
     );
     footerText=`Comparison ${currentIndex} of ${repetitionTargets.length}`;
     actionButton=btn(true,!currentRepValue,advanceRepetition,currentIndex<story.shots.length-1?"Save & compare next":"Continue");
