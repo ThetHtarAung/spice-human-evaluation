@@ -3266,15 +3266,15 @@ function TrainingStage({manifest,onComplete,onBack}){
       React.createElement("div",{className:"tr3-grid2"},
         React.createElement(TrainingExample,{tone:"good",anchor:React.createElement(React.Fragment,null,
           React.createElement("div",{className:"training-example-grade"},"GOOD"),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity:"),"These generated characters still look like the reference images, and the face/body remain as the same person across the three frames."),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes:"),"All their visual traits (clothing, colors, hair, accessories) stay mostly consistent.")
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters still look like the reference images, and the face/body remain as the same person across the three frames."),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes: All their visual traits (clothing, colors, hair, accessories) stay mostly consistent.")
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_NaiveBaseline",shots:[4,5,6],character:"Guan Yu"})
         ),
         React.createElement(TrainingExample,{tone:"bad",anchor:React.createElement(React.Fragment,null,
           React.createElement("div",{className:"training-example-grade"},"LOW"),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity:"),"These generated characters do not look like the reference images, and the face/body change noticeably between frames."),
-          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes:"),"Important visual traits are not preserved consistently.")
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Identity: These generated characters do not look like the reference images, and the face/body change noticeably between frames."),
+          React.createElement("div",{className:"training-example-metric"},React.createElement("strong",null,"Attributes: Important visual traits are not preserved consistently.")
         )},
           React.createElement(TrainingSequence,{manifest,itemId:"story60_UNO",shots:[4,5,6],character:"Guan Yu"})
         )
