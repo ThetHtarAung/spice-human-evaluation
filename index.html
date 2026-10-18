@@ -5130,7 +5130,7 @@ function OverallStage({item,story,resp,setResp,onNext,onBack,submitting}){
     title="Story rating summary";
     evidence=React.createElement("div",{className:"result-card"},React.createElement("div",{className:"label"},"YOUR CONSISTENCY PROFILE"),React.createElement(RadarChart,{components:componentValues}),React.createElement("div",{className:"radar-note"},`Adjacent repetition is stored separately (${nearDupCount} near-duplicate pair${nearDupCount===1?"":"s"}). Your Overall score is ${r.q9_overall} / 5.`));
     questionPanel=React.createElement("div",{className:"success"},"All ratings for this story are complete.");
-    actionButton=btn(true,submitting,onNext,submitting?"Submitting...":"Finish story");
+    actionButton=btn(true,submitting,onNext,submitting?"Submitting...":"Finish story and continue→");
   }
 
   return React.createElement("div",{className:"page late-stage-page"},
