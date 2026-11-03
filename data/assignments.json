@@ -300,9 +300,33 @@
       "story29_Gemini",
       "story27_StoryDiffusion_photomaker"
     ]
+    "G51": [
+      "story01_NanoBanana",
+      "story08_StoryDiffusion_photomaker",
+      "story09_NaiveBaseline",
+      "story15_Gemini"
+    ],
+    "G52": [
+      "story17_UNO",
+      "story27_Gemini",
+      "story28_NanoBanana",
+      "story29_QwenImageEdit-2509"
+    ],
+    "G53": [
+      "story27_StoryDiffusion_photomaker",
+      "story32_NaiveBaseline",
+      "story53_QwenImageEdit-2509",
+      "story64_Gemini"
+    ],
+    "G54": [
+      "story28_UNO",
+      "story32_QwenImageEdit-2509",
+      "story57_NaiveBaseline",
+      "story64_NanoBanana"
+    ]
   },
   "design": {
-    "version": "SPICE-HUMAN-2026-MAIN-v2",
+    "version": "SPICE-HUMAN-2026-MAIN-v4-EXT54",
     "main_story_ids": [
       1,
       8,
@@ -325,10 +349,10 @@
       68,
       79
     ],
-    "participants": 50,
+    "participants": 54,
     "items_per_participant": 4,
-    "total_evaluations": 200,
-    "cell_replication": "56 cells x3; 16 cells x2",
+    "total_evaluations": 216,
+    "cell_replication": "72 cells x3"
     "random_seed": 20261008
   }
 }
