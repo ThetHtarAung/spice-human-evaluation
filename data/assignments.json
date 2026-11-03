@@ -352,7 +352,7 @@
     "participants": 54,
     "items_per_participant": 4,
     "total_evaluations": 216,
-    "cell_replication": "72 cells x3"
+    "cell_replication": "72 cells x3",
     "random_seed": 20261008
   }
 }
